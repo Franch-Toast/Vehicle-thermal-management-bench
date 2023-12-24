@@ -1,0 +1,76 @@
+/**
+@defgroup clock_manager_ytm32b1Mx Clock Manager ytm32b1Mx
+@brief This module covers the device-specific clock_manager functionality implemented for YTM32B1Mx SOC.
+@ingroup clock_manager
+<p>
+The support for YTM32B1Mx consist in the following items:
+-  Clock names enumeration <b> clock_manager </b> is an enumeration which contains all clock names which are relevant for YTM32B1Mx.
+
+- Submodule configuration structures
+
+- Submodule configuration functions
+The following function <b> CLOCK_SYS_SetConfiguration </b> was implemented for YTM32B1Mx:
+
+
+## Hardware background ##
+
+Features of clock_manager module include the following clock sources:
+    - 4 - 40 MHz fast external oscillator (SOSC)
+    - 48 MHz Fast Internal RC oscillator (FIRC)
+    - 8 MHz Slow Internal RC oscillator (SIRC)
+    - 128 kHz Low Power Oscillator (LPO)
+
+## How to use the CLOCK_MANAGER driver in your application ##
+
+In order to be able to use the clock_manager in your application,
+<b>CLOCK_DRV_Init</b> function has to be called. The same function is called
+when another configuration is loaded and clock configuration is updated.
+
+## Code Example ##
+
+This is an example for switching between two configurations:
+
+@code
+  CLOCK_SYS_Init(g_clockManConfigsArr,
+                 CLOCK_MANAGER_CONFIG_CNT,
+                 g_clockManCallbacksArr,
+                 CLOCK_MANAGER_CALLBACK_CNT);
+
+  CLOCK_SYS_UpdateConfiguration(0, CLOCK_MANAGER_POLICY_FORCIBLE);
+  CLOCK_SYS_UpdateConfiguration(1, CLOCK_MANAGER_POLICY_FORCIBLE);
+@endcode
+
+## Notes ##
+
+Current implementation assumes that the clock configurations are valid and are applied in a valid sequence.
+Mainly this means that the configuration doesn't reinitialize the clock used as the system clock.
+
+The S32DS do not support generate Callbacks configuration. It's alway empty.
+
+## Integration guideline ##
+
+### Compilation units ###
+
+The following files need to be compiled in the project:
+\verbatim
+${SDK_PATH}\platform\drivers\src\clock\YTM32B1Mx\clock_YTM32B1Mx.c
+\endverbatim
+
+### Include path ###
+
+The following paths need to be added to the include path of the toolchain:
+\verbatim
+${SDK_PATH}\platform\drivers\inc\
+${SDK_PATH}\platform\drivers\src\clock\
+${SDK_PATH}\platform\drivers\src\clock\YTM32B1Mx\
+\endverbatim
+
+### Compile symbols ###
+
+No special symbols are required for this component
+
+### Dependencies ###
+
+\ref interrupt_manager
+</p>
+*/

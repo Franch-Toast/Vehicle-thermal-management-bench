@@ -1,0 +1,1899 @@
+Archive member included to satisfy reference by file (symbol)
+
+libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(dma_config.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(startup.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                              (--whole-archive)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dmul)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fmul)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dsub)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_ddiv)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dcmpeq)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_d2iz)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_d2uiz)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fsub)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fdiv)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_f2uiz)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_uldivmod)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o (exit)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o (__libc_init_array)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o (memset)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o) (__call_exitprocs)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o) (atexit)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o) (__register_exitproc)
+c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+                              c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+ .text          0x00000000       0x40 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .data          0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .bss           0x00000000       0x1c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .rodata        0x00000000       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .init_array    0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .fini_array    0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .eh_frame      0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+ .text          0x00000000       0x7c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .ARM.exidx     0x00000000       0x10 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .ARM.attributes
+                0x00000000       0x20 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+ .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._out_buffer
+                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._out_fct
+                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.sprintf_
+                0x00000000       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.snprintf_
+                0x00000000       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.vprintf_
+                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.vsnprintf_
+                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.fctprintf
+                0x00000000       0x44 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .text.INT_SYS_ConfigInit
+                0x00000000       0x10 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_info    0x00000000       0x85 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_abbrev  0x00000000       0x42 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_aranges
+                0x00000000       0x20 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_ranges  0x00000000       0x10 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_line    0x00000000       0xa9 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_str     0x00000000      0x214 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .comment       0x00000000       0x4a libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .debug_frame   0x00000000       0x2c libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .ARM.attributes
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(interrupt_config.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .rodata.dma_config0
+                0x00000000        0xc libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .rodata.dmaChnConfigArray
+                0x00000000        0x4 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .rodata.dmaController_InitConfig
+                0x00000000        0x1 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .bss.dma_config0_State
+                0x00000000       0x10 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .rodata.dmaChnState
+                0x00000000        0x4 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .bss.dmaState  0x00000000       0x40 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .debug_info    0x00000000      0x471 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .debug_abbrev  0x00000000      0x108 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .debug_aranges
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .debug_line    0x00000000      0x2aa libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .debug_str     0x00000000      0x810 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .comment       0x00000000       0x4a libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .ARM.attributes
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(dma_config.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_GetCurrentConfiguration
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_GetErrorCallback
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_GetPinsDirection
+                0x00000000       0x16 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_SetPinDirection
+                0x00000000       0x42 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_SetPinsDirection
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_SetPortInputDisable
+                0x00000000       0x1c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_GetPortInputDisable
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_WritePin
+                0x00000000       0x42 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_WritePins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_GetPinsOutput
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_SetPins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_ClearPins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_TogglePins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GPIO_ReadPins
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_SetPinIntSel
+                0x00000000       0x44 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GetPinIntSel
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_ClearPinIntFlagCmd
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_EnableDigitalFilter
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DisableDigitalFilter
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_ConfigDigitalFilter
+                0x00000000       0x50 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_GetPortIntFlag
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_ClearPortIntFlagCmd
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_SetPullSel
+                0x00000000       0x90 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPullSel
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetMuxModeSel
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPinIntSel
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_GetPinIntSel
+                0x00000000       0x1c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_ClearPinIntFlagCmd
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_EnableDigitalFilter
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_DisableDigitalFilter
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_ConfigDigitalFilter
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_GetPortIntFlag
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_ClearPortIntFlagCmd
+                0x00000000       0x16 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_GetPinsDirection
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPinDirection
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPinsDirection
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPortInputDisable
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_GetPortInputDisable
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_WritePin
+                0x00000000       0x22 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_WritePins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_GetPinsOutput
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_SetPins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_ClearPins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_TogglePins
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text.PINS_DRV_ReadPins
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .text.PINS_SetMuxModeSel
+                0x00000000       0x42 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_DisableIRQ
+                0x00000000       0x48 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_GetPendingIRQ
+                0x00000000       0x40 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_SetPendingIRQ
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_ClearPendingIRQ
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_SetPriority
+                0x00000000       0x54 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.__NVIC_GetPriority
+                0x00000000       0x4c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_DisableIRQ
+                0x00000000       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_SetPriority
+                0x00000000       0x26 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_GetPriority
+                0x00000000       0x20 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_ClearPending
+                0x00000000       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_SetPending
+                0x00000000       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_GetPending
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_SetHaltOnErrorCmd
+                0x00000000       0x3e libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_SetTransferLoopMappingCmd
+                0x00000000       0x3e libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_TriggerChannelStart
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetEngineStall
+                0x00000000       0x56 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetSrcAddr
+                0x00000000       0x26 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetSrcOffset
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetSrcTransferSize
+                0x00000000       0x5c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDestTransferSize
+                0x00000000       0x56 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetSrcMinorLoopOffsetCmd
+                0x00000000       0x64 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDestMinorLoopOffsetCmd
+                0x00000000       0x64 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetSrcLastAdjust
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDestOffset
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDestLastAdjust
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetRamReloadCmd
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetChannelTriggerLink
+                0x00000000       0x9e libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDisableDmaRequestAfterCTSDoneCmd
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetMajorHalfCompleteIntCmd
+                0x00000000       0x5a libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetMajorCompleteIntCmd
+                0x00000000       0x5c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMAMUX_SetChannelSource
+                0x00000000       0x26 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .rodata.s_dmaBase
+                0x00000000        0x4 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .rodata.s_dmaIrqId
+                0x00000000       0x20 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .rodata.s_dmaErrIrqId
+                0x00000000        0x2 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_Init
+                0x00000000       0xfc libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_Deinit
+                0x00000000       0xa0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ChannelInit
+                0x00000000       0xb0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_InstallCallback
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ReleaseChannel
+                0x00000000       0x5c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ClearSoftwareCTS
+                0x00000000       0x18 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ConfigSingleBlockTransfer
+                0x00000000      0x17c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ConfigMultiBlockTransfer
+                0x00000000       0x6c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ConfigLoopTransfer
+                0x00000000       0x48 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ConfigRamReloadTransfer
+                0x00000000      0x258 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetChannelRequestAndTrigger
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ClearCTS
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetSrcAddr
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetSrcOffset
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetSrcReadChunkSize
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetSrcLastAddrAdjustment
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetDestLastAddrAdjustment
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetDestOffset
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetDestWriteChunkSize
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetTransferLoopBlockSize
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_GetRemainingTriggerIterationsCount
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_SetRamReloadLink
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_DisableRequestsOnTransferComplete
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ConfigureInterrupt
+                0x00000000       0x70 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_CancelTransfer
+                0x00000000       0x44 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_TriggerSwRequest
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_PushConfigToSCTS
+                0x00000000       0xfc libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_PushConfigToReg
+                0x00000000      0x18c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_GetChannelStatus
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ClearStructure
+                0x00000000       0x30 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_Init
+                0x00000000       0x62 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CancelTransfer
+                0x00000000       0x3e libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CancelTransferWithError
+                0x00000000       0x3e libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_SetErrorIntCmd
+                0x00000000       0x48 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSClearReg
+                0x00000000       0xc4 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSSetAttribute
+                0x00000000       0x6e libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSSetNbytes
+                0x00000000       0xbe libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSSetTransferLoopOffset
+                0x00000000       0x9c libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSSetRamReloadLink
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSSetChannelLoopLink
+                0x00000000      0x128 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMA_CTSGetCurrentTriggerCount
+                0x00000000       0x60 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text.DMAMUX_Init
+                0x00000000       0x32 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetFractionalBaudRate
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetIntegerBaudRate
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_GetBaudRate
+                0x00000000       0x64 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_InstallRxCallback
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_InstallTxCallback
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_InstallErrorCallback
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_Deinit
+                0x00000000       0xa8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_SendDataBlocking
+                0x00000000       0x9c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_SendData
+                0x00000000       0x54 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_GetTransmitStatus
+                0x00000000       0x64 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_AbortSendingData
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_ReceiveDataBlocking
+                0x00000000       0x9c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_ReceiveData
+                0x00000000       0x54 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_GetReceiveStatus
+                0x00000000       0x64 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_AbortReceivingData
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_SetTxBuffer
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_SetRxBuffer
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_StartSendUsingInterrupts
+                0x00000000       0x78 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_StartReceiveUsingInterrupts
+                0x00000000       0x74 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_StartSendUsingDma
+                0x00000000       0xf4 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_StartReceiveUsingDma
+                0x00000000      0x100 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_CompleteSendUsingDma
+                0x00000000       0xdc libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_FlushRxFifo
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .rodata.s_vectors
+                0x00000000        0x4 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.__NVIC_SystemReset
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.SystemCoreClockUpdate
+                0x00000000       0xa8 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.SystemSoftwareReset
+                0x00000000        0x8 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.osif_GetCurrentTickCount
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.osif_UpdateTickConfig
+                0x00000000       0x60 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_TimeDelay
+                0x00000000       0x46 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_GetMilliseconds
+                0x00000000        0xe libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_MutexLock
+                0x00000000       0x16 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_MutexUnlock
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_MutexCreate
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_MutexDestroy
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_SemaWait
+                0x00000000       0xa8 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_SemaDestroy
+                0x00000000       0x14 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .data.first_init.0
+                0x00000000        0x1 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text          0x00000000      0x254 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+ .debug_frame   0x00000000       0x30 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+ .ARM.attributes
+                0x00000000       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
+ .text          0x00000000      0x168 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x00000000       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+ .ARM.attributes
+                0x00000000       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .data.impure_data
+                0x00000000      0x428 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x00000000       0x48 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .debug_frame   0x00000000       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .text.memset   0x00000000       0xa4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x00000000       0x14 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .init_array.00000
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000       0xc4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .data.__atexit_recursive_mutex
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000       0x5c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .text.atexit   0x00000000        0xc c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000000       0x20 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x00000000       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .debug_frame   0x00000000       0x34 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire_recursive
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release_recursive
+                0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___arc4random_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___at_quick_exit_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___atexit_recursive_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___dd_hash_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___env_recursive_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___malloc_recursive_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___sfp_recursive_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___sinit_recursive_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .bss.__lock___tz_mutex
+                0x00000000        0x1 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .debug_frame   0x00000000       0xb0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-lock.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x00000000       0x90 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00000000       0x34 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .text._exit    0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .debug_frame   0x00000000       0x20 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a(_exit.o)
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .rodata        0x00000000       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .eh_frame      0x00000000        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .ARM.attributes
+                0x00000000       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+ .text          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+ .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+ .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+ .init          0x00000000        0x8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+ .fini          0x00000000        0x8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+ .ARM.attributes
+                0x00000000       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_text           0x00000000         0x00100000         xr
+m_custom         0x1fff0000         0x00000000         rw
+m_data           0x1fff0000         0x00020000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtbegin.o
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
+START GROUP
+LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+LOAD libGENERATED_SDK_TARGET.a
+END GROUP
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libstdc++.a
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libm.a
+START GROUP
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a
+END GROUP
+START GROUP
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libc.a
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libnosys.a
+END GROUP
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtend.o
+LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crtn.o
+                0x00001000                HEAP_SIZE = DEFINED (__heap_size__)?__heap_size__:0x1000
+                0x00001000                STACK_SIZE = DEFINED (__stack_size__)?__stack_size__:0x1000
+                0x00000400                M_VECTOR_RAM_SIZE = DEFINED (__flash_vector_table__)?0x0:0x400
+
+.interrupts     0x00000000      0x340
+                0x00000000                __VECTOR_TABLE = .
+                0x00000000                __interrupts_start__ = .
+                0x00000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x340 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                0x00000000                __isr_vector
+                0x00000340                __interrupts_end__ = .
+                0x00000340                . = ALIGN (0x4)
+
+.text           0x00000340     0x5f2c
+                0x00000340                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000340       0x6c libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                0x00000340                Reset_Handler
+                0x000003a8                Reserved0_Handler
+                0x000003a8                Reserved54_IRQHandler
+                0x000003a8                Reserved16_IRQHandler
+                0x000003a8                DebugMon_Handler
+                0x000003a8                CAN2_ORed_48_63_MB_IRQHandler
+                0x000003a8                CAN0_ORed_32_47_MB_IRQHandler
+                0x000003a8                SPI4_IRQHandler
+                0x000003a8                CAN0_ORed_IRQHandler
+                0x000003a8                CAN2_Wake_Up_IRQHandler
+                0x000003a8                eTMR0_Ch2_Ch3_IRQHandler
+                0x000003a8                eTMR0_Ch6_Ch7_IRQHandler
+                0x000003a8                TMR0_Ch2_IRQHandler
+                0x000003a8                HardFault_Handler
+                0x000003a8                eTMR2_Fault_IRQHandler
+                0x000003a8                GPIOE_IRQHandler
+                0x000003a8                GPIOB_IRQHandler
+                0x000003a8                I2C1_Master_IRQHandler
+                0x000003a8                GPIOA_IRQHandler
+                0x000003a8                Reserved50_IRQHandler
+                0x000003a8                PendSV_Handler
+                0x000003a8                NMI_Handler
+                0x000003a8                HCU_IRQHandler
+                0x000003a8                Reserved19_IRQHandler
+                0x000003a8                TMR0_Ch3_IRQHandler
+                0x000003a8                Reserved29_IRQHandler
+                0x000003a8                eTMR1_Ovf_IRQHandler
+                0x000003a8                eTMR2_Ch4_Ch5_IRQHandler
+                0x000003a8                WKU_IRQHandler
+                0x000003a8                eTMR4_Ovf_IRQHandler
+                0x000003a8                SCU_IRQHandler
+                0x000003a8                CAN2_ORed_0_15_MB_IRQHandler
+                0x000003a8                Reserved1_Handler
+                0x000003a8                eTMR3_Ch6_Ch7_IRQHandler
+                0x000003a8                CAN4_Error_IRQHandler
+                0x000003a8                lpTMR0_IRQHandler
+                0x000003a8                Reserved42_IRQHandler
+                0x000003a8                CAN1_Error_IRQHandler
+                0x000003a8                Reserved36_IRQHandler
+                0x000003a8                Reserved22_IRQHandler
+                0x000003a8                FPU_IRQHandler
+                0x000003a8                ADC0_IRQHandler
+                0x000003a8                eTMR2_Ch0_Ch1_IRQHandler
+                0x000003a8                Reserved39_IRQHandler
+                0x000003a8                WDG_IRQHandler
+                0x000003a8                PTU0_IRQHandler
+                0x000003a8                UsageFault_Handler
+                0x000003a8                eTMR3_Ovf_IRQHandler
+                0x000003a8                EFM_Ecc_IRQHandler
+                0x000003a8                eTMR4_Ch4_Ch5_IRQHandler
+                0x000003a8                SPI1_IRQHandler
+                0x000003a8                eTMR4_Fault_IRQHandler
+                0x000003a8                DefaultISR
+                0x000003a8                Reserved34_IRQHandler
+                0x000003a8                eTMR5_Ch0_Ch1_IRQHandler
+                0x000003a8                CAN1_ORed_0_15_MB_IRQHandler
+                0x000003a8                eTMR5_Ovf_IRQHandler
+                0x000003a8                eTMR0_Ch0_Ch1_IRQHandler
+                0x000003a8                Reserved25_IRQHandler
+                0x000003a8                Reserved24_IRQHandler
+                0x000003a8                CAN0_ORed_16_31_MB_IRQHandler
+                0x000003a8                eTMR1_Ch6_Ch7_IRQHandler
+                0x000003a8                eTMR1_Ch2_Ch3_IRQHandler
+                0x000003a8                Reserved2_Handler
+                0x000003a8                eTMR0_Ch4_Ch5_IRQHandler
+                0x000003a8                Reserved8_IRQHandler
+                0x000003a8                Reserved33_IRQHandler
+                0x000003a8                I2C0_Master_IRQHandler
+                0x000003a8                Reserved5_IRQHandler
+                0x000003a8                CAN5_ORed_16_31_MB_IRQHandler
+                0x000003a8                eTMR3_Ch4_Ch5_IRQHandler
+                0x000003a8                ADC1_IRQHandler
+                0x000003a8                TMR0_Ch1_IRQHandler
+                0x000003a8                I2C1_Slave_IRQHandler
+                0x000003a8                Reserved43_IRQHandler
+                0x000003a8                Reserved53_IRQHandler
+                0x000003a8                RTC_IRQHandler
+                0x000003a8                Reserved21_IRQHandler
+                0x000003a8                Reserved18_IRQHandler
+                0x000003a8                Reserved12_IRQHandler
+                0x000003a8                I2C2_Slave_IRQHandler
+                0x000003a8                Reserved15_IRQHandler
+                0x000003a8                PTU1_IRQHandler
+                0x000003a8                GPIOD_IRQHandler
+                0x000003a8                Reserved27_IRQHandler
+                0x000003a8                CAN0_ORed_48_63_MB_IRQHandler
+                0x000003a8                GPIOC_IRQHandler
+                0x000003a8                eTMR5_Fault_IRQHandler
+                0x000003a8                RTC_Seconds_IRQHandler
+                0x000003a8                Reserved11_IRQHandler
+                0x000003a8                eTMR1_Ch4_Ch5_IRQHandler
+                0x000003a8                eTMR3_Ch0_Ch1_IRQHandler
+                0x000003a8                CAN2_ORed_IRQHandler
+                0x000003a8                Reserved14_IRQHandler
+                0x000003a8                eTMR5_Ch4_Ch5_IRQHandler
+                0x000003a8                pTMR_Ch0_IRQHandler
+                0x000003a8                Reserved35_IRQHandler
+                0x000003a8                Reserved20_IRQHandler
+                0x000003a8                Reserved13_IRQHandler
+                0x000003a8                Reserved37_IRQHandler
+                0x000003a8                eTMR4_Ch6_Ch7_IRQHandler
+                0x000003a8                CAN3_Error_IRQHandler
+                0x000003a8                pTMR_Ch3_IRQHandler
+                0x000003a8                CAN2_Error_IRQHandler
+                0x000003a8                EMU_IRQHandler
+                0x000003a8                Reserved17_IRQHandler
+                0x000003a8                eTMR4_Ch2_Ch3_IRQHandler
+                0x000003a8                CAN3_ORed_0_15_MB_IRQHandler
+                0x000003a8                Reserved47_IRQHandler
+                0x000003a8                CAN1_ORed_32_47_MB_IRQHandler
+                0x000003a8                I2C0_Slave_IRQHandler
+                0x000003a8                Reserved32_IRQHandler
+                0x000003a8                SPI5_IRQHandler
+                0x000003a8                Reserved9_IRQHandler
+                0x000003a8                eTMR2_Ch2_Ch3_IRQHandler
+                0x000003a8                eTMR1_Fault_IRQHandler
+                0x000003a8                CAN3_ORed_16_31_MB_IRQHandler
+                0x000003a8                CAN4_Wake_Up_IRQHandler
+                0x000003a8                Reserved31_IRQHandler
+                0x000003a8                EFM_IRQHandler
+                0x000003a8                SPI2_IRQHandler
+                0x000003a8                ACMP0_IRQHandler
+                0x000003a8                Reserved41_IRQHandler
+                0x000003a8                CAN3_Wake_Up_IRQHandler
+                0x000003a8                MemManage_Handler
+                0x000003a8                eTMR4_Ch0_Ch1_IRQHandler
+                0x000003a8                Reserved48_IRQHandler
+                0x000003a8                LINFlexD2_IRQHandler
+                0x000003a8                SVC_Handler
+                0x000003a8                CAN1_Wake_Up_IRQHandler
+                0x000003a8                CAN5_Error_IRQHandler
+                0x000003a8                pTMR_Ch1_IRQHandler
+                0x000003a8                Reserved6_IRQHandler
+                0x000003a8                LINFlexD4_IRQHandler
+                0x000003a8                Reserved10_IRQHandler
+                0x000003a8                PCU_IRQHandler
+                0x000003a8                CAN5_ORed_0_15_MB_IRQHandler
+                0x000003a8                CAN1_ORed_IRQHandler
+                0x000003a8                Reserved26_IRQHandler
+                0x000003a8                CAN4_ORed_0_15_MB_IRQHandler
+                0x000003a8                Reserved7_IRQHandler
+                0x000003a8                Reserved46_IRQHandler
+                0x000003a8                LINFlexD3_IRQHandler
+                0x000003a8                Reserved23_IRQHandler
+                0x000003a8                Reserved4_Handler
+                0x000003a8                Reserved45_IRQHandler
+                0x000003a8                CAN2_ORed_16_31_MB_IRQHandler
+                0x000003a8                CAN0_Error_IRQHandler
+                0x000003a8                Reserved3_Handler
+                0x000003a8                Reserved30_IRQHandler
+                0x000003a8                RCU_IRQHandler
+                0x000003a8                CAN5_Wake_Up_IRQHandler
+                0x000003a8                CAN5_ORed_IRQHandler
+                0x000003a8                eTMR2_Ch6_Ch7_IRQHandler
+                0x000003a8                eTMR5_Ch6_Ch7_IRQHandler
+                0x000003a8                I2C2_Master_IRQHandler
+                0x000003a8                ALIGN_0_IRQHandler
+                0x000003a8                eTMR5_Ch2_Ch3_IRQHandler
+                0x000003a8                SPI0_IRQHandler
+                0x000003a8                Reserved51_IRQHandler
+                0x000003a8                CAN1_ORed_48_63_MB_IRQHandler
+                0x000003a8                CAN4_ORed_16_31_MB_IRQHandler
+                0x000003a8                CAN1_ORed_16_31_MB_IRQHandler
+                0x000003a8                eTMR2_Ovf_IRQHandler
+                0x000003a8                Reserved28_IRQHandler
+                0x000003a8                Reserved44_IRQHandler
+                0x000003a8                EFM_Error_IRQHandler
+                0x000003a8                CAN0_ORed_0_15_MB_IRQHandler
+                0x000003a8                Reserved40_IRQHandler
+                0x000003a8                eTMR3_Fault_IRQHandler
+                0x000003a8                CAN2_ORed_32_47_MB_IRQHandler
+                0x000003a8                CAN4_ORed_IRQHandler
+                0x000003a8                Reserved38_IRQHandler
+                0x000003a8                BusFault_Handler
+                0x000003a8                SPI3_IRQHandler
+                0x000003a8                eTMR0_Ovf_IRQHandler
+                0x000003a8                eTMR0_Fault_IRQHandler
+                0x000003a8                CAN0_Wake_Up_IRQHandler
+                0x000003a8                eTMR3_Ch2_Ch3_IRQHandler
+                0x000003a8                INTM_IRQHandler
+                0x000003a8                eTMR1_Ch0_Ch1_IRQHandler
+                0x000003a8                Reserved49_IRQHandler
+                0x000003a8                LINFlexD1_IRQHandler
+                0x000003a8                LINFlexD0_IRQHandler
+                0x000003a8                TMR0_Ch0_IRQHandler
+                0x000003a8                Reserved52_IRQHandler
+                0x000003a8                TRNG_IRQHandler
+                0x000003a8                LINFlexD5_IRQHandler
+                0x000003a8                pTMR_Ch2_IRQHandler
+                0x000003a8                CAN3_ORed_IRQHandler
+ .text          0x000003ac      0x378 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x000003ac                __aeabi_drsub
+                0x000003b4                __aeabi_dsub
+                0x000003b4                __subdf3
+                0x000003b8                __aeabi_dadd
+                0x000003b8                __adddf3
+                0x00000630                __floatunsidf
+                0x00000630                __aeabi_ui2d
+                0x00000650                __floatsidf
+                0x00000650                __aeabi_i2d
+                0x00000674                __aeabi_f2d
+                0x00000674                __extendsfdf2
+                0x000006b8                __floatundidf
+                0x000006b8                __aeabi_ul2d
+                0x000006c8                __floatdidf
+                0x000006c8                __aeabi_l2d
+ .text          0x00000724      0x424 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x00000724                __aeabi_dmul
+                0x00000724                __muldf3
+                0x00000978                __divdf3
+                0x00000978                __aeabi_ddiv
+ .text          0x00000b48      0x110 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x00000b48                __gtdf2
+                0x00000b48                __gedf2
+                0x00000b50                __ltdf2
+                0x00000b50                __ledf2
+                0x00000b58                __nedf2
+                0x00000b58                __eqdf2
+                0x00000b58                __cmpdf2
+                0x00000bd4                __aeabi_cdrcmple
+                0x00000be4                __aeabi_cdcmpeq
+                0x00000be4                __aeabi_cdcmple
+                0x00000bf4                __aeabi_dcmpeq
+                0x00000c08                __aeabi_dcmplt
+                0x00000c1c                __aeabi_dcmple
+                0x00000c30                __aeabi_dcmpge
+                0x00000c44                __aeabi_dcmpgt
+ .text          0x00000c58       0x50 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x00000c58                __aeabi_d2iz
+                0x00000c58                __fixdfsi
+ .text          0x00000ca8       0x40 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+                0x00000ca8                __aeabi_d2uiz
+                0x00000ca8                __fixunsdfsi
+ .text          0x00000ce8      0x21c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x00000ce8                __aeabi_frsub
+                0x00000cf0                __subsf3
+                0x00000cf0                __aeabi_fsub
+                0x00000cf4                __aeabi_fadd
+                0x00000cf4                __addsf3
+                0x00000e54                __aeabi_ui2f
+                0x00000e54                __floatunsisf
+                0x00000e5c                __aeabi_i2f
+                0x00000e5c                __floatsisf
+                0x00000e78                __aeabi_ul2f
+                0x00000e78                __floatundisf
+                0x00000e88                __aeabi_l2f
+                0x00000e88                __floatdisf
+ .text          0x00000f04      0x2a0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+                0x00000f04                __mulsf3
+                0x00000f04                __aeabi_fmul
+                0x0000106c                __aeabi_fdiv
+                0x0000106c                __divsf3
+ .text          0x000011a4       0x40 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+                0x000011a4                __fixunssfsi
+                0x000011a4                __aeabi_f2uiz
+ .text          0x000011e4       0x30 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x000011e4                __aeabi_uldivmod
+ .text          0x00001214      0x2e8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+                0x00001214                __udivmoddi4
+ .text          0x000014fc        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+                0x000014fc                __aeabi_idiv0
+                0x000014fc                __aeabi_ldiv0
+ *(.text*)
+ .text.main     0x00001500       0x6c CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+                0x00001500                main
+ .text.Board_Init
+                0x0000156c       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .text.UART_init
+                0x000015a0       0x1c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+                0x000015a0                UART_init
+ .text.printf_char
+                0x000015bc       0x1e CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+                0x000015bc                printf_char
+ .text._out_null
+                0x000015da       0x1a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._out_char
+                0x000015f4       0x26 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._strnlen_s
+                0x0000161a       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._is_digit
+                0x00001652       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._atoi    0x0000167e       0x48 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._out_rev
+                0x000016c6       0xa0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._ntoa_format
+                0x00001766      0x1b8 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._ntoa_long
+                0x0000191e       0xcc CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._ntoa_long_long
+                0x000019ea       0xda CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ *fill*         0x00001ac4        0x4 
+ .text._ftoa    0x00001ac8      0x4b0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._etoa    0x00001f78      0x520 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text._vsnprintf
+                0x00002498      0x9c0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .text.printf_  0x00002e58       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+                0x00002e58                printf_
+ .text.IPC_SetPeripheralClockControl
+                0x00002e90       0x54 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.IPC_SetClockMode
+                0x00002ee4       0x70 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetSysClkDiv
+                0x00002f54       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetSysClkDiv
+                0x00002f8c       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetFastBusClkDiv
+                0x00002fac       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetFastBusClkDiv
+                0x00002fe4       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetSlowBusClkDiv
+                0x00003004       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetSlowBusClkDiv
+                0x0000303a       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetSysClkSrc
+                0x00003058       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetSysClkSrc
+                0x0000308e       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetClkOutSrc
+                0x000030ac       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetClkOutDiv
+                0x000030e2       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_EnableFxosc
+                0x0000311a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetFxoscBypassMode
+                0x00003156       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetFxoscComp
+                0x00003194       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetFxoscGain
+                0x000031d2       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_EnableSxosc
+                0x0000320a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SxoscDeepSleepEnable
+                0x00003246       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SxoscStandbyEnable
+                0x00003282       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SxoscPowerDownEnable
+                0x000032be       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetSxoscEnableFlag
+                0x000032fa       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetSxoscBypassMode
+                0x00003318       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetSxoscGain
+                0x00003356       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetPllRefClk
+                0x0000338e       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetPllRefClk
+                0x000033c6       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetPllFeedBackDiv
+                0x000033e6       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetPllFeedBackDiv
+                0x00003420       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetPllRefClkDiv
+                0x00003444       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetPllRefClkDiv
+                0x0000347e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_EnablePll
+                0x000034a2       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetPllLock
+                0x000034de       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SircDeepSleepEnable
+                0x00003502       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SircStandbyEnable
+                0x0000353e       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SircPowerDownEnable
+                0x0000357a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_EnableFirc
+                0x000035b6       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_FircDeepSleepEnable
+                0x000035f2       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetFXOSCValid
+                0x0000362e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_GetDividerStable
+                0x00003652       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetCmuChEnable
+                0x0000367a       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetCmuChResetEnable
+                0x000036be       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetCmuChRefClock
+                0x00003706       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetCmuChCompHigh
+                0x0000374e       0x26 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.SCU_SetCmuChCompLow
+                0x00003774       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_DRV_Init
+                0x0000379c       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000379c                CLOCK_DRV_Init
+ *fill*         0x000037d6        0x2 
+ .text.CLOCK_SYS_SetScuConfiguration
+                0x000037d8      0x334 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_SetDefaultCmuChannelConfiguration
+                0x00003b0c       0x98 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_SetCmuChannelConfiguration
+                0x00003ba4       0x64 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_ConfigureSystemClock
+                0x00003c08       0x50 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SCU_WaitPllLock
+                0x00003c58       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SCU_WaitDividerStable
+                0x00003c98       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SCU_WaitFXOSCValid
+                0x00003cd8       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_SYS_SetIpcConfiguration
+                0x00003d18       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .text.CLOCK_DRV_GetPllFreq
+                0x00003da4       0x78 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00003da4                CLOCK_DRV_GetPllFreq
+ .text.CLOCK_DRV_GetFreq
+                0x00003e1c      0x1e0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00003e1c                CLOCK_DRV_GetFreq
+ .text.CLOCK_SYS_Init
+                0x00003ffc       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00003ffc                CLOCK_SYS_Init
+ .text.CLOCK_SYS_UpdateConfiguration
+                0x00004040      0x17c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00004040                CLOCK_SYS_UpdateConfiguration
+ .text.CLOCK_SYS_GetFreq
+                0x000041bc       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000041bc                CLOCK_SYS_GetFreq
+ .text.CLOCK_SYS_SetConfiguration
+                0x000041dc       0x18 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000041dc                CLOCK_SYS_SetConfiguration
+ .text.PINS_DRV_Init
+                0x000041f4       0x3e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                0x000041f4                PINS_DRV_Init
+ .text.PINS_GPIO_WritePin
+                0x00004232       0x42 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .text.PINS_ConfigDigitalFilter
+                0x00004274       0x50 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .text.PINS_Init
+                0x000042c4      0x1f2 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x000042c4                PINS_Init
+ *fill*         0x000044b6        0x2 
+ .text.__NVIC_EnableIRQ
+                0x000044b8       0x38 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .text.INT_SYS_InstallHandler
+                0x000044f0       0x78 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x000044f0                INT_SYS_InstallHandler
+ .text.INT_SYS_EnableIRQ
+                0x00004568       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00004568                INT_SYS_EnableIRQ
+ .text.INT_SYS_EnableIRQGlobal
+                0x00004584       0x30 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00004584                INT_SYS_EnableIRQGlobal
+ .text.INT_SYS_DisableIRQGlobal
+                0x000045b4       0x20 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x000045b4                INT_SYS_DisableIRQGlobal
+ .text.DMA_ClearErrorIntStatusFlag
+                0x000045d4       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_ClearDoneStatusFlag
+                0x000045f8       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_ClearIntStatusFlag
+                0x0000461c       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_CTSSetDestAddr
+                0x00004640       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_ClearIntStatus
+                0x00004668       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .text.DMA_DRV_IRQHandler
+                0x000046a4       0x4c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x000046a4                DMA_DRV_IRQHandler
+ .text.DMA_DRV_ErrorIRQHandler
+                0x000046f0       0x7c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x000046f0                DMA_DRV_ErrorIRQHandler
+ .text.DMA_DRV_StartChannel
+                0x0000476c       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x0000476c                DMA_DRV_StartChannel
+ .text.DMA_DRV_StopChannel
+                0x000047a4       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x000047a4                DMA_DRV_StopChannel
+ .text.DMA_DRV_SetDestAddr
+                0x000047dc       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x000047dc                DMA_DRV_SetDestAddr
+ .text.DMA_DRV_SetTriggerLoopIterationCount
+                0x00004814       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00004814                DMA_DRV_SetTriggerLoopIterationCount
+ .text.DMA_DRV_GetDmaRegBaseAddr
+                0x0000484c       0x18 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x0000484c                DMA_DRV_GetDmaRegBaseAddr
+ .text.DMA_SetDmaRequestCmd
+                0x00004864       0x48 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x00004864                DMA_SetDmaRequestCmd
+ .text.DMA_CTSSetTriggerCount
+                0x000048ac      0x134 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x000048ac                DMA_CTSSetTriggerCount
+ .text.DMA_GetErrorIntStatusFlag
+                0x000049e0       0x16 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .text.DMA0_IRQHandler
+                0x000049f6        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000049f6                DMA0_IRQHandler
+ .text.DMA1_IRQHandler
+                0x00004a04        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a04                DMA1_IRQHandler
+ .text.DMA2_IRQHandler
+                0x00004a12        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a12                DMA2_IRQHandler
+ .text.DMA3_IRQHandler
+                0x00004a20        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a20                DMA3_IRQHandler
+ .text.DMA4_IRQHandler
+                0x00004a2e        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a2e                DMA4_IRQHandler
+ .text.DMA5_IRQHandler
+                0x00004a3c        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a3c                DMA5_IRQHandler
+ .text.DMA6_IRQHandler
+                0x00004a4a        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a4a                DMA6_IRQHandler
+ .text.DMA7_IRQHandler
+                0x00004a58        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a58                DMA7_IRQHandler
+ .text.DMA8_IRQHandler
+                0x00004a66        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a66                DMA8_IRQHandler
+ .text.DMA9_IRQHandler
+                0x00004a74        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a74                DMA9_IRQHandler
+ .text.DMA10_IRQHandler
+                0x00004a82        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a82                DMA10_IRQHandler
+ .text.DMA11_IRQHandler
+                0x00004a90        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a90                DMA11_IRQHandler
+ .text.DMA12_IRQHandler
+                0x00004a9e        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004a9e                DMA12_IRQHandler
+ .text.DMA13_IRQHandler
+                0x00004aac        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004aac                DMA13_IRQHandler
+ .text.DMA14_IRQHandler
+                0x00004aba        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004aba                DMA14_IRQHandler
+ .text.DMA15_IRQHandler
+                0x00004ac8        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004ac8                DMA15_IRQHandler
+ .text.DMA_Error_IRQHandler
+                0x00004ad6       0x4a libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00004ad6                DMA_Error_IRQHandler
+ .text.LINFlexD_EnterInitMode
+                0x00004b20       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_EnterNormalMode
+                0x00004b4e       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetMode
+                0x00004b7c       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetLinState
+                0x00004bb2       0x22 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetUartWordLength
+                0x00004bd4       0x50 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetParityControl
+                0x00004c24       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetParityType
+                0x00004c60       0x52 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTransmitterState
+                0x00004cb2       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetReceiverState
+                0x00004cee       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTxMode
+                0x00004d2a       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetRxMode
+                0x00004d62       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetRxDataFieldLength
+                0x00004d9a       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTxDataFieldLength
+                0x00004dd2       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetRxStopBitsCount
+                0x00004e08       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetMonitorIdleState
+                0x00004e40       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetDisableTimeout
+                0x00004e7e       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetFractionalBaudRate
+                0x00004ebc       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetIntegerBaudRate
+                0x00004ef2       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTxStopBitsCount
+                0x00004f26       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_ClearStatusFlag
+                0x00004f66       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetStatusFlag
+                0x00004f82       0x28 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetInterruptMode
+                0x00004faa       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_IsInterruptEnabled
+                0x00004fea       0x26 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTxDataBuffer1Byte
+                0x00005010       0x1e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_SetTxDataBuffer2Bytes
+                0x0000502e       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetRxDataBuffer1Byte
+                0x0000504a       0x1a libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_GetRxDataBuffer2Bytes
+                0x00005064       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_SetBaudRate
+                0x0000507c      0x148 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000507c                LINFlexD_UART_DRV_SetBaudRate
+ .text.LINFlexD_UART_DRV_Init
+                0x000051c4      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000051c4                LINFlexD_UART_DRV_Init
+ .text.LINFlexD_UART_DRV_SendDataPolling
+                0x000053dc       0xd8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000053dc                LINFlexD_UART_DRV_SendDataPolling
+ .text.LINFlexD_UART_DRV_ReceiveDataPolling
+                0x000054b4       0xec libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000054b4                LINFlexD_UART_DRV_ReceiveDataPolling
+ .text.LINFlexD_UART_DRV_RxIRQHandler
+                0x000055a0       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000055a0                LINFlexD_UART_DRV_RxIRQHandler
+ .text.LINFlexD_UART_DRV_TxIRQHandler
+                0x00005658       0x98 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00005658                LINFlexD_UART_DRV_TxIRQHandler
+ .text.LINFlexD_UART_DRV_ErrIRQHandler
+                0x000056f0       0xa8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000056f0                LINFlexD_UART_DRV_ErrIRQHandler
+ .text.LINFlexD_UART_DRV_RxTOHandler
+                0x00005798       0x70 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00005798                LINFlexD_UART_DRV_RxTOHandler
+ .text.LINFlexD_UART_DRV_IRQHandler
+                0x00005808       0x9c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00005808                LINFlexD_UART_DRV_IRQHandler
+ .text.LINFlexD_UART_DRV_CompleteSendUsingInterrupts
+                0x000058a4       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts
+                0x0000590c       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_CompleteReceiveUsingDma
+                0x00005974       0xf0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_PutData
+                0x00005a64       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD_UART_DRV_GetData
+                0x00005b24       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .text.LINFlexD0_UART_IRQHandler
+                0x00005be4        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005be4                LINFlexD0_UART_IRQHandler
+ .text.LINFlexD1_UART_IRQHandler
+                0x00005bf2        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005bf2                LINFlexD1_UART_IRQHandler
+ .text.LINFlexD2_UART_IRQHandler
+                0x00005c00        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005c00                LINFlexD2_UART_IRQHandler
+ .text.LINFlexD3_UART_IRQHandler
+                0x00005c0e        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005c0e                LINFlexD3_UART_IRQHandler
+ .text.LINFlexD4_UART_IRQHandler
+                0x00005c1c        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005c1c                LINFlexD4_UART_IRQHandler
+ .text.LINFlexD5_UART_IRQHandler
+                0x00005c2a        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00005c2a                LINFlexD5_UART_IRQHandler
+ .text.init_data_bss
+                0x00005c38      0x128 libGENERATED_SDK_TARGET.a(startup.c.o)
+                0x00005c38                init_data_bss
+ .text.ARM_MPU_Enable
+                0x00005d60       0x44 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.ARM_MPU_SetMemAttrEx
+                0x00005da4       0x68 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.ARM_MPU_SetMemAttr
+                0x00005e0c       0x28 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.ARM_MPU_OrderedMemcpy
+                0x00005e34       0x40 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.ARM_MPU_LoadEx
+                0x00005e74       0xba libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ *fill*         0x00005f2e        0x2 
+ .text.ARM_MPU_Load
+                0x00005f30       0x24 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.EfmInitMpu
+                0x00005f54       0x48 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .text.SystemInit
+                0x00005f9c       0x4c libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x00005f9c                SystemInit
+ .text.osif_Tick
+                0x00005fe8       0x1c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.SysTick_Handler
+                0x00006004        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00006004                SysTick_Handler
+ .text.osif_DisableIrqGlobal
+                0x00006010        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.osif_EnableIrqGlobal
+                0x0000601c        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .text.OSIF_SemaPost
+                0x00006028       0x3c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00006028                OSIF_SemaPost
+ .text.OSIF_SemaCreate
+                0x00006064       0x24 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00006064                OSIF_SemaCreate
+ *(.rodata)
+ .rodata        0x00006088       0x66 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ *fill*         0x000060ee        0x2 
+ .rodata        0x000060f0       0x18 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .rodata        0x00006108        0x8 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ *(.rodata*)
+ .rodata.pow10.0
+                0x00006110       0x50 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .rodata.clock_config0ScuConfig
+                0x00006160       0x28 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x00006160                clock_config0ScuConfig
+ .rodata.linflexd_uart_config0
+                0x00006188        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x00006188                linflexd_uart_config0
+ .rodata.clockNameMappings
+                0x00006194       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00006194                clockNameMappings
+ .rodata.s_uartLINFlexDBase
+                0x00006220       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .rodata.s_uartLINFlexDIntVec
+                0x00006238        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .rodata.s_uartLINFlexDClkNames
+                0x00006244        0x6 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ *fill*         0x0000624a        0x2 
+ .rodata.g_uartLINFlexDIsr
+                0x0000624c       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x0000624c                g_uartLINFlexDIsr
+ *(.init)
+ .init          0x00006264        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+                0x00006264                _init
+ *(.fini)
+ .fini          0x00006268        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+                0x00006268                _fini
+ *(.eh_frame)
+                0x0000626c                . = ALIGN (0x4)
+
+.glue_7         0x0000626c        0x0
+ .glue_7        0x0000626c        0x0 linker stubs
+
+.glue_7t        0x0000626c        0x0
+ .glue_7t       0x0000626c        0x0 linker stubs
+
+.vfp11_veneer   0x0000626c        0x0
+ .vfp11_veneer  0x0000626c        0x0 linker stubs
+
+.v4_bx          0x0000626c        0x0
+ .v4_bx         0x0000626c        0x0 linker stubs
+
+.iplt           0x0000626c        0x0
+ .iplt          0x0000626c        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+
+.ARM            0x0000626c        0x8
+                0x0000626c                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x0000626c        0x8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+                0x00006274                __exidx_end = .
+                0x00006274                __etext = .
+                0x00006274                __DATA_ROM = .
+
+.rel.dyn        0x00006274        0x0
+ .rel.iplt      0x00006274        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+
+.interrupts_ram
+                0x1fff0000      0x400
+                0x1fff0000                . = ALIGN (0x4)
+                0x1fff0000                __VECTOR_RAM__ = .
+                0x1fff0000                __RAM_START = .
+                0x1fff0000                __interrupts_ram_start__ = .
+ *(.m_interrupts_ram)
+                0x1fff0400                . = (. + M_VECTOR_RAM_SIZE)
+ *fill*         0x1fff0000      0x400 
+                0x1fff0400                . = ALIGN (0x4)
+                0x1fff0400                __interrupts_ram_end__ = .
+                0x1fff0000                __VECTOR_RAM = DEFINED (__flash_vector_table__)?ORIGIN (m_interrupts):__VECTOR_RAM__
+                0x00000400                __RAM_VECTOR_TABLE_SIZE = DEFINED (__flash_vector_table__)?0x0:(__interrupts_ram_end__ - __interrupts_ram_start__)
+
+.data           0x1fff0400       0x54 load address 0x00006274
+                0x1fff0400                . = ALIGN (0x4)
+                0x1fff0400                __DATA_RAM = .
+                0x1fff0400                __data_start__ = .
+ *(.data)
+ *(.data*)
+ .data.clock_config0PeripheralClockConfig
+                0x1fff0400        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0400                clock_config0PeripheralClockConfig
+ .data.clock_config0ClockManager
+                0x1fff0404       0x10 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0404                clock_config0ClockManager
+ .data.g_clockManConfigsArr
+                0x1fff0414        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0414                g_clockManConfigsArr
+ .data.g_pin_mux_InitConfigArr0
+                0x1fff0418       0x38 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                0x1fff0418                g_pin_mux_InitConfigArr0
+ .data.SystemCoreClock
+                0x1fff0450        0x4 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x1fff0450                SystemCoreClock
+                0x1fff0454                . = ALIGN (0x4)
+                0x1fff0454                __data_end__ = .
+                0x000062c8                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x000062c8                __CODE_ROM = __DATA_END
+
+.igot.plt       0x1fff0454        0x0 load address 0x000062c8
+ .igot.plt      0x1fff0454        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+
+.code           0x1fff0454        0x0 load address 0x000062c8
+                0x1fff0454                . = ALIGN (0x4)
+                0x1fff0454                __CODE_RAM = .
+                0x1fff0454                __code_start__ = .
+                0x1fff0454                __code_ram_start__ = .
+ *(.code_ram)
+                0x1fff0454                . = ALIGN (0x4)
+                0x1fff0454                __code_end__ = .
+                0x1fff0454                __code_ram_end__ = .
+                0x000062c8                __CODE_END = (__CODE_ROM + (__code_end__ - __code_start__))
+                0x000062c8                __CUSTOM_ROM = __CODE_END
+
+.customSectionBlock
+                0x1fff0000        0x0 load address 0x000062c8
+                0x1fff0000                __customSectionStart = .
+                0x1fff0000                __customSection_start__ = .
+ *(.customSection)
+                0x1fff0000                __customSection_end__ = .
+                0x000062c8                __CUSTOM_END = (__CUSTOM_ROM + (__customSection_end__ - __customSection_start__))
+                0x000062c8                __rom_end = __CUSTOM_END
+
+.bss            0x1fff0454       0x78 load address 0x000062c8
+                0x1fff0454                . = ALIGN (0x4)
+                0x1fff0454                __BSS_START = .
+                0x1fff0454                __bss_start__ = .
+ *(.bss)
+ *(.bss*)
+ .bss.g_clockManCallbacksArr
+                0x1fff0454        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0454                g_clockManCallbacksArr
+ .bss.linflexd_uart_config0_State
+                0x1fff0458       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x1fff0458                linflexd_uart_config0_State
+ .bss.g_clockState
+                0x1fff0490       0x10 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .bss.g_fxoscClkFreq
+                0x1fff04a0        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x1fff04a0                g_fxoscClkFreq
+ .bss.g_sxoscClkFreq
+                0x1fff04a4        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x1fff04a4                g_sxoscClkFreq
+ .bss.g_interruptDisableCount
+                0x1fff04a8        0x4 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .bss.s_virtEdmaState
+                0x1fff04ac        0x4 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .bss.s_uartLINFlexDStatePtr
+                0x1fff04b0       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .bss.s_osif_tick_cnt
+                0x1fff04c8        0x4 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ *(COMMON)
+                0x1fff04cc                . = ALIGN (0x4)
+                0x1fff04cc                __bss_end__ = .
+                0x1fff04cc                __BSS_END = .
+
+.heap           0x1fff04cc     0x1004 load address 0x00006340
+                0x1fff04d0                . = ALIGN (0x8)
+ *fill*         0x1fff04cc        0x4 
+                0x1fff04d0                __end__ = .
+                0x1fff04d0                __heap_start__ = .
+                [!provide]                PROVIDE (end = .)
+                [!provide]                PROVIDE (_end = .)
+                [!provide]                PROVIDE (__end = .)
+                0x1fff04d0                __HeapBase = .
+                0x1fff14d0                . = (. + HEAP_SIZE)
+ *fill*         0x1fff04d0     0x1000 
+                0x1fff14d0                __HeapLimit = .
+                0x1fff14d0                __heap_limit = .
+                0x1fff14d0                __heap_end__ = .
+                0x20010000                __StackTop = (ORIGIN (m_data) + LENGTH (m_data))
+                0x2000f000                __StackLimit = (__StackTop - STACK_SIZE)
+                0x20010000                PROVIDE (__stack = __StackTop)
+                0x20010000                __RAM_END = __StackTop
+
+.stack          0x2000f000     0x1000 load address 0x00024e74
+                0x2000f000                . = ALIGN (0x8)
+                0x2000f000                __stack_start__ = .
+                0x20010000                . = (. + STACK_SIZE)
+ *fill*         0x2000f000     0x1000 
+                0x20010000                __stack_end__ = .
+
+.ARM.attributes
+                0x00000000       0x30
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+ .ARM.attributes
+                0x00000022       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .ARM.attributes
+                0x00000056       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .ARM.attributes
+                0x0000008a       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .ARM.attributes
+                0x000000be       0x34 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .ARM.attributes
+                0x000000f2       0x34 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .ARM.attributes
+                0x00000126       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .ARM.attributes
+                0x0000015a       0x34 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .ARM.attributes
+                0x0000018e       0x34 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .ARM.attributes
+                0x000001c2       0x34 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .ARM.attributes
+                0x000001f6       0x34 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .ARM.attributes
+                0x0000022a       0x34 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .ARM.attributes
+                0x0000025e       0x34 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .ARM.attributes
+                0x00000292       0x34 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .ARM.attributes
+                0x000002c6       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .ARM.attributes
+                0x000002fa       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .ARM.attributes
+                0x0000032e       0x34 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .ARM.attributes
+                0x00000362       0x34 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .ARM.attributes
+                0x00000396       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .ARM.attributes
+                0x000003b6       0x34 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .ARM.attributes
+                0x000003ea       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000040c       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000042e       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000450       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x00000472       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000494       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000004b6       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000004d8       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x000004fa       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000051c       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000054e       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+                0x00000001                ASSERT ((__rom_end <= (ORIGIN (m_text) + LENGTH (m_text))), Region m_text overflowed!)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
+OUTPUT(Vehicle-thermal-management.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000    0x10020
+ .debug_info    0x00000000      0xfcf CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_info    0x00000fcf      0x699 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_info    0x00001668      0xe35 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_info    0x0000249d      0xcbc libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_info    0x00003159      0x416 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_info    0x0000356f      0x855 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_info    0x00003dc4     0x1f88 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_info    0x00005d4c     0x10ff libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_info    0x00006e4b      0x553 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_info    0x0000739e      0xe09 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_info    0x000081a7     0x2b3b libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_info    0x0000ace2      0x8b9 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_info    0x0000b59b      0x4b8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_info    0x0000ba53     0x2745 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_info    0x0000e198      0x306 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_info    0x0000e49e      0x58c libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_info    0x0000ea2a      0xca6 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_info    0x0000f6d0       0x26 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_info    0x0000f6f6      0x92a libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_abbrev   0x00000000     0x2164
+ .debug_abbrev  0x00000000      0x192 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_abbrev  0x00000192       0xd9 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_abbrev  0x0000026b      0x22d CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_abbrev  0x00000498      0x142 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_abbrev  0x000005da      0x11c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_abbrev  0x000006f6       0xdd libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_abbrev  0x000007d3      0x32b libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_abbrev  0x00000afe      0x28c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_abbrev  0x00000d8a      0x1bd libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_abbrev  0x00000f47      0x23b libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_abbrev  0x00001182      0x2b2 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_abbrev  0x00001434      0x1ea libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_abbrev  0x0000161e      0x161 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_abbrev  0x0000177f      0x2ea libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_abbrev  0x00001a69       0xba libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_abbrev  0x00001b23      0x110 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_abbrev  0x00001c33      0x2c9 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_abbrev  0x00001efc       0x14 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_abbrev  0x00001f10      0x254 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_aranges  0x00000000      0xc70
+ .debug_aranges
+                0x00000000       0x28 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_aranges
+                0x00000028       0x20 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_aranges
+                0x00000048       0xc0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_aranges
+                0x00000108       0x18 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_aranges
+                0x00000120       0x18 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_aranges
+                0x00000138       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_aranges
+                0x00000150      0x1f8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_aranges
+                0x00000348      0x178 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_aranges
+                0x000004c0       0x38 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_aranges
+                0x000004f8       0xa0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_aranges
+                0x00000598      0x200 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_aranges
+                0x00000798       0x88 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_aranges
+                0x00000820       0xa8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_aranges
+                0x000008c8      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_aranges
+                0x00000ae0       0x48 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_aranges
+                0x00000b28       0x20 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_aranges
+                0x00000b48       0x70 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_aranges
+                0x00000bb8       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_aranges
+                0x00000bd8       0x98 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_ranges   0x00000000      0xb18
+ .debug_ranges  0x00000000       0x18 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_ranges  0x00000018       0x10 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_ranges  0x00000028       0xb0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_ranges  0x000000d8      0x1e8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_ranges  0x000002c0      0x168 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_ranges  0x00000428       0x28 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_ranges  0x00000450       0x90 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_ranges  0x000004e0      0x1f0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_ranges  0x000006d0       0x78 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_ranges  0x00000748       0x98 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_ranges  0x000007e0      0x208 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_ranges  0x000009e8       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_ranges  0x00000a20       0x10 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_ranges  0x00000a30       0x60 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_ranges  0x00000a90       0x88 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_line     0x00000000     0x83b8
+ .debug_line    0x00000000      0x475 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_line    0x00000475      0x38b CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_line    0x00000800      0xde0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_line    0x000015e0      0x338 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_line    0x00001918      0x29c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_line    0x00001bb4      0x3b8 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_line    0x00001f6c     0x1109 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_line    0x00003075      0x836 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_line    0x000038ab      0x44b libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_line    0x00003cf6      0x5fe libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_line    0x000042f4     0x114d libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_line    0x00005441      0x66b libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_line    0x00005aac      0x42c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_line    0x00005ed8     0x130f libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_line    0x000071e7      0x361 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_line    0x00007548      0x2c8 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_line    0x00007810      0x565 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_line    0x00007d75       0xf5 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_line    0x00007e6a      0x54e libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_str      0x00000000     0x71e7
+ .debug_str     0x00000000     0x198d CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+                               0x1ab7 (size before relaxing)
+ .debug_str     0x0000198d      0x43d CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+                                0xfaa (size before relaxing)
+ .debug_str     0x00001dca      0x215 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+                                0x422 (size before relaxing)
+ .debug_str     0x00001fdf      0x218 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                               0x1850 (size before relaxing)
+ .debug_str     0x000021f7       0x68 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                                0x613 (size before relaxing)
+ .debug_str     0x0000225f       0x75 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                               0x12a6 (size before relaxing)
+ .debug_str     0x000022d4      0x97a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                               0x1fa7 (size before relaxing)
+ .debug_str     0x00002c4e      0x4c1 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                               0x1413 (size before relaxing)
+ .debug_str     0x0000310f       0xb0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                                0x6a3 (size before relaxing)
+ .debug_str     0x000031bf     0x1049 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                               0x1214 (size before relaxing)
+ .debug_str     0x00004208     0x150a libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                               0x3055 (size before relaxing)
+ .debug_str     0x00005712      0x1ba libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                                0x761 (size before relaxing)
+ .debug_str     0x000058cc      0x1b0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                                0x445 (size before relaxing)
+ .debug_str     0x00005a7c      0xf59 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                               0x2f4e (size before relaxing)
+ .debug_str     0x000069d5      0x126 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                                0x5e7 (size before relaxing)
+ .debug_str     0x00006afb      0x193 libGENERATED_SDK_TARGET.a(startup.c.o)
+                                0x487 (size before relaxing)
+ .debug_str     0x00006c8e      0x286 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                                0x694 (size before relaxing)
+ .debug_str     0x00006f14       0xa7 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                                0x105 (size before relaxing)
+ .debug_str     0x00006fbb      0x22c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                               0x10c2 (size before relaxing)
+
+.comment        0x00000000       0x49
+ .comment       0x00000000       0x49 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+                                 0x4a (size before relaxing)
+ .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(startup.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+
+.debug_frame    0x00000000     0x361c
+ .debug_frame   0x00000000       0x4c CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_frame   0x0000004c       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+ .debug_frame   0x00000078      0x3a8 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+ .debug_frame   0x00000420      0x940 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_frame   0x00000d60      0x694 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_frame   0x000013f4       0xac libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_frame   0x000014a0      0x28c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_frame   0x0000172c      0x91c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_frame   0x00002048      0x23c libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_frame   0x00002284      0x21c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_frame   0x000024a0      0x9ac libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_frame   0x00002e4c       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_frame   0x00002f04       0x38 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_frame   0x00002f3c      0x190 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_frame   0x000030cc      0x23c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_frame   0x00003308       0xac c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000033b4       0x50 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00003404       0xc4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000034c8       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x000034ec       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00003510       0x4c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000355c       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00003594       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x000035b8       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000035e4       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)

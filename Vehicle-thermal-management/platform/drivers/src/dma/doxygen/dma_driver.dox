@@ -1,0 +1,105 @@
+/*!
+@defgroup dma_driver Direct Memory Access (DMA)
+@details
+@brief The YTMicro SDK provides Peripheral Driver for the Direct Memory Access (DMA) module.
+
+The direct memory access engine features are used for performing complex data transfers with minimal intervention from the host processor. These sections describe the YTMicro SDK software modules API that can be used for initializing, configuring and triggering DMA transfers.
+
+
+## Features ##
+
+- Memory-to-memory, peripheral-to-memory, memory-to-peripheral transfers
+- Simple single-block transfers with transfer loop configuration
+- Multi-block transfers with trigger loop configuration (based on subsequent requests)
+- Loop transfers for complex use-cases
+- Ram reload transfers for complex use-cases
+- Dynamic channel allocation
+
+## Functionality ##
+
+### Initialization ###
+
+In order to use the DMA driver, the module must be first initialized using DMA_DRV_Init() function. Once initialized, it cannot be initialized again until it is de-initialized, using DMA_DRV_Deinit(). The initialization function does the following operations:
+  - Resets DMA control registers
+  - Reset DMA CTS memories
+  - Clears the DMA driver state structure
+  - Enables error and channel interrupts
+
+Upon module initialization, the application must initialize the channel(s) to be used, using DMA_DRV_ChannelInit() function. This operation means enabling an DMA channel number (or dynamically allocating one), selecting a source trigger. Additionally, a user callback can be installed for each channel, which will be called when the corresponding interrupt is triggered.
+
+### Transfer Configuration ###
+
+After initialization, the channel transfer configuration for the selected channel must be configured before use.
+
+#### Single-block transfer ####
+
+For the simplest use-case where a contiguous chunk of data must be transferred, the most suitable function is DMA_DRV_ConfigSingleBlockTransfer(). This takes the source/destination addresses as parameters, as well as transfer type/size and data buffer size, and configures the channel CTS to read/write the data in a single request. The looping and ram reload features are not used in this scenario. The driver computes the appropriate offsets for source/destination addresses and set the other CTS fields.
+
+#### Multi-block transfer ####
+
+This type of transfer can be seen as a sequence of single-block transfers, as described above, which are triggered by subsequent requests. This configuration is suitable for contiguous chunks of data which need to be transferred in multiple steps (e.g. writing one/several bytes from a memory buffer to a peripheral data register each time the module is free - DMA-based communication). In order to configure this kind of transfer, DMA_DRV_ConfigMultiBlockTransfer function should be used; aside from the DMA_DRV_ConfigSingleBlockTransfer parameters, this function also takes two additional parameters: the number of transfer loops (expected number of requests to finish the data) and a boolean variable configuring whether requests should be disabled for the current channel upon transfer completion.
+
+#### Loop transfer ####
+
+The DMA IP supports complex addressing modes. One of the methods to configure complex transfers in
+multiple requests is using the transfer/trigger loop support. The DMA_DRV_ConfigLoopTransfer() function sets up the transfer control descriptor for subsequent requests to trigger multiple transfers. The addresses are adjusted after each transfer/trigger loop, according to user setup. This method takes a transfer configuration structure as parameter, with settings for all the fields that control addressing mode (source/destination offsets, transfer loop offset, channel linking, transfer/trigger loop count, address last adjustments). It is the responsibility of the application to correctly initialize the configuration structure passed to this function, according to the addressed use-case.
+
+#### Ram configuration reload ####
+The DMA driver also supports ram reload feature, which allows various transfer scenarios. When ram reload is enabled, a new CTS structure is automatically loaded in the current channel's CTS registers when a transfer is complete, allowing the application to define multiple different subsequent transfers.  The DMA_DRV_ConfigRamReloadTransfer() function sets up a list of CTS structures based on the parameters received and configures the DMA channel for the first transfer; upon completion, the second CTS from the list will be loaded and the channel will be ready to start the new transfer when a new request is received.
+The application must allocate memory for the CTS list passed to this function (with an extra 32-bytes buffer, as the CTS structures need to be 32 bytes aligned); nevertheless, the driver will take care of initializing the array of descriptors, based on the other parameters passed. The function also received two lists of ram reload configuration structures (for source and destination, respectively), which define the address, length and type for each transfer. Besides these, the other parameters received are the transfer size, the number of bytes to be transferred on each request and the number of CTS structures to be used. This method will initialize all the descriptors according to user input and link them together; the linkage is done by writing the address of the next descriptor in the appropriate field of each one, similar to a linked-list data structure. The first descriptor is also copied to the CTS registers of the selected channel; if no errors are returned, after calling this function the channel is configured for the transfer defined by the first descriptor.
+
+### Virtual Channel Definition ###
+
+The virtual channel is used to map multiple hardware channels across multiple DMA instances.  If only one DMA instance is available, then the virtual channels will map one-on-one with the hardware channels.  If more than one DMA instance is available, then the virtual channels will map continuously and linearly over all of the hardware channels. 
+Example: If the SOC has 4 DMA modules, each with 32 channels, then the user will be able to address a total of 128 virtual channels, that seamlessly map onto the hardware channels.
+
+### Virtual Channel Control ###
+
+The DMA driver provides functions that allow the user to start, stop, allocate and release an DMA virtual channel. 
+The DMA_DRV_StartChannel() enables the DMA requests for a virtual channel; this function should be called when the virtual channel is already initialized, as the first request received after the function call will trigger the transfer based on the current values of the virtual channel's CTS registers.
+The DMA_DRV_StopChannel() function disables requests for the selected virtual channel; this function should be called whenever the application needs to ignore DMA requests for a virtual channel. It is automatically called when the virtual channel is released.
+The DMA_DRV_SetChannelRequestAndTrigger() function configures the selected virtual channel request and also configures the periodic trigger functionality of the DMA channel.
+Periodic triggering is used by an internal timer to control an DMA channel.  
+
+The DMA_DRV_ReleaseChannel() function frees the hardware and software resources allocated for that virtual channel; 
+  The DMA_DRV_ReleaseChannel() function frees the hardware and software resources allocated for that virtual channel; 
+The DMA_DRV_ReleaseChannel() function frees the hardware and software resources allocated for that virtual channel; 
+it clears the virtual channel state structure, updates the driver state and disables requests for that virtual channel.
+
+## Important Notes ##
+
+- Before using the DMA driver the clock for DMA modules must be configured
+- The driver enables the interrupts for the DMA module, but any interrupt priority must be done by the application
+- When using the modulo feature, application is responsible with ensuring that the source/destination address is properly aligned on a modulo-size boundary.
+- The source/destination address must be aligned with transfer size. Ex: With transfer size is 8 bytes, the source/destination address is multiple of 8.
+- Limitation of IAR compiler: function alignment is not supported using ALIGNED() macro.
+
+## Integration guideline ##
+
+### Compilation units ###
+
+The following files need to be compiled in the project:
+
+```sh
+${SDK_PATH}\platform\drivers\src\dma\dma_driver.c
+${SDK_PATH}\platform\drivers\src\dma\dma_hw_access.c
+${SDK_PATH}\platform\drivers\src\dma\dma_irq.c
+```
+
+### Include path ###
+
+The following paths need to be added to include path of the toolchain:
+```sh
+${SDK_PATH}\platform\drivers\inc\
+```
+
+### Compile symbols ###
+
+No special symbols are required for this component
+
+### Dependencies ###
+
+\ref clock_manager
+\ref interrupt_manager
+
+*/

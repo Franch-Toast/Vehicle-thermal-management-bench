@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Vehicle-thermal-management",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GENERATED_SDK_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GENERATED_SDK_TARGET-Debug-fec7a5297ba5a39cf348.json",
+					"name" : "GENERATED_SDK_TARGET",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Vehicle-thermal-management.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Vehicle-thermal-management.elf-Debug-46dbc25a2de71ae832c4.json",
+					"name" : "Vehicle-thermal-management.elf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "genbin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-genbin-Debug-909ecaff12ab4d814e51.json",
+					"name" : "genbin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "genhex::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-genhex-Debug-8eae25b72f919b6199d9.json",
+					"name" : "genhex",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "genlist::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-genlist-Debug-18b08fc1ba2936b9a731.json",
+					"name" : "genlist",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gens19::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gens19-Debug-e04b7a61902abb207546.json",
+					"name" : "gens19",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/build",
+		"source" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

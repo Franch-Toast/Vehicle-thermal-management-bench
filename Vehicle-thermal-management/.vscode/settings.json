@@ -1,0 +1,26 @@
+{
+    "cmake.configureArgs": [
+        "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/gcc.cmake",
+        "-DARM_CPU=cortex-m33"
+    ],
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.buildToolArgs": [],
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.generator": "Ninja",
+    "cmake.configureOnOpen": false,
+    "cmake.ignoreKitEnv": true,
+    "cmake.showSystemKits": false,
+    "cmake.enabledOutputParsers": [
+        "cmake",
+        "gcc",
+        "gnuld",
+        "msvc",
+        "ghs",
+        "diab",
+        "iar"
+    ],
+    "files.associations": {
+        "uart.h": "c",
+        "printf.h": "c"
+    }
+}

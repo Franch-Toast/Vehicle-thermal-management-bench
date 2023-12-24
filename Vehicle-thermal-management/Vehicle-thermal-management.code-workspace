@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "clangd.arguments": [
+            "--compile-commands-dir=${workspaceFolder}/build",
+            "--clang-tidy",
+            "--query-driver=${env:APPDATA}/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe"
+        ],
+        "files.associations": {
+            "uart.h": "c"
+        }
+    }
+}

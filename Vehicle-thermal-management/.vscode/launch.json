@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "Debug jlink",
+            "cwd": "${workspaceRoot}",
+            // "preLaunchTask": "CMake: build",
+            "executable": "${workspaceRoot}/build/Vehicle-thermal-management.elf",
+            "serverpath": "D:\\Jlink\\JLink\\JLinkGDBServerCL.exe",
+            "servertype": "jlink",
+            "device": "YTM32B1ME05G0MLQT",
+            "interface": "jtag",
+            "runToEntryPoint": "main",
+            "runToMain": true,
+            "svdFile": "${workspaceFolder}/.vscode/chip.svd"
+        }
+    ]
+}
