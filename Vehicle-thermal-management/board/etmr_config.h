@@ -12,23 +12,59 @@
  *  activate or otherwise use the software. The production use license in
  *  Section 2.3 is expressly granted for this software.
  * 
- * @file sdk_project_config.h
+ * @file etmr_config.h
  * @brief 
  * 
  */
 
 
 
-#ifndef SDK_PROJECT_CONFIG_H_
-#define SDK_PROJECT_CONFIG_H_
 
-#include "clock_config.h"
-#include "pin_mux.h"
-#include "interrupt_config.h"
-#include "dma_config.h"
-#include "linflexd_uart_config.h"
-#include "etmr_config.h"
+#ifndef __ETMR_CONFIG_H__
+#define __ETMR_CONFIG_H__
 
+
+
+#include "etmr_common.h"
+
+
+#include "etmr_pwm_driver.h"
+
+
+
+
+
+/*
+ * Common
+*/
+
+
+/*
+ * MC
+*/
+
+
+/*
+ * PWM
+*/
+extern etmr_pwm_param_t ETMR_PWM_Config0;
+extern etmr_pwm_ch_param_t ETMR_PWM_Config0IndChConfig[1];
+
+/*
+ * IC
+*/
+
+
+/*
+ * OC
+*/
+
+
+
+/*
+ * QD
+*/
 
 #endif
+
 

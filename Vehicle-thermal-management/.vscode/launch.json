@@ -6,7 +6,6 @@
             "request": "launch",
             "name": "Debug jlink",
             "cwd": "${workspaceRoot}",
-            // "preLaunchTask": "CMake: build",
             "executable": "${workspaceRoot}/build/Vehicle-thermal-management.elf",
             "serverpath": "D:\\Jlink\\JLink\\JLinkGDBServerCL.exe",
             "servertype": "jlink",
@@ -14,7 +13,8 @@
             "interface": "jtag",
             "runToEntryPoint": "main",
             "runToMain": true,
-            "svdFile": "${workspaceFolder}/.vscode/chip.svd"
+            "svdFile": "${workspaceFolder}/.vscode/chip.svd",
+            "preLaunchTask": "CMake: build"
         }
     ]
 }

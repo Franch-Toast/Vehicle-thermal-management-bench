@@ -102,6 +102,34 @@
         "id": "84898d84-5e37-4da6-b3a2-895d2cd64bd2",
         "errorHandler": false,
         "successLabel": "0"
+      },
+      {
+        "funcName": "eTMR_DRV_Init   ",
+        "value": "eTMR_DRV_Init   (uint32_t instance,const etmr_user_config_t * info,etmr_state_t * state);",
+        "id": "7b13cb5c-5c4a-4d4b-866f-c4225c7dc493",
+        "errorHandler": false,
+        "successLabel": "0"
+      },
+      {
+        "funcName": "eTMR_DRV_InitPwmDutyCycleChannel",
+        "value": "eTMR_DRV_InitPwmDutyCycleChannel(0,&ETMR_PWM_Config0);",
+        "id": "42100ea9-dc1c-4b89-b130-dc84d39d763f",
+        "errorHandler": false,
+        "successLabel": "0"
+      },
+      {
+        "funcName": "eTMR_DRV_InitPwm",
+        "value": "eTMR_DRV_InitPwm(0,&ETMR_PWM_Config0);",
+        "id": "42aba5b3-966f-4129-bf61-5dd23b662c3a",
+        "errorHandler": false,
+        "successLabel": "0"
+      },
+      {
+        "funcName": "eTMR_DRV_InitCounter",
+        "value": "eTMR_DRV_InitCounter(uint32_t instance,const etmr_timer_param_t * timer);",
+        "id": "9b2774ff-c2d5-4d19-a251-7b675c9b17b7",
+        "errorHandler": false,
+        "successLabel": "0"
       }
     ],
     "linkfile": "${PROJ_DIR}/board/YTM32B1ME0_flash.ld",
@@ -755,10 +783,10 @@
                 },
                 {
                   "name": "eTMR0_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
                   "periSrc": 0,
-                  "userCtrl": false,
+                  "userCtrl": true,
                   "busClock": [
                     "FAST_BUS_CLK",
                     "TCLK0",
@@ -1031,7 +1059,7 @@
           }
         ]
       },
-      "updateTime": 1703346116187,
+      "updateTime": 1704187005651,
       "lock": false
     },
     "device": {
@@ -1063,6 +1091,207 @@
         ]
       },
       "updateTime": 1703346131010,
+      "lock": false
+    },
+    "etmr": {
+      "enable": {},
+      "data": {
+        "common": [],
+        "pwm": {
+          "enable": true,
+          "data": [
+            {
+              "name": "ETMR_PWM_Config0",
+              "readonly": false,
+              "nNumIndependentPwmChannels": 1,
+              "mode": "eTMR_PWM_MODE",
+              "uFrequencyHZ": 100,
+              "counterInitValFromInitReg": false,
+              "counterInitSrc": "COUNTER_VAL_FROM_CNT",
+              "pwmIndependentChannelConfig": [
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 50,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                },
+                {
+                  "hwChannelId": 0,
+                  "polarity": "eTMR_POLARITY_NORMAL",
+                  "pwmSrcInvert": false,
+                  "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
+                  "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
+                  "channelInitVal": 0,
+                  "dutyCycle": 0,
+                  "offset": 0,
+                  "enableSecondChannelOutput": false,
+                  "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
+                  "evenDeadTime": 0,
+                  "oddDeadTime": 0,
+                  "enableDoubleSwitch": false
+                }
+              ],
+              "faultConfig": {
+                "pwmFaultInterrupt": false,
+                "faultFilterSampleCounter": 0,
+                "faultFilterSamplePeriod": 0,
+                "faultInputStrentch": 0,
+                "pwmRecoveryOpportunity": "eTMR_FAULT_PWM_RECOVERY_DISABLED",
+                "pwmAutoRecoveryMode": "eTMR_MANUAL_CLEAR_FAULT_FLAG_THEN_AUTO_RECOVERY",
+                "faultMode": "eTMR_FAULT_WITH_CLK",
+                "etmrFaultChannelParam": [
+                  {
+                    "faultChannelEnabled": false,
+                    "faultInputPolarity": "eTMR_FAULT_SIGNAL_HIGH"
+                  },
+                  {
+                    "faultChannelEnabled": false,
+                    "faultInputPolarity": "eTMR_FAULT_SIGNAL_HIGH"
+                  },
+                  {
+                    "faultChannelEnabled": false,
+                    "faultInputPolarity": "eTMR_FAULT_SIGNAL_HIGH"
+                  },
+                  {
+                    "faultChannelEnabled": false,
+                    "faultInputPolarity": "eTMR_FAULT_SIGNAL_HIGH"
+                  }
+                ],
+                "safeState": [
+                  {
+                    "val": "eTMR_LOW_STATE"
+                  },
+                  {
+                    "val": "eTMR_LOW_STATE"
+                  },
+                  {
+                    "val": "eTMR_LOW_STATE"
+                  },
+                  {
+                    "val": "eTMR_LOW_STATE"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "ic": {
+          "enable": false,
+          "data": []
+        },
+        "oc": {
+          "enable": false,
+          "data": []
+        },
+        "qd": {
+          "enable": false,
+          "data": []
+        },
+        "mc": {
+          "enable": false,
+          "data": []
+        }
+      },
+      "updateTime": 1704262507223,
       "lock": false
     },
     "interrupt": {
@@ -2532,9 +2761,28 @@
           "init": 0,
           "userLabel": "",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLB",
+          "gpioBase": "GPIOB",
+          "num": "98",
+          "label": "PTB_12",
+          "feature": "eTMR0_CH0",
+          "alt": "PCTRL_MUX_ALT2",
+          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": false,
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
         }
       ],
-      "updateTime": 1703345881116,
+      "updateTime": 1704186912434,
       "lock": false
     }
   }

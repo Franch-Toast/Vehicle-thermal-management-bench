@@ -18,7 +18,9 @@
                 "${PROJ_DIR}/platform/devices/YTM32B1ME0/include",
                 "${PROJ_DIR}/platform/devices/YTM32B1ME0/startup",
                 "${PROJ_DIR}/CMSIS/Core/Include",
-                "${PROJ_DIR}/rtos/osif"
+                "${PROJ_DIR}/rtos/osif",
+                "${PROJ_DIR}/platform/drivers/src/etmr",
+                "${PROJ_DIR}/platform/drivers/inc/etmr"
             ],
             "defines": [
                 "YTM32B1ME0",

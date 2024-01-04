@@ -8,6 +8,7 @@ set(sources
     ${PROJ_DIR}/board/interrupt_config.c
     ${PROJ_DIR}/board/dma_config.c
     ${PROJ_DIR}/board/linflexd_uart_config.c
+    ${PROJ_DIR}/board/etmr_config.c
     ${PROJ_DIR}/platform/drivers/src/clock/YTM32B1Mx/clock_YTM32B1Mx.c
     ${PROJ_DIR}/platform/drivers/src/pins/pins_driver.c
     ${PROJ_DIR}/platform/drivers/src/pins/pins_port_hw_access.c
@@ -17,6 +18,9 @@ set(sources
     ${PROJ_DIR}/platform/drivers/src/dma/dma_irq.c
     ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_uart_driver.c
     ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_uart_irq.c
+    ${PROJ_DIR}/platform/drivers/src/etmr/etmr_common.c
+    ${PROJ_DIR}/platform/drivers/src/etmr/etmr_hw_access.c
+    ${PROJ_DIR}/platform/drivers/src/etmr/etmr_pwm_driver.c
     ${PROJ_DIR}/platform/devices/startup.c
     ${PROJ_DIR}/platform/devices/YTM32B1ME0/startup/system_YTM32B1ME0.c
     ${PROJ_DIR}/platform/devices/YTM32B1ME0/startup/gcc/YTM32B1ME0_startup_gcc.S
@@ -28,7 +32,9 @@ set(includes
     ${PROJ_DIR}/platform/drivers/src/pins
     ${PROJ_DIR}/platform/drivers/src/dma
     ${PROJ_DIR}/platform/drivers/src/linflexd
+    ${PROJ_DIR}/platform/drivers/src/etmr
     ${PROJ_DIR}/platform/drivers/inc
+    ${PROJ_DIR}/platform/drivers/inc/etmr
     ${PROJ_DIR}/platform/devices/common
     ${PROJ_DIR}/platform/devices
     ${PROJ_DIR}/platform/devices/YTM32B1ME0/include
