@@ -83,51 +83,16 @@
         "successLabel": "0"
       },
       {
-        "funcName": "LINFlexD_UART_DRV_Init",
-        "value": "LINFlexD_UART_DRV_Init(0,&linflexd_uart_config0_State,&linflexd_uart_config0);",
-        "id": "a79ec66b-3e71-4a99-a35b-1e167b0f3d89",
+        "funcName": "eTMR_DRV_InitInputCapture",
+        "value": "eTMR_DRV_InitInputCapture(0,&ETMR_IC_Config0);",
+        "id": "93763e40-d505-4166-bec4-bf3748bb4af8",
         "errorHandler": false,
         "successLabel": "0"
       },
       {
-        "funcName": "LINFlexD_UART_DRV_ReceiveDataPolling",
-        "value": "LINFlexD_UART_DRV_ReceiveDataPolling(uint32_t instance,uint8_t * rxBuff,uint32_t rxSize);",
-        "id": "b7907261-a937-4e15-a4a3-7fb63714046c",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "LINFlexD_UART_DRV_SendDataPolling",
-        "value": "LINFlexD_UART_DRV_SendDataPolling(uint32_t instance,const uint8_t * txBuff,uint32_t txSize);",
-        "id": "84898d84-5e37-4da6-b3a2-895d2cd64bd2",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_Init   ",
-        "value": "eTMR_DRV_Init   (uint32_t instance,const etmr_user_config_t * info,etmr_state_t * state);",
-        "id": "7b13cb5c-5c4a-4d4b-866f-c4225c7dc493",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_InitPwmDutyCycleChannel",
-        "value": "eTMR_DRV_InitPwmDutyCycleChannel(0,&ETMR_PWM_Config0);",
-        "id": "42100ea9-dc1c-4b89-b130-dc84d39d763f",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_InitPwm",
-        "value": "eTMR_DRV_InitPwm(0,&ETMR_PWM_Config0);",
-        "id": "42aba5b3-966f-4129-bf61-5dd23b662c3a",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_InitCounter",
-        "value": "eTMR_DRV_InitCounter(uint32_t instance,const etmr_timer_param_t * timer);",
-        "id": "9b2774ff-c2d5-4d19-a251-7b675c9b17b7",
+        "funcName": "eTMR_DRV_ClearInputCaptureComplete",
+        "value": "eTMR_DRV_ClearInputCaptureComplete(uint32_t instance,uint8_t channel);",
+        "id": "8062f6d4-f378-446c-8d17-f71bf0c7f7c7",
         "errorHandler": false,
         "successLabel": "0"
       }
@@ -797,10 +762,10 @@
                 },
                 {
                   "name": "eTMR1_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
                   "periSrc": 0,
-                  "userCtrl": false,
+                  "userCtrl": true,
                   "busClock": [
                     "FAST_BUS_CLK",
                     "TCLK0",
@@ -1059,7 +1024,7 @@
           }
         ]
       },
-      "updateTime": 1704187005651,
+      "updateTime": 1704373155547,
       "lock": false
     },
     "device": {
@@ -1275,8 +1240,113 @@
           ]
         },
         "ic": {
-          "enable": false,
-          "data": []
+          "enable": true,
+          "data": [
+            {
+              "name": "ETMR_IC_Config0",
+              "readonly": false,
+              "numChannels": 1,
+              "countValue": 65536,
+              "inputChConfig": [
+                {
+                  "hwChannelId": 4,
+                  "edge": "eTMR_POS_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                },
+                {
+                  "hwChannelId": 0,
+                  "edge": "eTMR_NOT_SEL_EDGE",
+                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "filterSampleCounter": 0,
+                  "filterSamplePeriod": 0,
+                  "dmaEnable": false,
+                  "interruptEnable": false,
+                  "enableNotification": false,
+                  "channelsCallbacks": "NULL",
+                  "channelsCallbacksParams": "NULL"
+                }
+              ]
+            }
+          ]
         },
         "oc": {
           "enable": false,
@@ -1291,7 +1361,7 @@
           "data": []
         }
       },
-      "updateTime": 1704262507223,
+      "updateTime": 1704374323545,
       "lock": false
     },
     "interrupt": {
@@ -2780,9 +2850,28 @@
           "init": 0,
           "userLabel": "",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLD",
+          "gpioBase": "GPIOD",
+          "num": "55",
+          "label": "PTD_8",
+          "feature": "eTMR1_CH4",
+          "alt": "PCTRL_MUX_ALT6",
+          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": false,
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
         }
       ],
-      "updateTime": 1704186912434,
+      "updateTime": 1704373110331,
       "lock": false
     }
   }

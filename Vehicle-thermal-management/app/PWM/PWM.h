@@ -3,7 +3,7 @@
 
 #include "etmr_config.h"
 
-#define eTMR_INST           (0U)
+#define eTMR_PWM_INST           (0U)
 
 // PWM 初始化
 void PWM_init(void);

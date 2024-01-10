@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-01-03 14:16:28
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-01-05 11:14:19
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -30,7 +41,7 @@
 
 #include "etmr_pwm_driver.h"
 
-
+#include "etmr_ic_driver.h"
 
 
 
@@ -53,6 +64,7 @@ extern etmr_pwm_ch_param_t ETMR_PWM_Config0IndChConfig[1];
 /*
  * IC
 */
+extern etmr_ic_param_t ETMR_IC_Config0;
 
 
 /*

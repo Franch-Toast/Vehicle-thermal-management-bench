@@ -15,7 +15,7 @@
 
 
 
-etmr_state_t etmrState;
+etmr_state_t etmrState_PWM;
 
 
 /* etmr sync configuration */
@@ -47,28 +47,28 @@ etmr_user_config_t ETMR_PWM_USER_CONFIG_info[1]=
 
 void PWM_init()
 {
-    eTMR_DRV_Deinit(eTMR_INST);
-    eTMR_DRV_Init(eTMR_INST,ETMR_PWM_USER_CONFIG_info,&etmrState);
-    eTMR_DRV_InitPwm(eTMR_INST,&ETMR_PWM_Config0);
+    eTMR_DRV_Deinit(eTMR_PWM_INST);
+    eTMR_DRV_Init(eTMR_PWM_INST,ETMR_PWM_USER_CONFIG_info,&etmrState_PWM);
+    eTMR_DRV_InitPwm(eTMR_PWM_INST,&ETMR_PWM_Config0);
 }
 
 // PWM使能，发送信号
 void PWM_Start()
 {
-    eTMR_DRV_Enable(eTMR_INST);
+    eTMR_DRV_Enable(eTMR_PWM_INST);
 }
 
 // PWM失能，停止发送信号
 void PWM_Stop(void)
 {
-    eTMR_DRV_Disable(eTMR_INST);
+    eTMR_DRV_Disable(eTMR_PWM_INST);
 }
 
 // PWM占空比调节
 void PWM_Changedutycycle(float duty_cycle)
 {
-    eTMR_DRV_UpdatePwmChannel(eTMR_INST, ETMR_PWM_Config0IndChConfig[0].hwChannelId, (uint32_t)(duty_cycle * 0x8000), 0x0000U);
-    eTMR_DRV_SetLdok(eTMR_INST);
+    eTMR_DRV_UpdatePwmChannel(eTMR_PWM_INST, ETMR_PWM_Config0IndChConfig[0].hwChannelId, (uint32_t)(duty_cycle * 0x8000), 0x0000U);
+    eTMR_DRV_SetLdok(eTMR_PWM_INST);
     // OSIF_TimeDelay(10);
 }
 

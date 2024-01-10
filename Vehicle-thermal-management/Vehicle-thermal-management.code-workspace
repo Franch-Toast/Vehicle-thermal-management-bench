@@ -14,7 +14,9 @@
             "uart.h": "c",
             "sdk_project_config.h": "c",
             "pwm.h": "c",
-            "etmr_config.h": "c"
+            "etmr_config.h": "c",
+            "input_capture.h": "c",
+            "etmr_ic_driver.h": "c"
         }
     }
 }

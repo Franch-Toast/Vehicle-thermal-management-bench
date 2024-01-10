@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2023-12-23 23:43:52
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-01-06 21:49:01
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 /* USER CODE BEGIN Header */
 /* you can remove the copyright */
 
@@ -27,6 +38,7 @@
 /* USER CODE BEGIN Includes */
 #include "./UART/UART.h"
 #include "./PWM/PWM.h"
+#include "./Input_capture/Input_capture.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,6 +94,17 @@ int main(void)
     PWM_Start();
     PWM_Changedutycycle(0.8);// 调整占空比为80%
 
+    float frequency = 0;
+
+    // 输入捕获初始化
+    Input_capture_init();
+
+    // 输入捕获使能
+    Input_capture_Start();
+
+    // 获取输入捕获的脉冲频率
+    Input_capture_get_pulse_frequncy(&frequency);
+    PRINTF("frequency is %f Hz!\n",frequency);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -89,6 +112,8 @@ int main(void)
     while (1)
     {
         /* USER CODE END WHILE */
+        Input_capture_get_pulse_frequncy(&frequency);
+        // PRINTF("frequency is %f Hz!\n",frequency);
         /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */
@@ -98,15 +123,8 @@ static void Board_Init(void)
 {
     CLOCK_SYS_Init(g_clockManConfigsArr,CLOCK_MANAGER_CONFIG_CNT,g_clockManCallbacksArr,CLOCK_MANAGER_CALLBACK_CNT);
     CLOCK_SYS_UpdateConfiguration(CLOCK_MANAGER_ACTIVE_INDEX,CLOCK_MANAGER_POLICY_AGREEMENT);
-
     PINS_DRV_Init(NUM_OF_CONFIGURED_PINS0,g_pin_mux_InitConfigArr0);
 
-    // LINFlexD_UART_DRV_Init(0,&linflexd_uart_config0_State,&linflexd_uart_config0);
-
-
-    // eTMR_DRV_InitPwmDutyCycleChannel(0,&ETMR_PWM_Config0);
-    
-    // eTMR_DRV_InitCounter(uint32_t instance,const etmr_timer_param_t * timer);
 }
 
 /* USER CODE BEGIN 4 */

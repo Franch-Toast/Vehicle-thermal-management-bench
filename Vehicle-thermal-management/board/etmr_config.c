@@ -34,7 +34,6 @@
  * PWM
 */
 
-
 etmr_pwm_ch_param_t ETMR_PWM_Config0IndChConfig[1]={
     {
         .hwChannelId=0,
@@ -43,7 +42,7 @@ etmr_pwm_ch_param_t ETMR_PWM_Config0IndChConfig[1]={
         .align=eTMR_PWM_RIGHT_EDGE_ALIGN,
         .channelInitVal=0,
         .typeOfUpdate=eTMR_PWM_UPDATE_IN_DUTY_CYCLE,
-        .dutyCycle=0x3FFF,
+        .dutyCycle=50,
         .offset=0,
         .enableSecondChannelOutput=false,
         .secondChannelPolarity=eTMR_POLARITY_NORMAL,
@@ -103,6 +102,30 @@ etmr_pwm_param_t ETMR_PWM_Config0={
 /*
  * IC
 */
+
+
+
+
+etmr_ic_ch_param_t ETMR_IC_Config0InputCh[1]={
+    {
+        .hwChannelId=4,
+        .edge=eTMR_POS_EDGE,
+        .measurementType=eTMR_POS_PULSE_MEASUREMENT,
+        .filterSampleCounter=0,
+        .filterSamplePeriod=0,
+        .interruptEnable=false,
+        .dmaEnable=false,
+        .enableNotification=false,
+        .channelsCallbacks=NULL,
+        .channelsCallbacksParams=NULL,
+    },
+};
+
+etmr_ic_param_t ETMR_IC_Config0={
+    .numChannels=1,
+    .countValue=65536,
+    .inputChConfig=ETMR_IC_Config0InputCh,
+};
 
 
 /*

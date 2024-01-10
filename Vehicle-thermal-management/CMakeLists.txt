@@ -21,7 +21,7 @@ add_executable(${project_elf} app/main.c)
 #add app as include path
 target_include_directories(${project_elf} PRIVATE app)
 #add all source files in app folder 
-file(GLOB dir_sources "app/*.c" "app/*.cpp" "app/*.S" "app/UART/*.c" "app/UART/printf/*.c" "app/PWM/*.c")
+file(GLOB dir_sources "app/*.c" "app/*.cpp" "app/*.S" "app/UART/*.c" "app/UART/printf/*.c" "app/PWM/*.c" "app/Input_capture/*.c")
 if(dir_sources)
     foreach(src ${dir_sources})
         target_sources(${project_elf} PRIVATE ${src})

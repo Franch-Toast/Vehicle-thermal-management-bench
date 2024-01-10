@@ -20,6 +20,7 @@ set(sources
     ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_uart_irq.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_common.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_hw_access.c
+    ${PROJ_DIR}/platform/drivers/src/etmr/etmr_ic_driver.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_pwm_driver.c
     ${PROJ_DIR}/platform/devices/startup.c
     ${PROJ_DIR}/platform/devices/YTM32B1ME0/startup/system_YTM32B1ME0.c

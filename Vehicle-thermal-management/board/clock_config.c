@@ -22,7 +22,7 @@
 
 /*! @brief peripheral clock PeripheralClockConfig */
 
-peripheral_clock_config_t clock_config0PeripheralClockConfig[2] = {
+peripheral_clock_config_t clock_config0PeripheralClockConfig[3] = {
     {
         .clkName = LINFlexD2_CLK,
         .clkGate = true,
@@ -33,7 +33,13 @@ peripheral_clock_config_t clock_config0PeripheralClockConfig[2] = {
         .clkName = eTMR0_CLK,
         .clkGate = true,
         .divider = DIV_BY_1,
-        .clkSrc = CLK_SRC_FIRC, // eTMR internal clock source is fixed Fast bus clock
+        .clkSrc = CLK_SRC_DISABLED,
+    },
+    {
+        .clkName = eTMR1_CLK,
+        .clkGate = true,
+        .divider = DIV_BY_1,
+        .clkSrc = CLK_SRC_DISABLED,
     },
 };
 
@@ -88,7 +94,7 @@ clock_manager_user_config_t clock_config0ClockManager = {
     .ipcConfig =
         {
             .peripheralClocks = clock_config0PeripheralClockConfig,
-            .count = 2,
+            .count = 3,
         },
 };
 
