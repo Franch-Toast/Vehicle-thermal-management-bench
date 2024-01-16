@@ -281,7 +281,7 @@ status_t eTMR_DRV_InitInputCapture(uint32_t instance, const etmr_ic_param_t *par
 #endif
 #if FEATURE_eTMR_HAS_INIT_REG
         /* Set initial value for counter */
-        eTMR_SetInitVal(etmrBase, 0U);
+        eTMR_SetInitVal(etmrBase, 1U);
 #endif
         /* Set maximum value for counter */
         eTMR_SetMod(etmrBase, param->countValue);

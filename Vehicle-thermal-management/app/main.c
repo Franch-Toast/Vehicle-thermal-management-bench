@@ -3,7 +3,7 @@
  * @Date: 2023-12-23 23:43:52
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-06 21:49:01
+ * @LastEditTime: 2024-01-16 18:57:49
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood. 
@@ -90,21 +90,22 @@ int main(void)
     PRINTF("There is a %f chance that this code will not have a bug!\n",scale);
     PRINTF("%s\n",test);
 
-    PWM_init();
-    PWM_Start();
-    PWM_Changedutycycle(0.8);// 调整占空比为80%
+
 
     float frequency = 0;
-
+    // PRINTF("frequency is %f Hz!\n",frequency);
     // 输入捕获初始化
     Input_capture_init();
 
     // 输入捕获使能
     Input_capture_Start();
 
+    PWM_init();
+    PWM_Start();
+    // PWM_Changedutycycle(0.8);// 调整占空比为80%
     // 获取输入捕获的脉冲频率
     Input_capture_get_pulse_frequncy(&frequency);
-    PRINTF("frequency is %f Hz!\n",frequency);
+    // PRINTF("frequency is %f Hz!\n",frequency);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -113,7 +114,6 @@ int main(void)
     {
         /* USER CODE END WHILE */
         Input_capture_get_pulse_frequncy(&frequency);
-        // PRINTF("frequency is %f Hz!\n",frequency);
         /* USER CODE BEGIN 3 */
     }
     /* USER CODE END 3 */
@@ -124,7 +124,6 @@ static void Board_Init(void)
     CLOCK_SYS_Init(g_clockManConfigsArr,CLOCK_MANAGER_CONFIG_CNT,g_clockManCallbacksArr,CLOCK_MANAGER_CALLBACK_CNT);
     CLOCK_SYS_UpdateConfiguration(CLOCK_MANAGER_ACTIVE_INDEX,CLOCK_MANAGER_POLICY_AGREEMENT);
     PINS_DRV_Init(NUM_OF_CONFIGURED_PINS0,g_pin_mux_InitConfigArr0);
-
 }
 
 /* USER CODE BEGIN 4 */

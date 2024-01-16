@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2023-12-23 23:43:52
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-01-15 16:03:16
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -67,13 +78,13 @@ pin_settings_config_t g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0] = {
         .clearIntFlag = false,
         .digitalFilter = false,
         .gpioBase = GPIOB,
-        .direction=GPIO_OUTPUT_DIRECTION,
+        .direction=GPIO_INPUT_DIRECTION,
         .initValue=0,
     },
-    /*PTD_8-55-eTMR1_CH4-*/
+    /*PTC_0-53-eTMR1_CH6-*/
     {
-        .base=PCTRLD,
-        .pinPortIdx = 8U,
+        .base=PCTRLC,
+        .pinPortIdx = 0U,
         .pullConfig = PCTRL_INTERNAL_PULL_NOT_ENABLED,
         .driveSelect = PCTRL_LOW_DRIVE_STRENGTH,
         .passiveFilter = false,
@@ -82,8 +93,8 @@ pin_settings_config_t g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0] = {
         .rateSelect = PCTRL_FAST_SLEW_RATE,
         .clearIntFlag = false,
         .digitalFilter = false,
-        .gpioBase = GPIOD,
-        .direction=GPIO_INPUT_DIRECTION,
+        .gpioBase = GPIOC,
+        .direction=GPIO_OUTPUT_DIRECTION,
         .initValue=0,
     },
 };

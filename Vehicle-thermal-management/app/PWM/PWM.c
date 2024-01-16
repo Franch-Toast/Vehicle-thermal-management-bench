@@ -3,7 +3,7 @@
  * @Date: 2024-01-03 17:25:50
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-03 19:41:18
+ * @LastEditTime: 2024-01-13 16:58:36
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood. 
@@ -34,7 +34,7 @@ etmr_user_config_t ETMR_PWM_USER_CONFIG_info[1]=
 {
     {
         .etmrClockSource = eTMR_CLOCK_SOURCE_INTERNALCLK,  /*!< Select clock source for eTMR */
-        .etmrPrescaler = 120,              /*!< eTMR clock prescaler */
+        .etmrPrescaler = 60,              /*!< eTMR clock prescaler */
         .debugMode = false,                       /*!< true  -- debug mode enabled, counter will stop in debug mode
                                             *   false -- debug mode disabled, counter will continue to run in debug mode */
         .syncMethod = &eTMR_PwmSyncConfig_1,          /*!< etmr sync method */

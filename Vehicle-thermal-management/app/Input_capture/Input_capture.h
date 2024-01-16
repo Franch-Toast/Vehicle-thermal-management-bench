@@ -4,7 +4,7 @@
 
 #include "etmr_config.h"
 
-#define eTMR_IC_INST           (1U)
+#define eTMR_IC_INST           (0U)
 
 // 输入捕获初始化
 void Input_capture_init(void);
