@@ -117,7 +117,7 @@
 
 ##### PWM
 
-使用高级定时器eTMR0，并通过channel0输出PWM。
+使用高级定时器eTMR1，并通过channel6输出PWM。
 
 下面是计算：
 $$
@@ -142,9 +142,9 @@ $$
 
 PWM配置：
 
-|    功能    |   IO   | MCU  Pin  NO. | Direction | Frequency |       CLK_SRC        | Prescaler |   Align_Mode    |
-| :--------: | :----: | :-----------: | :-------: | :-------: | :------------------: | :-------: | :-------------: |
-| PWM output | PTB_12 |      98       |  Output   |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    120    | right(向上计数) |
+|    功能    |  IO   | MCU  Pin  NO. | eTMRx_CHx | Frequency |       CLK_SRC        | Prescaler |   Align_Mode    |
+| :--------: | :---: | :-----------: | :-------: | :-------: | :------------------: | :-------: | :-------------: |
+| PWM output | PTC_0 |      53       | eTMR1_CH6 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
 
 
 
@@ -168,7 +168,7 @@ void PWM_init()
     eTMR_DRV_Init(eTMR_INST,ETMR_PWM_USER_CONFIG_info,&etmrState);
     // 使用ETMR_PWM_USER_CONFIG_info结构体中的信息（时钟源、分频系数等）初始化eTMR，并把该实例的状态存到etmrState，有实例状态指针数组会指向etmrState。
     eTMR_DRV_InitPwm(eTMR_INST,&ETMR_PWM_Config0);
-    // 使用ETMR_PWM_Config0结构体中的信息（频率、计数方式、技术初始值、通道具体配置（占空比等））初始化PWM mode。
+    // 使用ETMR_PWM_Config0结构体中的信息（频率、计数方式、技术初始值、通道具体配置（占空比等））初始化PWM mode。初始占空比配置为50%。
 }
 
 // PWM使能，发送信号
@@ -200,6 +200,101 @@ void PWM_Changedutycycle(float duty_cycle)
 ![pwm示波器结果](./pic/4.jpg)
 
 
+
+##### 输入捕获
+
+为完成脉冲捕获，使用eTMR0的channel0配置了输入捕获功能。其中对于定时器的时钟计算方法同[PWM配置](#####PWM)中描述的。计算捕获周期的方法为：
+
+$$T_{Capture_Period} = Captured\_Counter * T_{eTMR\_ticks} = Captured\_Counter * \frac{1}{f_{eTMR\_CLK}}$$
+
+其中：
+
+$$Captured\_Counter$$是相邻的两个CH_CVAL寄存器相减得到的。
+
+在云途给出的官方SDK中没有给出计算$$Captured\_Counter$$的库函数，但是有直接读取CH_CVAL寄存器的库函数，具体的使用可以查看下面的方法。
+
+输入捕获配置：
+
+|     功能      |   IO   | MCU  Pin  NO. | Direction | eTMRx_CHx |       CLK_SRC        | Prescaler |   Align_Mode   |
+| :-----------: | :----: | :-----------: | :-------: | :-------: | :------------------: | :-------: | :------------: |
+| Input capture | PTB_12 |      98       |   Input   | eTMR0_CH0 | $f_{FAST\_BUS\_CLK}$ |    60     | DUAL(双边捕获) |
+
+
+
+需要注意的是：新版的SDK中通过`eTMR_SetCounterInitValSrc(etmrBase, true);`函数来确定Counter初始值的源值是从INIT寄存器中获得还是直接向CNT寄存器中写入；通过`eTMR_SetInitVal(etmrBase, 1U);`函数向INIT寄存器中写入初始值；通过`eTMR_SetMod(etmrBase, param->countValue);`函数向MOD寄存器中写入最大重装载值，对于eTMR0而言，MOD的值不可以超过0xFFFF。**具体的配置查看寄存器手册。**
+
+
+
+###### 输入捕获功能函数
+
+`/app/Input_capture.c`
+
+实现功能：
+
+- 输入捕获初始化
+- 输入捕获使能输出
+- 输入捕获失能输出
+- 输入捕获脉冲频率输出
+
+在`Input_capture.c`中主要定义的函数：
+
+```c
+// 输入捕获初始化
+void Input_capture_init(void)
+{
+    eTMR_DRV_Deinit(eTMR_IC_INST);
+    eTMR_DRV_Init(eTMR_IC_INST,&ETMR_IC_USER_CONFIG_info,&etmrState_IC);
+    eTMR_DRV_InitInputCapture(eTMR_IC_INST, &ETMR_IC_Config0);
+}
+
+// 输入捕获使能
+void Input_capture_Start(void)
+{
+    eTMR_DRV_Enable(eTMR_IC_INST);
+    // eTMR_DRV_EnableChnInt(eTMR_IC_INST, ETMR_IC_Config0.inputChConfig[0].hwChannelId);
+}
+
+// 输入捕获失能
+void Input_capture_Stop(void)
+{
+    eTMR_DRV_Disable(eTMR_IC_INST);
+}
+
+void Input_capture_get_pulse_frequncy(float *frequency)
+{
+    uint32_t pulse[2] = {0,0};
+    // status_t status = STATUS_SUCCESS;
+    while(1) // 如果没有两个边沿没有捕获完成就一直在这里等待捕获完成
+    {
+        eTMR_DRV_InputCaptureHandler(eTMR_IC_INST,0);// 主动调用函数，如果捕获完成会把捕获完成标志位置1，在该函数中计算了脉宽！
+        if(eTMR_DRV_GetInputCaptureComplete(eTMR_IC_INST,0))// 检查捕获完成标志位是否置1
+        {
+            pulse[0] = eTMR_DRV_GetInputCapturePositivePulseCount(eTMR_IC_INST, 0);
+            // 获取正脉宽
+            pulse[1] = eTMR_DRV_GetInputCaptureNegativePulseCount(eTMR_IC_INST, 0);
+            // 获取负脉宽
+            eTMR_DRV_ClearInputCaptureComplete(eTMR_IC_INST,0);
+            // 清楚标志位
+            break;
+        }
+    }
+    
+    *frequency = eTMR_DRV_GetFrequency(eTMR_IC_INST) / (pulse[1] + pulse[0]);
+    // 计算捕获的频率，并保存在外部传入的指针地址，给外部使用
+    PRINTF("input capture frequncy is %f Hz.\n",*frequency);
+    PRINTF("pulse[0] = %d , pulse[1] = %d \n",pulse[0],pulse[1]);
+}
+```
+
+其中很踩坑的一点是：**`eTMR_DRV_InputCaptureHandler(eTMR_IC_INST,0);`中计算的是脉宽，这就意味着，输入捕获的触发信号必须是正负边沿都要触发，否则是没有办法计算的！！**由于官方SDK写得很拉跨，这里我debug了很久，并且查了很久的寄存器手册才发现问题。当然，也可以单纯捕获上升沿，通过直接读取寄存器的方法，即获取通道的CH_CVAL寄存器，然后相减得到整个脉冲的长度，但是这种需要做在中断里，目前使用的这种方法是不需要进入中断的。
+
+
+
+将板子上的PWM输出直接接到输入捕获引脚上，计算得到的结果通过串口输出结果如下：
+
+![输入捕获结果](./pic/5.png)
+
+如图能够正确获取频率，同时可以通过`pulse[0]`和`pulse[1]`的结果计算占空比、脉冲宽度等。
 
 
 
