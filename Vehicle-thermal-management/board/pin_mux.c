@@ -1,14 +1,3 @@
-/*
- * @Author: Franch-Toast
- * @Date: 2023-12-23 23:43:52
- * @email: random996@163.com
- * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-15 16:03:16
- * @Description: 
- * Shit Code Manufacturing Machine, a low-level bug production expert myself.
- * The code is terrible but can be barely understood. 
- * Welcome to communicate with each other!
- */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -94,8 +83,56 @@ pin_settings_config_t g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0] = {
         .clearIntFlag = false,
         .digitalFilter = false,
         .gpioBase = GPIOC,
-        .direction=GPIO_OUTPUT_DIRECTION,
+        .direction=GPIO_INPUT_DIRECTION,
         .initValue=0,
+    },
+    /*PTC_8-81-LINFlexD1_RX-*/
+    {
+        .base=PCTRLC,
+        .pinPortIdx = 8U,
+        .pullConfig = PCTRL_INTERNAL_PULL_NOT_ENABLED,
+        .driveSelect = PCTRL_LOW_DRIVE_STRENGTH,
+        .passiveFilter = false,
+        .mux = PCTRL_MUX_ALT2,
+        .intConfig = PCTRL_INT_FALLING_EDGE,
+        .rateSelect = PCTRL_FAST_SLEW_RATE,
+        .clearIntFlag = true,
+        .digitalFilter = false,
+        .gpioBase = GPIOC,
+        .direction=GPIO_INPUT_DIRECTION,
+        .initValue=0,
+    },
+    /*PTC_9-80-LINFlexD1_TX-*/
+    {
+        .base=PCTRLC,
+        .pinPortIdx = 9U,
+        .pullConfig = PCTRL_INTERNAL_PULL_NOT_ENABLED,
+        .driveSelect = PCTRL_LOW_DRIVE_STRENGTH,
+        .passiveFilter = false,
+        .mux = PCTRL_MUX_ALT2,
+        .intConfig = PCTRL_INT_FALLING_EDGE,
+        .rateSelect = PCTRL_FAST_SLEW_RATE,
+        .clearIntFlag = true,
+        .digitalFilter = false,
+        .gpioBase = GPIOC,
+        .direction=GPIO_INPUT_DIRECTION,
+        .initValue=0,
+    },
+    /*PTA_7-83-GPIO-LINFlexD1_SLEEPEN*/
+    {
+        .base=PCTRLA,
+        .pinPortIdx = 7U,
+        .pullConfig = PCTRL_INTERNAL_PULL_NOT_ENABLED,
+        .driveSelect = PCTRL_LOW_DRIVE_STRENGTH,
+        .passiveFilter = false,
+        .mux = PCTRL_MUX_AS_GPIO,
+        .intConfig = PCTRL_INT_FALLING_EDGE,
+        .rateSelect = PCTRL_FAST_SLEW_RATE,
+        .clearIntFlag = true,
+        .digitalFilter = false,
+        .gpioBase = GPIOA,
+        .direction=GPIO_OUTPUT_DIRECTION,
+        .initValue=1,
     },
 };
 

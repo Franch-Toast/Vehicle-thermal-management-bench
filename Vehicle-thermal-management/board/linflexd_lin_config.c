@@ -12,24 +12,26 @@
  *  activate or otherwise use the software. The production use license in
  *  Section 2.3 is expressly granted for this software.
  * 
- * @file sdk_project_config.h
+ * @file linflexd_lin_config.c
  * @brief 
  * 
  */
 
 
-
-#ifndef SDK_PROJECT_CONFIG_H_
-#define SDK_PROJECT_CONFIG_H_
-
-#include "clock_config.h"
-#include "pin_mux.h"
-#include "interrupt_config.h"
-#include "dma_config.h"
-#include "linflexd_uart_config.h"
+#include <stddef.h>
 #include "linflexd_lin_config.h"
-#include "etmr_config.h"
 
 
-#endif
-
+/*linflexd_lin_config0*/
+linflexd_state_t linflexd_lin_config0_State;
+linflexd_user_config_t linflexd_lin_config0 = {
+    .baudRate=19200U,
+    .nodeFunction=true,
+    .breakLength=LINFlexD_BREAK_13_BIT,
+    .autobaudEnable=false,
+    .timeoutEnable=true,
+    .responseTimeoutValue=14,
+    .headerTimeoutValue=0,
+    .filterCount=0,
+    .slaveFilterCfgPtr=NULL,
+};

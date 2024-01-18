@@ -3,7 +3,7 @@
  * @Date: 2024-01-04 21:29:55
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-16 19:35:45
+ * @LastEditTime: 2024-01-18 14:36:50
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood. 
@@ -11,7 +11,7 @@
  */
 
 #include "Input_capture.h"
-#include "UART/printf/printf.h"
+#include "printf.h"
 #include "etmr_ic_driver.h"
 #include "etmr_hw_access.h"
 

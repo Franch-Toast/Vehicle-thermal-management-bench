@@ -22,7 +22,19 @@
 
 /*! @brief peripheral clock PeripheralClockConfig */
 
-peripheral_clock_config_t clock_config0PeripheralClockConfig[4] = {
+peripheral_clock_config_t clock_config0PeripheralClockConfig[5] = {
+    {
+        .clkName = GPIO_CLK,
+        .clkGate = true,
+        .clkSrc = CLK_SRC_FIRC,
+        .divider = DIV_BY_1,
+    },
+    {
+        .clkName = LINFlexD1_CLK,
+        .clkGate = true,
+        .divider = DIV_BY_1,
+        .clkSrc = CLK_SRC_DISABLED,
+    },
     {
         .clkName = LINFlexD2_CLK,
         .clkGate = true,
@@ -33,19 +45,13 @@ peripheral_clock_config_t clock_config0PeripheralClockConfig[4] = {
         .clkName = eTMR0_CLK,
         .clkGate = true,
         .divider = DIV_BY_1,
-        .clkSrc = CLK_SRC_FIRC,
+        .clkSrc = CLK_SRC_DISABLED,
     },
     {
         .clkName = eTMR1_CLK,
         .clkGate = true,
         .divider = DIV_BY_1,
-        .clkSrc = CLK_SRC_FIRC,
-    },
-    {
-        .clkName = GPIO_CLK,
-        .clkGate = true,
-        .clkSrc = CLK_SRC_FIRC,
-        .divider = DIV_BY_1,
+        .clkSrc = CLK_SRC_DISABLED,
     },
 };
 
@@ -100,7 +106,7 @@ clock_manager_user_config_t clock_config0ClockManager = {
     .ipcConfig =
         {
             .peripheralClocks = clock_config0PeripheralClockConfig,
-            .count = 4,
+            .count = 5,
         },
 };
 

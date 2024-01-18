@@ -227,7 +227,7 @@ $$Captured\_Counter$$是相邻的两个CH_CVAL寄存器相减得到的。
 
 ###### 输入捕获功能函数
 
-`/app/Input_capture.c`
+`/app/Input_capture`
 
 实现功能：
 
@@ -295,6 +295,118 @@ void Input_capture_get_pulse_frequncy(float *frequency)
 ![输入捕获结果](./pic/5.png)
 
 如图能够正确获取频率，同时可以通过`pulse[0]`和`pulse[1]`的结果计算占空比、脉冲宽度等。
+
+
+
+##### LIN通讯
+
+台架上的大部分元件与下位机间的通讯方式是LIN通讯，故而在MCU中配置LIN通讯功能。值得注意的是，YTM32B1ME0芯片中继承了6个片上外设LINflex，外界LIN收发器可以快速配置LIN通讯功能，加快了开发。
+
+
+
+LIN配置：
+
+|   功能   |                      IO                       |   MCU  Pin  NO.    |           Direction           |     CLK_SRC     |
+| :------: | :-------------------------------------------: | :----------------: | :---------------------------: | :-------------: |
+| LINflex1 | PTC_8(RX)<br />PTC_9(TX)<br />PTA_7(SLEEP_EN) | 81<br />80<br />83 | Input<br />Output<br />Output | $f_{CORE\_CLK}$ |
+
+
+
+需要注意的是：在硬件板子上有两种连接方式，当板子使用5V供电时，连接 J27 (1-12V、2-LIN、3-GND)，当使用12V供电时，跳线帽直接连接 J24 ，只需要连接 J27- 2 即可。当然，J26 是要对应连接的。
+
+
+
+![LIN原理图](./pic/7.png)
+
+实际对应板子上的接线图如下：
+
+![LIN实际接线图](./pic/8.png)
+
+
+
+###### LIN功能函数
+
+`/app/LIN`
+
+实现功能：
+
+- LIN主机 初始化
+- LIN主机 发送帧
+- LIN主机 接收帧
+
+在`LIN.c`中主要定义的函数：
+
+```c
+// LIN主机 发送帧
+void LIN_Master_Send_Frame()
+{
+    status_t status = STATUS_SUCCESS;
+    currentEvent = 0;
+    /* LIN Master Send a Frame */
+    linMasterFrame.id = 0x35;
+    linMasterFrame.responseType = LIN_MASTER_RESPONSE;
+    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
+    /* Wait until master transmission completed */
+    while (0 == currentEvent);
+
+    if (LINMasterSendDone == currentEvent)
+    {
+        PRINTF("LIN Master Send: \n");
+        for (uint8_t i = 0; i < linMasterFrame.dataLength; i++)
+        {
+            PRINTF("%d, \n", linMasterFrame.data[i]);
+        }
+        PRINTF("\r\n");
+    }
+    else
+    {
+        PRINTF("LIN Master Send error!\n");
+    }
+}
+
+// LIN主机 接收帧
+void LIN_Master_Receive_Frame()
+{
+    status_t status = STATUS_SUCCESS;
+    currentEvent = 0;
+    /* LIN Master receive a Frame */
+    linMasterFrame.id = 0x32;
+    linMasterFrame.responseType = LIN_SLAVE_RESPONSE;
+    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
+    /* wait until master receive completed */
+    while (0 == currentEvent);
+
+    if (LINMaserRecvDone == currentEvent)
+    {
+        PRINTF("LIN Master Receive: \n");
+        for (uint8_t i = 0; i < linMasterFrame.dataLength; i++)
+        {
+            PRINTF("%d, \n", linMasterFrame.data[i]);
+        }
+        PRINTF("\r\n");
+    }
+    else
+    {
+        PRINTF("LIN Master Receive error!\n");
+    }
+}
+```
+
+其中对于接收的处理和事件的处理结果都放在了回调函数`linflexd_process_callback`中，这个函数比较精髓，同样定义在了[`LIN.c`](.\Vehicle-thermal-management\app\LIN\LIN.c)中。
+
+
+
+测试功能使用的是 12V供电的三通阀，搭配220V-12V DC电源转换器，进行通讯：
+
+![LIN测试硬件图](./pic/9.png)
+
+串口输出结果：
+
+发送的是使控制三通阀开度调整的帧，收到的是三通阀传来的数据结果。根据商家给出的通讯矩阵可以对收到的数据进行解析。
+
+![LIN通讯测试结果](./pic/6.png)
+
+
 
 
 

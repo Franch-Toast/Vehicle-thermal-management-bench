@@ -16,7 +16,9 @@
             "pwm.h": "c",
             "etmr_config.h": "c",
             "input_capture.h": "c",
-            "etmr_ic_driver.h": "c"
+            "etmr_ic_driver.h": "c",
+            "linflexd_lin_config.h": "c",
+            "linflexd_lin_driver.h": "c"
         }
     }
 }

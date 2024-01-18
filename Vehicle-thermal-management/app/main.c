@@ -1,14 +1,3 @@
-/*
- * @Author: Franch-Toast
- * @Date: 2023-12-23 23:43:52
- * @email: random996@163.com
- * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-16 18:57:49
- * @Description: 
- * Shit Code Manufacturing Machine, a low-level bug production expert myself.
- * The code is terrible but can be barely understood. 
- * Welcome to communicate with each other!
- */
 /* USER CODE BEGIN Header */
 /* you can remove the copyright */
 
@@ -39,6 +28,7 @@
 #include "./UART/UART.h"
 #include "./PWM/PWM.h"
 #include "./Input_capture/Input_capture.h"
+#include "LIN.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,17 +85,21 @@ int main(void)
     float frequency = 0;
     // PRINTF("frequency is %f Hz!\n",frequency);
     // 输入捕获初始化
-    Input_capture_init();
+    // Input_capture_init();
 
-    // 输入捕获使能
-    Input_capture_Start();
+    // // 输入捕获使能
+    // Input_capture_Start();
 
     PWM_init();
     PWM_Start();
     // PWM_Changedutycycle(0.8);// 调整占空比为80%
     // 获取输入捕获的脉冲频率
-    Input_capture_get_pulse_frequncy(&frequency);
-    // PRINTF("frequency is %f Hz!\n",frequency);
+    // Input_capture_get_pulse_frequncy(&frequency);
+
+    LIN_MASTER_init();
+    LIN_Master_Send_Frame();
+
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -113,8 +107,9 @@ int main(void)
     while (1)
     {
         /* USER CODE END WHILE */
-        Input_capture_get_pulse_frequncy(&frequency);
         /* USER CODE BEGIN 3 */
+        
+        LIN_Master_Receive_Frame();
     }
     /* USER CODE END 3 */
 }

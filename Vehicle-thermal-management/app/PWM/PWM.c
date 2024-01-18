@@ -3,6 +3,17 @@
  * @Date: 2024-01-03 17:25:50
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-01-18 14:31:53
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-01-03 17:25:50
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
  * @LastEditTime: 2024-01-13 16:58:36
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.

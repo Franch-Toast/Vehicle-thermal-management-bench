@@ -46,28 +46,44 @@ libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
                               (--whole-archive)
 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
                               (--whole-archive)
+libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(LIN.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(PWM.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(UART.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(printf.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                              (--whole-archive)
+libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                              (--whole-archive)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dmul)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_dmul)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_mulsf3.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o (__aeabi_fmul)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fmul)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dsub)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_dsub)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_ddiv)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_ddiv)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_dcmpeq)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_dcmpeq)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_d2iz)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_d2iz)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_d2uiz)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_d2uiz)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
                               libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fsub)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
                               libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_fdiv)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o (__aeabi_f2uiz)
+                              libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o) (__aeabi_f2uiz)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
-                              CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o (__aeabi_uldivmod)
+                              libGENERATED_SDK_TARGET.a(printf.c.o) (__aeabi_uldivmod)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
                               c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
@@ -117,38 +133,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
  .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
  .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .text.Input_capture_Stop
-                0x00000000        0xe CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .text.PWM_Stop
-                0x00000000        0xe CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .text.PWM_Changedutycycle
-                0x00000000       0x3c CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .text          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .data          0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .bss           0x00000000        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._out_buffer
-                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._out_fct
-                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.sprintf_
-                0x00000000       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.snprintf_
-                0x00000000       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.vprintf_
-                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.vsnprintf_
-                0x00000000       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.fctprintf
-                0x00000000       0x44 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
  .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
  .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
  .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(clock_config.c.o)
@@ -556,6 +540,10 @@ Discarded input sections
  .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
  .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
  .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .data.ETMR_IC_Config0InputCh
+                0x00000000       0x10 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .data.ETMR_IC_Config0
+                0x00000000        0xc libGENERATED_SDK_TARGET.a(etmr_config.c.o)
  .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
@@ -577,6 +565,8 @@ Discarded input sections
                 0x00000000       0x1a libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetMod
                 0x00000000       0x1a libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .rodata.g_etmrIrqId
+                0x00000000       0x30 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .rodata.g_etmrFaultIrqId
                 0x00000000        0xc libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_DRV_Disable
@@ -612,6 +602,22 @@ Discarded input sections
                 0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetTofIntEnable
                 0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh7IntEnable
+                0x00000000       0x32 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh6IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh5IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh4IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh3IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh2IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh1IntEnable
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_SetCh0IntEnable
+                0x00000000       0x2e libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_DRV_GetQuadDecodeDir
                 0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_DRV_GetQuadDecodeTofFlag
@@ -650,6 +656,8 @@ Discarded input sections
                 0x00000000       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_DRV_SetChnsetIntEnable
                 0x00000000       0x30 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .text.eTMR_DRV_DisableChnInt
+                0x00000000       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_DRV_SetChnsetIntDisable
                 0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_DRV_IsTofIntEnabled
@@ -690,8 +698,139 @@ Discarded input sections
  .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetCounterInitValSrc
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetInitVal
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetMod
+                0x00000000       0x1a libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetChnDmaEnable
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetChnCapEdge
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetChnCapFilterSampleCounter
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetChnCapFilterSamplePeriod
+                0x00000000       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_SetChnMode
+                0x00000000       0x56 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_DRV_InitInputCapture
+                0x00000000      0x1a4 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .text.eTMR_DRV_DeinitInputCapture
                 0x00000000       0xe8 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_DRV_GetInputCapturePositivePulseCount
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_DRV_GetInputCaptureNegativePulseCount
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_DRV_GetInputCaptureComplete
+                0x00000000       0x48 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text.eTMR_DRV_ClearInputCaptureComplete
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .bss.etmrState_IC
+                0x00000000      0x128 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .data.eTMR_ICSyncConfig_1
+                0x00000000        0xa libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .data.ETMR_IC_USER_CONFIG_info
+                0x00000000       0x10 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .text.Input_capture_init
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .text.Input_capture_Start
+                0x00000000        0xe libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .text.Input_capture_Stop
+                0x00000000        0xe libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .rodata        0x00000000       0x44 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .text.Input_capture_get_pulse_frequncy
+                0x00000000       0x98 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_info    0x00000000      0x9fc libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_abbrev  0x00000000      0x187 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_aranges
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_ranges  0x00000000       0x28 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_line    0x00000000      0x43b libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_str     0x00000000      0xdf6 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .comment       0x00000000       0x4a libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .debug_frame   0x00000000       0x88 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .ARM.attributes
+                0x00000000       0x34 libGENERATED_SDK_TARGET.a(Input_capture.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .text.PWM_Stop
+                0x00000000        0xe libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .text.PWM_Changedutycycle
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._out_buffer
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._out_fct
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.sprintf_
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.snprintf_
+                0x00000000       0x38 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.vprintf_
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.vsnprintf_
+                0x00000000       0x2c libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.fctprintf
+                0x00000000       0x44 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetWakeupRequest
+                0x00000000       0x1e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetTransferAbort
+                0x00000000       0x40 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetTransferAbort
+                0x00000000       0x24 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_Deinit
+                0x00000000       0x44 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_GetDefaultConfig
+                0x00000000       0x2a libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_MasterTransferBlocking
+                0x00000000       0x60 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_SlaveResponse
+                0x00000000       0x98 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_DataDiscard
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_AbortTransferData
+                0x00000000       0x54 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_GoToSleepMode
+                0x00000000       0x3c libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_GotoIdleState
+                0x00000000       0x30 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_SendWakeupSignal
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_GetCurrentNodeState
+                0x00000000       0x28 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_EnableIRQ
+                0x00000000       0x24 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_DisableIRQ
+                0x00000000       0x24 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetFilterMatchId
+                0x00000000       0x4c libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_GetChecksumType
+                0x00000000       0x94 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.BIT      0x00000000       0x2a libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_ProcessParity
+                0x00000000       0xd0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+ .data          0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+ .bss           0x00000000        0x0 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
  .text          0x00000000      0x254 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
  .data          0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
  .bss           0x00000000        0x0 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldf3.o)
@@ -878,10 +1017,6 @@ LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2
 LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp/crt0.o
 START GROUP
 LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
-LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
-LOAD CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
 LOAD libGENERATED_SDK_TARGET.a
 END GROUP
 LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/nofp\libstdc++.a
@@ -911,7 +1046,7 @@ LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2
                 0x00000340                __interrupts_end__ = .
                 0x00000340                . = ALIGN (0x4)
 
-.text           0x00000340     0x8e80
+.text           0x00000340     0x96d4
                 0x00000340                . = ALIGN (0x4)
  *(.text)
  .text          0x00000340       0x6c libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
@@ -1154,850 +1289,904 @@ LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2
                 0x000014fc                __aeabi_idiv0
                 0x000014fc                __aeabi_ldiv0
  *(.text*)
- .text.main     0x00001500       0x80 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .text.main     0x00001500       0x70 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
                 0x00001500                main
  .text.Board_Init
-                0x00001580       0x30 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .text.Input_capture_init
-                0x000015b0       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x000015b0                Input_capture_init
- .text.Input_capture_Start
-                0x000015dc        0xe CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x000015dc                Input_capture_Start
- *fill*         0x000015ea        0x2 
- .text.Input_capture_get_pulse_frequncy
-                0x000015ec       0x98 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x000015ec                Input_capture_get_pulse_frequncy
- .text.PWM_init
-                0x00001684       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                0x00001684                PWM_init
- .text.PWM_Start
-                0x000016b0        0xe CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                0x000016b0                PWM_Start
- *fill*         0x000016be        0x2 
- .text.UART_init
-                0x000016c0       0x1c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
-                0x000016c0                UART_init
- .text.printf_char
-                0x000016dc       0x1e CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
-                0x000016dc                printf_char
- .text._out_null
-                0x000016fa       0x1a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._out_char
-                0x00001714       0x26 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._strnlen_s
-                0x0000173a       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._is_digit
-                0x00001772       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._atoi    0x0000179e       0x48 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._out_rev
-                0x000017e6       0xa0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._ntoa_format
-                0x00001886      0x1b8 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._ntoa_long
-                0x00001a3e       0xcc CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._ntoa_long_long
-                0x00001b0a       0xda CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- *fill*         0x00001be4        0x4 
- .text._ftoa    0x00001be8      0x4b0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._etoa    0x00002098      0x520 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text._vsnprintf
-                0x000025b8      0x9c0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .text.printf_  0x00002f78       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
-                0x00002f78                printf_
+                0x00001570       0x30 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
  .text.IPC_SetPeripheralClockControl
-                0x00002fb0       0x54 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000015a0       0x54 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.IPC_SetClockMode
-                0x00003004       0x70 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000015f4       0x70 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetSysClkDiv
-                0x00003074       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001664       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetSysClkDiv
-                0x000030ac       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000169c       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetFastBusClkDiv
-                0x000030cc       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000016bc       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetFastBusClkDiv
-                0x00003104       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000016f4       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetSlowBusClkDiv
-                0x00003124       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001714       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetSlowBusClkDiv
-                0x0000315a       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000174a       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetSysClkSrc
-                0x00003178       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001768       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetSysClkSrc
-                0x000031ae       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000179e       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetClkOutSrc
-                0x000031cc       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000017bc       0x36 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetClkOutDiv
-                0x00003202       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000017f2       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_EnableFxosc
-                0x0000323a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000182a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetFxoscBypassMode
-                0x00003276       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001866       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetFxoscComp
-                0x000032b4       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000018a4       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetFxoscGain
-                0x000032f2       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000018e2       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_EnableSxosc
-                0x0000332a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000191a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SxoscDeepSleepEnable
-                0x00003366       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001956       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SxoscStandbyEnable
-                0x000033a2       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001992       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SxoscPowerDownEnable
-                0x000033de       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000019ce       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetSxoscEnableFlag
-                0x0000341a       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001a0a       0x1e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetSxoscBypassMode
-                0x00003438       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001a28       0x3e libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetSxoscGain
-                0x00003476       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001a66       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetPllRefClk
-                0x000034ae       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001a9e       0x38 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetPllRefClk
-                0x000034e6       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001ad6       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetPllFeedBackDiv
-                0x00003506       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001af6       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetPllFeedBackDiv
-                0x00003540       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001b30       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetPllRefClkDiv
-                0x00003564       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001b54       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetPllRefClkDiv
-                0x0000359e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001b8e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_EnablePll
-                0x000035c2       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001bb2       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetPllLock
-                0x000035fe       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001bee       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SircDeepSleepEnable
-                0x00003622       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001c12       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SircStandbyEnable
-                0x0000365e       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001c4e       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SircPowerDownEnable
-                0x0000369a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001c8a       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_EnableFirc
-                0x000036d6       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001cc6       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_FircDeepSleepEnable
-                0x00003712       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001d02       0x3c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetFXOSCValid
-                0x0000374e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001d3e       0x24 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_GetDividerStable
-                0x00003772       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001d62       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetCmuChEnable
-                0x0000379a       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001d8a       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetCmuChResetEnable
-                0x000037de       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001dce       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetCmuChRefClock
-                0x00003826       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001e16       0x48 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetCmuChCompHigh
-                0x0000386e       0x26 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001e5e       0x26 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.SCU_SetCmuChCompLow
-                0x00003894       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001e84       0x28 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_DRV_Init
-                0x000038bc       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x000038bc                CLOCK_DRV_Init
- *fill*         0x000038f6        0x2 
+                0x00001eac       0x3a libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001eac                CLOCK_DRV_Init
+ *fill*         0x00001ee6        0x2 
  .text.CLOCK_SYS_SetScuConfiguration
-                0x000038f8      0x334 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00001ee8      0x334 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SYS_SetDefaultCmuChannelConfiguration
-                0x00003c2c       0x98 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000221c       0x98 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SYS_SetCmuChannelConfiguration
-                0x00003cc4       0x64 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000022b4       0x64 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SYS_ConfigureSystemClock
-                0x00003d28       0x50 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00002318       0x50 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SCU_WaitPllLock
-                0x00003d78       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00002368       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SCU_WaitDividerStable
-                0x00003db8       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000023a8       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SCU_WaitFXOSCValid
-                0x00003df8       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000023e8       0x40 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_SYS_SetIpcConfiguration
-                0x00003e38       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00002428       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .text.CLOCK_DRV_GetPllFreq
-                0x00003ec4       0x78 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x00003ec4                CLOCK_DRV_GetPllFreq
+                0x000024b4       0x78 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000024b4                CLOCK_DRV_GetPllFreq
  .text.CLOCK_DRV_GetFreq
-                0x00003f3c      0x1e0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x00003f3c                CLOCK_DRV_GetFreq
+                0x0000252c      0x1e0 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000252c                CLOCK_DRV_GetFreq
  .text.CLOCK_SYS_Init
-                0x0000411c       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x0000411c                CLOCK_SYS_Init
+                0x0000270c       0x44 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x0000270c                CLOCK_SYS_Init
  .text.CLOCK_SYS_UpdateConfiguration
-                0x00004160      0x17c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x00004160                CLOCK_SYS_UpdateConfiguration
+                0x00002750      0x17c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00002750                CLOCK_SYS_UpdateConfiguration
  .text.CLOCK_SYS_GetFreq
-                0x000042dc       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x000042dc                CLOCK_SYS_GetFreq
+                0x000028cc       0x20 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000028cc                CLOCK_SYS_GetFreq
  .text.CLOCK_SYS_SetConfiguration
-                0x000042fc       0x18 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x000042fc                CLOCK_SYS_SetConfiguration
+                0x000028ec       0x18 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000028ec                CLOCK_SYS_SetConfiguration
  .text.PINS_DRV_Init
-                0x00004314       0x3e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
-                0x00004314                PINS_DRV_Init
+                0x00002904       0x3e libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                0x00002904                PINS_DRV_Init
  .text.PINS_GPIO_WritePin
-                0x00004352       0x42 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x00002942       0x42 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
  .text.PINS_ConfigDigitalFilter
-                0x00004394       0x50 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x00002984       0x50 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
  .text.PINS_Init
-                0x000043e4      0x1f2 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
-                0x000043e4                PINS_Init
- *fill*         0x000045d6        0x2 
+                0x000029d4      0x1f2 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x000029d4                PINS_Init
+ *fill*         0x00002bc6        0x2 
  .text.__NVIC_EnableIRQ
-                0x000045d8       0x38 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002bc8       0x38 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
  .text.__NVIC_DisableIRQ
-                0x00004610       0x48 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002c00       0x48 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
  .text.INT_SYS_InstallHandler
-                0x00004658       0x78 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
-                0x00004658                INT_SYS_InstallHandler
+                0x00002c48       0x78 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002c48                INT_SYS_InstallHandler
  .text.INT_SYS_EnableIRQ
-                0x000046d0       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
-                0x000046d0                INT_SYS_EnableIRQ
+                0x00002cc0       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002cc0                INT_SYS_EnableIRQ
  .text.INT_SYS_DisableIRQ
-                0x000046ec       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
-                0x000046ec                INT_SYS_DisableIRQ
+                0x00002cdc       0x1c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002cdc                INT_SYS_DisableIRQ
  .text.INT_SYS_EnableIRQGlobal
-                0x00004708       0x30 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
-                0x00004708                INT_SYS_EnableIRQGlobal
+                0x00002cf8       0x30 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002cf8                INT_SYS_EnableIRQGlobal
  .text.INT_SYS_DisableIRQGlobal
-                0x00004738       0x20 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
-                0x00004738                INT_SYS_DisableIRQGlobal
+                0x00002d28       0x20 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x00002d28                INT_SYS_DisableIRQGlobal
  .text.DMA_ClearErrorIntStatusFlag
-                0x00004758       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002d48       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .text.DMA_ClearDoneStatusFlag
-                0x0000477c       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002d6c       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .text.DMA_ClearIntStatusFlag
-                0x000047a0       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002d90       0x24 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .text.DMA_CTSSetDestAddr
-                0x000047c4       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002db4       0x28 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .text.DMA_DRV_ClearIntStatus
-                0x000047ec       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002ddc       0x3c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .text.DMA_DRV_IRQHandler
-                0x00004828       0x4c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x00004828                DMA_DRV_IRQHandler
+                0x00002e18       0x4c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002e18                DMA_DRV_IRQHandler
  .text.DMA_DRV_ErrorIRQHandler
-                0x00004874       0x7c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x00004874                DMA_DRV_ErrorIRQHandler
+                0x00002e64       0x7c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002e64                DMA_DRV_ErrorIRQHandler
  .text.DMA_DRV_StartChannel
-                0x000048f0       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x000048f0                DMA_DRV_StartChannel
+                0x00002ee0       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002ee0                DMA_DRV_StartChannel
  .text.DMA_DRV_StopChannel
-                0x00004928       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x00004928                DMA_DRV_StopChannel
+                0x00002f18       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002f18                DMA_DRV_StopChannel
  .text.DMA_DRV_SetDestAddr
-                0x00004960       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x00004960                DMA_DRV_SetDestAddr
+                0x00002f50       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002f50                DMA_DRV_SetDestAddr
  .text.DMA_DRV_SetTriggerLoopIterationCount
-                0x00004998       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x00004998                DMA_DRV_SetTriggerLoopIterationCount
+                0x00002f88       0x38 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002f88                DMA_DRV_SetTriggerLoopIterationCount
  .text.DMA_DRV_GetDmaRegBaseAddr
-                0x000049d0       0x18 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
-                0x000049d0                DMA_DRV_GetDmaRegBaseAddr
+                0x00002fc0       0x18 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00002fc0                DMA_DRV_GetDmaRegBaseAddr
  .text.DMA_SetDmaRequestCmd
-                0x000049e8       0x48 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
-                0x000049e8                DMA_SetDmaRequestCmd
+                0x00002fd8       0x48 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x00002fd8                DMA_SetDmaRequestCmd
  .text.DMA_CTSSetTriggerCount
-                0x00004a30      0x134 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
-                0x00004a30                DMA_CTSSetTriggerCount
+                0x00003020      0x134 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x00003020                DMA_CTSSetTriggerCount
  .text.DMA_GetErrorIntStatusFlag
-                0x00004b64       0x16 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003154       0x16 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
  .text.DMA0_IRQHandler
-                0x00004b7a        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004b7a                DMA0_IRQHandler
+                0x0000316a        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x0000316a                DMA0_IRQHandler
  .text.DMA1_IRQHandler
-                0x00004b88        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004b88                DMA1_IRQHandler
+                0x00003178        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003178                DMA1_IRQHandler
  .text.DMA2_IRQHandler
-                0x00004b96        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004b96                DMA2_IRQHandler
+                0x00003186        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003186                DMA2_IRQHandler
  .text.DMA3_IRQHandler
-                0x00004ba4        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004ba4                DMA3_IRQHandler
+                0x00003194        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003194                DMA3_IRQHandler
  .text.DMA4_IRQHandler
-                0x00004bb2        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bb2                DMA4_IRQHandler
+                0x000031a2        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031a2                DMA4_IRQHandler
  .text.DMA5_IRQHandler
-                0x00004bc0        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bc0                DMA5_IRQHandler
+                0x000031b0        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031b0                DMA5_IRQHandler
  .text.DMA6_IRQHandler
-                0x00004bce        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bce                DMA6_IRQHandler
+                0x000031be        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031be                DMA6_IRQHandler
  .text.DMA7_IRQHandler
-                0x00004bdc        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bdc                DMA7_IRQHandler
+                0x000031cc        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031cc                DMA7_IRQHandler
  .text.DMA8_IRQHandler
-                0x00004bea        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bea                DMA8_IRQHandler
+                0x000031da        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031da                DMA8_IRQHandler
  .text.DMA9_IRQHandler
-                0x00004bf8        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004bf8                DMA9_IRQHandler
+                0x000031e8        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031e8                DMA9_IRQHandler
  .text.DMA10_IRQHandler
-                0x00004c06        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c06                DMA10_IRQHandler
+                0x000031f6        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000031f6                DMA10_IRQHandler
  .text.DMA11_IRQHandler
-                0x00004c14        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c14                DMA11_IRQHandler
+                0x00003204        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003204                DMA11_IRQHandler
  .text.DMA12_IRQHandler
-                0x00004c22        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c22                DMA12_IRQHandler
+                0x00003212        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003212                DMA12_IRQHandler
  .text.DMA13_IRQHandler
-                0x00004c30        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c30                DMA13_IRQHandler
+                0x00003220        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00003220                DMA13_IRQHandler
  .text.DMA14_IRQHandler
-                0x00004c3e        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c3e                DMA14_IRQHandler
+                0x0000322e        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x0000322e                DMA14_IRQHandler
  .text.DMA15_IRQHandler
-                0x00004c4c        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c4c                DMA15_IRQHandler
+                0x0000323c        0xe libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x0000323c                DMA15_IRQHandler
  .text.DMA_Error_IRQHandler
-                0x00004c5a       0x4a libGENERATED_SDK_TARGET.a(dma_irq.c.o)
-                0x00004c5a                DMA_Error_IRQHandler
+                0x0000324a       0x4a libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x0000324a                DMA_Error_IRQHandler
  .text.LINFlexD_EnterInitMode
-                0x00004ca4       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003294       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_EnterNormalMode
-                0x00004cd2       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000032c2       0x2e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetMode
-                0x00004d00       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000032f0       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_GetLinState
-                0x00004d36       0x22 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003326       0x22 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetUartWordLength
-                0x00004d58       0x50 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003348       0x50 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetParityControl
-                0x00004da8       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003398       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetParityType
-                0x00004de4       0x52 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000033d4       0x52 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTransmitterState
-                0x00004e36       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003426       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetReceiverState
-                0x00004e72       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003462       0x3c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTxMode
-                0x00004eae       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000349e       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetRxMode
-                0x00004ee6       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000034d6       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetRxDataFieldLength
-                0x00004f1e       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000350e       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTxDataFieldLength
-                0x00004f56       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003546       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetRxStopBitsCount
-                0x00004f8c       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000357c       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetMonitorIdleState
-                0x00004fc4       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000035b4       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetDisableTimeout
-                0x00005002       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000035f2       0x3e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetFractionalBaudRate
-                0x00005040       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003630       0x36 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetIntegerBaudRate
-                0x00005076       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003666       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTxStopBitsCount
-                0x000050aa       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000369a       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_ClearStatusFlag
-                0x000050ea       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000036da       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_GetStatusFlag
-                0x00005106       0x28 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000036f6       0x28 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetInterruptMode
-                0x0000512e       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000371e       0x40 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_IsInterruptEnabled
-                0x0000516e       0x26 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000375e       0x26 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTxDataBuffer1Byte
-                0x00005194       0x1e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003784       0x1e libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_SetTxDataBuffer2Bytes
-                0x000051b2       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000037a2       0x1c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_GetRxDataBuffer1Byte
-                0x000051ce       0x1a libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000037be       0x1a libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_GetRxDataBuffer2Bytes
-                0x000051e8       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000037d8       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_UART_DRV_SetBaudRate
-                0x00005200      0x148 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005200                LINFlexD_UART_DRV_SetBaudRate
+                0x000037f0      0x148 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000037f0                LINFlexD_UART_DRV_SetBaudRate
  .text.LINFlexD_UART_DRV_Init
-                0x00005348      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005348                LINFlexD_UART_DRV_Init
+                0x00003938      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003938                LINFlexD_UART_DRV_Init
  .text.LINFlexD_UART_DRV_SendDataPolling
-                0x00005560       0xd8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005560                LINFlexD_UART_DRV_SendDataPolling
+                0x00003b50       0xd8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003b50                LINFlexD_UART_DRV_SendDataPolling
  .text.LINFlexD_UART_DRV_RxIRQHandler
-                0x00005638       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005638                LINFlexD_UART_DRV_RxIRQHandler
+                0x00003c28       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003c28                LINFlexD_UART_DRV_RxIRQHandler
  .text.LINFlexD_UART_DRV_TxIRQHandler
-                0x000056f0       0x98 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x000056f0                LINFlexD_UART_DRV_TxIRQHandler
+                0x00003ce0       0x98 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003ce0                LINFlexD_UART_DRV_TxIRQHandler
  .text.LINFlexD_UART_DRV_ErrIRQHandler
-                0x00005788       0xa8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005788                LINFlexD_UART_DRV_ErrIRQHandler
+                0x00003d78       0xa8 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003d78                LINFlexD_UART_DRV_ErrIRQHandler
  .text.LINFlexD_UART_DRV_RxTOHandler
-                0x00005830       0x70 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x00005830                LINFlexD_UART_DRV_RxTOHandler
+                0x00003e20       0x70 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003e20                LINFlexD_UART_DRV_RxTOHandler
  .text.LINFlexD_UART_DRV_IRQHandler
-                0x000058a0       0x9c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
-                0x000058a0                LINFlexD_UART_DRV_IRQHandler
+                0x00003e90       0x9c libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003e90                LINFlexD_UART_DRV_IRQHandler
  .text.LINFlexD_UART_DRV_CompleteSendUsingInterrupts
-                0x0000593c       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003f2c       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts
-                0x000059a4       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003f94       0x68 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_UART_DRV_CompleteReceiveUsingDma
-                0x00005a0c       0xf0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00003ffc       0xf0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_UART_DRV_PutData
-                0x00005afc       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000040ec       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD_UART_DRV_GetData
-                0x00005bbc       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x000041ac       0xc0 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .text.LINFlexD0_UART_IRQHandler
-                0x00005c7c        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005c7c                LINFlexD0_UART_IRQHandler
+                0x0000426c        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x0000426c                LINFlexD0_UART_IRQHandler
  .text.LINFlexD1_UART_IRQHandler
-                0x00005c8a        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005c8a                LINFlexD1_UART_IRQHandler
+                0x0000427a        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x0000427a                LINFlexD1_UART_IRQHandler
  .text.LINFlexD2_UART_IRQHandler
-                0x00005c98        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005c98                LINFlexD2_UART_IRQHandler
+                0x00004288        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00004288                LINFlexD2_UART_IRQHandler
  .text.LINFlexD3_UART_IRQHandler
-                0x00005ca6        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005ca6                LINFlexD3_UART_IRQHandler
+                0x00004296        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00004296                LINFlexD3_UART_IRQHandler
  .text.LINFlexD4_UART_IRQHandler
-                0x00005cb4        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005cb4                LINFlexD4_UART_IRQHandler
+                0x000042a4        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x000042a4                LINFlexD4_UART_IRQHandler
  .text.LINFlexD5_UART_IRQHandler
-                0x00005cc2        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00005cc2                LINFlexD5_UART_IRQHandler
+                0x000042b2        0xe libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x000042b2                LINFlexD5_UART_IRQHandler
  .text.init_data_bss
-                0x00005cd0      0x128 libGENERATED_SDK_TARGET.a(startup.c.o)
-                0x00005cd0                init_data_bss
+                0x000042c0      0x128 libGENERATED_SDK_TARGET.a(startup.c.o)
+                0x000042c0                init_data_bss
  .text.ARM_MPU_Enable
-                0x00005df8       0x44 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x000043e8       0x44 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.ARM_MPU_SetMemAttrEx
-                0x00005e3c       0x68 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x0000442c       0x68 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.ARM_MPU_SetMemAttr
-                0x00005ea4       0x28 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x00004494       0x28 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.ARM_MPU_OrderedMemcpy
-                0x00005ecc       0x40 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x000044bc       0x40 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.ARM_MPU_LoadEx
-                0x00005f0c       0xba libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- *fill*         0x00005fc6        0x2 
+                0x000044fc       0xba libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ *fill*         0x000045b6        0x2 
  .text.ARM_MPU_Load
-                0x00005fc8       0x24 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x000045b8       0x24 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.EfmInitMpu
-                0x00005fec       0x48 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x000045dc       0x48 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .text.SystemInit
-                0x00006034       0x4c libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
-                0x00006034                SystemInit
+                0x00004624       0x4c libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x00004624                SystemInit
  .text.osif_Tick
-                0x00006080       0x1c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00004670       0x1c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .text.SysTick_Handler
-                0x0000609c        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
-                0x0000609c                SysTick_Handler
+                0x0000468c        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x0000468c                SysTick_Handler
  .text.osif_DisableIrqGlobal
-                0x000060a8        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00004698        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .text.osif_EnableIrqGlobal
-                0x000060b4        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x000046a4        0xc libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .text.OSIF_SemaPost
-                0x000060c0       0x3c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
-                0x000060c0                OSIF_SemaPost
+                0x000046b0       0x3c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x000046b0                OSIF_SemaPost
  .text.OSIF_SemaCreate
-                0x000060fc       0x24 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
-                0x000060fc                OSIF_SemaCreate
+                0x000046ec       0x24 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x000046ec                OSIF_SemaCreate
  .text.eTMR_SetClkSrc
-                0x00006120       0x2c libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004710       0x2c libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetClkPrs
-                0x0000614c       0x2c libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x0000473c       0x2c libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_GetClkPrs
-                0x00006178       0x20 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004768       0x20 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetDebugModeDisable
-                0x00006198       0x2a libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004788       0x2a libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_Enable
-                0x000061c2       0x1e libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000047b2       0x1e libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetRegLoadFreq
-                0x000061e0       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000047d0       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetHwTrig2Enable
-                0x00006214       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004804       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetHwTrig1Enable
-                0x00006248       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004838       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetHwTrig0Enable
-                0x0000627c       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x0000486c       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetMaskLoadOpportunity
-                0x000062b0       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000048a0       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetMaskLoadTrigSrc
-                0x000062e2       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000048d2       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetCounterLoadOpportunity
-                0x00006316       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004906       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetCounterLoadTrigSrc
-                0x0000634a       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x0000493a       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetRegLoadOpportunity
-                0x0000637e       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x0000496e       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetRegLoadTrigSrc
-                0x000063b0       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000049a0       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetOutputTrigWidth
-                0x000063e4       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000049d4       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetOutputTrigFreq
-                0x00006418       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004a08       0x32 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetPulseOutSrc
-                0x0000644a       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004a3a       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetOutTrigSrc
-                0x0000647e       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004a6e       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetModMatchTrigEnable
-                0x000064b2       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004aa2       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetMidMatchTrigEnable
-                0x000064e6       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004ad6       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetInitMatchTrigEnable
-                0x0000651a       0x2e libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004b0a       0x2e libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetTofIntEnable
-                0x00006548       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004b38       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_SetChnLdEnable
-                0x0000657c       0x58 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004b6c       0x58 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_IsChnVal1MatchTrigEnable
-                0x000065d4       0x56 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004bc4       0x56 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .text.eTMR_IsChnVal0MatchTrigEnable
-                0x0000662a       0x58 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- *fill*         0x00006682        0x2 
+                0x00004c1a       0x58 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ *fill*         0x00004c72        0x2 
  .text.eTMR_DRV_Enable
-                0x00006684       0x24 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x00006684                eTMR_DRV_Enable
+                0x00004c74       0x24 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004c74                eTMR_DRV_Enable
  .text.eTMR_DRV_Init
-                0x000066a8      0x1cc libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x000066a8                eTMR_DRV_Init
+                0x00004c98      0x1cc libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004c98                eTMR_DRV_Init
  .text.eTMR_DRV_GetChannelNum
-                0x00006874       0x44 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x00006874                eTMR_DRV_GetChannelNum
+                0x00004e64       0x44 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004e64                eTMR_DRV_GetChannelNum
  .text.eTMR_DRV_Deinit
-                0x000068b8       0x28 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x000068b8                eTMR_DRV_Deinit
+                0x00004ea8       0x28 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004ea8                eTMR_DRV_Deinit
  .text.eTMR_DRV_SetSync
-                0x000068e0       0xc4 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x000068e0                eTMR_DRV_SetSync
+                0x00004ed0       0xc4 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004ed0                eTMR_DRV_SetSync
  .text.eTMR_DRV_SetOutputTrigger
-                0x000069a4      0x118 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x000069a4                eTMR_DRV_SetOutputTrigger
+                0x00004f94      0x118 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00004f94                eTMR_DRV_SetOutputTrigger
  .text.eTMR_DRV_GetFrequency
-                0x00006abc       0x74 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x00006abc                eTMR_DRV_GetFrequency
+                0x000050ac       0x74 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x000050ac                eTMR_DRV_GetFrequency
  .text.eTMR_DRV_ConvertFreqToPeriodTicks
-                0x00006b30       0x30 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x00006b30                eTMR_DRV_ConvertFreqToPeriodTicks
+                0x00005120       0x30 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00005120                eTMR_DRV_ConvertFreqToPeriodTicks
  .text.eTMR_SetCh01CompMode
-                0x00006b60       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005150       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh23CompMode
-                0x00006b8c       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000517c       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh45CompMode
-                0x00006bb8       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000051a8       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh67CompMode
-                0x00006be4       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000051d4       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh67DoubleSwitch
-                0x00006c10       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005200       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh45DoubleSwitch
-                0x00006c3c       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000522c       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh23DoubleSwitch
-                0x00006c68       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005258       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_SetCh01DoubleSwitch
-                0x00006c94       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh7IntEnable
-                0x00006cc0       0x32 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh6IntEnable
-                0x00006cf2       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh5IntEnable
-                0x00006d26       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh4IntEnable
-                0x00006d5a       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh3IntEnable
-                0x00006d8e       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh2IntEnable
-                0x00006dc2       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh1IntEnable
-                0x00006df6       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .text.eTMR_SetCh0IntEnable
-                0x00006e2a       0x2e libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005284       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsInvertFault3InputPol
-                0x00006e58       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000052b0       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsInvertFault2InputPol
-                0x00006e8c       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000052e4       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsInvertFault1InputPol
-                0x00006ec0       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005318       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsInvertFault0InputPol
-                0x00006ef4       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000534c       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsFault3Enable
-                0x00006f28       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005380       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsFault2Enable
-                0x00006f5c       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000053b4       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsFault1Enable
-                0x00006f90       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000053e8       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .text.eTMR_IsFault0Enable
-                0x00006fc4       0x2e libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- *fill*         0x00006ff2        0x2 
+                0x0000541c       0x2e libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ *fill*         0x0000544a        0x2 
  .text.eTMR_DRV_Reset
-                0x00006ff4       0x48 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x00006ff4                eTMR_DRV_Reset
+                0x0000544c       0x48 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000544c                eTMR_DRV_Reset
  .text.eTMR_DRV_GetChnNegPulseRdyFlag
-                0x0000703c       0xf0 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x0000703c                eTMR_DRV_GetChnNegPulseRdyFlag
+                0x00005494       0xf0 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005494                eTMR_DRV_GetChnNegPulseRdyFlag
  .text.eTMR_DRV_GetChnPosPulseRdyFlag
-                0x0000712c       0xfc libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x0000712c                eTMR_DRV_GetChnPosPulseRdyFlag
+                0x00005584       0xfc libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005584                eTMR_DRV_GetChnPosPulseRdyFlag
  .text.eTMR_DRV_ClearChnNegPulseRdyFlag
-                0x00007228       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x00007228                eTMR_DRV_ClearChnNegPulseRdyFlag
+                0x00005680       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005680                eTMR_DRV_ClearChnNegPulseRdyFlag
  .text.eTMR_DRV_ClearChnPosPulseRdyFlag
-                0x000072cc       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x000072cc                eTMR_DRV_ClearChnPosPulseRdyFlag
+                0x00005724       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005724                eTMR_DRV_ClearChnPosPulseRdyFlag
  .text.eTMR_DRV_ClearTofFlag
-                0x00007370       0x28 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x00007370                eTMR_DRV_ClearTofFlag
+                0x000057c8       0x28 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000057c8                eTMR_DRV_ClearTofFlag
  .text.eTMR_DRV_ClearChnFlag
-                0x00007398       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x00007398                eTMR_DRV_ClearChnFlag
+                0x000057f0       0x2c libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000057f0                eTMR_DRV_ClearChnFlag
  .text.eTMR_DRV_SetChnCompMode
-                0x000073c4       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x000073c4                eTMR_DRV_SetChnCompMode
+                0x0000581c       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000581c                eTMR_DRV_SetChnCompMode
  .text.eTMR_DRV_SetChnDoubleSwitch
-                0x0000743c       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x0000743c                eTMR_DRV_SetChnDoubleSwitch
+                0x00005894       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005894                eTMR_DRV_SetChnDoubleSwitch
  .text.eTMR_DRV_SetFaultChnPol
-                0x000074b4       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x000074b4                eTMR_DRV_SetFaultChnPol
+                0x0000590c       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x0000590c                eTMR_DRV_SetFaultChnPol
  .text.eTMR_DRV_SetFaultChnEnable
-                0x0000752c       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x0000752c                eTMR_DRV_SetFaultChnEnable
- .text.eTMR_DRV_DisableChnInt
-                0x000075a4       0xa4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
-                0x000075a4                eTMR_DRV_DisableChnInt
+                0x00005984       0x78 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00005984                eTMR_DRV_SetFaultChnEnable
  .text.eTMR_SetCntVal
-                0x00007648       0x2a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x000059fc       0x2a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetCounterInitValSrc
-                0x00007672       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005a26       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetFaultIntEnable
-                0x000076a6       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005a5a       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnOutInitVal
-                0x000076da       0x1c libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005a8e       0x1c libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnOutFaultVal
-                0x000076f6       0x2e libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005aaa       0x2e libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetInitVal
-                0x00007724       0x1a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005ad8       0x1a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetMod
-                0x0000773e       0x1a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005af2       0x1a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetFaultFilterSampleCnt
-                0x00007758       0x30 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005b0c       0x30 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetFaultFilterSamplePeriod
-                0x00007788       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005b3c       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetFaultInputStrentch
-                0x000077bc       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005b70       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_EnableFaultCombLogic
-                0x000077f0       0x2a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005ba4       0x2a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetPwmRecoveryOpportunity
-                0x0000781a       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005bce       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetPwmAutoRecoveryMode
-                0x0000784e       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005c02       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnPwmSrc
-                0x00007882       0x54 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005c36       0x54 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_IsInvertChnOutputPol
-                0x000078d6       0x58 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005c8a       0x58 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnMode
-                0x0000792e       0x56 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005ce2       0x56 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnVal0
-                0x00007984       0x28 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005d38       0x28 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnVal1
-                0x000079ac       0x26 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005d60       0x26 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_SetChnDeadtime
-                0x000079d2       0x52 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005d86       0x52 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_DRV_InitPwmChannel
-                0x00007a24      0x218 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
-                0x00007a24                eTMR_DRV_InitPwmChannel
+                0x00005dd8      0x218 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005dd8                eTMR_DRV_InitPwmChannel
  .text.eTMR_DRV_InitPwmDutyCycleChannel
-                0x00007c3c       0xf0 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
-                0x00007c3c                eTMR_DRV_InitPwmDutyCycleChannel
+                0x00005ff0       0xf0 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00005ff0                eTMR_DRV_InitPwmDutyCycleChannel
  .text.eTMR_DRV_InitFault
-                0x00007d2c      0x124 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
-                0x00007d2c                eTMR_DRV_InitFault
+                0x000060e0      0x124 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x000060e0                eTMR_DRV_InitFault
  .text.eTMR_DRV_InitPwm
-                0x00007e50       0xbc libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
-                0x00007e50                eTMR_DRV_InitPwm
+                0x00006204       0xbc libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x00006204                eTMR_DRV_InitPwm
  .text.eTMR_DRV_UpdatePwmChannel
-                0x00007f0c       0xa4 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
-                0x00007f0c                eTMR_DRV_UpdatePwmChannel
+                0x000062c0       0xa4 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x000062c0                eTMR_DRV_UpdatePwmChannel
  .text.eTMR_DRV_CalculateDutyCycle
-                0x00007fb0      0x3b8 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .text.eTMR_SetCounterInitValSrc
-                0x00008368       0x34 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetInitVal
-                0x0000839c       0x1a libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetMod
-                0x000083b6       0x1a libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetChnDmaEnable
-                0x000083d0       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetChnCapEdge
-                0x00008428       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetChnCapFilterSampleCounter
-                0x00008480       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetChnCapFilterSamplePeriod
-                0x000084d8       0x58 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .text.eTMR_SetChnMode
-                0x00008530       0x56 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006364      0x3b8 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .text.eTMR_GetChnPosPulseCntPeriodNum
-                0x00008586       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x0000671c       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .text.eTMR_GetChnPosPulseWidthCapVal
-                0x000085ac       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006742       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .text.eTMR_GetChnNegPulseCntPeriodNum
-                0x000085d2       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006768       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .text.eTMR_GetChnNegPulseWidthCapVal
-                0x000085f8       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x0000678e       0x26 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .text.eTMR0_Ch0_Ch1_IRQHandler
-                0x0000861e       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x0000861e                eTMR0_Ch0_Ch1_IRQHandler
+                0x000067b4       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000067b4                eTMR0_Ch0_Ch1_IRQHandler
  .text.eTMR0_Ch2_Ch3_IRQHandler
-                0x00008650       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008650                eTMR0_Ch2_Ch3_IRQHandler
+                0x000067e6       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000067e6                eTMR0_Ch2_Ch3_IRQHandler
  .text.eTMR0_Ch4_Ch5_IRQHandler
-                0x00008682       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008682                eTMR0_Ch4_Ch5_IRQHandler
+                0x00006818       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006818                eTMR0_Ch4_Ch5_IRQHandler
  .text.eTMR0_Ch6_Ch7_IRQHandler
-                0x000086b4       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000086b4                eTMR0_Ch6_Ch7_IRQHandler
+                0x0000684a       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x0000684a                eTMR0_Ch6_Ch7_IRQHandler
  .text.eTMR1_Ch0_Ch1_IRQHandler
-                0x000086e6       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000086e6                eTMR1_Ch0_Ch1_IRQHandler
+                0x0000687c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x0000687c                eTMR1_Ch0_Ch1_IRQHandler
  .text.eTMR1_Ch2_Ch3_IRQHandler
-                0x00008718       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008718                eTMR1_Ch2_Ch3_IRQHandler
+                0x000068ae       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000068ae                eTMR1_Ch2_Ch3_IRQHandler
  .text.eTMR1_Ch4_Ch5_IRQHandler
-                0x0000874a       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x0000874a                eTMR1_Ch4_Ch5_IRQHandler
+                0x000068e0       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000068e0                eTMR1_Ch4_Ch5_IRQHandler
  .text.eTMR1_Ch6_Ch7_IRQHandler
-                0x0000877c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x0000877c                eTMR1_Ch6_Ch7_IRQHandler
+                0x00006912       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006912                eTMR1_Ch6_Ch7_IRQHandler
  .text.eTMR2_Ch0_Ch1_IRQHandler
-                0x000087ae       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000087ae                eTMR2_Ch0_Ch1_IRQHandler
+                0x00006944       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006944                eTMR2_Ch0_Ch1_IRQHandler
  .text.eTMR2_Ch2_Ch3_IRQHandler
-                0x000087e0       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000087e0                eTMR2_Ch2_Ch3_IRQHandler
+                0x00006976       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006976                eTMR2_Ch2_Ch3_IRQHandler
  .text.eTMR2_Ch4_Ch5_IRQHandler
-                0x00008812       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008812                eTMR2_Ch4_Ch5_IRQHandler
+                0x000069a8       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000069a8                eTMR2_Ch4_Ch5_IRQHandler
  .text.eTMR2_Ch6_Ch7_IRQHandler
-                0x00008844       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008844                eTMR2_Ch6_Ch7_IRQHandler
+                0x000069da       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000069da                eTMR2_Ch6_Ch7_IRQHandler
  .text.eTMR3_Ch0_Ch1_IRQHandler
-                0x00008876       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008876                eTMR3_Ch0_Ch1_IRQHandler
+                0x00006a0c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006a0c                eTMR3_Ch0_Ch1_IRQHandler
  .text.eTMR3_Ch2_Ch3_IRQHandler
-                0x000088a8       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000088a8                eTMR3_Ch2_Ch3_IRQHandler
+                0x00006a3e       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006a3e                eTMR3_Ch2_Ch3_IRQHandler
  .text.eTMR3_Ch4_Ch5_IRQHandler
-                0x000088da       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000088da                eTMR3_Ch4_Ch5_IRQHandler
+                0x00006a70       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006a70                eTMR3_Ch4_Ch5_IRQHandler
  .text.eTMR3_Ch6_Ch7_IRQHandler
-                0x0000890c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x0000890c                eTMR3_Ch6_Ch7_IRQHandler
+                0x00006aa2       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006aa2                eTMR3_Ch6_Ch7_IRQHandler
  .text.eTMR4_Ch0_Ch1_IRQHandler
-                0x0000893e       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x0000893e                eTMR4_Ch0_Ch1_IRQHandler
+                0x00006ad4       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006ad4                eTMR4_Ch0_Ch1_IRQHandler
  .text.eTMR4_Ch2_Ch3_IRQHandler
-                0x00008970       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008970                eTMR4_Ch2_Ch3_IRQHandler
+                0x00006b06       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006b06                eTMR4_Ch2_Ch3_IRQHandler
  .text.eTMR4_Ch4_Ch5_IRQHandler
-                0x000089a2       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000089a2                eTMR4_Ch4_Ch5_IRQHandler
+                0x00006b38       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006b38                eTMR4_Ch4_Ch5_IRQHandler
  .text.eTMR4_Ch6_Ch7_IRQHandler
-                0x000089d4       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x000089d4                eTMR4_Ch6_Ch7_IRQHandler
+                0x00006b6a       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006b6a                eTMR4_Ch6_Ch7_IRQHandler
  .text.eTMR5_Ch0_Ch1_IRQHandler
-                0x00008a06       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008a06                eTMR5_Ch0_Ch1_IRQHandler
+                0x00006b9c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006b9c                eTMR5_Ch0_Ch1_IRQHandler
  .text.eTMR5_Ch2_Ch3_IRQHandler
-                0x00008a38       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008a38                eTMR5_Ch2_Ch3_IRQHandler
+                0x00006bce       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006bce                eTMR5_Ch2_Ch3_IRQHandler
  .text.eTMR5_Ch4_Ch5_IRQHandler
-                0x00008a6a       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008a6a                eTMR5_Ch4_Ch5_IRQHandler
+                0x00006c00       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006c00                eTMR5_Ch4_Ch5_IRQHandler
  .text.eTMR5_Ch6_Ch7_IRQHandler
-                0x00008a9c       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008a9c                eTMR5_Ch6_Ch7_IRQHandler
- *fill*         0x00008ace        0x2 
- .text.eTMR_DRV_InitInputCapture
-                0x00008ad0      0x1a4 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008ad0                eTMR_DRV_InitInputCapture
- .text.eTMR_DRV_GetInputCapturePositivePulseCount
-                0x00008c74       0x3c libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008c74                eTMR_DRV_GetInputCapturePositivePulseCount
- .text.eTMR_DRV_GetInputCaptureNegativePulseCount
-                0x00008cb0       0x3c libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008cb0                eTMR_DRV_GetInputCaptureNegativePulseCount
- .text.eTMR_DRV_GetInputCaptureComplete
-                0x00008cec       0x48 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008cec                eTMR_DRV_GetInputCaptureComplete
- .text.eTMR_DRV_ClearInputCaptureComplete
-                0x00008d34       0x38 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008d34                eTMR_DRV_ClearInputCaptureComplete
+                0x00006c32       0x32 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006c32                eTMR5_Ch6_Ch7_IRQHandler
  .text.eTMR_DRV_InputCaptureHandler
-                0x00008d6c      0x1d0 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
-                0x00008d6c                eTMR_DRV_InputCaptureHandler
+                0x00006c64      0x1d0 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00006c64                eTMR_DRV_InputCaptureHandler
+ .text.linflexd_process_callback
+                0x00006e34       0x80 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .text.LIN_MASTER_init
+                0x00006eb4       0x58 libGENERATED_SDK_TARGET.a(LIN.c.o)
+                0x00006eb4                LIN_MASTER_init
+ .text.LIN_Master_Send_Frame
+                0x00006f0c       0xa0 libGENERATED_SDK_TARGET.a(LIN.c.o)
+                0x00006f0c                LIN_Master_Send_Frame
+ .text.LIN_Master_Receive_Frame
+                0x00006fac       0xa0 libGENERATED_SDK_TARGET.a(LIN.c.o)
+                0x00006fac                LIN_Master_Receive_Frame
+ .text.PWM_init
+                0x0000704c       0x2c libGENERATED_SDK_TARGET.a(PWM.c.o)
+                0x0000704c                PWM_init
+ .text.PWM_Start
+                0x00007078        0xe libGENERATED_SDK_TARGET.a(PWM.c.o)
+                0x00007078                PWM_Start
+ *fill*         0x00007086        0x2 
+ .text.UART_init
+                0x00007088       0x1c libGENERATED_SDK_TARGET.a(UART.c.o)
+                0x00007088                UART_init
+ .text.printf_char
+                0x000070a4       0x1e libGENERATED_SDK_TARGET.a(printf.c.o)
+                0x000070a4                printf_char
+ .text._out_null
+                0x000070c2       0x1a libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._out_char
+                0x000070dc       0x26 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._strnlen_s
+                0x00007102       0x38 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._is_digit
+                0x0000713a       0x2c libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._atoi    0x00007166       0x48 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._out_rev
+                0x000071ae       0xa0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._ntoa_format
+                0x0000724e      0x1b8 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._ntoa_long
+                0x00007406       0xcc libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._ntoa_long_long
+                0x000074d2       0xda libGENERATED_SDK_TARGET.a(printf.c.o)
+ *fill*         0x000075ac        0x4 
+ .text._ftoa    0x000075b0      0x4b0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._etoa    0x00007a60      0x520 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text._vsnprintf
+                0x00007f80      0x9c0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .text.printf_  0x00008940       0x38 libGENERATED_SDK_TARGET.a(printf.c.o)
+                0x00008940                printf_
+ .text.LINFlexD_EnterInitMode
+                0x00008978       0x2e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_EnterNormalMode
+                0x000089a6       0x2e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetSleepMode
+                0x000089d4       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_Init
+                0x00008a08       0x38 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_IntInit
+                0x00008a40       0x1a libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_AutoSyncEnable
+                0x00008a5a       0x38 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetLinBIDR
+                0x00008a92       0x52 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetHeaderRequest
+                0x00008ae4       0x1e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetDataRequest
+                0x00008b02       0x1e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DataDiscard
+                0x00008b20       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetLinBidrID
+                0x00008b54       0x1e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetLinState
+                0x00008b72       0x22 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetFractionalBaudRate
+                0x00008b94       0x36 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetIntegerBaudRate
+                0x00008bca       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_EnableTimeout
+                0x00008bfe       0x2e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetTimeoutValue
+                0x00008c2c       0x2e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_ClearLinStatusFlag
+                0x00008c5a       0x1c libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetLinStatusFlag
+                0x00008c76       0x28 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetLinErrorStatusFlag
+                0x00008c9e       0x28 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetInterruptMode
+                0x00008cc6       0x40 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_IsInterruptEnabled
+                0x00008d06       0x26 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_SetTxDataArray
+                0x00008d2c       0x46 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetRxDataArray
+                0x00008d72       0x46 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_ConfigIdFilter
+                0x00008db8      0x136 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_GetFilterMatchIndex
+                0x00008eee       0x1e libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .text.LINFlexD_DRV_Init
+                0x00008f0c      0x140 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x00008f0c                LINFlexD_DRV_Init
+ .text.LINFlexD_DRV_SetBaudRate
+                0x0000904c      0x120 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x0000904c                LINFlexD_DRV_SetBaudRate
+ .text.LINFlexD_DRV_InstallCallback
+                0x0000916c       0x30 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x0000916c                LINFlexD_DRV_InstallCallback
+ .text.LINFlexD_DRV_MasterTransfer
+                0x0000919c       0xd8 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x0000919c                LINFlexD_DRV_MasterTransfer
+ .text.LINFlexD_LIN_DRV_IRQHandler
+                0x00009274       0x4c libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x00009274                LINFlexD_LIN_DRV_IRQHandler
+ .text.LINFlexD_LIN_DRV_RxIRQHandler
+                0x000092c0      0x12c libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x000092c0                LINFlexD_LIN_DRV_RxIRQHandler
+ .text.LINFlexD_LIN_DRV_TxIRQHandler
+                0x000093ec       0x70 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x000093ec                LINFlexD_LIN_DRV_TxIRQHandler
+ .text.LINFlexD_LIN_DRV_ErrIRQHandler
+                0x0000945c      0x1ac libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x0000945c                LINFlexD_LIN_DRV_ErrIRQHandler
+ .text.LINFlexD_LIN_DRV_FilterResponse
+                0x00009608       0xac libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                0x00009608                LINFlexD_LIN_DRV_FilterResponse
+ .text.LINFlexD0_LIN_IRQHandler
+                0x000096b4        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096b4                LINFlexD0_LIN_IRQHandler
+ .text.LINFlexD1_LIN_IRQHandler
+                0x000096c2        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096c2                LINFlexD1_LIN_IRQHandler
+ .text.LINFlexD2_LIN_IRQHandler
+                0x000096d0        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096d0                LINFlexD2_LIN_IRQHandler
+ .text.LINFlexD3_LIN_IRQHandler
+                0x000096de        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096de                LINFlexD3_LIN_IRQHandler
+ .text.LINFlexD4_LIN_IRQHandler
+                0x000096ec        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096ec                LINFlexD4_LIN_IRQHandler
+ .text.LINFlexD5_LIN_IRQHandler
+                0x000096fa        0xe libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000096fa                LINFlexD5_LIN_IRQHandler
  *(.rodata)
- .rodata        0x00008f3c       0x66 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- *fill*         0x00008fa2        0x2 
- .rodata        0x00008fa4       0x44 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .rodata        0x00008fe8       0x18 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .rodata        0x00009000        0x8 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .rodata        0x00009708       0x66 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ *fill*         0x0000976e        0x2 
+ .rodata        0x00009770        0x8 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .rodata        0x00009778       0xb3 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ *fill*         0x0000982b        0x1 
+ .rodata        0x0000982c       0x18 libGENERATED_SDK_TARGET.a(printf.c.o)
  *(.rodata*)
- .rodata.pow10.0
-                0x00009008       0x50 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
  .rodata.clock_config0ScuConfig
-                0x00009058       0x28 libGENERATED_SDK_TARGET.a(clock_config.c.o)
-                0x00009058                clock_config0ScuConfig
+                0x00009844       0x28 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x00009844                clock_config0ScuConfig
  .rodata.linflexd_uart_config0
-                0x00009080        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
-                0x00009080                linflexd_uart_config0
+                0x0000986c        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x0000986c                linflexd_uart_config0
  .rodata.clockNameMappings
-                0x0000908c       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x0000908c                clockNameMappings
+                0x00009878       0x8c libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x00009878                clockNameMappings
  .rodata.s_uartLINFlexDBase
-                0x00009118       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00009904       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .rodata.s_uartLINFlexDIntVec
-                0x00009130        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000991c        0xc libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .rodata.s_uartLINFlexDClkNames
-                0x0000913c        0x6 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- *fill*         0x00009142        0x2 
+                0x00009928        0x6 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ *fill*         0x0000992e        0x2 
  .rodata.g_uartLINFlexDIsr
-                0x00009144       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
-                0x00009144                g_uartLINFlexDIsr
+                0x00009930       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00009930                g_uartLINFlexDIsr
  .rodata.g_etmrBase
-                0x0000915c       0x18 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x0000915c                g_etmrBase
+                0x00009948       0x18 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00009948                g_etmrBase
  .rodata.g_etmrChannelNum
-                0x00009174        0x6 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x00009174                g_etmrChannelNum
- *fill*         0x0000917a        0x2 
- .rodata.g_etmrIrqId
-                0x0000917c       0x30 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x0000917c                g_etmrIrqId
+                0x00009960        0x6 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00009960                g_etmrChannelNum
+ *fill*         0x00009966        0x2 
  .rodata.g_etmrOverflowIrqId
-                0x000091ac        0xc libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x000091ac                g_etmrOverflowIrqId
+                0x00009968        0xc libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00009968                g_etmrOverflowIrqId
+ *fill*         0x00009974        0x4 
+ .rodata.pow10.0
+                0x00009978       0x50 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .rodata.s_LINFlexDBase
+                0x000099c8       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .rodata.s_LINFlexDClkName
+                0x000099e0        0x6 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ *fill*         0x000099e6        0x2 
+ .rodata.s_LINFlexDIntVec
+                0x000099e8        0xc libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .rodata.g_LinLINFlexDIsr
+                0x000099f4       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                0x000099f4                g_LinLINFlexDIsr
  *(.init)
- .init          0x000091b8        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
-                0x000091b8                _init
+ .init          0x00009a0c        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+                0x00009a0c                _init
  *(.fini)
- .fini          0x000091bc        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
-                0x000091bc                _fini
+ .fini          0x00009a10        0x4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp/crti.o
+                0x00009a10                _fini
  *(.eh_frame)
-                0x000091c0                . = ALIGN (0x4)
+                0x00009a14                . = ALIGN (0x4)
 
-.glue_7         0x000091c0        0x0
- .glue_7        0x000091c0        0x0 linker stubs
+.glue_7         0x00009a14        0x0
+ .glue_7        0x00009a14        0x0 linker stubs
 
-.glue_7t        0x000091c0        0x0
- .glue_7t       0x000091c0        0x0 linker stubs
+.glue_7t        0x00009a14        0x0
+ .glue_7t       0x00009a14        0x0 linker stubs
 
-.vfp11_veneer   0x000091c0        0x0
- .vfp11_veneer  0x000091c0        0x0 linker stubs
+.vfp11_veneer   0x00009a14        0x0
+ .vfp11_veneer  0x00009a14        0x0 linker stubs
 
-.v4_bx          0x000091c0        0x0
- .v4_bx         0x000091c0        0x0 linker stubs
+.v4_bx          0x00009a14        0x0
+ .v4_bx         0x00009a14        0x0 linker stubs
 
-.iplt           0x000091c0        0x0
- .iplt          0x000091c0        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+.iplt           0x00009a14        0x0
+ .iplt          0x00009a14        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
 
-.ARM            0x000091c0        0x8
-                0x000091c0                __exidx_start = .
+.ARM            0x00009a14        0x8
+                0x00009a14                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x000091c0        0x8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
-                0x000091c8                __exidx_end = .
-                0x000091c8                __etext = .
-                0x000091c8                __DATA_ROM = .
+ .ARM.exidx     0x00009a14        0x8 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+                0x00009a1c                __exidx_end = .
+                0x00009a1c                __etext = .
+                0x00009a1c                __DATA_ROM = .
 
-.rel.dyn        0x000091c8        0x0
- .rel.iplt      0x000091c8        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+.rel.dyn        0x00009a1c        0x0
+ .rel.iplt      0x00009a1c        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
 
 .interrupts_ram
                 0x1fff0000      0x400
@@ -2013,148 +2202,149 @@ LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2
                 0x1fff0000                __VECTOR_RAM = DEFINED (__flash_vector_table__)?ORIGIN (m_interrupts):__VECTOR_RAM__
                 0x00000400                __RAM_VECTOR_TABLE_SIZE = DEFINED (__flash_vector_table__)?0x0:(__interrupts_ram_end__ - __interrupts_ram_start__)
 
-.data           0x1fff0400      0x11c load address 0x000091c8
+.data           0x1fff0400      0x160 load address 0x00009a1c
                 0x1fff0400                . = ALIGN (0x4)
                 0x1fff0400                __DATA_RAM = .
                 0x1fff0400                __data_start__ = .
  *(.data)
  *(.data*)
- .data.eTMR_ICSyncConfig_1
-                0x1fff0400        0xa CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x1fff0400                eTMR_ICSyncConfig_1
- *fill*         0x1fff040a        0x2 
- .data.ETMR_IC_USER_CONFIG_info
-                0x1fff040c       0x10 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x1fff040c                ETMR_IC_USER_CONFIG_info
- .data.eTMR_PwmSyncConfig_1
-                0x1fff041c        0xa CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                0x1fff041c                eTMR_PwmSyncConfig_1
- *fill*         0x1fff0426        0x2 
- .data.ETMR_PWM_USER_CONFIG_info
-                0x1fff0428       0x10 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                0x1fff0428                ETMR_PWM_USER_CONFIG_info
  .data.clock_config0PeripheralClockConfig
-                0x1fff0438       0x10 libGENERATED_SDK_TARGET.a(clock_config.c.o)
-                0x1fff0438                clock_config0PeripheralClockConfig
+                0x1fff0400       0x14 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0400                clock_config0PeripheralClockConfig
  .data.clock_config0ClockManager
-                0x1fff0448       0x10 libGENERATED_SDK_TARGET.a(clock_config.c.o)
-                0x1fff0448                clock_config0ClockManager
+                0x1fff0414       0x10 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0414                clock_config0ClockManager
  .data.g_clockManConfigsArr
-                0x1fff0458        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
-                0x1fff0458                g_clockManConfigsArr
+                0x1fff0424        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0424                g_clockManConfigsArr
  .data.g_pin_mux_InitConfigArr0
-                0x1fff045c       0x70 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
-                0x1fff045c                g_pin_mux_InitConfigArr0
+                0x1fff0428       0xc4 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                0x1fff0428                g_pin_mux_InitConfigArr0
  .data.SystemCoreClock
-                0x1fff04cc        0x4 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
-                0x1fff04cc                SystemCoreClock
+                0x1fff04ec        0x4 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x1fff04ec                SystemCoreClock
  .data.ETMR_PWM_Config0IndChConfig
-                0x1fff04d0       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
-                0x1fff04d0                ETMR_PWM_Config0IndChConfig
+                0x1fff04f0       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+                0x1fff04f0                ETMR_PWM_Config0IndChConfig
  .data.ETMR_PWM_Config0
-                0x1fff04e8       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
-                0x1fff04e8                ETMR_PWM_Config0
- .data.ETMR_IC_Config0InputCh
-                0x1fff0500       0x10 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
-                0x1fff0500                ETMR_IC_Config0InputCh
- .data.ETMR_IC_Config0
-                0x1fff0510        0xc libGENERATED_SDK_TARGET.a(etmr_config.c.o)
-                0x1fff0510                ETMR_IC_Config0
-                0x1fff051c                . = ALIGN (0x4)
-                0x1fff051c                __data_end__ = .
-                0x000092e4                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
-                0x000092e4                __CODE_ROM = __DATA_END
+                0x1fff0508       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+                0x1fff0508                ETMR_PWM_Config0
+ .data.linMasterFrame
+                0x1fff0520        0xc libGENERATED_SDK_TARGET.a(LIN.c.o)
+                0x1fff0520                linMasterFrame
+ .data.eTMR_PwmSyncConfig_1
+                0x1fff052c        0xa libGENERATED_SDK_TARGET.a(PWM.c.o)
+                0x1fff052c                eTMR_PwmSyncConfig_1
+ *fill*         0x1fff0536        0x2 
+ .data.ETMR_PWM_USER_CONFIG_info
+                0x1fff0538       0x10 libGENERATED_SDK_TARGET.a(PWM.c.o)
+                0x1fff0538                ETMR_PWM_USER_CONFIG_info
+ .data.linflexd_lin_config0
+                0x1fff0548       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+                0x1fff0548                linflexd_lin_config0
+                0x1fff0560                . = ALIGN (0x4)
+                0x1fff0560                __data_end__ = .
+                0x00009b7c                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x00009b7c                __CODE_ROM = __DATA_END
 
-.igot.plt       0x1fff051c        0x0 load address 0x000092e4
- .igot.plt      0x1fff051c        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+.igot.plt       0x1fff0560        0x0 load address 0x00009b7c
+ .igot.plt      0x1fff0560        0x0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
 
-.code           0x1fff051c        0x0 load address 0x000092e4
-                0x1fff051c                . = ALIGN (0x4)
-                0x1fff051c                __CODE_RAM = .
-                0x1fff051c                __code_start__ = .
-                0x1fff051c                __code_ram_start__ = .
+.code           0x1fff0560        0x0 load address 0x00009b7c
+                0x1fff0560                . = ALIGN (0x4)
+                0x1fff0560                __CODE_RAM = .
+                0x1fff0560                __code_start__ = .
+                0x1fff0560                __code_ram_start__ = .
  *(.code_ram)
-                0x1fff051c                . = ALIGN (0x4)
-                0x1fff051c                __code_end__ = .
-                0x1fff051c                __code_ram_end__ = .
-                0x000092e4                __CODE_END = (__CODE_ROM + (__code_end__ - __code_start__))
-                0x000092e4                __CUSTOM_ROM = __CODE_END
+                0x1fff0560                . = ALIGN (0x4)
+                0x1fff0560                __code_end__ = .
+                0x1fff0560                __code_ram_end__ = .
+                0x00009b7c                __CODE_END = (__CODE_ROM + (__code_end__ - __code_start__))
+                0x00009b7c                __CUSTOM_ROM = __CODE_END
 
 .customSectionBlock
-                0x1fff0000        0x0 load address 0x000092e4
+                0x1fff0000        0x0 load address 0x00009b7c
                 0x1fff0000                __customSectionStart = .
                 0x1fff0000                __customSection_start__ = .
  *(.customSection)
                 0x1fff0000                __customSection_end__ = .
-                0x000092e4                __CUSTOM_END = (__CUSTOM_ROM + (__customSection_end__ - __customSection_start__))
-                0x000092e4                __rom_end = __CUSTOM_END
+                0x00009b7c                __CUSTOM_END = (__CUSTOM_ROM + (__customSection_end__ - __customSection_start__))
+                0x00009b7c                __rom_end = __CUSTOM_END
 
-.bss            0x1fff051c      0x2f8 load address 0x000092e4
-                0x1fff051c                . = ALIGN (0x4)
-                0x1fff051c                __BSS_START = .
-                0x1fff051c                __bss_start__ = .
+.bss            0x1fff0560      0x224 load address 0x00009b7c
+                0x1fff0560                . = ALIGN (0x4)
+                0x1fff0560                __BSS_START = .
+                0x1fff0560                __bss_start__ = .
  *(.bss)
  *(.bss*)
- .bss.etmrState_IC
-                0x1fff051c      0x128 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                0x1fff051c                etmrState_IC
- .bss.etmrState_PWM
-                0x1fff0644      0x128 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                0x1fff0644                etmrState_PWM
  .bss.g_clockManCallbacksArr
-                0x1fff076c        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
-                0x1fff076c                g_clockManCallbacksArr
+                0x1fff0560        0x4 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x1fff0560                g_clockManCallbacksArr
  .bss.linflexd_uart_config0_State
-                0x1fff0770       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
-                0x1fff0770                linflexd_uart_config0_State
+                0x1fff0564       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x1fff0564                linflexd_uart_config0_State
  .bss.g_clockState
-                0x1fff07a8       0x10 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x1fff059c       0x10 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .bss.g_fxoscClkFreq
-                0x1fff07b8        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x1fff07b8                g_fxoscClkFreq
+                0x1fff05ac        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x1fff05ac                g_fxoscClkFreq
  .bss.g_sxoscClkFreq
-                0x1fff07bc        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
-                0x1fff07bc                g_sxoscClkFreq
+                0x1fff05b0        0x4 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x1fff05b0                g_sxoscClkFreq
  .bss.g_interruptDisableCount
-                0x1fff07c0        0x4 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x1fff05b4        0x4 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
  .bss.s_virtEdmaState
-                0x1fff07c4        0x4 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x1fff05b8        0x4 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .bss.s_uartLINFlexDStatePtr
-                0x1fff07c8       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x1fff05bc       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .bss.s_osif_tick_cnt
-                0x1fff07e0        0x4 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x1fff05d4        0x4 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .bss.ETMR_PWM_Config0FaultConfig
-                0x1fff07e4       0x17 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
-                0x1fff07e4                ETMR_PWM_Config0FaultConfig
- *fill*         0x1fff07fb        0x1 
+                0x1fff05d8       0x17 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+                0x1fff05d8                ETMR_PWM_Config0FaultConfig
+ *fill*         0x1fff05ef        0x1 
  .bss.etmrStatePtr
-                0x1fff07fc       0x18 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
-                0x1fff07fc                etmrStatePtr
+                0x1fff05f0       0x18 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x1fff05f0                etmrStatePtr
+ .bss.currentEvent
+                0x1fff0608        0x1 libGENERATED_SDK_TARGET.a(LIN.c.o)
+                0x1fff0608                currentEvent
+ *fill*         0x1fff0609        0x3 
+ .bss.etmrState_PWM
+                0x1fff060c      0x128 libGENERATED_SDK_TARGET.a(PWM.c.o)
+                0x1fff060c                etmrState_PWM
+ .bss.linflexd_lin_config0_State
+                0x1fff0734       0x20 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+                0x1fff0734                linflexd_lin_config0_State
+ .bss.s_LINFlexDStatePtr
+                0x1fff0754       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .bss.s_LINFlexDUserconfigPtr
+                0x1fff076c       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
  *(COMMON)
-                0x1fff0814                . = ALIGN (0x4)
-                0x1fff0814                __bss_end__ = .
-                0x1fff0814                __BSS_END = .
+                0x1fff0784                . = ALIGN (0x4)
+                0x1fff0784                __bss_end__ = .
+                0x1fff0784                __BSS_END = .
 
-.heap           0x1fff0814     0x1004 load address 0x000095dc
-                0x1fff0818                . = ALIGN (0x8)
- *fill*         0x1fff0814        0x4 
-                0x1fff0818                __end__ = .
-                0x1fff0818                __heap_start__ = .
+.heap           0x1fff0784     0x1004 load address 0x00009da0
+                0x1fff0788                . = ALIGN (0x8)
+ *fill*         0x1fff0784        0x4 
+                0x1fff0788                __end__ = .
+                0x1fff0788                __heap_start__ = .
                 [!provide]                PROVIDE (end = .)
                 [!provide]                PROVIDE (_end = .)
                 [!provide]                PROVIDE (__end = .)
-                0x1fff0818                __HeapBase = .
-                0x1fff1818                . = (. + HEAP_SIZE)
- *fill*         0x1fff0818     0x1000 
-                0x1fff1818                __HeapLimit = .
-                0x1fff1818                __heap_limit = .
-                0x1fff1818                __heap_end__ = .
+                0x1fff0788                __HeapBase = .
+                0x1fff1788                . = (. + HEAP_SIZE)
+ *fill*         0x1fff0788     0x1000 
+                0x1fff1788                __HeapLimit = .
+                0x1fff1788                __heap_limit = .
+                0x1fff1788                __heap_end__ = .
                 0x20010000                __StackTop = (ORIGIN (m_data) + LENGTH (m_data))
                 0x2000f000                __StackLimit = (__StackTop - STACK_SIZE)
                 0x20010000                PROVIDE (__stack = __StackTop)
                 0x20010000                __RAM_END = __StackTop
 
-.stack          0x2000f000     0x1000 load address 0x00027dc8
+.stack          0x2000f000     0x1000 load address 0x0002861c
                 0x2000f000                . = ALIGN (0x8)
                 0x2000f000                __stack_start__ = .
                 0x20010000                . = (. + STACK_SIZE)
@@ -2169,304 +2359,329 @@ LOAD c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2
  .ARM.attributes
                 0x00000022       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
  .ARM.attributes
-                0x00000056       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
+                0x00000056       0x34 libGENERATED_SDK_TARGET.a(clock_config.c.o)
  .ARM.attributes
-                0x0000008a       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
+                0x0000008a       0x34 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
  .ARM.attributes
-                0x000000be       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+                0x000000be       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
  .ARM.attributes
-                0x000000f2       0x34 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+                0x000000f2       0x34 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .ARM.attributes
-                0x00000126       0x34 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x00000126       0x34 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
  .ARM.attributes
-                0x0000015a       0x34 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                0x0000015a       0x34 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
  .ARM.attributes
-                0x0000018e       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x0000018e       0x34 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
  .ARM.attributes
-                0x000001c2       0x34 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000001c2       0x34 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .ARM.attributes
-                0x000001f6       0x34 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                0x000001f6       0x34 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
  .ARM.attributes
-                0x0000022a       0x34 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x0000022a       0x34 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
  .ARM.attributes
-                0x0000025e       0x34 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x0000025e       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .ARM.attributes
-                0x00000292       0x34 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00000292       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
  .ARM.attributes
-                0x000002c6       0x34 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x000002c6       0x34 libGENERATED_SDK_TARGET.a(startup.c.o)
  .ARM.attributes
-                0x000002fa       0x34 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x000002fa       0x34 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .ARM.attributes
-                0x0000032e       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x0000032e       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
  .ARM.attributes
-                0x00000362       0x34 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x0000034e       0x34 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .ARM.attributes
-                0x00000396       0x34 libGENERATED_SDK_TARGET.a(startup.c.o)
+                0x00000382       0x34 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
  .ARM.attributes
-                0x000003ca       0x34 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x000003b6       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .ARM.attributes
-                0x000003fe       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                0x000003ea       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .ARM.attributes
-                0x0000041e       0x34 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x0000041e       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .ARM.attributes
-                0x00000452       0x34 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+                0x00000452       0x34 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .ARM.attributes
-                0x00000486       0x34 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00000486       0x34 libGENERATED_SDK_TARGET.a(LIN.c.o)
  .ARM.attributes
-                0x000004ba       0x34 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x000004ba       0x34 libGENERATED_SDK_TARGET.a(PWM.c.o)
  .ARM.attributes
-                0x000004ee       0x34 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x000004ee       0x34 libGENERATED_SDK_TARGET.a(UART.c.o)
  .ARM.attributes
-                0x00000522       0x34 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x00000522       0x34 libGENERATED_SDK_TARGET.a(printf.c.o)
  .ARM.attributes
-                0x00000556       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x00000556       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
  .ARM.attributes
-                0x00000578       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x0000058a       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
  .ARM.attributes
-                0x0000059a       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x000005be       0x34 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
  .ARM.attributes
-                0x000005bc       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x000005f2       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x000005de       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+                0x00000614       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000600       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x00000636       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x00000622       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+                0x00000658       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x00000644       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+                0x0000067a       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
  .ARM.attributes
-                0x00000666       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x0000069c       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x00000688       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+                0x000006be       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x000006ba       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
+                0x000006e0       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x00000702       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000724       0x32 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000756       0x22 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_dvmd_tls.o)
                 0x00000001                ASSERT ((__rom_end <= (ORIGIN (m_text) + LENGTH (m_text))), Region m_text overflowed!)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(Vehicle-thermal-management.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000    0x1833e
+.debug_info     0x00000000    0x1ada2
  .debug_info    0x00000000      0xfbd CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .debug_info    0x00000fbd      0x9fc CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .debug_info    0x000019b9      0xad2 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .debug_info    0x0000248b      0x699 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .debug_info    0x00002b24      0xe35 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .debug_info    0x00003959      0xcbc libGENERATED_SDK_TARGET.a(clock_config.c.o)
- .debug_info    0x00004615      0x416 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
- .debug_info    0x00004a2b      0x855 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
- .debug_info    0x00005280     0x1f88 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
- .debug_info    0x00007208     0x10ff libGENERATED_SDK_TARGET.a(pins_driver.c.o)
- .debug_info    0x00008307      0x553 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
- .debug_info    0x0000885a      0xe09 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
- .debug_info    0x00009663     0x2b3b libGENERATED_SDK_TARGET.a(dma_driver.c.o)
- .debug_info    0x0000c19e      0x8b9 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
- .debug_info    0x0000ca57      0x4b8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
- .debug_info    0x0000cf0f     0x2745 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- .debug_info    0x0000f654      0x306 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
- .debug_info    0x0000f95a      0x58c libGENERATED_SDK_TARGET.a(startup.c.o)
- .debug_info    0x0000fee6      0xca6 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- .debug_info    0x00010b8c       0x26 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
- .debug_info    0x00010bb2      0x92a libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
- .debug_info    0x000114dc      0x676 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
- .debug_info    0x00011b52     0x22ad libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- .debug_info    0x00013dff     0x1376 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .debug_info    0x00015175     0x1833 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .debug_info    0x000169a8     0x1996 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_info    0x00000fbd      0xcbc libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_info    0x00001c79      0x416 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_info    0x0000208f      0x855 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_info    0x000028e4     0x1f88 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_info    0x0000486c     0x10ff libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_info    0x0000596b      0x553 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_info    0x00005ebe      0xe09 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_info    0x00006cc7     0x2b3b libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_info    0x00009802      0x8b9 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_info    0x0000a0bb      0x4b8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_info    0x0000a573     0x2745 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_info    0x0000ccb8      0x306 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_info    0x0000cfbe      0x58c libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_info    0x0000d54a      0xca6 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_info    0x0000e1f0       0x26 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_info    0x0000e216      0x92a libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_info    0x0000eb40      0x676 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .debug_info    0x0000f1b6     0x22ad libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_info    0x00011463     0x1376 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_info    0x000127d9     0x1833 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_info    0x0001400c     0x1996 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_info    0x000159a2      0xa7b libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .debug_info    0x0001641d      0xad2 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .debug_info    0x00016eef      0x699 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .debug_info    0x00017588      0xe35 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_info    0x000183bd      0x48f libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .debug_info    0x0001884c     0x2250 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_info    0x0001aa9c      0x306 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_abbrev   0x00000000     0x2f84
+.debug_abbrev   0x00000000     0x3434
  .debug_abbrev  0x00000000      0x192 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .debug_abbrev  0x00000192      0x187 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .debug_abbrev  0x00000319      0x176 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .debug_abbrev  0x0000048f       0xd9 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .debug_abbrev  0x00000568      0x22d CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .debug_abbrev  0x00000795      0x142 libGENERATED_SDK_TARGET.a(clock_config.c.o)
- .debug_abbrev  0x000008d7      0x11c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
- .debug_abbrev  0x000009f3       0xdd libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
- .debug_abbrev  0x00000ad0      0x32b libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
- .debug_abbrev  0x00000dfb      0x28c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
- .debug_abbrev  0x00001087      0x1bd libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
- .debug_abbrev  0x00001244      0x23b libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
- .debug_abbrev  0x0000147f      0x2b2 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
- .debug_abbrev  0x00001731      0x1ea libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
- .debug_abbrev  0x0000191b      0x161 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
- .debug_abbrev  0x00001a7c      0x2ea libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- .debug_abbrev  0x00001d66       0xba libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
- .debug_abbrev  0x00001e20      0x110 libGENERATED_SDK_TARGET.a(startup.c.o)
- .debug_abbrev  0x00001f30      0x2c9 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- .debug_abbrev  0x000021f9       0x14 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
- .debug_abbrev  0x0000220d      0x254 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
- .debug_abbrev  0x00002461       0xfa libGENERATED_SDK_TARGET.a(etmr_config.c.o)
- .debug_abbrev  0x0000255b      0x303 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- .debug_abbrev  0x0000285e      0x24b libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .debug_abbrev  0x00002aa9      0x26c libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .debug_abbrev  0x00002d15      0x26f libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_abbrev  0x00000192      0x142 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_abbrev  0x000002d4      0x11c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_abbrev  0x000003f0       0xdd libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_abbrev  0x000004cd      0x32b libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_abbrev  0x000007f8      0x28c libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_abbrev  0x00000a84      0x1bd libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_abbrev  0x00000c41      0x23b libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_abbrev  0x00000e7c      0x2b2 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_abbrev  0x0000112e      0x1ea libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_abbrev  0x00001318      0x161 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_abbrev  0x00001479      0x2ea libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_abbrev  0x00001763       0xba libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_abbrev  0x0000181d      0x110 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_abbrev  0x0000192d      0x2c9 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_abbrev  0x00001bf6       0x14 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_abbrev  0x00001c0a      0x254 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_abbrev  0x00001e5e       0xfa libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .debug_abbrev  0x00001f58      0x303 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_abbrev  0x0000225b      0x24b libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_abbrev  0x000024a6      0x26c libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_abbrev  0x00002712      0x26f libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_abbrev  0x00002981      0x19c libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .debug_abbrev  0x00002b1d      0x176 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .debug_abbrev  0x00002c93       0xd9 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .debug_abbrev  0x00002d6c      0x22d libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_abbrev  0x00002f99       0xdd libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .debug_abbrev  0x00003076      0x304 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_abbrev  0x0000337a       0xba libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_aranges  0x00000000     0x1388
+.debug_aranges  0x00000000     0x15a8
  .debug_aranges
                 0x00000000       0x28 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
  .debug_aranges
-                0x00000028       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
+                0x00000028       0x18 libGENERATED_SDK_TARGET.a(clock_config.c.o)
  .debug_aranges
-                0x00000060       0x38 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
+                0x00000040       0x18 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
  .debug_aranges
-                0x00000098       0x20 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
+                0x00000058       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
  .debug_aranges
-                0x000000b8       0xc0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
+                0x00000070      0x1f8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
  .debug_aranges
-                0x00000178       0x18 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+                0x00000268      0x178 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
  .debug_aranges
-                0x00000190       0x18 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+                0x000003e0       0x38 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
  .debug_aranges
-                0x000001a8       0x18 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+                0x00000418       0xa0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
  .debug_aranges
-                0x000001c0      0x1f8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+                0x000004b8      0x200 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
  .debug_aranges
-                0x000003b8      0x178 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+                0x000006b8       0x88 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
  .debug_aranges
-                0x00000530       0x38 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+                0x00000740       0xa8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
  .debug_aranges
-                0x00000568       0xa0 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+                0x000007e8      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
  .debug_aranges
-                0x00000608      0x200 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+                0x00000a00       0x48 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
  .debug_aranges
-                0x00000808       0x88 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+                0x00000a48       0x20 libGENERATED_SDK_TARGET.a(startup.c.o)
  .debug_aranges
-                0x00000890       0xa8 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+                0x00000a68       0x70 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
  .debug_aranges
-                0x00000938      0x218 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+                0x00000ad8       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
  .debug_aranges
-                0x00000b50       0x48 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+                0x00000af8       0x98 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
  .debug_aranges
-                0x00000b98       0x20 libGENERATED_SDK_TARGET.a(startup.c.o)
+                0x00000b90       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
  .debug_aranges
-                0x00000bb8       0x70 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+                0x00000ba8      0x1d0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
  .debug_aranges
-                0x00000c28       0x20 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+                0x00000d78      0x218 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .debug_aranges
-                0x00000c48       0x98 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+                0x00000f90      0x138 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .debug_aranges
-                0x00000ce0       0x18 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+                0x000010c8      0x170 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
  .debug_aranges
-                0x00000cf8      0x1d0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+                0x00001238       0x38 libGENERATED_SDK_TARGET.a(LIN.c.o)
  .debug_aranges
-                0x00000ec8      0x218 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+                0x00001270       0x38 libGENERATED_SDK_TARGET.a(PWM.c.o)
  .debug_aranges
-                0x000010e0      0x138 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+                0x000012a8       0x20 libGENERATED_SDK_TARGET.a(UART.c.o)
  .debug_aranges
-                0x00001218      0x170 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+                0x000012c8       0xc0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_aranges
+                0x00001388       0x18 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .debug_aranges
+                0x000013a0      0x1c0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_aranges
+                0x00001560       0x48 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_ranges   0x00000000     0x11b8
+.debug_ranges   0x00000000     0x13a0
  .debug_ranges  0x00000000       0x18 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .debug_ranges  0x00000018       0x28 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .debug_ranges  0x00000040       0x28 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .debug_ranges  0x00000068       0x10 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .debug_ranges  0x00000078       0xb0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .debug_ranges  0x00000128      0x1e8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
- .debug_ranges  0x00000310      0x168 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
- .debug_ranges  0x00000478       0x28 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
- .debug_ranges  0x000004a0       0x90 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
- .debug_ranges  0x00000530      0x1f0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
- .debug_ranges  0x00000720       0x78 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
- .debug_ranges  0x00000798       0x98 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
- .debug_ranges  0x00000830      0x208 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- .debug_ranges  0x00000a38       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
- .debug_ranges  0x00000a70       0x10 libGENERATED_SDK_TARGET.a(startup.c.o)
- .debug_ranges  0x00000a80       0x60 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- .debug_ranges  0x00000ae0       0x88 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
- .debug_ranges  0x00000b68      0x1c0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- .debug_ranges  0x00000d28      0x208 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .debug_ranges  0x00000f30      0x128 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .debug_ranges  0x00001058      0x160 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_ranges  0x00000018      0x1e8 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_ranges  0x00000200      0x168 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_ranges  0x00000368       0x28 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_ranges  0x00000390       0x90 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_ranges  0x00000420      0x1f0 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_ranges  0x00000610       0x78 libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_ranges  0x00000688       0x98 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_ranges  0x00000720      0x208 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_ranges  0x00000928       0x38 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_ranges  0x00000960       0x10 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_ranges  0x00000970       0x60 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_ranges  0x000009d0       0x88 libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_ranges  0x00000a58      0x1c0 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_ranges  0x00000c18      0x208 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_ranges  0x00000e20      0x128 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_ranges  0x00000f48      0x160 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_ranges  0x000010a8       0x28 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .debug_ranges  0x000010d0       0x28 libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .debug_ranges  0x000010f8       0x10 libGENERATED_SDK_TARGET.a(UART.c.o)
+ .debug_ranges  0x00001108       0xb0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_ranges  0x000011b8      0x1b0 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_ranges  0x00001368       0x38 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_line     0x00000000     0xc14f
- .debug_line    0x00000000      0x475 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .debug_line    0x00000475      0x43b CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .debug_line    0x000008b0      0x368 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .debug_line    0x00000c18      0x38b CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .debug_line    0x00000fa3      0xde0 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .debug_line    0x00001d83      0x338 libGENERATED_SDK_TARGET.a(clock_config.c.o)
- .debug_line    0x000020bb      0x29c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
- .debug_line    0x00002357      0x3b8 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
- .debug_line    0x0000270f     0x1109 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
- .debug_line    0x00003818      0x836 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
- .debug_line    0x0000404e      0x44b libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
- .debug_line    0x00004499      0x5fe libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
- .debug_line    0x00004a97     0x114d libGENERATED_SDK_TARGET.a(dma_driver.c.o)
- .debug_line    0x00005be4      0x66b libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
- .debug_line    0x0000624f      0x42c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
- .debug_line    0x0000667b     0x130f libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- .debug_line    0x0000798a      0x361 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
- .debug_line    0x00007ceb      0x2c8 libGENERATED_SDK_TARGET.a(startup.c.o)
- .debug_line    0x00007fb3      0x565 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- .debug_line    0x00008518       0xf5 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
- .debug_line    0x0000860d      0x54e libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
- .debug_line    0x00008b5b      0x2be libGENERATED_SDK_TARGET.a(etmr_config.c.o)
- .debug_line    0x00008e19      0xd83 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- .debug_line    0x00009b9c      0xd7d libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .debug_line    0x0000a919      0xb79 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .debug_line    0x0000b492      0xcbd libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+.debug_line     0x00000000     0xd76a
+ .debug_line    0x00000000      0x474 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+ .debug_line    0x00000474      0x338 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_line    0x000007ac      0x29c libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_line    0x00000a48      0x3b8 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_line    0x00000e00     0x1109 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_line    0x00001f09      0x836 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_line    0x0000273f      0x44b libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_line    0x00002b8a      0x5fe libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_line    0x00003188     0x114d libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_line    0x000042d5      0x66b libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_line    0x00004940      0x42c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_line    0x00004d6c     0x130f libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_line    0x0000607b      0x361 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_line    0x000063dc      0x2c8 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_line    0x000066a4      0x565 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_line    0x00006c09       0xf5 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_line    0x00006cfe      0x54e libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_line    0x0000724c      0x2be libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .debug_line    0x0000750a      0xd83 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_line    0x0000828d      0xd7d libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_line    0x0000900a      0xb79 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_line    0x00009b83      0xcbd libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_line    0x0000a840      0x564 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .debug_line    0x0000ada4      0x36a libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .debug_line    0x0000b10e      0x38b libGENERATED_SDK_TARGET.a(UART.c.o)
+ .debug_line    0x0000b499      0xde0 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_line    0x0000c279      0x29c libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .debug_line    0x0000c515      0xef6 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_line    0x0000d40b      0x35f libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_str      0x00000000     0x9a1d
- .debug_str     0x00000000     0x1986 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
+.debug_str      0x00000000     0xab4e
+ .debug_str     0x00000000     0x197d CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
                                0x1ab0 (size before relaxing)
- .debug_str     0x00001986      0x926 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
-                                0xdf6 (size before relaxing)
- .debug_str     0x000022ac      0x5b1 CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
-                                0xf11 (size before relaxing)
- .debug_str     0x0000285d      0x444 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
-                                0xfaa (size before relaxing)
- .debug_str     0x00002ca1      0x215 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
-                                0x422 (size before relaxing)
- .debug_str     0x00002eb6      0x218 libGENERATED_SDK_TARGET.a(clock_config.c.o)
+ .debug_str     0x0000197d      0x218 libGENERATED_SDK_TARGET.a(clock_config.c.o)
                                0x1850 (size before relaxing)
- .debug_str     0x000030ce       0x68 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
+ .debug_str     0x00001b95       0x68 libGENERATED_SDK_TARGET.a(pin_mux.c.o)
                                 0x613 (size before relaxing)
- .debug_str     0x00003136       0x75 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
+ .debug_str     0x00001bfd      0x447 libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
                                0x12a6 (size before relaxing)
- .debug_str     0x000031ab      0x975 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_str     0x00002044      0x97b libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
                                0x1fa7 (size before relaxing)
- .debug_str     0x00003b20      0x4c1 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_str     0x000029bf      0x4c1 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
                                0x1413 (size before relaxing)
- .debug_str     0x00003fe1       0xb0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_str     0x00002e80       0xb0 libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
                                 0x6a3 (size before relaxing)
- .debug_str     0x00004091     0x1049 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_str     0x00002f30     0x1049 libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
                                0x1214 (size before relaxing)
- .debug_str     0x000050da     0x14f3 libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_str     0x00003f79     0x150a libGENERATED_SDK_TARGET.a(dma_driver.c.o)
                                0x3055 (size before relaxing)
- .debug_str     0x000065cd      0x1ba libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_str     0x00005483      0x1ba libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
                                 0x761 (size before relaxing)
- .debug_str     0x00006787      0x1b0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_str     0x0000563d      0x1b0 libGENERATED_SDK_TARGET.a(dma_irq.c.o)
                                 0x445 (size before relaxing)
- .debug_str     0x00006937      0xf54 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_str     0x000057ed      0xf54 libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
                                0x2f4e (size before relaxing)
- .debug_str     0x0000788b      0x126 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_str     0x00006741      0x126 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
                                 0x5e7 (size before relaxing)
- .debug_str     0x000079b1      0x193 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_str     0x00006867      0x193 libGENERATED_SDK_TARGET.a(startup.c.o)
                                 0x487 (size before relaxing)
- .debug_str     0x00007b44      0x286 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_str     0x000069fa      0x286 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
                                 0x694 (size before relaxing)
- .debug_str     0x00007dca       0xa7 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
+ .debug_str     0x00006c80       0xa7 libGENERATED_SDK_TARGET.a(YTM32B1ME0_startup_gcc.S.o)
                                 0x105 (size before relaxing)
- .debug_str     0x00007e71      0x22c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_str     0x00006d27      0x22c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
                                0x10c2 (size before relaxing)
- .debug_str     0x0000809d       0x9f libGENERATED_SDK_TARGET.a(etmr_config.c.o)
+ .debug_str     0x00006f53      0x825 libGENERATED_SDK_TARGET.a(etmr_config.c.o)
                                 0xa1d (size before relaxing)
- .debug_str     0x0000813c      0x948 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_str     0x00007778      0xe85 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
                                0x2bf5 (size before relaxing)
- .debug_str     0x00008a84      0x6e2 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_str     0x000085fd      0x6e2 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
                                 0x9b2 (size before relaxing)
- .debug_str     0x00009166      0x406 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_str     0x00008cdf      0x411 libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
                                0x1a0f (size before relaxing)
- .debug_str     0x0000956c      0x4b1 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_str     0x000090f0      0x4b1 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
                                0x229a (size before relaxing)
+ .debug_str     0x000095a1      0x837 libGENERATED_SDK_TARGET.a(LIN.c.o)
+                               0x16e7 (size before relaxing)
+ .debug_str     0x00009dd8       0xde libGENERATED_SDK_TARGET.a(PWM.c.o)
+                                0xf11 (size before relaxing)
+ .debug_str     0x00009eb6       0x72 libGENERATED_SDK_TARGET.a(UART.c.o)
+                                0xfaa (size before relaxing)
+ .debug_str     0x00009f28      0x204 libGENERATED_SDK_TARGET.a(printf.c.o)
+                                0x422 (size before relaxing)
+ .debug_str     0x0000a12c       0x74 libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+                                0x947 (size before relaxing)
+ .debug_str     0x0000a1a0      0x88f libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+                               0x2fd6 (size before relaxing)
+ .debug_str     0x0000aa2f      0x11f libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+                                0x5df (size before relaxing)
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
                                  0x4a (size before relaxing)
- .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .comment       0x00000049       0x4a CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(clock_config.c.o)
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(pin_mux.c.o)
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_uart_config.c.o)
@@ -2487,36 +2702,45 @@ LOAD linker stubs
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
  .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(UART.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(printf.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_lin_config.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .comment       0x00000049       0x4a libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
 
-.debug_frame    0x00000000     0x5584
+.debug_frame    0x00000000     0x5e6c
  .debug_frame   0x00000000       0x4c CMakeFiles/Vehicle-thermal-management.elf.dir/app/main.c.o
- .debug_frame   0x0000004c       0x88 CMakeFiles/Vehicle-thermal-management.elf.dir/app/Input_capture/Input_capture.c.o
- .debug_frame   0x000000d4       0x8c CMakeFiles/Vehicle-thermal-management.elf.dir/app/PWM/PWM.c.o
- .debug_frame   0x00000160       0x2c CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/UART.c.o
- .debug_frame   0x0000018c      0x3a8 CMakeFiles/Vehicle-thermal-management.elf.dir/app/UART/printf/printf.c.o
- .debug_frame   0x00000534      0x940 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
- .debug_frame   0x00000e74      0x694 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
- .debug_frame   0x00001508       0xac libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
- .debug_frame   0x000015b4      0x28c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
- .debug_frame   0x00001840      0x91c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
- .debug_frame   0x0000215c      0x23c libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
- .debug_frame   0x00002398      0x21c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
- .debug_frame   0x000025b4      0x9ac libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
- .debug_frame   0x00002f60       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
- .debug_frame   0x00003018       0x38 libGENERATED_SDK_TARGET.a(startup.c.o)
- .debug_frame   0x00003050      0x190 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
- .debug_frame   0x000031e0      0x23c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
- .debug_frame   0x0000341c      0x864 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
- .debug_frame   0x00003c80      0x9e4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
- .debug_frame   0x00004664      0x5ac libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
- .debug_frame   0x00004c10      0x660 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
- .debug_frame   0x00005270       0xac c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000531c       0x50 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000536c       0xc4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x00005430       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x00005454       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x00005478       0x4c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x000054c4       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
- .debug_frame   0x000054fc       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
- .debug_frame   0x00005520       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000554c       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000004c      0x940 libGENERATED_SDK_TARGET.a(clock_YTM32B1Mx.c.o)
+ .debug_frame   0x0000098c      0x694 libGENERATED_SDK_TARGET.a(pins_driver.c.o)
+ .debug_frame   0x00001020       0xac libGENERATED_SDK_TARGET.a(pins_port_hw_access.c.o)
+ .debug_frame   0x000010cc      0x28c libGENERATED_SDK_TARGET.a(interrupt_manager.c.o)
+ .debug_frame   0x00001358      0x91c libGENERATED_SDK_TARGET.a(dma_driver.c.o)
+ .debug_frame   0x00001c74      0x23c libGENERATED_SDK_TARGET.a(dma_hw_access.c.o)
+ .debug_frame   0x00001eb0      0x21c libGENERATED_SDK_TARGET.a(dma_irq.c.o)
+ .debug_frame   0x000020cc      0x9ac libGENERATED_SDK_TARGET.a(linflexd_uart_driver.c.o)
+ .debug_frame   0x00002a78       0xb8 libGENERATED_SDK_TARGET.a(linflexd_uart_irq.c.o)
+ .debug_frame   0x00002b30       0x38 libGENERATED_SDK_TARGET.a(startup.c.o)
+ .debug_frame   0x00002b68      0x190 libGENERATED_SDK_TARGET.a(system_YTM32B1ME0.c.o)
+ .debug_frame   0x00002cf8      0x23c libGENERATED_SDK_TARGET.a(osif_baremetal.c.o)
+ .debug_frame   0x00002f34      0x864 libGENERATED_SDK_TARGET.a(etmr_common.c.o)
+ .debug_frame   0x00003798      0x9e4 libGENERATED_SDK_TARGET.a(etmr_hw_access.c.o)
+ .debug_frame   0x0000417c      0x5ac libGENERATED_SDK_TARGET.a(etmr_pwm_driver.c.o)
+ .debug_frame   0x00004728      0x660 libGENERATED_SDK_TARGET.a(etmr_ic_driver.c.o)
+ .debug_frame   0x00004d88       0xa4 libGENERATED_SDK_TARGET.a(LIN.c.o)
+ .debug_frame   0x00004e2c       0x8c libGENERATED_SDK_TARGET.a(PWM.c.o)
+ .debug_frame   0x00004eb8       0x2c libGENERATED_SDK_TARGET.a(UART.c.o)
+ .debug_frame   0x00004ee4      0x3a8 libGENERATED_SDK_TARGET.a(printf.c.o)
+ .debug_frame   0x0000528c      0x814 libGENERATED_SDK_TARGET.a(linflexd_lin_driver.c.o)
+ .debug_frame   0x00005aa0       0xb8 libGENERATED_SDK_TARGET.a(linflexd_lin_irq.c.o)
+ .debug_frame   0x00005b58       0xac c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00005c04       0x50 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x00005c54       0xc4 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00005d18       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x00005d3c       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x00005d60       0x4c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00005dac       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00005de4       0x24 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x00005e08       0x2c c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00005e34       0x38 c:/users/zhangyifei/appdata/roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp\libgcc.a(_udivmoddi4.o)

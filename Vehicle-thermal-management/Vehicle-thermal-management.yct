@@ -366,10 +366,10 @@
                 },
                 {
                   "name": "LINFlexD1_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
                   "periSrc": 0,
-                  "userCtrl": false,
+                  "userCtrl": true,
                   "busClock": [
                     "SLOW_BUS_CLK",
                     "FAST_BUS_CLK"
@@ -1024,7 +1024,7 @@
           }
         ]
       },
-      "updateTime": 1704373155547,
+      "updateTime": 1705480664726,
       "lock": false
     },
     "device": {
@@ -1071,17 +1071,17 @@
               "nNumIndependentPwmChannels": 1,
               "mode": "eTMR_PWM_MODE",
               "uFrequencyHZ": 100,
-              "counterInitValFromInitReg": false,
+              "counterInitValFromInitReg": true,
               "counterInitSrc": "COUNTER_VAL_FROM_CNT",
               "pwmIndependentChannelConfig": [
                 {
-                  "hwChannelId": 0,
+                  "hwChannelId": 6,
                   "polarity": "eTMR_POLARITY_NORMAL",
                   "pwmSrcInvert": false,
                   "align": "eTMR_PWM_RIGHT_EDGE_ALIGN",
                   "typeOfUpdate": "eTMR_PWM_UPDATE_IN_DUTY_CYCLE",
                   "channelInitVal": 0,
-                  "dutyCycle": 50,
+                  "dutyCycle": 16384,
                   "offset": 0,
                   "enableSecondChannelOutput": false,
                   "secondChannelPolarity": "eTMR_POLARITY_NORMAL",
@@ -1235,7 +1235,8 @@
                     "val": "eTMR_LOW_STATE"
                   }
                 ]
-              }
+              },
+              "cntVal": 0
             }
           ]
         },
@@ -1246,15 +1247,15 @@
               "name": "ETMR_IC_Config0",
               "readonly": false,
               "numChannels": 1,
-              "countValue": 65536,
+              "countValue": 65535,
               "inputChConfig": [
                 {
-                  "hwChannelId": 4,
-                  "edge": "eTMR_POS_EDGE",
-                  "measurementType": "eTMR_POS_PULSE_MEASUREMENT",
+                  "hwChannelId": 0,
+                  "edge": "eTMR_DUAL_EDGES",
+                  "measurementType": "eTMR_PERIOD_MEASUREMENT",
                   "filterSampleCounter": 0,
                   "filterSamplePeriod": 0,
-                  "dmaEnable": false,
+                  "dmaEnable": true,
                   "interruptEnable": false,
                   "enableNotification": false,
                   "channelsCallbacks": "NULL",
@@ -1361,7 +1362,7 @@
           "data": []
         }
       },
-      "updateTime": 1704374323545,
+      "updateTime": 1705471463791,
       "lock": false
     },
     "interrupt": {
@@ -2771,6 +2772,24 @@
       "updateTime": 1703344883157,
       "lock": false
     },
+    "linflexd_lin": {
+      "enable": {},
+      "data": [
+        {
+          "name": "linflexd_lin_config0",
+          "baudrate": 19200,
+          "breakLength": "LINFlexD_BREAK_13_BIT",
+          "nodeFunction": true,
+          "autobaudEnable": false,
+          "timeoutEnable": true,
+          "responseTimeoutValue": 14,
+          "headerTimeoutValue": 0,
+          "filter": []
+        }
+      ],
+      "updateTime": 1705498466963,
+      "lock": false
+    },
     "linflexd_uart": {
       "enable": {},
       "data": [
@@ -2852,11 +2871,11 @@
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
         },
         {
-          "base": "PCTRLD",
-          "gpioBase": "GPIOD",
-          "num": "55",
-          "label": "PTD_8",
-          "feature": "eTMR1_CH4",
+          "base": "PCTRLC",
+          "gpioBase": "GPIOC",
+          "num": "53",
+          "label": "PTC_0",
+          "feature": "eTMR1_CH6",
           "alt": "PCTRL_MUX_ALT6",
           "intCfg": "PCTRL_DMA_INT_DISABLED",
           "direction": "",
@@ -2869,9 +2888,66 @@
           "init": 0,
           "userLabel": "",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLC",
+          "gpioBase": "GPIOC",
+          "num": "81",
+          "label": "PTC_8",
+          "feature": "LINFlexD1_RX",
+          "alt": "PCTRL_MUX_ALT2",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLC",
+          "gpioBase": "GPIOC",
+          "num": "80",
+          "label": "PTC_9",
+          "feature": "LINFlexD1_TX",
+          "alt": "PCTRL_MUX_ALT2",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLA",
+          "gpioBase": "GPIOA",
+          "num": "83",
+          "label": "PTA_7",
+          "feature": "GPIO",
+          "alt": "PCTRL_MUX_AS_GPIO",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "GPIO_OUTPUT_DIRECTION",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": "1",
+          "userLabel": "LINFlexD1_SLEEPEN",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
         }
       ],
-      "updateTime": 1704373110331,
+      "updateTime": 1705480651962,
       "lock": false
     }
   }

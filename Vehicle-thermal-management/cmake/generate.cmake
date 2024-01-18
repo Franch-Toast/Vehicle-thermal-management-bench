@@ -3,11 +3,17 @@ cmake_minimum_required(VERSION 3.16)
 
 
 set(sources
+    ${PROJ_DIR}/app/Input_capture/Input_capture.c
+    ${PROJ_DIR}/app/LIN/LIN.c
+    ${PROJ_DIR}/app/PWM/PWM.c
+    ${PROJ_DIR}/app/UART/UART.c
+    ${PROJ_DIR}/app/UART/printf/printf.c
     ${PROJ_DIR}/board/clock_config.c
     ${PROJ_DIR}/board/pin_mux.c
     ${PROJ_DIR}/board/interrupt_config.c
     ${PROJ_DIR}/board/dma_config.c
     ${PROJ_DIR}/board/linflexd_uart_config.c
+    ${PROJ_DIR}/board/linflexd_lin_config.c
     ${PROJ_DIR}/board/etmr_config.c
     ${PROJ_DIR}/platform/drivers/src/clock/YTM32B1Mx/clock_YTM32B1Mx.c
     ${PROJ_DIR}/platform/drivers/src/pins/pins_driver.c
@@ -18,6 +24,8 @@ set(sources
     ${PROJ_DIR}/platform/drivers/src/dma/dma_irq.c
     ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_uart_driver.c
     ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_uart_irq.c
+    ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_lin_driver.c
+    ${PROJ_DIR}/platform/drivers/src/linflexd/linflexd_lin_irq.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_common.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_hw_access.c
     ${PROJ_DIR}/platform/drivers/src/etmr/etmr_ic_driver.c
@@ -28,6 +36,11 @@ set(sources
     ${PROJ_DIR}/rtos/osif/osif_baremetal.c
 )
 set(includes
+    ${PROJ_DIR}/app/Input_capture
+    ${PROJ_DIR}/app/LIN
+    ${PROJ_DIR}/app/PWM
+    ${PROJ_DIR}/app/UART
+    ${PROJ_DIR}/app/UART/printf
     ${PROJ_DIR}/board
     ${PROJ_DIR}/platform/drivers/src/clock/YTM32B1Mx
     ${PROJ_DIR}/platform/drivers/src/pins

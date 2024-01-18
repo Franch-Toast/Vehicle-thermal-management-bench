@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-01-17 17:09:21
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-01-18 16:20:24
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -12,24 +23,30 @@
  *  activate or otherwise use the software. The production use license in
  *  Section 2.3 is expressly granted for this software.
  * 
- * @file sdk_project_config.h
+ * @file linflexd_lin_config.h
  * @brief 
  * 
  */
 
 
 
-#ifndef SDK_PROJECT_CONFIG_H_
-#define SDK_PROJECT_CONFIG_H_
 
-#include "clock_config.h"
-#include "pin_mux.h"
-#include "interrupt_config.h"
-#include "dma_config.h"
-#include "linflexd_uart_config.h"
-#include "linflexd_lin_config.h"
-#include "etmr_config.h"
+#ifndef __LINFLEXD_LIN_CONFIG_H__
+#define __LINFLEXD_LIN_CONFIG_H__
+
+
+
+
+#include "linflexd_lin_driver.h"
+
+
+
+/*linflexd_lin_config0*/
+extern linflexd_state_t linflexd_lin_config0_State;
+extern linflexd_user_config_t linflexd_lin_config0;
+
+
+
 
 
 #endif
-
