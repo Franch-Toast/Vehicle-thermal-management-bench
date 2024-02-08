@@ -14,7 +14,7 @@
             "runToEntryPoint": "main",
             "runToMain": true,
             "svdFile": "${workspaceFolder}/.vscode/chip.svd",
-            "preLaunchTask": "CMake: build"
+            // "preLaunchTask": "CMake: build"
         }
     ]
 }

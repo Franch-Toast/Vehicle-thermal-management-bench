@@ -21,6 +21,10 @@
     ],
     "files.associations": {
         "uart.h": "c",
-        "printf.h": "c"
+        "printf.h": "c",
+        "system_ytm32b1me0.h": "c",
+        "freertos.h": "c",
+        "osif.h": "c",
+        "stack_macros.h": "c"
     }
 }

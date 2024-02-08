@@ -302,6 +302,14 @@
 				},
 				{
 					"backtrace" : 11,
+					"path" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/rtos/FreeRTOS/Source/include"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33"
+				},
+				{
+					"backtrace" : 11,
 					"path" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/app/Input_capture"
 				},
 				{

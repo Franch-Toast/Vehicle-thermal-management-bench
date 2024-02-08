@@ -81,20 +81,6 @@
         "id": "195d1f64-8275-4a9c-9baf-3c9b74cae593",
         "errorHandler": false,
         "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_InitInputCapture",
-        "value": "eTMR_DRV_InitInputCapture(0,&ETMR_IC_Config0);",
-        "id": "93763e40-d505-4166-bec4-bf3748bb4af8",
-        "errorHandler": false,
-        "successLabel": "0"
-      },
-      {
-        "funcName": "eTMR_DRV_ClearInputCaptureComplete",
-        "value": "eTMR_DRV_ClearInputCaptureComplete(uint32_t instance,uint8_t channel);",
-        "id": "8062f6d4-f378-446c-8d17-f71bf0c7f7c7",
-        "errorHandler": false,
-        "successLabel": "0"
       }
     ],
     "linkfile": "${PROJ_DIR}/board/YTM32B1ME0_flash.ld",
@@ -280,10 +266,10 @@
                 },
                 {
                   "name": "GPIO_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
-                  "periSrc": 0,
-                  "userCtrl": false,
+                  "periSrc": 1,
+                  "userCtrl": true,
                   "div": 0,
                   "busClock": [
                     "CORE_CLK"
@@ -1024,7 +1010,7 @@
           }
         ]
       },
-      "updateTime": 1705480664726,
+      "updateTime": 1705819369833,
       "lock": false
     },
     "device": {

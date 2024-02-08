@@ -3,6 +3,16 @@ cmake_minimum_required(VERSION 3.16)
 
 
 set(sources
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/port.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/portasm.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/MemMang/heap_4.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/croutine.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/event_groups.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/list.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/queue.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/stream_buffer.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/tasks.c
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/timers.c
     ${PROJ_DIR}/app/Input_capture/Input_capture.c
     ${PROJ_DIR}/app/LIN/LIN.c
     ${PROJ_DIR}/app/PWM/PWM.c
@@ -36,6 +46,9 @@ set(sources
     ${PROJ_DIR}/rtos/osif/osif_baremetal.c
 )
 set(includes
+    ${PROJ_DIR}/app
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/include
+    ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33
     ${PROJ_DIR}/app/Input_capture
     ${PROJ_DIR}/app/LIN
     ${PROJ_DIR}/app/PWM

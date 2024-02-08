@@ -410,6 +410,25 @@ void LIN_Master_Receive_Frame()
 
 
 
+##### FreeRTOS移植
+
+为满足板子的实时性需求，为芯片移植了FreeRTOS操作系统（`FreeRTOS Kernel V10.4.3`）。主要文件存放在rtos文件夹中，内存管理使用了heap_4.c。`FreeRTOSConfig.h`参考了FreeRTOS官方给出的文件进行了修改。
+
+使用动态内存创建任务的方法，在main.c文件中简单地创建了一个任务（AppTaskCreate），再在这个任务中创建两个任务进行测试：
+
+1. PWM的开启
+2. 输入捕获功能的开启
+
+经测试，移植成功，可以正常启动。
+
+
+
+
+
+
+
+
+
 #### 编译与烧录
 
 使用 VS Code 进行代码编辑，Cmake构建项目，JTAG接口烧录。
