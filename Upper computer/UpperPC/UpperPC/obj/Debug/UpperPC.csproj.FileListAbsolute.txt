@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.Form1.resources
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.Properties.Resources.resources
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\bin\Debug\UpperPC.exe.config
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\bin\Debug\UpperPC.exe
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\bin\Debug\UpperPC.pdb
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.exe
+C:\Users\Administrator\Desktop\台架\Vehicle-thermal-management\Vehicle-thermal-management-bench\Upper computer\UpperPC\UpperPC\obj\Debug\UpperPC.pdb
