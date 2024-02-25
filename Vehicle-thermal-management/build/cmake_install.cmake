@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management
+# Install script for directory: C:/Users/Administrator/Desktop/Workbench/Vehicle-thermal-management/Vehicle-thermal-management-bench/Vehicle-thermal-management
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Administrator/Desktop/Workbench/Vehicle-thermal-management/Vehicle-thermal-management-bench/Vehicle-thermal-management/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

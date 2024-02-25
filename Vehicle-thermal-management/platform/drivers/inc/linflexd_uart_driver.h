@@ -411,4 +411,8 @@ status_t LINFlexD_UART_DRV_SetRxBuffer(uint32_t instance,
 
 /*! @}*/
 
+status_t LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(uint32_t instance,
+                                                                uint8_t *rxBuff,
+                                                                uint32_t rxSize);
+
 #endif /* LINFlexD_UART_DRIVER_H */

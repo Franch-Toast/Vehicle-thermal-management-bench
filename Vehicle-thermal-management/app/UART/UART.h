@@ -16,8 +16,21 @@
 #include "linflexd_uart_config.h"
 #include "printf/printf.h"
 
+#define PRINTF_UART (2U)
+
+#define BUFFER_MAX 24 // 缓冲区大小
+
+typedef struct
+{
+    uint8_t head;                 // 缓冲区头部位置
+    uint8_t tail;                 // 缓冲区尾部位置
+    uint8_t ringBuff[BUFFER_MAX]; // 缓冲区数组
+} ringBuffer_t;
 
 void UART_init(void);
+void RingBuff_Write(uint8_t data);
+uint8_t RingBuff_Read(uint8_t *pData);
 
+extern ringBuffer_t buffer;
 
 #endif

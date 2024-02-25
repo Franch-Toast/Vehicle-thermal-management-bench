@@ -49,14 +49,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "GENERATED_SDK_TARGET::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-GENERATED_SDK_TARGET-Debug-4a4a43c6b746908676c6.json",
+					"jsonFile" : "target-GENERATED_SDK_TARGET-Debug-6132a30612721226e9bf.json",
 					"name" : "GENERATED_SDK_TARGET",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Vehicle-thermal-management.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Vehicle-thermal-management.elf-Debug-aa75a54f67ada7bbe562.json",
+					"jsonFile" : "target-Vehicle-thermal-management.elf-Debug-94bf409628c9db6ceca7.json",
 					"name" : "Vehicle-thermal-management.elf",
 					"projectIndex" : 0
 				},
@@ -94,8 +94,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management/build",
-		"source" : "C:/Users/ZhangYifei/Desktop/Vehicle-thermal-management-bench/Vehicle-thermal-management"
+		"build" : "C:/Users/Administrator/Desktop/Workbench/Vehicle-thermal-management/Vehicle-thermal-management-bench/Vehicle-thermal-management/build",
+		"source" : "C:/Users/Administrator/Desktop/Workbench/Vehicle-thermal-management/Vehicle-thermal-management-bench/Vehicle-thermal-management"
 	},
 	"version" : 
 	{

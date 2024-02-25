@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe")
+set(CMAKE_C_COMPILER "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "10.3.1")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_C_COMPILER_AR "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe")
+set(CMAKE_AR "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_C_COMPILER_AR "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include-fixed;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc;c;gcc;c;nosys")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v8-m.main/nofp;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc;C:/Users/ZhangYifei/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v8-m.main/nofp;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v8-m.main/nofp;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/lib/gcc;C:/Users/Administrator/AppData/Roaming/yt_config_tool/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

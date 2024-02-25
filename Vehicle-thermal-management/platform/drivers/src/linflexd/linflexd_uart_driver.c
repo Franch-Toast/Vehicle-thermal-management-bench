@@ -1082,10 +1082,62 @@ status_t LINFlexD_UART_DRV_SetRxBuffer(uint32_t instance,
  * occurs.
  *
  *END**************************************************************************/
+// void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
+// {
+//     linflexd_uart_state_t * uartState;
+//     LINFlexD_Type * base;
+
+//     base = s_uartLINFlexDBase[instance];
+//     uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
+
+//     /* Exit if there is no reception in progress */
+//     if (!uartState->isRxBusy)
+//     {
+//         return;
+//     }
+
+//     /* Retrieve the data */
+//     LINFlexD_UART_DRV_GetData(instance);
+
+//     /* Check if this was the last byte in the current buffer */
+//     if (uartState->rxSize == 0U)
+//     {
+//         /* Invoke the callback when the buffer is finished;
+//          * Application can provide another buffer inside the callback by calling LINFlexD_UART_DRV_SetRxBuffer */
+//         if (uartState->rxCallback != NULL)
+//         {
+//             uartState->rxCallback(uartState, UART_EVENT_RX_FULL, uartState->rxCallbackParam);
+//         }
+//     }
+
+//     /* Finish reception if this was the last byte received */
+//     if (uartState->rxSize == 0U)
+//     {
+//         /* Complete transfer (disable rx logic) */
+//         LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
+//         LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, false);
+
+//         /* Invoke callback if there is one */
+//         if (uartState->rxCallback != NULL)
+//         {
+//             uartState->rxCallback(uartState, UART_EVENT_END_TRANSFER, uartState->rxCallbackParam);
+//         }
+//     }
+//     else 
+//     {
+//         LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
+//         LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true);
+//     }
+
+//     /* Clear the flag */
+//     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_DATA_RECEPTION_COMPLETE_FLAG);
+//     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_MESSAGE_BUFFER_FULL_FLAG);
+// }
+
 void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
 {
-    linflexd_uart_state_t * uartState;
-    LINFlexD_Type * base;
+    linflexd_uart_state_t *uartState;
+    LINFlexD_Type *base;
 
     base = s_uartLINFlexDBase[instance];
     uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
@@ -1123,7 +1175,7 @@ void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
             uartState->rxCallback(uartState, UART_EVENT_END_TRANSFER, uartState->rxCallbackParam);
         }
     }
-    else 
+    else
     {
         LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
         LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true);
@@ -1960,3 +2012,51 @@ static void LINFlexD_UART_DRV_FlushRxFifo(const LINFlexD_Type *base)
  * EOF
  ******************************************************************************/
 
+
+
+
+
+/*FUNCTION**********************************************************************
+ *
+ * Function Name : LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal
+ * Description   : Initiate (start) a receive by beginning the process of
+ * receiving data and enabling the interrupt. Code by myself.
+ * This is not a public API as it is called from other driver functions.
+ *
+ *END**************************************************************************/
+status_t LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(uint32_t instance,
+                                                                       uint8_t *rxBuff,
+                                                                       uint32_t rxSize)
+{
+    DEV_ASSERT(instance < LINFlexD_INSTANCE_COUNT);
+    DEV_ASSERT(rxBuff != NULL);
+
+    linflexd_uart_state_t *uartState;
+    LINFlexD_Type *base;
+
+    uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
+    base = s_uartLINFlexDBase[instance];
+
+    /* Check it's not busy receiving data from a previous function call */
+    if ((uartState->isRxBusy) && (!uartState->rxCallback))
+    {
+        return STATUS_BUSY;
+    }
+
+    DEV_ASSERT(rxSize > 0U);
+
+    /* Initialize the module driver state struct to indicate transfer in progress
+     * and with the buffer and byte count data. */
+    uartState->isRxBusy = true;
+    uartState->rxBuff = rxBuff;
+    uartState->rxSize = rxSize;
+    uartState->receiveStatus = STATUS_BUSY;
+
+    /* Enable the receiver */
+    LINFlexD_SetReceiverState(base, true);
+
+    /* Enable receive data full interrupt */
+    LINFlexD_SetInterruptMode(base, LINFlexD_DATA_RECEPTION_COMPLETE_INT, true);
+
+    return STATUS_SUCCESS;
+}

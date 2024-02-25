@@ -50,11 +50,12 @@
 
  /* 创建任务句柄 */
 static TaskHandle_t AppTaskCreate_Handle = NULL;
-/* LED1任务句柄 */
+/* PWM任务句柄 */
 static TaskHandle_t PWM_Task_Handle = NULL;
-/* LED2任务句柄 */
+/* 输入捕获任务句柄 */
 static TaskHandle_t Input_capture_Task_Handle = NULL;
-
+/* 串口测试任务句柄 */
+static TaskHandle_t Serial_test_Handle = NULL;
 
 /* USER CODE END PV */
 
@@ -65,6 +66,7 @@ static void AppTaskCreate(void);/* 用于创建任务 */
 
 static void PWM_Task(void* pvParameters);/* LED1_Task任务实现 */
 static void Input_capture_Task(void* pvParameters);/* LED2_Task任务实现 */
+static void Serial_test(void *parameter);
 
 /* USER CODE END PFDC */
 static void Board_Init(void);
@@ -82,11 +84,11 @@ int main(void)
 {
     /* USER CODE BEGIN 1 */
     /* USER CODE END 1 */ 
-                            Board_Init();
+    Board_Init();
     /* USER CODE BEGIN 2 */
 
     float scale = 0.99;
-    char test[10] = "Thank God!";
+    char *test = "Thank God!";
     PRINTF("Fuck this world %d times!\n",100);                                                                     
     PRINTF("There is a %f chance that this code will not have a bug!\n",scale);
     PRINTF("%s\n",test);
@@ -149,26 +151,36 @@ static void AppTaskCreate(void)
     
     taskENTER_CRITICAL();           //进入临界区
     
-    /* 创建LED_Task任务 */
-    xReturn = xTaskCreate((TaskFunction_t )PWM_Task, /* 任务入口函数 */
-                            (const char*    )"PWM_Task",/* 任务名字 */
-                            (uint16_t       )512,   /* 任务栈大小 */
-                            (void*          )NULL,	/* 任务入口函数参数 */
-                            (UBaseType_t    )2,	    /* 任务的优先级 */
-                            (TaskHandle_t*  )&PWM_Task_Handle);/* 任务控制块指针 */
-    if(pdPASS == xReturn)
-        PRINTF("Create PWM_Task successfully !\r\n");
+    // /* 创建LED_Task任务 */
+    // xReturn = xTaskCreate((TaskFunction_t )PWM_Task, /* 任务入口函数 */
+    //                         (const char*    )"PWM_Task",/* 任务名字 */
+    //                         (uint16_t       )512,   /* 任务栈大小 */
+    //                         (void*          )NULL,	/* 任务入口函数参数 */
+    //                         (UBaseType_t    )2,	    /* 任务的优先级 */
+    //                         (TaskHandle_t*  )&PWM_Task_Handle);/* 任务控制块指针 */
+    // if(pdPASS == xReturn)
+    //     PRINTF("Create PWM_Task successfully !\r\n");
     
-        /* 创建LED_Task任务 */
-    xReturn = xTaskCreate((TaskFunction_t )Input_capture_Task, /* 任务入口函数 */
-                            (const char*    )"Input_capture_Task",/* 任务名字 */
-                            (uint16_t       )512,   /* 任务栈大小 */
-                            (void*          )NULL,	/* 任务入口函数参数 */
-                            (UBaseType_t    )2,	    /* 任务的优先级 */
-                            (TaskHandle_t*  )&Input_capture_Task_Handle);/* 任务控制块指针 */
-    if(pdPASS == xReturn)
-        PRINTF("Create Input_capture_Task successfully!\r\n");
-    
+    //     /* 创建LED_Task任务 */
+    // xReturn = xTaskCreate((TaskFunction_t )Input_capture_Task, /* 任务入口函数 */
+    //                         (const char*    )"Input_capture_Task",/* 任务名字 */
+    //                         (uint16_t       )512,   /* 任务栈大小 */
+    //                         (void*          )NULL,	/* 任务入口函数参数 */
+    //                         (UBaseType_t    )2,	    /* 任务的优先级 */
+    //                         (TaskHandle_t*  )&Input_capture_Task_Handle);/* 任务控制块指针 */
+    // if(pdPASS == xReturn)
+    //     PRINTF("Create Input_capture_Task successfully!\r\n");
+
+    /* 创建串口测试任务 */
+    xReturn = xTaskCreate((TaskFunction_t)Serial_test,          /* 任务入口函数 */
+                          (const char *)"Serial_test",          /* 任务名字 */
+                          (uint16_t)512,                        /* 任务栈大小 */
+                          (void *)NULL,                         /* 任务入口函数参数 */
+                          (UBaseType_t)2,                       /* 任务的优先级 */
+                          (TaskHandle_t *)&Serial_test_Handle); /* 任务控制块指针 */
+    if (pdPASS == xReturn)
+        PRINTF("Create Serial_test successfully !\r\n");
+
     vTaskDelete(AppTaskCreate_Handle); //删除AppTaskCreate任务
     
     taskEXIT_CRITICAL();            //退出临界区
@@ -207,6 +219,32 @@ static void Input_capture_Task(void* parameter)
     }
 }
 
+
+
+static void Serial_test(void *parameter)
+{
+    uint8_t Tx_buffer[100];
+    uint8_t Rx_buffer[10];
+
+    status_t status = 0;
+    for(uint8_t i = 0; i < 100; i++) Tx_buffer[i] = i;
+    LINFlexD_UART_DRV_SendDataPolling(2,Tx_buffer,100);
+    
+    while(1)
+    {
+        if(buffer.head != buffer.tail)// 说明不为空
+        {
+            uint8_t temp;
+            RingBuff_Read(&temp);
+            LINFlexD_UART_DRV_SendDataPolling(2, &temp, 1);
+        }
+            
+        // LINFlexD_UART_DRV_ReceiveDataPolling(2, Rx_buffer,10);
+        // status = LINFlexD_UART_DRV_ReceiveData(2, Rx_buffer, 1);
+        // LINFlexD_UART_DRV_SendDataPolling(2, Rx_buffer, 1);
+    }
+
+}
 
 
 

@@ -48,6 +48,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button_send = new System.Windows.Forms.Button();
             this.button_clear_window = new System.Windows.Forms.Button();
+            this.button_save_data = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             this.textBox1.Location = new System.Drawing.Point(401, 39);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(490, 204);
             this.textBox1.TabIndex = 6;
@@ -235,11 +237,24 @@
             this.button_clear_window.UseVisualStyleBackColor = true;
             this.button_clear_window.Click += new System.EventHandler(this.button_clear_window_Click);
             // 
+            // button_save_data
+            // 
+            this.button_save_data.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_save_data.ForeColor = System.Drawing.Color.Black;
+            this.button_save_data.Location = new System.Drawing.Point(285, 149);
+            this.button_save_data.Name = "button_save_data";
+            this.button_save_data.Size = new System.Drawing.Size(110, 43);
+            this.button_save_data.TabIndex = 16;
+            this.button_save_data.Text = "保存数据";
+            this.button_save_data.UseVisualStyleBackColor = true;
+            this.button_save_data.Click += new System.EventHandler(this.button_save_data_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 743);
+            this.Controls.Add(this.button_save_data);
             this.Controls.Add(this.button_clear_window);
             this.Controls.Add(this.button_send);
             this.Controls.Add(this.textBox2);
@@ -287,6 +302,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button_send;
         private System.Windows.Forms.Button button_clear_window;
+        private System.Windows.Forms.Button button_save_data;
     }
 }
 

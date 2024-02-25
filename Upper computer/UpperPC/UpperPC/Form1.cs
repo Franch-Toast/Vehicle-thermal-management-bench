@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -98,7 +99,7 @@ namespace UpperPC
                         {
                             serialPort1.WriteLine(textBox2.Text);//写数据
                         }
-                        catch 
+                        catch
                         {
                             MessageBox.Show("串口数据写入错误", "错误");//出错提示
                             serialPort1.Close();
@@ -120,6 +121,10 @@ namespace UpperPC
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("串口未打开！", "错误");
+            }
         }
 
         private void button_clear_window_Click(object sender, EventArgs e)
@@ -127,6 +132,50 @@ namespace UpperPC
             textBox1.Clear();
         }
 
+        private void button_save_data_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //System.Windows.Forms.FolderBrowserDialog dialog = new System.Windows.Forms.FolderBrowserDialog();
+                //dialog.Description = "请选择文件夹";
+                //dialog.SelectedPath = "C:\\";
+                //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                //{
+                //    Console.WriteLine("选择了文件夹路径：" + dialog.SelectedPath);
+                //}
+                SaveFileDialog s = new SaveFileDialog();
+                //s.Filter = "图像文件|*.jpg|图像文件|*.png|所有文件|*.*";//保存的文件扩展名
+                s.Filter = "文本文件|*.txt|所有文件|*.*";//保存的文件扩展名
+                s.Title = "保存文件";//对话框标题
+                s.DefaultExt = "文本文件|*.txt";//设置文件默认扩展名 
+                s.InitialDirectory = @"C:\Users\Administrator\Desktop";//设置保存的初始目录
+                if (s.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    // 创建文件，将textBox1中的内容保存到文件中
+                    // saveDlg.FileName 是用户指定的文件路径
+                    FileStream fs = File.Open(s.FileName,
+                        FileMode.Create,
+                        FileAccess.Write);
+                    StreamWriter sw = new StreamWriter(fs);
 
+                    // 保存textBox1中所有内容（所有行）
+                    foreach (string line in textBox1.Lines)
+                    {
+                        sw.WriteLine(line);
+                    }
+                    //写入文件
+                    sw.Flush();
+                    //关闭文件
+                    sw.Close();
+                    fs.Close();
+                    // 提示用户：文件保存的位置和文件名
+                    MessageBox.Show("文件已成功保存到" + s.FileName);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("数据保存失败！", "Error");
+            }
+        }
     }
 }
