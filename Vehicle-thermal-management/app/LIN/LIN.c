@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-01-17 21:40:11
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-02-25 23:43:59
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 #include "LIN.h"
 #include "UART.h"
 
@@ -78,8 +89,8 @@ void LIN_Master_Send_Frame()
     status_t status = STATUS_SUCCESS;
     currentEvent = 0;
     /* LIN Master Send a Frame */
-    linMasterFrame.id = 0x35;
-    linMasterFrame.responseType = LIN_MASTER_RESPONSE;
+    // linMasterFrame.id = 0x35;
+    linMasterFrame.responseType = LIN_MASTER_RESPONSE; // 发送时，MCU作为主机必须为LIN_MASTER_RESPONSE模式
     status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
     /* Wait until master transmission completed */
     while (0 == currentEvent);
@@ -105,8 +116,8 @@ void LIN_Master_Receive_Frame()
     status_t status = STATUS_SUCCESS;
     currentEvent = 0;
     /* LIN Master receive a Frame */
-    linMasterFrame.id = 0x32;
-    linMasterFrame.responseType = LIN_SLAVE_RESPONSE;
+    // linMasterFrame.id = 0x32;
+    linMasterFrame.responseType = LIN_SLAVE_RESPONSE;// 接收时，MCU作为主机必须为LIN_SLAVE_RESPONSE模式
     status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
     /* wait until master receive completed */
     while (0 == currentEvent);
