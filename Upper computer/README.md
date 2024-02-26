@@ -32,11 +32,34 @@
 
 帧头：0x0A
 
-帧尾：0x0D
+帧尾：0xFF
 
 指令码与数据码根据具体开启的任务而定。
 
 ![通讯逻辑](./pic/1.jpg)
+
+```c
+/* 定义台架的状态结构体 */
+typedef struct 
+{
+    uint8_t three_way_valve_status; // 三通阀状态
+    uint8_t four_way_valve_status; // 四通阀状态
+    uint8_t compressor_status; // 压缩机开启状态
+    uint16_t compressor_speed; // 压缩机转速
+    uint8_t water_pump_duty; // 水泵占空比
+}Workbench_status_t;
+
+/*
+	其中：
+	三通阀、四通阀各两个，分别用每个阀使用4bit来标识（由于只有两种状态，其实两个bit就够了，但为了更加明了这样来设计）
+	压缩机开启状态使用一个字节来传输
+	压缩机转速用四个字节标识，因为在通讯矩阵中通过LIN发送的转速为2字节，放大系数为50，所以最大值为255*50 = 12750 < 65535
+	水泵占空比使用一个字节传输，默认为百分比制
+	
+	故而传输帧格式为{0x0A（帧头）,0x（指令码）, 0x,0x,0x,0x,0x,0x, 0XFF（帧尾）}，数据码共6byte
+*/
+
+```
 
 
 

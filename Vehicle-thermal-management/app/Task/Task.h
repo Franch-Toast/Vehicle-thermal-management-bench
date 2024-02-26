@@ -12,6 +12,18 @@
 #ifndef _TASK_H_
 #define _TASK_H_
 
+#include "stdint.h"
+
+/* 定义串口传输帧结构体 */
+typedef struct 
+{
+    uint8_t data_length;// 数据的长度
+    uint8_t data[10]; // 数据内容，这里暂时给10的大小
+}serial_data_frame_t;
+
+
+
+
 /*
  * 任务0 ：
     1.停止台架的运行，任务中对已经开启的任务进行通信，关闭不断传输数据的任务

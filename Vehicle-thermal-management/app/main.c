@@ -35,6 +35,17 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
+
+/* 定义台架的状态结构体 */
+typedef struct 
+{
+    uint8_t three_way_valve_status; // 三通阀状态
+    uint8_t four_way_valve_status; // 四通阀状态
+    uint8_t compressor_status;     // 压缩机开启状态
+    uint16_t compressor_speed; // 压缩机转速
+    uint8_t water_pump_duty; // 水泵占空比
+}Workbench_status_t;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -57,12 +68,16 @@ static TaskHandle_t Input_capture_Task_Handle = NULL;
 /* 串口测试任务句柄 */
 static TaskHandle_t Serial_test_Handle = NULL;
 
+/* 台架状态结构体 */
+Workbench_status_t Workbench_status;
+
 /* USER CODE END PV */
 
-/* Private function declare --------------------------------------------------*/
-/* USER CODE BEGIN PFDC */
+    /* Private function declare --------------------------------------------------*/
+    /* USER CODE BEGIN PFDC */
 
-static void AppTaskCreate(void);/* 用于创建任务 */
+    static void
+    AppTaskCreate(void); /* 用于创建任务 */
 
 static void PWM_Task(void* pvParameters);/* LED1_Task任务实现 */
 static void Input_capture_Task(void* pvParameters);/* LED2_Task任务实现 */
@@ -224,7 +239,7 @@ static void Input_capture_Task(void* parameter)
 static void Serial_test(void *parameter)
 {
     uint8_t Tx_buffer[100];
-    uint8_t Rx_buffer[10];
+    uint8_t Rx_buffer[20];
 
     status_t status = 0;
     for(uint8_t i = 0; i < 100; i++) Tx_buffer[i] = i;
@@ -239,9 +254,9 @@ static void Serial_test(void *parameter)
             LINFlexD_UART_DRV_SendDataPolling(2, &temp, 1);
         }
             
-        // LINFlexD_UART_DRV_ReceiveDataPolling(2, Rx_buffer,10);
+        // LINFlexD_UART_DRV_ReceiveDataPolling(2, Rx_buffer,15);
         // status = LINFlexD_UART_DRV_ReceiveData(2, Rx_buffer, 1);
-        // LINFlexD_UART_DRV_SendDataPolling(2, Rx_buffer, 1);
+        // LINFlexD_UART_DRV_SendDataPolling(2, Rx_buffer, 15);
     }
 
 }

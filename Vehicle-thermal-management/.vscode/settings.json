@@ -25,6 +25,10 @@
         "system_ytm32b1me0.h": "c",
         "freertos.h": "c",
         "osif.h": "c",
-        "stack_macros.h": "c"
-    }
+        "stack_macros.h": "c",
+        "sdk_project_config.h": "c",
+        "task.h": "c",
+        "linflexd_hw_access.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": false
 }

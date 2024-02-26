@@ -13,6 +13,8 @@
 
 #include "UART.h"
 #include "linflexd_hw_access.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 
 
@@ -48,6 +50,7 @@ uint8_t RingBuff_Read(uint8_t *pData)
 
 void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 {
+    uint32_t ulReturn = taskENTER_CRITICAL_FROM_ISR();
     if (event == UART_EVENT_END_TRANSFER)
     {
         RingBuff_Write(Rx_Byte);
@@ -57,6 +60,7 @@ void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
     {
         
     }
+    taskEXIT_CRITICAL_FROM_ISR(ulReturn);
 }
 
 
