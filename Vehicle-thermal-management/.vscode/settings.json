@@ -28,7 +28,12 @@
         "stack_macros.h": "c",
         "sdk_project_config.h": "c",
         "task.h": "c",
-        "linflexd_hw_access.h": "c"
+        "linflexd_hw_access.h": "c",
+        "lin.h": "c",
+        "linflexd_lin_driver.h": "c",
+        "pwm.h": "c",
+        "event_groups.h": "c",
+        "linflexd_uart_driver.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": false
 }

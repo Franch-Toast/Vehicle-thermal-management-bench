@@ -1082,10 +1082,66 @@ status_t LINFlexD_UART_DRV_SetRxBuffer(uint32_t instance,
  * occurs.
  *
  *END**************************************************************************/
+void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
+{
+    linflexd_uart_state_t *uartState;
+    LINFlexD_Type *base;
+
+    base = s_uartLINFlexDBase[instance];
+    uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
+
+    /* Exit if there is no reception in progress */
+    if (!uartState->isRxBusy)
+    {
+        return;
+    }
+
+    /* Retrieve the data */
+    LINFlexD_UART_DRV_GetData(instance);
+
+    /* Check if this was the last byte in the current buffer */
+    if (uartState->rxSize == 0U)
+    {
+        /* Invoke the callback when the buffer is finished;
+         * Application can provide another buffer inside the callback by calling LINFlexD_UART_DRV_SetRxBuffer */
+        if (uartState->rxCallback != NULL)
+        {
+            uartState->rxCallback(uartState, UART_EVENT_RX_FULL, uartState->rxCallbackParam);
+        }
+        LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
+        LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true); // 开启空闲中断
+    }
+
+    /* Finish reception if this was the last byte received */
+    // if (uartState->rxSize == 0U)
+    // {
+    //     /* Complete transfer (disable rx logic) */
+    //     LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
+    //     LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, false);
+
+    //     /* Invoke callback if there is one */
+    //     if (uartState->rxCallback != NULL)
+    //     {
+    //         uartState->rxCallback(uartState, UART_EVENT_END_TRANSFER, uartState->rxCallbackParam);
+    //     }
+    // }
+    // else
+    // {
+    //     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
+    //     LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true);
+    // }
+
+
+    /* Clear the flag */
+    LINFlexD_ClearStatusFlag(base, LINFlexD_UART_DATA_RECEPTION_COMPLETE_FLAG);
+    LINFlexD_ClearStatusFlag(base, LINFlexD_UART_MESSAGE_BUFFER_FULL_FLAG);
+}
+
+/* original SDK LINFlexD_UART_DRV_RxIRQHandler for saving */
 // void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
 // {
-//     linflexd_uart_state_t * uartState;
-//     LINFlexD_Type * base;
+//     linflexd_uart_state_t *uartState;
+//     LINFlexD_Type *base;
 
 //     base = s_uartLINFlexDBase[instance];
 //     uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
@@ -1123,7 +1179,7 @@ status_t LINFlexD_UART_DRV_SetRxBuffer(uint32_t instance,
 //             uartState->rxCallback(uartState, UART_EVENT_END_TRANSFER, uartState->rxCallbackParam);
 //         }
 //     }
-//     else 
+//     else
 //     {
 //         LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
 //         LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true);
@@ -1133,58 +1189,6 @@ status_t LINFlexD_UART_DRV_SetRxBuffer(uint32_t instance,
 //     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_DATA_RECEPTION_COMPLETE_FLAG);
 //     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_MESSAGE_BUFFER_FULL_FLAG);
 // }
-
-void LINFlexD_UART_DRV_RxIRQHandler(uint32_t instance)
-{
-    linflexd_uart_state_t *uartState;
-    LINFlexD_Type *base;
-
-    base = s_uartLINFlexDBase[instance];
-    uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
-
-    /* Exit if there is no reception in progress */
-    if (!uartState->isRxBusy)
-    {
-        return;
-    }
-
-    /* Retrieve the data */
-    LINFlexD_UART_DRV_GetData(instance);
-
-    /* Check if this was the last byte in the current buffer */
-    if (uartState->rxSize == 0U)
-    {
-        /* Invoke the callback when the buffer is finished;
-         * Application can provide another buffer inside the callback by calling LINFlexD_UART_DRV_SetRxBuffer */
-        if (uartState->rxCallback != NULL)
-        {
-            uartState->rxCallback(uartState, UART_EVENT_RX_FULL, uartState->rxCallbackParam);
-        }
-    }
-
-    /* Finish reception if this was the last byte received */
-    if (uartState->rxSize == 0U)
-    {
-        /* Complete transfer (disable rx logic) */
-        LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
-        LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, false);
-
-        /* Invoke callback if there is one */
-        if (uartState->rxCallback != NULL)
-        {
-            uartState->rxCallback(uartState, UART_EVENT_END_TRANSFER, uartState->rxCallbackParam);
-        }
-    }
-    else
-    {
-        LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
-        LINFlexD_SetInterruptMode(base, LINFlexD_UART_TIMEOUT_ERROR_INT, true);
-    }
-
-    /* Clear the flag */
-    LINFlexD_ClearStatusFlag(base, LINFlexD_UART_DATA_RECEPTION_COMPLETE_FLAG);
-    LINFlexD_ClearStatusFlag(base, LINFlexD_UART_MESSAGE_BUFFER_FULL_FLAG);
-}
 
 /*FUNCTION**********************************************************************
  *
@@ -1327,13 +1331,42 @@ void LINFlexD_UART_DRV_RxTOHandler(uint32_t instance)
     }
 
     /* Complete transfer (disable rx logic) */
-    LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
+    // LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
 
     /* Clear the flag */
     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
     base->LINIER &= ~LINFlexD_LINIER_TOIE(1U);
 }
 
+
+/* original SDK LINFlexD_UART_DRV_RxIRQHandler for saving */
+// void LINFlexD_UART_DRV_RxTOHandler(uint32_t instance)
+// {
+//     linflexd_uart_state_t *uartState;
+//     LINFlexD_Type *base;
+
+//     base = s_uartLINFlexDBase[instance];
+//     uartState = (linflexd_uart_state_t *)s_uartLINFlexDStatePtr[instance];
+
+//     /* Exit if there is no reception in progress */
+//     if (!uartState->isRxBusy)
+//     {
+//         return;
+//     }
+
+//     /* Invoke callback if there is one */
+//     if (uartState->rxCallback != NULL)
+//     {
+//         uartState->rxCallback(uartState, UART_EVENT_TIMEOUT, uartState->rxCallbackParam);
+//     }
+
+//     /* Complete transfer (disable rx logic) */
+//     LINFlexD_UART_DRV_CompleteReceiveUsingInterrupts(instance);
+
+//     /* Clear the flag */
+//     LINFlexD_ClearStatusFlag(base, LINFlexD_UART_TIMEOUT_FLAG);
+//     base->LINIER &= ~LINFlexD_LINIER_TOIE(1U);
+// }
 
 /*FUNCTION**********************************************************************
  *

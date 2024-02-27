@@ -13,16 +13,31 @@
 #define _TASK_H_
 
 #include "stdint.h"
+#include "FreeRTOS.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "event_groups.h"
+#include "linflexd_lin_driver.h"
+#include "linflexd_uart_driver.h"
+#include "PWM.h"
+#include "LIN.h"
 
 /* 定义串口传输帧结构体 */
 typedef struct 
 {
     uint8_t data_length;// 数据的长度
     uint8_t data[10]; // 数据内容，这里暂时给10的大小
-}serial_data_frame_t;
+}Serial_data_frame_t;
 
-
-
+/* 定义台架的状态结构体 */
+typedef struct
+{
+    uint8_t three_way_valve_status; // 三通阀状态
+    uint8_t four_way_valve_status;  // 四通阀状态
+    uint8_t compressor_status;      // 压缩机开启状态
+    uint16_t compressor_speed;      // 压缩机转速
+    uint8_t water_pump_duty;        // 水泵占空比
+} Workbench_status_t;
 
 /*
  * 任务0 ：

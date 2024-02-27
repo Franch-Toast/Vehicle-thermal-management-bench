@@ -15,10 +15,12 @@
 #include "linflexd_hw_access.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "semphr.h"
 
+/* 上位机指令传输信号量 */
+extern SemaphoreHandle_t Get_upper_order_Handle;
 
-
-ringBuffer_t buffer; // 定义一个结构体
+ringBuffer_t buffer; // 定义一个环形缓冲区
 
 uint8_t Rx_Byte;
 
@@ -50,17 +52,18 @@ uint8_t RingBuff_Read(uint8_t *pData)
 
 void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 {
-    uint32_t ulReturn = taskENTER_CRITICAL_FROM_ISR();
-    if (event == UART_EVENT_END_TRANSFER)
+    // uint32_t ulReturn = taskENTER_CRITICAL_FROM_ISR();
+    if (event == UART_EVENT_RX_FULL)
     {
         RingBuff_Write(Rx_Byte);
         LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(PRINTF_UART, &Rx_Byte, 1);
     }
-    else if (event == UART_EVENT_RX_FULL)
+    else if (event == UART_EVENT_TIMEOUT) // 串口空闲中断
     {
-        
+        BaseType_t xReturn = pdPASS;
+        xReturn = xSemaphoreGive(Get_upper_order_Handle); // 给出二值信号量
     }
-    taskEXIT_CRITICAL_FROM_ISR(ulReturn);
+    // taskEXIT_CRITICAL_FROM_ISR(ulReturn);
 }
 
 
@@ -69,7 +72,10 @@ void UART_init()
     LINFlexD_UART_DRV_Init(PRINTF_UART,&linflexd_uart_config0_State,&linflexd_uart_config0);
     LINFlexD_UART_DRV_InstallRxCallback(PRINTF_UART,UART_Rx_Callback,NULL);
 
-    // LINFlexD_SetReceiverState(((LINFlexD_Type *)(0x4001D000)), true);
+    /* 创建二值信号量 */
+    Get_upper_order_Handle = xSemaphoreCreateBinary();
+    if(Get_upper_order_Handle != NULL) PRINTF("二值信号量创建成功！\n");
+
     LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(PRINTF_UART, &Rx_Byte, 1);
 }
 

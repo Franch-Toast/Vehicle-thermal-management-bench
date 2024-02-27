@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 
 
 set(sources
+    ${PROJ_DIR}/app/Task/Task.c
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/port.c
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/portasm.c
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/MemMang/heap_4.c
@@ -46,6 +47,7 @@ set(sources
     ${PROJ_DIR}/rtos/osif/osif_baremetal.c
 )
 set(includes
+    ${PROJ_DIR}/app/Task
     ${PROJ_DIR}/app
     ${PROJ_DIR}/rtos/FreeRTOS/Source/include
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33

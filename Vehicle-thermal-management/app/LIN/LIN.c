@@ -11,6 +11,7 @@
  */
 #include "LIN.h"
 #include "UART.h"
+#include "linflexd_lin_driver.h"
 
 
 /* 
