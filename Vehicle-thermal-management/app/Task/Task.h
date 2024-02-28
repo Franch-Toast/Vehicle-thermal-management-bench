@@ -3,7 +3,7 @@
  * @Date: 2024-02-25 22:17:21
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-25 22:17:57
+ * @LastEditTime: 2024-02-28 11:34:46
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood. 
@@ -21,6 +21,12 @@
 #include "linflexd_uart_driver.h"
 #include "PWM.h"
 #include "LIN.h"
+#include "queue.h"
+
+
+
+
+
 
 /* 定义串口传输帧结构体 */
 typedef struct 
@@ -45,7 +51,20 @@ typedef struct
     2.关闭受控的部件，这里主要是压缩机和水泵
     3.向上位机发送响应，通知上位机关闭台架的结果
 */
-void Task_0x00(void* parameter);
+void Task_0x01(void* parameter);
+
+
+
+
+// /* 任务句柄 */
+// TaskHandle_t Task_main_Handle;
+// TaskHandle_t Task_0x00_Handle;
+// TaskHandle_t Task_0x01_Handle;
+
+/* 定义事件标志组 */
+static EventGroupHandle_t deleteTask01EventGroup;
+
+
 
 
 #endif

@@ -33,7 +33,8 @@
         "linflexd_lin_driver.h": "c",
         "pwm.h": "c",
         "event_groups.h": "c",
-        "linflexd_uart_driver.h": "c"
+        "linflexd_uart_driver.h": "c",
+        "linflexd_uart_config.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": false
 }
