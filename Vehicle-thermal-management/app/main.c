@@ -45,7 +45,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
-#define QUEUE_LEN 2   // 消息队列中能存放多少个消息
+#define QUEUE_LEN 4   // 消息队列中能存放多少个消息
 #define QUEUE_SIZE 11 // 消息队列中的一个消息的长度，即一个数据帧结构体的长度
 
 /* USER CODE END PD */
@@ -261,12 +261,23 @@ static void Serial_test(void *parameter)
 
         if (xReturn == pdPASS) // 说明不为空
         {
-            while(buffer.head != buffer.tail)
+            if (RingBuff_Read_frame() > 0)
             {
-                uint8_t temp;
-                RingBuff_Read_Byte(&temp);
-                LINFlexD_UART_DRV_SendDataPolling(2, &temp, 1);
+
+                // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
+                if (serial_data_frame.data[0] == 0x0A && serial_data_frame.data[serial_data_frame.data_length-1] == 0xFF) // 满足帧定义
+                {
+                    if(serial_data_frame.data[1] == 0x01) 
+                    {
+                        // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
+                        xQueueSend(Message_queue_main2Task0x01,&serial_data_frame,1000);
+                    }
+                }
             }
+            // LINFlexD_UART_DRV_SendDataPolling(2, &buffer.ringBuff[buffer.head], data_length);
+            // uint8_t frame[data_length];
+            // RingBuff_Read_frame(frame, data_length);
+            
             
             // uint8_t data_length = RingBuff_data_length();
             // if (data_length > 0)
