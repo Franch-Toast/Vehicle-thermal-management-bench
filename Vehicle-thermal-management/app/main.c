@@ -31,7 +31,6 @@
 #include "LIN.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "semphr.h"
 #include "Task.h"
 #include "queue.h"
 
@@ -57,43 +56,30 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
+
 /* 创建任务句柄 */
 static TaskHandle_t AppTaskCreate_Handle = NULL;
-/* PWM任务句柄 */
-static TaskHandle_t PWM_Task_Handle = NULL;
-/* 输入捕获任务句柄 */
-static TaskHandle_t Input_capture_Task_Handle = NULL;
-/* 串口测试任务句柄 */
-static TaskHandle_t Serial_test_Handle = NULL;
-
-/* 上位机指令传输信号量 */
-SemaphoreHandle_t Get_upper_order_Handle = NULL;
-
-/* 主任务向 Task01 传输数据使用的消息队列句柄 */
-QueueHandle_t Message_queue_main2Task0x01 = NULL;
-
-/* 台架状态结构体 */
-Workbench_status_t Workbench_status;
-
-/* 串口发送数据帧结构体，大小为 11 Bytes */
-Serial_data_frame_t serial_data_frame;
-
-
-/* 任务句柄 */
+/* 任务句柄，在Task.c中创建 */
 extern TaskHandle_t Task_main_Handle;
 extern TaskHandle_t Task_0x00_Handle;
 extern TaskHandle_t Task_0x01_Handle;
+extern TaskHandle_t Task_0x02_Handle;
+
+/* 通信用句柄 */
+extern QueueHandle_t Message_queue_main2Task0x01; // 主任务向Task01通信用消息队列句柄
+extern SemaphoreHandle_t Get_upper_order_Handle;   // 串口接收二值信号量
+extern EventGroupHandle_t HangTask01EventGroup; // 挂起Task01用事件组句柄
+
+/* 台架状态结构体 */
+Workbench_status_t Workbench_status;
 
 /* USER CODE END PV */
 
 /* Private function declare --------------------------------------------------*/
 /* USER CODE BEGIN PFDC */
 
-static void AppTaskCreate(void); /* 用于创建任务 */
-
-static void PWM_Task(void *pvParameters);           /* LED1_Task任务实现 */
-static void Input_capture_Task(void *pvParameters); /* LED2_Task任务实现 */
-static void Serial_test(void *parameter);
+static void AppTaskCreate(void); /* 用于创建任务的任务 */
+static void COM_init(void); // 用于初始化通信方式
 
 /* USER CODE END PFDC */
 static void Board_Init(void);
@@ -126,14 +112,6 @@ int main(void)
                           (void *)NULL,                           /* 任务入口函数参数 */
                           (UBaseType_t)1,                         /* 任务的优先级 */
                           (TaskHandle_t *)&AppTaskCreate_Handle); /* 任务控制块指针 */
-                          
-    xReturn = xTaskCreate((TaskFunction_t)Task_0x01,          /* 任务入口函数 */
-                        (const char *)"Task_0x01_Handle",          /* 任务名字 */
-                        (uint16_t)512,                          /* 任务栈大小 */
-                        (void *)NULL,                           /* 任务入口函数参数 */
-                        (UBaseType_t)1,                         /* 任务的优先级 */
-                        (TaskHandle_t *)&Task_0x01_Handle); /* 任务控制块指针 */
-
 
     /* 启动任务调度 */
     if (pdPASS == xReturn)
@@ -141,20 +119,15 @@ int main(void)
     else
         return -1;
 
-    // LIN_MASTER_init();
-    // LIN_Master_Send_Frame();
-
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
 
-    /* 正常不会执行到这里 */
     while (1)
     {
         /* USER CODE END WHILE */
         /* USER CODE BEGIN 3 */
-        // LIN_Master_Receive_Frame();
     }
     /* USER CODE END 3 */
 }
@@ -164,15 +137,15 @@ static void Board_Init(void)
     CLOCK_SYS_Init(g_clockManConfigsArr, CLOCK_MANAGER_CONFIG_CNT, g_clockManCallbacksArr, CLOCK_MANAGER_CALLBACK_CNT);
     CLOCK_SYS_UpdateConfiguration(CLOCK_MANAGER_ACTIVE_INDEX, CLOCK_MANAGER_POLICY_AGREEMENT);
     PINS_DRV_Init(NUM_OF_CONFIGURED_PINS0, g_pin_mux_InitConfigArr0);
+
+    /* 通讯方式初始化 */
+    COM_init();
     /* 串口功能初始化 */
     UART_init();
     /* 输入捕获初始化 */
     Input_capture_init();
     /* PWM功能初始化 */
     PWM_init();
-
-    /* 消息队列创建初始化 */
-    Message_queue_main2Task0x01 = xQueueCreate(QUEUE_LEN, QUEUE_SIZE);
 
 }
 
@@ -183,120 +156,46 @@ static void AppTaskCreate(void)
 
     taskENTER_CRITICAL(); // 进入临界区
 
-    // /* 创建LED_Task任务 */
-    // xReturn = xTaskCreate((TaskFunction_t )PWM_Task, /* 任务入口函数 */
-    //                         (const char*    )"PWM_Task",/* 任务名字 */
-    //                         (uint16_t       )512,   /* 任务栈大小 */
-    //                         (void*          )NULL,	/* 任务入口函数参数 */
-    //                         (UBaseType_t    )2,	    /* 任务的优先级 */
-    //                         (TaskHandle_t*  )&PWM_Task_Handle);/* 任务控制块指针 */
-    // if(pdPASS == xReturn)
-    //     PRINTF("Create PWM_Task successfully !\r\n");
-
-    //     /* 创建LED_Task任务 */
-    // xReturn = xTaskCreate((TaskFunction_t )Input_capture_Task, /* 任务入口函数 */
-    //                         (const char*    )"Input_capture_Task",/* 任务名字 */
-    //                         (uint16_t       )512,   /* 任务栈大小 */
-    //                         (void*          )NULL,	/* 任务入口函数参数 */
-    //                         (UBaseType_t    )2,	    /* 任务的优先级 */
-    //                         (TaskHandle_t*  )&Input_capture_Task_Handle);/* 任务控制块指针 */
-    // if(pdPASS == xReturn)
-    //     PRINTF("Create Input_capture_Task successfully!\r\n");
-
     /* 创建串口测试任务 */
-    xReturn = xTaskCreate((TaskFunction_t)Serial_test,          /* 任务入口函数 */
-                          (const char *)"Serial_test",          /* 任务名字 */
+    xReturn = xTaskCreate((TaskFunction_t)Task_main,          /* 任务入口函数 */
+                          (const char *)"Task_main",          /* 任务名字 */
                           (uint16_t)512,                        /* 任务栈大小 */
                           (void *)NULL,                         /* 任务入口函数参数 */
                           (UBaseType_t)1,                       /* 任务的优先级 */
-                          (TaskHandle_t *)&Serial_test_Handle); /* 任务控制块指针 */
+                          (TaskHandle_t *)&Task_main_Handle); /* 任务控制块指针 */
+
+    xReturn = xTaskCreate((TaskFunction_t)Task_0x01,          /* 任务入口函数 */
+                        (const char *)"Task_0x01",          /* 任务名字 */
+                        (uint16_t)512,                          /* 任务栈大小 */
+                        (void *)NULL,                           /* 任务入口函数参数 */
+                        (UBaseType_t)1,                         /* 任务的优先级 */
+                        (TaskHandle_t *)&Task_0x01_Handle); /* 任务控制块指针 */
+    xReturn = xTaskCreate((TaskFunction_t)Task_0x02,          /* 任务入口函数 */
+                        (const char *)"Task_0x02",          /* 任务名字 */
+                        (uint16_t)512,                          /* 任务栈大小 */
+                        (void *)NULL,                           /* 任务入口函数参数 */
+                        (UBaseType_t)1,                         /* 任务的优先级 */
+                        (TaskHandle_t *)&Task_0x02_Handle); /* 任务控制块指针 */
     if (pdPASS == xReturn)
-        PRINTF("Create Serial_test successfully !\r\n");
+        PRINTF("System start successfully !\r\n");
 
     vTaskDelete(AppTaskCreate_Handle); // 删除AppTaskCreate任务
 
     taskEXIT_CRITICAL(); // 退出临界区
 }
 
-static void PWM_Task(void *parameter)
+static void COM_init(void)
 {
-    PRINTF("Come into PWM_Task successfully !\r\n");
-    PWM_Start();
+    /* 创建二值信号量 */
+    Get_upper_order_Handle = xSemaphoreCreateBinary();
+    if (Get_upper_order_Handle != NULL)
+        PRINTF("二值信号量创建成功！\n");
 
-    while (1)
-    {
-        vTaskDelay(5000);         /* 延时500个tick */
-        PWM_Changedutycycle(0.8); // 调整占空比为80%
-        PRINTF("PWM duty cycle is 80\%.\r\n");
+    /* 消息队列创建初始化 */
+    Message_queue_main2Task0x01 = xQueueCreate(QUEUE_LEN, QUEUE_SIZE);
 
-        PWM_Changedutycycle(0.5); // 调整占空比为50%
-        vTaskDelay(5000);         /* 延时500个tick */
-        PRINTF("PWM duty cycle is 50\%.\r\n");
-    }
-}
-
-static void Input_capture_Task(void *parameter)
-{
-
-    PRINTF("Come into Input_capture_Task successfully !\r\n");
-    // 输入捕获使能
-    Input_capture_Start();
-    float frequency = 0;
-
-    while (1)
-    {
-        vTaskDelay(500);                              /* 延时500个tick */
-        Input_capture_get_pulse_frequncy(&frequency); // 获取输入捕获的脉冲频率
-        PRINTF("frequency is %f Hz!\n", frequency);
-    }
-}
-
-static void Serial_test(void *parameter)
-{
-    BaseType_t xReturn = pdPASS;
-
-    while (1)
-    {
-        xReturn = xSemaphoreTake(Get_upper_order_Handle, portMAX_DELAY);
-
-        if (xReturn == pdPASS) // 说明不为空
-        {
-            if (RingBuff_Read_frame() > 0)
-            {
-
-                // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
-                if (serial_data_frame.data[0] == 0x0A && serial_data_frame.data[serial_data_frame.data_length-1] == 0xFF) // 满足帧定义
-                {
-                    if(serial_data_frame.data[1] == 0x01) 
-                    {
-                        // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
-                        xQueueSend(Message_queue_main2Task0x01,&serial_data_frame,1000);
-                    }
-                }
-            }
-            // LINFlexD_UART_DRV_SendDataPolling(2, &buffer.ringBuff[buffer.head], data_length);
-            // uint8_t frame[data_length];
-            // RingBuff_Read_frame(frame, data_length);
-            
-            
-            // uint8_t data_length = RingBuff_data_length();
-            // if (data_length > 0)
-            // {
-            //     uint8_t frame[data_length];
-            //     RingBuff_Read_frame(frame, data_length);
-            //     if (frame[0] == 0x0A && frame[data_length - 1] == 0xFF) // 满足帧定义
-            //     {
-            //         serial_data_frame.data_length = data_length - 3;
-            //         memcpy(serial_data_frame.data, frame + 2, serial_data_frame.data_length);
-            //         // if(frame[1] == 0x01) // 将数据帧发送给Task_0x01
-            //         // {
-            //         //     xQueueSend(Message_queue_main2Task0x01,&serial_data_frame,1000);
-            //         // }
-            //         LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
-            //     }
-            // }
-        }
-    }
+    /* 事件组创建初始化 */
+    HangTask01EventGroup = xEventGroupCreate();
 }
 
 /* USER CODE END 4 */

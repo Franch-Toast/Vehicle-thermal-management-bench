@@ -3,7 +3,7 @@
  * @Date: 2023-12-24 11:53:25
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-28 14:30:19
+ * @LastEditTime: 2024-02-28 20:02:06
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -20,6 +20,13 @@
 #define PRINTF_UART (2U)
 
 #define BUFFER_MAX 24 // 缓冲区大小
+
+/* 定义串口传输帧结构体 */
+typedef struct 
+{
+    uint8_t data_length;// 数据的长度
+    uint8_t data[10]; // 数据内容，这里暂时给10的大小
+}Serial_data_frame_t;
 
 typedef struct
 {

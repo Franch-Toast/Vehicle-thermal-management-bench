@@ -3,7 +3,7 @@
  * @Date: 2023-12-24 11:53:14
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-28 14:29:03
+ * @LastEditTime: 2024-02-28 20:02:37
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -16,10 +16,14 @@
 #include "task.h"
 #include "semphr.h"
 #include "Task.h"
+#include "queue.h"
+
 
 /* 上位机指令传输信号量 */
 extern SemaphoreHandle_t Get_upper_order_Handle;
-extern Serial_data_frame_t serial_data_frame;
+
+/* 串口发送数据帧结构体，大小为 11 Bytes */
+Serial_data_frame_t serial_data_frame;
 
 ringBuffer_t buffer; // 定义一个环形缓冲区
 
@@ -97,12 +101,9 @@ void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 void UART_init()
 {
     LINFlexD_UART_DRV_Init(PRINTF_UART, &linflexd_uart_config0_State, &linflexd_uart_config0);
+    
+    /* 注册回调函数 */
     LINFlexD_UART_DRV_InstallRxCallback(PRINTF_UART, UART_Rx_Callback, NULL);
-
-    /* 创建二值信号量 */
-    Get_upper_order_Handle = xSemaphoreCreateBinary();
-    if (Get_upper_order_Handle != NULL)
-        PRINTF("二值信号量创建成功！\n");
-
+    /* 开启单字节接收中断 */
     LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(PRINTF_UART, &Rx_Byte, 1);
 }
