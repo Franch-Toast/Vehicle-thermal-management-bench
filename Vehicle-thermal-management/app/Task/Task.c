@@ -36,13 +36,12 @@ extern Serial_data_frame_t serial_data_frame;
     1.在未收到信号量的时候阻塞
     2.收到信号量后，获取队列缓冲区中的数据
     3.对指令码进行解析，存放到数据帧结构体中
-    4.使用消息队列将数据帧传递给对应的任务
+    4.使用消息队列将数据帧传递给对应的任务或置位标志位唤醒任务
     5.循环任务
 */
 void Task_main(void *parameter)
 {
     BaseType_t xReturn = pdPASS;
-
 
     while (1)
     {
@@ -52,17 +51,17 @@ void Task_main(void *parameter)
         {
             if (RingBuff_Read_frame() > 0)
             {
-                // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
                 if (serial_data_frame.data[0] == 0x0A && serial_data_frame.data[serial_data_frame.data_length-1] == 0xFF) // 满足帧定义
                 {
-                    if(serial_data_frame.data[1] == 0x01) 
+                    if(serial_data_frame.data[1] == 0x01) // 唤醒Task01
                     {
                         // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
                         xQueueSend(Message_queue_main2Task0x01,&serial_data_frame,1000);
                     }
-                    else if(serial_data_frame.data[1] == 0x02)
+                    else if(serial_data_frame.data[1] == 0x00) // 唤醒Task00
                     {
-                        xEventGroupClearBits(HangTask01EventGroup,0x01); // bit0被清除
+                        // xEventGroupClearBits(HangTask01EventGroup,0x01); // bit0被清除
+                        xEventGroupSetBits(HangTask01EventGroup, 0x02); // bit1 置1
                     }
                 }
             }
@@ -80,34 +79,42 @@ void Task_main(void *parameter)
 */
 void Task_0x00(void *parameter)
 {
-    /* 清除已经置位的事件标志通知Task_0x01挂起自身，停止向上位机发送 */
-    xEventGroupClearBits(HangTask01EventGroup,0x01); // bit0被清除
-
-    /* 使水泵停转，调整占空比为10% */
-    PWM_Changedutycycle(0.1);
-
-    /* 使压缩机停转，根据通讯矩阵的内容写死通讯帧 */
-    linMasterFrame.id = 0x30;
-    linMasterFrame.data[2] = 0x00; // 第三个字节为 0 即可停机
-    LIN_Master_Send_Frame();
-    
-    /* 为确保停机，向压缩机读取转速数据 */
-    linMasterFrame.id = 0x12;
-    vTaskDelay(100000);// 延时一段时间，让压缩机的转速降低
-    LIN_Master_Receive_Frame();
-
-    /* 向上位机发送响应，通知上位机关闭台架的结果 */
-
-    if (linMasterFrame.data[1] == 0) // 压缩机转速降低至0
+    while(1)
     {
-        uint8_t responce2upper[4] = {0x0A, 0x00, 0x01 ,0xFF};// 发送数据码为 0x01 ，表示关闭成功
-        LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
+        /* 等待主任务唤醒 */
+        xEventGroupWaitBits(HangTask01EventGroup,0x02,pdTRUE,pdFALSE,portMAX_DELAY); // 仅一位标志位，无需获取返回值，清除事件标志位
+
+        /* 使水泵停转，调整占空比为10% */
+        PWM_Changedutycycle(0.1);
+
+        /* 使压缩机停转，根据通讯矩阵的内容写死通讯帧 */
+        linMasterFrame.id = 0x30;
+        linMasterFrame.data[2] = 0x00; // 第三个字节为 0 即可停机
+        LIN_Master_Send_Frame();
+        
+        /* 为确保停机，向压缩机读取转速数据 */
+        linMasterFrame.id = 0x12;
+        vTaskDelay(100000);// 延时一段时间，让压缩机的转速降低
+        LIN_Master_Receive_Frame();
+
+        /* 向上位机发送响应，通知上位机关闭台架的结果 */
+
+        if (linMasterFrame.data[1] == 0) // 压缩机转速降低至0
+        {
+            uint8_t responce2upper[4] = {0x0A, 0x00, 0x01 ,0xFF};// 发送数据码为 0x01 ，表示关闭成功
+            LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
+        }
+        else{
+            uint8_t responce2upper[4] = {0x0A, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
+            LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
+        }
+
+        /* 等待一段时间，观察数据是否递减 */
+        vTaskDelay(2000);
+
+        /* 清除已经置位的事件标志通知Task_0x01挂起自身，停止向上位机发送 */
+        xEventGroupClearBits(HangTask01EventGroup,0x01); // bit0被清除
     }
-    else{
-        uint8_t responce2upper[4] = {0x0A, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
-        LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
-    }
-    vTaskDelete(Task_0x00_Handle); // 删除自身
 }
 
 /*
@@ -166,6 +173,8 @@ void Task_0x02(void *parameter)
 {
     while(1)
     {
+
+        
         /* Task01中会置位事件，在获取事件标记后不会清除事件标记，故而只需要等待Task00清除事件标记即可 */
         xEventGroupWaitBits(HangTask01EventGroup, 0x01, pdFALSE, pdFALSE, portMAX_DELAY); // 由于只有一个事件，所以不需要获取返回值来匹配
         uint8_t temp = 0xFE;
