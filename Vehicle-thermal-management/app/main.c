@@ -69,6 +69,7 @@ extern TaskHandle_t Task_0x02_Handle;
 extern QueueHandle_t Message_queue_main2Task0x01; // 主任务向Task01通信用消息队列句柄
 extern SemaphoreHandle_t Get_upper_order_Handle;   // 串口接收二值信号量
 extern EventGroupHandle_t HangTask01EventGroup; // 挂起Task01用事件组句柄
+extern SemaphoreHandle_t MuxSem_Handle;  // 互斥信号量句柄，用于保护LIN传输帧
 
 /* 台架状态结构体 */
 Workbench_status_t Workbench_status;
@@ -163,7 +164,12 @@ static void AppTaskCreate(void)
                           (void *)NULL,                         /* 任务入口函数参数 */
                           (UBaseType_t)1,                       /* 任务的优先级 */
                           (TaskHandle_t *)&Task_main_Handle); /* 任务控制块指针 */
-
+    xReturn = xTaskCreate((TaskFunction_t)Task_0x00,          /* 任务入口函数 */
+                          (const char *)"Task_0x00",          /* 任务名字 */
+                          (uint16_t)512,                        /* 任务栈大小 */
+                          (void *)NULL,                         /* 任务入口函数参数 */
+                          (UBaseType_t)1,                       /* 任务的优先级 */
+                          (TaskHandle_t *)&Task_0x00_Handle); /* 任务控制块指针 */
     xReturn = xTaskCreate((TaskFunction_t)Task_0x01,          /* 任务入口函数 */
                         (const char *)"Task_0x01",          /* 任务名字 */
                         (uint16_t)512,                          /* 任务栈大小 */
@@ -196,6 +202,11 @@ static void COM_init(void)
 
     /* 事件组创建初始化 */
     HangTask01EventGroup = xEventGroupCreate();
+
+    /* 互斥锁初始化 */
+    MuxSem_Handle = xSemaphoreCreateMutex();
+    xSemaphoreGive(MuxSem_Handle); // 释放锁
+
 }
 
 /* USER CODE END 4 */

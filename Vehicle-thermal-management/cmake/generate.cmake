@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 
 
 set(sources
+    ${PROJ_DIR}/app/LIN/LIN_device_control.c
     ${PROJ_DIR}/app/Task/Task.c
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/port.c
     ${PROJ_DIR}/rtos/FreeRTOS/Source/portable/GCC/ARM_CM33/portasm.c

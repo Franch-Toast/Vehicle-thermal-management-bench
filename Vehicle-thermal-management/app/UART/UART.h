@@ -38,7 +38,7 @@ typedef struct
 void UART_init(void);
 void RingBuff_Write(uint8_t data);
 uint8_t RingBuff_Read_frame(void);
-// uint8_t RingBuff_data_length(void);
+
 void RingBuff_Read_Byte(uint8_t *pData);
 
 extern ringBuffer_t buffer;

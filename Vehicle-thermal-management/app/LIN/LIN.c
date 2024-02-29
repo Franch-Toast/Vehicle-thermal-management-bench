@@ -3,7 +3,7 @@
  * @Date: 2024-01-17 21:40:11
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-25 23:43:59
+ * @LastEditTime: 2024-02-29 21:37:54
  * @Description: 
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood. 
@@ -85,30 +85,17 @@ void LIN_MASTER_init()
 
 
 // LIN主机 发送帧
-void LIN_Master_Send_Frame()
+status_t LIN_Master_Send_Frame()
 {
     status_t status = STATUS_SUCCESS;
-    currentEvent = 0;
+    // currentEvent = 0;
     /* LIN Master Send a Frame */
     // linMasterFrame.id = 0x35;
     linMasterFrame.responseType = LIN_MASTER_RESPONSE; // 发送时，MCU作为主机必须为LIN_MASTER_RESPONSE模式
     status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
     /* Wait until master transmission completed */
-    while (0 == currentEvent);
-
-    if (LINMasterSendDone == currentEvent)
-    {
-        PRINTF("LIN Master Send: \n");
-        for (uint8_t i = 0; i < linMasterFrame.dataLength; i++)
-        {
-            PRINTF("%d, \n", linMasterFrame.data[i]);
-        }
-        PRINTF("\r\n");
-    }
-    else
-    {
-        PRINTF("LIN Master Send error!\n");
-    }
+    // while (0 == currentEvent);
+    return status;
 }
 
 // LIN主机 接收帧

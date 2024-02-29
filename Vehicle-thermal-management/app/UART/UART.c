@@ -3,7 +3,7 @@
  * @Date: 2023-12-24 11:53:14
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-28 20:02:37
+ * @LastEditTime: 2024-02-29 20:03:00
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -76,11 +76,6 @@ void RingBuff_Read_Byte(uint8_t *pData)
     // return 0; // 返回0，表示读取数据成功
 }
 
-// /* 获取缓冲区中的消息的大小 */
-// uint8_t RingBuff_data_length(void)
-// {
-    
-// }
 
 void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 {
