@@ -31,7 +31,12 @@ typedef struct
     uint8_t three_way_valve_status;        // 三通阀状态
     uint8_t four_way_valve_status;         // 四通阀状态
     Compressor_status_t Compressor_status; // 压缩机状态
+    EXV_status_t EXV_status;               // 电子膨胀阀状态
+    WPTC_status_t WPTC_status[2];            // WPTC1状态
+
+
     // uint8_t water_pump_duty;         // 水泵占空比
+
 } Workbench_status_t;
 
 /* 压缩机状态结构体 */
@@ -45,6 +50,23 @@ typedef struct
     uint16_t compressor_voltage;     // 压缩机供电电压
     uint16_t compressor_current;     // 压缩机电流
 } Compressor_status_t;
+
+/* 电子膨胀阀状态结构体 */
+typedef struct
+{
+    uint16_t EXV_CurrentPosition; // EXV膨胀阀开度
+    uint8_t EXV_status;           // EXV的初始化状态和运行状态，分别为前4bit和后4bit
+} EXV_status_t;
+
+/* WPTC状态结构体 */
+typedef struct
+{
+    uint8_t PTC_current;       // PTC电流
+    uint8_t PTC_voltage;       // PTC电压
+    uint8_t PTC_temp_out;      // PTC的出口温度
+    uint8_t PTC_temp_internel; // PTC的内部温度
+    uint8_t PTC_status;        // PTC工作状态
+} WPTC_status_t;
 
 /*
  * 主任务 ：

@@ -102,11 +102,11 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
     linMasterFrame.dataLength = 8;     // 8个字节
     memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
 
-    linMasterFrame.data[0] = (uint8_t)open;        // 第一二个字节为请求位置，两个字节的宽度，但是大小仅允许【0，480】
-    linMasterFrame.data[1] = (uint8_t)(open >> 4); 
+    linMasterFrame.data[0] = (uint8_t)open; // 第一二个字节为请求位置，两个字节的宽度，但是大小仅允许【0，480】
+    linMasterFrame.data[1] = (uint8_t)(open >> 4);
 
-    linMasterFrame.data[2] = 0x01;                 // 第三个字节bit0允许使能膨胀阀
-    linMasterFrame.data[3] = 0x00;                 // 第四个字节3个bit允许是否初始化
+    linMasterFrame.data[2] = 0x01;    // 第三个字节bit0允许使能膨胀阀
+    linMasterFrame.data[3] = 0x00;    // 第四个字节3个bit允许是否初始化
     status = LIN_Master_Send_Frame(); // 发送帧
 
     if (status != 0) // 如果发送失败了，则
@@ -117,16 +117,84 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
     return status;
 }
 
+/* 获取电子膨胀阀状态 */
+uint8_t Compressor_Get_info(void)
+{
+    status_t status = 0;
+    xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
 
+    linMasterFrame.id = 0x29;          // 帧ID为0x29
+    linMasterFrame.dataLength = 8;     // 八个字节
+    memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
 
+    status = LIN_Master_Receive_Frame(); // 接收帧
 
+    if (status != 0) // 如果发送失败了，则
+    {
+    }
 
+    /* 对接收数据进行解析 */
 
+    Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[2] | (linMasterFrame.data[3] << 8);          // EXV膨胀阀开度:当前位置
+    Workbench_status.EXV_status.EXV_status = ((linMasterFrame.data[0] & 0x0C) >> 2) | (linMasterFrame.data[0] & 0x10); // EXV的初始化状态和运行状态，分别为前4bit和后4bit
+
+    xSemaphoreGive(MuxSem_Handle); // 解锁
+    return status;
+}
 
 /************************************ 三通阀通讯 ************************************/
 
 /************************************ 四通阀通讯 ************************************/
 
-/************************************ 四通阀通讯 ************************************/
-
 /************************************ WPTC通讯 ************************************/
+
+/* 开启WPTC加热，并设置温度 */
+uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power)
+{
+    status_t status = 0;
+    xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
+
+    linMasterFrame.id = 0x15;
+    linMasterFrame.dataLength = 4;     // 四个字节
+    memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
+
+    linMasterFrame.data[0] = heat_power;  // 注意请求加热功率heat_power范围为[0,127]
+    linMasterFrame.data[1] = 0x01;        // PTC使能
+    linMasterFrame.data[2] = temperature; // 注意temperature范围为[0,127]
+    // 重置请求、紧急切断、放电请求均为不要求
+
+    status = LIN_Master_Send_Frame(); // 发送帧
+
+    if (status != 0) // 如果发送失败了，则
+    {
+    }
+
+    xSemaphoreGive(MuxSem_Handle); // 解锁
+    return status;
+}
+
+/* 获取WPTC状态 */
+uint8_t WPTC_Get_info(uint8_t instance)
+{
+    status_t status = 0;
+    xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
+
+    linMasterFrame.id = 0x16;          // 帧ID为0x16
+    linMasterFrame.dataLength = 8;     // 八个字节
+    memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
+
+    status = LIN_Master_Receive_Frame(); // 接收帧
+
+    if (status != 0) // 如果发送失败了，则
+    {
+    }
+
+    /* 对接收数据进行解析 */
+
+    memcpy(&Workbench_status.WPTC_status[instance], linMasterFrame.data,4);// 结构体的成员地址与通讯矩阵中的一致，直接memcpy
+    Workbench_status.WPTC_status[instance].PTC_status = linMasterFrame.data[4] & 0x07; // PTC工作状态，3bit
+
+
+    xSemaphoreGive(MuxSem_Handle); // 解锁
+    return status;
+}
