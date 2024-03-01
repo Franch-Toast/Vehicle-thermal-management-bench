@@ -3,7 +3,7 @@
  * @Date: 2024-02-25 22:17:21
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-29 21:32:34
+ * @LastEditTime: 2024-03-01 12:19:35
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -28,13 +28,23 @@
 /* 定义台架的状态结构体 */
 typedef struct
 {
-    uint8_t three_way_valve_status;  // 三通阀状态
-    uint8_t four_way_valve_status;   // 四通阀状态
-    uint8_t compressor_status;       // 压缩机开启状态
-    uint16_t compressor_speed;       // 压缩机转速
-    uint16_t compressor_limit_power; // 压缩机允许最大功率
-    uint8_t water_pump_duty;         // 水泵占空比
+    uint8_t three_way_valve_status;        // 三通阀状态
+    uint8_t four_way_valve_status;         // 四通阀状态
+    Compressor_status_t Compressor_status; // 压缩机状态
+    // uint8_t water_pump_duty;         // 水泵占空比
 } Workbench_status_t;
+
+/* 压缩机状态结构体 */
+typedef struct
+{
+    uint8_t compressor_status;       // 压缩机开启状态
+    uint8_t compressor_speed;        // 压缩机转速
+    uint8_t compressor_limit_power;  // 压缩机允许最大功率
+    uint8_t temperature_basic_board; // 基板温度
+    uint8_t temperature_IGBT;        // 基板温度
+    uint16_t compressor_voltage;     // 压缩机供电电压
+    uint16_t compressor_current;     // 压缩机电流
+} Compressor_status_t;
 
 /*
  * 主任务 ：

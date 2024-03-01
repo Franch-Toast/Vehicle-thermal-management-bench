@@ -24,10 +24,7 @@ void LIN_MASTER_init(void);
 status_t LIN_Master_Send_Frame(void);
 
 // LIN主机 接收帧
-void LIN_Master_Receive_Frame(void);
-
-
-
+status_t LIN_Master_Receive_Frame(void);
 
 
 #endif
