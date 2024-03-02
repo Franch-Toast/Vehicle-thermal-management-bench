@@ -3,7 +3,7 @@
  * @Date: 2024-02-25 22:17:21
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-01 12:19:35
+ * @LastEditTime: 2024-03-02 19:40:23
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -67,6 +67,11 @@ typedef struct
     uint8_t PTC_temp_internel; // PTC的内部温度
     uint8_t PTC_status;        // PTC工作状态
 } WPTC_status_t;
+
+/* 三通阀状态结构体 */
+
+
+
 
 /*
  * 主任务 ：
