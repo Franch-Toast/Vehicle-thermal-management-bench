@@ -28,12 +28,11 @@
 /* 定义台架的状态结构体 */
 typedef struct
 {
-    uint8_t three_way_valve_status;        // 三通阀状态
-    uint8_t four_way_valve_status;         // 四通阀状态
+    uint8_t three_way_valve_status[2];     // 三通阀状态
+    uint8_t four_way_valve_status[2];      // 四通阀状态，高4bit用于判定状态（转向中/停止），低4bit用于判定模式
     Compressor_status_t Compressor_status; // 压缩机状态
     EXV_status_t EXV_status;               // 电子膨胀阀状态
-    WPTC_status_t WPTC_status[2];            // WPTC1状态
-
+    WPTC_status_t WPTC_status[2];          // WPTC1状态
 
     // uint8_t water_pump_duty;         // 水泵占空比
 
@@ -67,11 +66,6 @@ typedef struct
     uint8_t PTC_temp_internel; // PTC的内部温度
     uint8_t PTC_status;        // PTC工作状态
 } WPTC_status_t;
-
-/* 三通阀状态结构体 */
-
-
-
 
 /*
  * 主任务 ：
