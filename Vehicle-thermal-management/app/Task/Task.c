@@ -1,5 +1,6 @@
 
 #include "Task.h"
+#include "Lin_device_control.h"
 
 /* 任务句柄 */
 TaskHandle_t Task_main_Handle = NULL;
@@ -19,14 +20,16 @@ EventGroupHandle_t HangTask01EventGroup = NULL;
 /* 定义互斥信号量，用于保护LIN传输帧 */
 SemaphoreHandle_t MuxSem_Handle = NULL;
 
-
-
 /* 声明LIN通讯帧与台架状态结构体 */
 extern linflexd_frame_t linMasterFrame;
 extern Workbench_status_t Workbench_status;
 
 /* 串口发送数据帧结构体，大小为 11 Bytes */
 extern Serial_data_frame_t serial_data_frame;
+
+/* 静态函数声明 */
+static void Unpacking_and_Run(Serial_data_frame_t DataFrame);
+static void Packing_and_Send(void);
 
 /*
  * 主任务 ：
@@ -81,31 +84,6 @@ void Task_0x00(void *parameter)
         /* 等待主任务唤醒 */
         xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, portMAX_DELAY); // 仅一位标志位，无需获取返回值，清除事件标志位
 
-        // /* 使水泵停转，调整占空比为10% */
-        // PWM_Changedutycycle(0.1);
-
-        // /* 使压缩机停转，根据通讯矩阵的内容写死通讯帧 */
-        // linMasterFrame.id = 0x30;
-        // linMasterFrame.data[2] = 0x00; // 第三个字节为 0 即可停机
-        // LIN_Master_Send_Frame();
-
-        // /* 为确保停机，向压缩机读取转速数据 */
-        // linMasterFrame.id = 0x12;
-        // vTaskDelay(100000);// 延时一段时间，让压缩机的转速降低
-        // LIN_Master_Receive_Frame();
-
-        // /* 向上位机发送响应，通知上位机关闭台架的结果 */
-
-        // if (linMasterFrame.data[1] == 0) // 压缩机转速降低至0
-        // {
-        //     uint8_t responce2upper[4] = {0x0A, 0x00, 0x01 ,0xFF};// 发送数据码为 0x01 ，表示关闭成功
-        //     LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
-        // }
-        // else{
-        //     uint8_t responce2upper[4] = {0x0A, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
-        //     LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
-        // }
-
         uint8_t responce2upper[4] = {0x0A, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
         LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
 
@@ -137,32 +115,12 @@ void Task_0x01(void *parameter)
         if (xReturn != pdTRUE)
             continue;
 
-        LINFlexD_UART_DRV_SendDataPolling(2, DataFrame.data, DataFrame.data_length);
+        // LINFlexD_UART_DRV_SendDataPolling(2, DataFrame.data, DataFrame.data_length);
+        Unpacking_and_Run(Serial_data_frame_t DataFrame);
 
         /* 置位事件标志唤醒Task_0x02，开始向上位机发送台架状态 */
         xEventGroupSetBits(HangTask01EventGroup, 0x01); // bit0 置1
     }
-
-    // /*这里是任务间通信的代码，代码暂无*/
-    // EventBits_t bits = xEventGroupWaitBits(deleteTask01EventGroup, 0x01, pdTRUE, pdFALSE, 0);
-    // if (bits & 0x01)
-    // {
-    //     vTaskDelete(NULL);// 删除自身
-    // }
-
-    // /* 使水泵停转，调整占空比为10% */
-    // PWM_Changedutycycle(0.1);
-
-    // /* 使压缩机停转，根据通讯矩阵的内容写死通讯帧 */
-    // linMasterFrame.id = 0x30;
-    // linMasterFrame.data[2] = 0x00; // 第三个字节为 0 即可停机
-    // LIN_Master_Send_Frame();
-
-    // linMasterFrame.id = 0x12;
-    // vTaskDelay(100000); // 延时一段时间，让压缩机的转速降低
-    // LIN_Master_Receive_Frame();
-
-    // /* 向上位机发送响应，通知上位机关闭台架的结果 */
 }
 
 /*
@@ -179,10 +137,39 @@ void Task_0x02(void *parameter)
         /* Task01中会置位事件，在获取事件标记后不会清除事件标记，故而只需要等待Task00清除事件标记即可 */
         xEventGroupWaitBits(HangTask01EventGroup, 0x01, pdFALSE, pdFALSE, portMAX_DELAY); // 由于只有一个事件，所以不需要获取返回值来匹配
 
-        uint8_t responce2upper[10] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10};
-        LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 10);
+        // uint8_t responce2upper[10] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10};
+        // LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 10);
+
+        Packing_and_Send();
 
         /* 等待一段时间后再继续传输，防止数据传输过快，疯狂占用 */
         vTaskDelay(10);
     }
+}
+
+/*
+ * 解包填充 ：
+    1.将获取得到的通讯帧数据进行解包
+    2.调用对应的API，将数据进行填充输入
+*/
+static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
+{
+    status_t status = 0;
+    /* 测试阶段，仅仅对三通阀进行测试 */
+    // 发送的数据格式为 {0A 01 FA(0) FF}，即将三通阀调节至100(0)的开度位置
+
+    status = Three_way_valve_Set_Open(1, DataFrame[2]);
+}
+
+/*
+ * 组包发送 ：
+    1.取出结构体中的数值
+    2.对数值进行组包
+*/
+static void Packing_and_Send(void)
+{
+    /* 测试阶段，仅仅对三通阀进行测试 */
+    Three_way_valve_Get_info(1); // 暂时将其存到 0 中
+    uint8_t responce2upper[4] = {0x0A, 0x02, Workbench_status.three_way_valve_status[0], 0xFF};
+    LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
 }

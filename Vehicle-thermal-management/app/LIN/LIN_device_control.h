@@ -10,7 +10,6 @@
 
 /************************************ 压缩机通讯 ************************************/
 
-
 /* 更改压缩机的转速，变相等于开启压缩机 */
 uint8_t Compressor_Set_Speed(uint16_t speed, uint16_t limit_power);
 /* 关闭压缩机 */
@@ -18,29 +17,36 @@ uint8_t Compressor_Shutdown(void);
 /* 获取压缩机状态 */
 uint8_t Compressor_Get_info(void);
 
-
-
 /************************************ 电子膨胀阀通讯 ************************************/
 
 /* 更改电子膨胀阀的开度 */
 uint8_t Expansion_valve_Set_Open(uint16_t open);
 
 /* 获取电子膨胀阀状态 */
-uint8_t Compressor_Get_info(void)
+uint8_t Compressor_Get_info(void);
 
 /************************************ 三通阀通讯 ************************************/
 
+/* 更改三通阀的比例开度 */
+uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos);
 
+/* 获取比例三通阀状态 */
+uint8_t Three_way_valve_Get_info(uint8_t instance);
 
 /************************************ 四通阀通讯 ************************************/
 
+/* 更改四通阀的开关状态 */
+uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode); // mode 只有两种取值
 
-
-
-
+/* 获取比例三通阀状态 */
+uint8_t Four_way_valve_Get_info(uint8_t instance);
 
 /************************************ WPTC通讯 ************************************/
 
+/* 开启WPTC加热，并设置温度 */
+uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power);
 
+/* 获取WPTC状态 */
+uint8_t WPTC_Get_info(uint8_t instance); // 输入的是第instance个WPTC，instance = 1 or 2
 
 #endif
