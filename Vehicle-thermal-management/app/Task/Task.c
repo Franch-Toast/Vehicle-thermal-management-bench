@@ -116,10 +116,11 @@ void Task_0x01(void *parameter)
             continue;
 
         // LINFlexD_UART_DRV_SendDataPolling(2, DataFrame.data, DataFrame.data_length);
-        Unpacking_and_Run(Serial_data_frame_t DataFrame);
+        Unpacking_and_Run(DataFrame);
 
         /* 置位事件标志唤醒Task_0x02，开始向上位机发送台架状态 */
         xEventGroupSetBits(HangTask01EventGroup, 0x01); // bit0 置1
+        vTaskDelay(100);
     }
 }
 
@@ -143,7 +144,7 @@ void Task_0x02(void *parameter)
         Packing_and_Send();
 
         /* 等待一段时间后再继续传输，防止数据传输过快，疯狂占用 */
-        vTaskDelay(10);
+        vTaskDelay(100);
     }
 }
 
@@ -158,7 +159,7 @@ static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
     /* 测试阶段，仅仅对三通阀进行测试 */
     // 发送的数据格式为 {0A 01 FA(0) FF}，即将三通阀调节至100(0)的开度位置
 
-    status = Three_way_valve_Set_Open(1, DataFrame[2]);
+    status = Three_way_valve_Set_Open(1, DataFrame.data[2]);
 }
 
 /*

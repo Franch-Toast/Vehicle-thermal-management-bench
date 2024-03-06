@@ -301,7 +301,7 @@ void Input_capture_get_pulse_frequncy(float *frequency)
 
 ##### LIN通讯
 
-台架上的大部分元件与下位机间的通讯方式是LIN通讯，故而在MCU中配置LIN通讯功能。值得注意的是，YTM32B1ME0芯片中继承了6个片上外设LINflex，外界LIN收发器可以快速配置LIN通讯功能，加快了开发。
+台架上的大部分元件与下位机间的通讯方式是LIN通讯，故而在MCU中配置LIN通讯功能。值得注意的是，YTM32B1ME0芯片中继承了4个片上外设LINflex，外界LIN收发器可以快速配置LIN通讯功能，加快了开发。
 
 
 

@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-02-29 20:19:10
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-03-04 16:41:04
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 #ifndef _LIN_DEVICE_CONTROL_H_
 #define _LIN_DEVICE_CONTROL_H_
 
@@ -23,7 +34,7 @@ uint8_t Compressor_Get_info(void);
 uint8_t Expansion_valve_Set_Open(uint16_t open);
 
 /* 获取电子膨胀阀状态 */
-uint8_t Compressor_Get_info(void);
+uint8_t Expansion_valve_Get_info(void);
 
 /************************************ 三通阀通讯 ************************************/
 

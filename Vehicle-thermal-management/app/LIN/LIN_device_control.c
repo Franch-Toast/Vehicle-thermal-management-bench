@@ -122,7 +122,7 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
 }
 
 /* 获取电子膨胀阀状态 */
-uint8_t Compressor_Get_info(void)
+uint8_t Expansion_valve_Get_info(void)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁

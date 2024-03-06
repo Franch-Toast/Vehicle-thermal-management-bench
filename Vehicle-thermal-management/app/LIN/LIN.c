@@ -3,7 +3,7 @@
  * @Date: 2024-01-17 21:40:11
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-01 13:19:51
+ * @LastEditTime: 2024-03-06 17:27:35
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -34,6 +34,7 @@ static void linflexd_process_callback(uint32_t instance, void *state)
 {
     linflexd_state_t *linState = (linflexd_state_t *)state;
     (void)instance;
+    PRINTF("linState->currentEventId:%d",linState->currentEventId);
     if (LINFlexD_HEADER_RECEIVED_EVENT == linState->currentEventId)
     {
     }
@@ -110,7 +111,7 @@ status_t LIN_Master_Receive_Frame()
     /* wait until master receive completed */
     while (0 == LincurrentEvent)
         ;
-    if (LincurrentEvent == LINMasterSendDone)
+    if (LincurrentEvent == LINMaserRecvDone)
         return status;
     return STATUS_ERROR;
 }

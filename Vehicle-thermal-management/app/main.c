@@ -147,6 +147,8 @@ static void Board_Init(void)
     Input_capture_init();
     /* PWM功能初始化 */
     PWM_init();
+    /* LIN初始化 */
+    LIN_MASTER_init();
 
 }
 

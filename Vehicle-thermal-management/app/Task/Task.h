@@ -3,7 +3,7 @@
  * @Date: 2024-02-25 22:17:21
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-02 19:40:23
+ * @LastEditTime: 2024-03-04 16:39:04
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -24,19 +24,6 @@
 #include "queue.h"
 #include "semphr.h"
 #include "UART.h"
-
-/* 定义台架的状态结构体 */
-typedef struct
-{
-    uint8_t three_way_valve_status[2];     // 三通阀状态
-    uint8_t four_way_valve_status[2];      // 四通阀状态，高4bit用于判定状态（转向中/停止），低4bit用于判定模式
-    Compressor_status_t Compressor_status; // 压缩机状态
-    EXV_status_t EXV_status;               // 电子膨胀阀状态
-    WPTC_status_t WPTC_status[2];          // WPTC1状态
-
-    // uint8_t water_pump_duty;         // 水泵占空比
-
-} Workbench_status_t;
 
 /* 压缩机状态结构体 */
 typedef struct
@@ -66,6 +53,20 @@ typedef struct
     uint8_t PTC_temp_internel; // PTC的内部温度
     uint8_t PTC_status;        // PTC工作状态
 } WPTC_status_t;
+
+
+/* 定义台架的状态结构体 */
+typedef struct
+{
+    uint8_t three_way_valve_status[2];     // 三通阀状态
+    uint8_t four_way_valve_status[2];      // 四通阀状态，高4bit用于判定状态（转向中/停止），低4bit用于判定模式
+    Compressor_status_t Compressor_status; // 压缩机状态
+    EXV_status_t EXV_status;               // 电子膨胀阀状态
+    WPTC_status_t WPTC_status[2];          // WPTC1状态
+
+    // uint8_t water_pump_duty;         // 水泵占空比
+
+} Workbench_status_t;
 
 /*
  * 主任务 ：
