@@ -32,7 +32,7 @@ typedef struct
     uint8_t compressor_speed;        // 压缩机转速
     uint8_t compressor_limit_power;  // 压缩机允许最大功率
     uint8_t temperature_basic_board; // 基板温度
-    uint8_t temperature_IGBT;        // 基板温度
+    uint8_t temperature_IGBT;        // IGBT温度
     uint16_t compressor_voltage;     // 压缩机供电电压
     uint16_t compressor_current;     // 压缩机电流
 } Compressor_status_t;

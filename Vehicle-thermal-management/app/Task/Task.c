@@ -51,7 +51,7 @@ void Task_main(void *parameter)
         {
             if (RingBuff_Read_frame() > 0)
             {
-                if (serial_data_frame.data[0] == 0x0A && serial_data_frame.data[serial_data_frame.data_length - 1] == 0xFF) // 满足帧定义
+                if (serial_data_frame.data[0] == 0xFE && serial_data_frame.data[serial_data_frame.data_length - 1] == 0xFF) // 满足帧定义
                 {
                     if (serial_data_frame.data[1] == 0x01) // 唤醒Task01
                     {
@@ -84,7 +84,7 @@ void Task_0x00(void *parameter)
         /* 等待主任务唤醒 */
         xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, portMAX_DELAY); // 仅一位标志位，无需获取返回值，清除事件标志位
 
-        uint8_t responce2upper[4] = {0x0A, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
+        uint8_t responce2upper[4] = {0xFE, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
         LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
 
         /* 等待一段时间，观察数据是否递减 */
@@ -171,6 +171,6 @@ static void Packing_and_Send(void)
 {
     /* 测试阶段，仅仅对三通阀进行测试 */
     Three_way_valve_Get_info(1); // 暂时将其存到 0 中
-    uint8_t responce2upper[4] = {0x0A, 0x02, Workbench_status.three_way_valve_status[0], 0xFF};
+    uint8_t responce2upper[4] = {0xFE, 0x02, Workbench_status.three_way_valve_status[0], 0xFF};
     LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
 }

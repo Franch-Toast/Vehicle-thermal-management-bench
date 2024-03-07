@@ -97,6 +97,10 @@ namespace UpperPC
                 {
                     string str = Convert.ToString(buff[i], 16).ToUpper();//转换为大写十六进制字符串
                     textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
+                    if(i == 3)
+                    {
+                        textBox1.Text = Convert.ToString(buff[i] * 0.4);
+                    }
                 }
             }
 

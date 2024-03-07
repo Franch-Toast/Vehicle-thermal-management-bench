@@ -63,6 +63,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.textBox_three_way_1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_scan_serial
@@ -267,7 +268,6 @@
             this.label14.Size = new System.Drawing.Size(116, 18);
             this.label14.TabIndex = 28;
             this.label14.Text = "三通阀#2开度";
-
             // 
             // label15
             // 
@@ -313,7 +313,6 @@
             this.label19.Size = new System.Drawing.Size(80, 18);
             this.label19.TabIndex = 31;
             this.label19.Text = "WPTC电压";
-
             // 
             // label20
             // 
@@ -378,11 +377,19 @@
             this.label26.TabIndex = 36;
             this.label26.Text = "WPTC电压";
             // 
+            // textBox_three_way_1
+            // 
+            this.textBox_three_way_1.Location = new System.Drawing.Point(573, 520);
+            this.textBox_three_way_1.Name = "textBox_three_way_1";
+            this.textBox_three_way_1.Size = new System.Drawing.Size(100, 28);
+            this.textBox_three_way_1.TabIndex = 41;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 743);
+            this.Controls.Add(this.textBox_three_way_1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
@@ -460,6 +467,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox_three_way_1;
     }
 }
 
