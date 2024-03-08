@@ -302,3 +302,28 @@ uint8_t WPTC_Get_info(uint8_t instance) // 输入的是第instance个WPTC，inst
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
 }
+
+/* 关闭温度 */
+uint8_t WPTC_Shutdown(uint8_t instance)
+{
+    status_t status = 0;
+    xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
+
+    linMasterFrame.id = 0x15;
+    linMasterFrame.dataLength = 4;     // 四个字节
+    memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
+
+    linMasterFrame.data[0] = 0;  // 注意请求加热功率heat_power范围为[0,127]
+    linMasterFrame.data[1] = 0x00;        // PTC失能
+    // 重置请求、紧急切断、放电请求均为不要求
+
+    status = LIN_Master_Send_Frame(); // 发送帧
+
+    if (status != 0) // 如果发送失败了，则
+    {
+        PRINTF("LIN Send fail!");
+    }
+
+    xSemaphoreGive(MuxSem_Handle); // 解锁
+    return status;
+}

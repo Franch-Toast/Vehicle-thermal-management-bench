@@ -25,10 +25,24 @@
 #include "semphr.h"
 #include "UART.h"
 
+typedef enum
+{
+    Compressor_OFF = 0x00,
+    Compressor_ON = 0x01,
+    Compressor_PowerLimit = 0x02,
+} Compressor_Open_status_t;
+
+typedef enum
+{
+    WPTC_OFF = 0x00,
+    WPTC_ON = 0x01,
+} WPTC_Open_status_t;
+
 /* 压缩机状态结构体 */
 typedef struct
 {
     uint8_t compressor_status;       // 压缩机开启状态
+    uint8_t compressor_fault_status; // 压缩机故障状态
     uint8_t compressor_speed;        // 压缩机转速
     uint8_t compressor_limit_power;  // 压缩机允许最大功率
     uint8_t temperature_basic_board; // 基板温度
@@ -41,7 +55,8 @@ typedef struct
 typedef struct
 {
     uint16_t EXV_CurrentPosition; // EXV膨胀阀开度
-    uint8_t EXV_status;           // EXV的初始化状态和运行状态，分别为前4bit和后4bit
+    uint8_t EXV_initial_status;   // EXV的初始化状态
+    uint8_t EXV_status;           // EXV的运行状态
 } EXV_status_t;
 
 /* WPTC状态结构体 */
@@ -52,17 +67,18 @@ typedef struct
     uint8_t PTC_temp_out;      // PTC的出口温度
     uint8_t PTC_temp_internel; // PTC的内部温度
     uint8_t PTC_status;        // PTC工作状态
+    uint8_t PTC_heat_level;    // PTC加热挡位
 } WPTC_status_t;
-
 
 /* 定义台架的状态结构体 */
 typedef struct
 {
-    uint8_t three_way_valve_status[2];     // 三通阀状态
-    uint8_t four_way_valve_status[2];      // 四通阀状态，高4bit用于判定状态（转向中/停止），低4bit用于判定模式
+
     Compressor_status_t Compressor_status; // 压缩机状态
     EXV_status_t EXV_status;               // 电子膨胀阀状态
-    WPTC_status_t WPTC_status[2];          // WPTC1状态
+    WPTC_status_t WPTC_status[2];          // WPTC状态
+    uint8_t three_way_valve_status[2];     // 三通阀状态
+    uint8_t four_way_valve_status[2];      // 四通阀状态，高4bit用于判定状态（转向中/停止），低4bit用于判定模式
 
     // uint8_t water_pump_duty;         // 水泵占空比
 

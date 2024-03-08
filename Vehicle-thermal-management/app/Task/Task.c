@@ -84,14 +84,26 @@ void Task_0x00(void *parameter)
         /* 等待主任务唤醒 */
         xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, portMAX_DELAY); // 仅一位标志位，无需获取返回值，清除事件标志位
 
-        uint8_t responce2upper[4] = {0xFE, 0x00, 0x00, 0xFF}; // 发送数据码为 0x00 ，表示关闭失败
-        LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 4);
+        uint8_t cnt = 30;// 尝试次数
+        while (Workbench_status.Compressor_status.compressor_status == Compressor_ON || Workbench_status.WPTC_status[0].PTC_status == WPTC_ON || Workbench_status.WPTC_status[1].PTC_status == WPTC_ON || cnt--)
+        {
+            /* 发送 终止台架运行的指令 */
+            Compressor_Shutdown();
+            WPTC_Shutdown(1); // 关闭WPTC1
+            WPTC_Shutdown(2); // 关闭WPTC2
+        }
+        if(cnt <0)
+        {
+            PRINTF(" Shut Down Fail! Try again!");
+            vTaskDelay(10);
 
-        /* 等待一段时间，观察数据是否递减 */
-        // vTaskDelay(2000);
-
+            continue;
+        }
         /* 清除已经置位的事件标志通知Task_0x01挂起自身，停止向上位机发送 */
         xEventGroupClearBits(HangTask01EventGroup, 0x01); // bit0被清除
+        vTaskDelay(1000);
+        PRINTF(" Shut Down Successfully!");
+        
     }
 }
 

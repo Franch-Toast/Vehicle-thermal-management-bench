@@ -60,4 +60,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 /* 获取WPTC状态 */
 uint8_t WPTC_Get_info(uint8_t instance); // 输入的是第instance个WPTC，instance = 1 or 2
 
+/* 关闭温度 */
+uint8_t WPTC_Shutdown(uint8_t instance);
+
 #endif

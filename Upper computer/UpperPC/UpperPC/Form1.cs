@@ -9,11 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Collections;
 
 namespace UpperPC
 {
+
+
     public partial class Form1 : Form
     {
+        /* 声明环形缓冲区 */
+        const int MAX_BUFFER_LEN = 1024;
+        static RingBufferManager receiveRingBuffer = new RingBufferManager(MAX_BUFFER_LEN);
+
+        /* 添加事件 */
+        static AutoResetEvent ProcessEvent = new AutoResetEvent(false);
+
+        /* 添加互斥锁 */
+        static Mutex mutex = new Mutex();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +40,7 @@ namespace UpperPC
                 "512000","921600"};
             comboBox_baudrate.Items.AddRange(baudrate);
             comboBox_baudrate.SelectedIndex = 0;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +71,10 @@ namespace UpperPC
                     serialPort1.BaudRate = Convert.ToInt32(comboBox_baudrate.Text);
                     serialPort1.Open();
                     button_open_serial.Text = "关闭串口";
+
+                    Thread processingThread = new Thread(ProcessData);
+                    processingThread.Start(); // 线程调度开始
+
                 }
             }
             catch
@@ -65,46 +84,41 @@ namespace UpperPC
         }
 
 
+
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)//串口数据接收事件
         {
-
-            //如果接收模式为数值接收
-            //byte data;
-            //data = (byte)serialPort1.ReadByte();//此处需要强制类型转换，将(int)类型数据转换为(byte类型数据，不必考虑是否会丢失数据
-            //string str = Convert.ToString(data, 16).ToUpper();//转换为大写十六进制字符串
-            //textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0”   
-            //上一句等同为：if(str.Length == 1)
-            //                  str = "0" + str;
-            //              else 
-            //                  str = str;
-            //              textBox1.AppendText("0x" + str);
             int len = serialPort1.BytesToRead;//获取可以读取的字节数
             byte[] buff = new byte[len];//创建缓存数据数组
-            serialPort1.Read(buff, 0, len);//把数据读取到buff数组
-                                           //string str = Encoding.Default.GetString(buff);//Byte值根据ASCII码表转为 String
-                                           //Invoke((new Action(() => //C# 3.0以后代替委托的新方法
-                                           //{
-                                           //    textBox1.AppendText(str);//对话框追加显示数据
-                                           //})));
-            if (buff[0] != 0xFE) // 来的不是数据帧，而是调试语句
-            {
-                string str = Encoding.Default.GetString(buff);//Byte值根据ASCII码表转为 String
-                textBox1.AppendText(str);//对话框追加显示数据
-            }
-            else // 来的是数据帧
-            {
-                textBox_three_way_1.Clear();
-                for (int i = 0; i < len; i++)
-                {
-                    string str = Convert.ToString(buff[i], 16).ToUpper();//转换为大写十六进制字符串
-                    textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
-                    if (i == 2)
-                    {
-                        
-                        textBox_three_way_1.Text = Convert.ToString(buff[i] * 0.4);
-                    }
-                }
-            }
+            serialPort1.Read(buff, 0, len);
+
+
+            mutex.WaitOne();// 加锁
+
+            receiveRingBuffer.WriteBuffer(buff); // 写入环形缓冲区
+
+            mutex.ReleaseMutex();// 解锁
+
+            ProcessEvent.Set();// 释放信号量
+
+            //if (buff[0] != 0xFE) // 来的不是数据帧，而是调试语句
+            //{
+            //    string str = Encoding.Default.GetString(buff);//Byte值根据ASCII码表转为 String
+            //    textBox1.AppendText(str);//对话框追加显示数据
+            //}
+            //else // 来的是数据帧
+            //{
+
+            //    for (int i = 0; i < len; i++)
+            //    {
+            //        string str = Convert.ToString(buff[i], 16).ToUpper();//转换为大写十六进制字符串
+            //        textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
+            //        if (i == 2)
+            //        {
+            //            textBox_three_way_1.Clear();
+            //            textBox_three_way_1.Text = Convert.ToString(buff[i] * 0.4);
+            //        }
+            //    }
+            //}
 
         }
 
@@ -185,7 +199,112 @@ namespace UpperPC
             }
         }
 
+
+        /* 对数据进行处理 */
+        private void ProcessData()
+        {
+
+            StringBuilder sb = new StringBuilder();
+
+            while (true)
+            {
+                ProcessEvent.WaitOne();
+
+                mutex.WaitOne();
+
+                byte[] data = new byte[receiveRingBuffer.DataCount];// 创建临时数据数组
+
+                receiveRingBuffer.ReadBuffer(data, 0, data.Length);// 读出并存入
+
+                mutex.ReleaseMutex();// 这个时候解锁即可
+
+                if (data[0] != 0xFE)// 证明这段语句是调试语句，直接打印
+                {
+                    string str = Encoding.Default.GetString(data);//Byte值根据ASCII码表转为 String
+                    textBox1.AppendText(str + "\r\n");//对话框追加显示数据
+                }
+                else
+                {
+                    Unpack(data);// 解包
+                }
+
+
+
+            }
+
+        }
+
+        private void Unpack(Byte[] data)
+        {
+            int n = data.Length;
+            switch(data[1])
+            {
+                case 0x02:// 传输的数据
+                    {
+                        if (data[n - 1]!= 0xFF || data[n - 2] != n - 3) break; // 不满足帧要求，丢弃
+
+
+                        /* 解包的格式如下 */
+                        /*
+                         *  压缩机数据 + 电子膨胀阀状态 + WPTC1 + WPTC2 + 三通阀状态 + 四通阀状态
+                         * 
+                         *  所有数据根据结构体的定义顺序进行传输，一共是30字节数据
+                         */
+
+
+
+
+                        break;
+                    }
+                case 0x00:
+                    {
+                        break;
+                    }
+                case 0x01:
+                    {
+                        break;
+                    }
+
+            }
+        }
+
+
+
+
+
+        //private void GetFrame(Byte[] data)
+        //{
+        //    if (data.Length == 0) return;// 如果为空直接返回
+        //    int end_pos = Array.IndexOf(data, (Byte)0xFF);// 查看是否有结束符
+        //    if (end_pos == -1) // 没找到结束符，证明这段语句是调试语句，直接打印
+        //    {
+        //        string str = Encoding.Default.GetString(data);//Byte值根据ASCII码表转为 String
+        //        textBox1.AppendText(str + "\r\n");//对话框追加显示数据
+        //    }
+        //    else // 找到了结束符，证实这其中一定有数据帧
+        //    {
+        //        int start_pos = Array.IndexOf(data, (Byte)0xFE);// 查看是否有开始符
+        //        if (start_pos == -1) // 没找到开始符，说明传输错误
+        //        {
+        //            textBox1.AppendText("传输过程出现错误!");//报错
+        //            return; // 直接抛弃这段数据
+        //        }
+        //        else
+        //        {
+        //            if(end_pos - start_pos  == data[end_pos - 1]) // 确认帧结构
+        //            {
+
+        //            }
+        //        }
+        //    }
+        //    //textBox1.AppendText(pos.ToString());
+        //}
+
+
     }
+
+
+
 }
 
 
