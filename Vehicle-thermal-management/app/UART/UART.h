@@ -25,7 +25,7 @@
 typedef struct 
 {
     uint8_t data_length;// 数据的长度
-    uint8_t data[10]; // 数据内容，这里暂时给10的大小
+    uint8_t data[35]; // 数据内容，这里暂时给35的大小
 }Serial_data_frame_t;
 
 typedef struct

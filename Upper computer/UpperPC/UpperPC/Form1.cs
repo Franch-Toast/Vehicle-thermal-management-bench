@@ -204,13 +204,11 @@ namespace UpperPC
         private void ProcessData()
         {
 
-            StringBuilder sb = new StringBuilder();
-
             while (true)
             {
-                ProcessEvent.WaitOne();
+                ProcessEvent.WaitOne();// 等待事件
 
-                mutex.WaitOne();
+                mutex.WaitOne();// 加锁
 
                 byte[] data = new byte[receiveRingBuffer.DataCount];// 创建临时数据数组
 

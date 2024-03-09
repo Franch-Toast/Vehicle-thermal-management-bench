@@ -61,48 +61,54 @@
             this.textBox_three_way_1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox_three_way_2 = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_status = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_speed = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_limit_power = new System.Windows.Forms.TextBox();
+            this.textBox_temperature_basic_board = new System.Windows.Forms.TextBox();
+            this.textBox_temperature_IGBT = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_voltage = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_current = new System.Windows.Forms.TextBox();
+            this.textBox_EXV_CurrentPosition = new System.Windows.Forms.TextBox();
+            this.textBox_EXV_initial_status = new System.Windows.Forms.TextBox();
+            this.textBox_EXV_status = new System.Windows.Forms.TextBox();
+            this.textBox_four_way_1 = new System.Windows.Forms.TextBox();
+            this.textBox_four_way_2 = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_m_voltage = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_m_current = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_m_temp_out = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_m_temp_internel = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_m_status = new System.Windows.Forms.TextBox();
+            this.comboBox_compressor_status = new System.Windows.Forms.ComboBox();
+            this.textBox_compressor_speed_set = new System.Windows.Forms.TextBox();
+            this.textBox_compressor_limit_power_set = new System.Windows.Forms.TextBox();
+            this.textBox_EXV_CurrentPosition_set = new System.Windows.Forms.TextBox();
+            this.textBox_three_way_1_set = new System.Windows.Forms.TextBox();
+            this.textBox_three_way_2_set = new System.Windows.Forms.TextBox();
+            this.textBox_four_way_1_set = new System.Windows.Forms.ComboBox();
+            this.textBox_four_way_2_set = new System.Windows.Forms.ComboBox();
+            this.textBox_PTC_b_heat_level = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_b_status = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_b_temp_internel = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_b_temp_out = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_b_current = new System.Windows.Forms.TextBox();
+            this.textBox_PTC_b_voltage = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox_PTC_b_heat_level = new System.Windows.Forms.ComboBox();
+            this.textBox_WPTC_b_target_temp = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox_WPTC_m_target_temp = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboBox_PTC_m_heat_level = new System.Windows.Forms.ComboBox();
+            this.textBox_PTC_m_heat_level = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox_WPTC_m_target_temp_set = new System.Windows.Forms.TextBox();
+            this.textBox_WPTC_b_target_temp_set = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button_scan_serial
@@ -173,14 +179,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(330, 489);
+            this.textBox1.Size = new System.Drawing.Size(330, 527);
             this.textBox1.TabIndex = 6;
             // 
             // button_clear_window
             // 
             this.button_clear_window.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_clear_window.ForeColor = System.Drawing.Color.Black;
-            this.button_clear_window.Location = new System.Drawing.Point(244, 672);
+            this.button_clear_window.Location = new System.Drawing.Point(244, 712);
             this.button_clear_window.Name = "button_clear_window";
             this.button_clear_window.Size = new System.Drawing.Size(110, 43);
             this.button_clear_window.TabIndex = 15;
@@ -192,7 +198,7 @@
             // 
             this.button_save_data.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_save_data.ForeColor = System.Drawing.Color.Black;
-            this.button_save_data.Location = new System.Drawing.Point(37, 672);
+            this.button_save_data.Location = new System.Drawing.Point(24, 712);
             this.button_save_data.Name = "button_save_data";
             this.button_save_data.Size = new System.Drawing.Size(110, 43);
             this.button_save_data.TabIndex = 16;
@@ -266,7 +272,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(476, 372);
+            this.label10.Location = new System.Drawing.Point(476, 392);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 18);
             this.label10.TabIndex = 24;
@@ -275,7 +281,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(422, 410);
+            this.label11.Location = new System.Drawing.Point(422, 430);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 18);
             this.label11.TabIndex = 25;
@@ -284,7 +290,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(440, 452);
+            this.label12.Location = new System.Drawing.Point(440, 472);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 18);
             this.label12.TabIndex = 26;
@@ -293,7 +299,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(431, 523);
+            this.label13.Location = new System.Drawing.Point(431, 543);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(116, 18);
             this.label13.TabIndex = 27;
@@ -302,7 +308,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(431, 565);
+            this.label14.Location = new System.Drawing.Point(431, 585);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(116, 18);
             this.label14.TabIndex = 28;
@@ -311,7 +317,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(431, 672);
+            this.label15.Location = new System.Drawing.Point(431, 692);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(116, 18);
             this.label15.TabIndex = 30;
@@ -320,7 +326,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(431, 630);
+            this.label16.Location = new System.Drawing.Point(431, 650);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(116, 18);
             this.label16.TabIndex = 29;
@@ -329,7 +335,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(929, 535);
+            this.label22.Location = new System.Drawing.Point(929, 641);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(116, 18);
             this.label22.TabIndex = 40;
@@ -338,7 +344,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(929, 492);
+            this.label23.Location = new System.Drawing.Point(929, 598);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(116, 18);
             this.label23.TabIndex = 39;
@@ -347,7 +353,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(929, 449);
+            this.label24.Location = new System.Drawing.Point(929, 555);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(116, 18);
             this.label24.TabIndex = 38;
@@ -356,7 +362,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(965, 407);
+            this.label25.Location = new System.Drawing.Point(965, 513);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(80, 18);
             this.label25.TabIndex = 37;
@@ -365,7 +371,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(965, 368);
+            this.label26.Location = new System.Drawing.Point(965, 474);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 18);
             this.label26.TabIndex = 36;
@@ -373,7 +379,7 @@
             // 
             // textBox_three_way_1
             // 
-            this.textBox_three_way_1.Location = new System.Drawing.Point(573, 520);
+            this.textBox_three_way_1.Location = new System.Drawing.Point(573, 540);
             this.textBox_three_way_1.Name = "textBox_three_way_1";
             this.textBox_three_way_1.ReadOnly = true;
             this.textBox_three_way_1.Size = new System.Drawing.Size(100, 28);
@@ -383,7 +389,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1204, 669);
+            this.button1.Location = new System.Drawing.Point(1198, 732);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 43);
             this.button1.TabIndex = 42;
@@ -393,294 +399,277 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(862, 618);
+            this.textBox2.Location = new System.Drawing.Point(850, 678);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(330, 97);
             this.textBox2.TabIndex = 43;
             // 
-            // textBox3
+            // textBox_three_way_2
             // 
-            this.textBox3.Location = new System.Drawing.Point(573, 562);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 28);
-            this.textBox3.TabIndex = 44;
+            this.textBox_three_way_2.Location = new System.Drawing.Point(573, 582);
+            this.textBox_three_way_2.Name = "textBox_three_way_2";
+            this.textBox_three_way_2.ReadOnly = true;
+            this.textBox_three_way_2.Size = new System.Drawing.Size(100, 28);
+            this.textBox_three_way_2.TabIndex = 44;
             // 
-            // textBox4
+            // textBox_compressor_status
             // 
-            this.textBox4.Location = new System.Drawing.Point(573, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 28);
-            this.textBox4.TabIndex = 45;
+            this.textBox_compressor_status.Location = new System.Drawing.Point(573, 36);
+            this.textBox_compressor_status.Name = "textBox_compressor_status";
+            this.textBox_compressor_status.ReadOnly = true;
+            this.textBox_compressor_status.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_status.TabIndex = 45;
             // 
-            // textBox5
+            // textBox_compressor_speed
             // 
-            this.textBox5.Location = new System.Drawing.Point(573, 75);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 28);
-            this.textBox5.TabIndex = 46;
+            this.textBox_compressor_speed.Location = new System.Drawing.Point(573, 75);
+            this.textBox_compressor_speed.Name = "textBox_compressor_speed";
+            this.textBox_compressor_speed.ReadOnly = true;
+            this.textBox_compressor_speed.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_speed.TabIndex = 46;
             // 
-            // textBox6
+            // textBox_compressor_limit_power
             // 
-            this.textBox6.Location = new System.Drawing.Point(573, 117);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 28);
-            this.textBox6.TabIndex = 47;
+            this.textBox_compressor_limit_power.Location = new System.Drawing.Point(573, 117);
+            this.textBox_compressor_limit_power.Name = "textBox_compressor_limit_power";
+            this.textBox_compressor_limit_power.ReadOnly = true;
+            this.textBox_compressor_limit_power.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_limit_power.TabIndex = 47;
             // 
-            // textBox7
+            // textBox_temperature_basic_board
             // 
-            this.textBox7.Location = new System.Drawing.Point(573, 160);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 28);
-            this.textBox7.TabIndex = 48;
+            this.textBox_temperature_basic_board.Location = new System.Drawing.Point(573, 160);
+            this.textBox_temperature_basic_board.Name = "textBox_temperature_basic_board";
+            this.textBox_temperature_basic_board.ReadOnly = true;
+            this.textBox_temperature_basic_board.Size = new System.Drawing.Size(100, 28);
+            this.textBox_temperature_basic_board.TabIndex = 48;
             // 
-            // textBox8
+            // textBox_temperature_IGBT
             // 
-            this.textBox8.Location = new System.Drawing.Point(573, 203);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 28);
-            this.textBox8.TabIndex = 49;
+            this.textBox_temperature_IGBT.Location = new System.Drawing.Point(573, 203);
+            this.textBox_temperature_IGBT.Name = "textBox_temperature_IGBT";
+            this.textBox_temperature_IGBT.ReadOnly = true;
+            this.textBox_temperature_IGBT.Size = new System.Drawing.Size(100, 28);
+            this.textBox_temperature_IGBT.TabIndex = 49;
             // 
-            // textBox9
+            // textBox_compressor_voltage
             // 
-            this.textBox9.Location = new System.Drawing.Point(573, 239);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 28);
-            this.textBox9.TabIndex = 50;
+            this.textBox_compressor_voltage.Location = new System.Drawing.Point(573, 239);
+            this.textBox_compressor_voltage.Name = "textBox_compressor_voltage";
+            this.textBox_compressor_voltage.ReadOnly = true;
+            this.textBox_compressor_voltage.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_voltage.TabIndex = 50;
             // 
-            // textBox10
+            // textBox_compressor_current
             // 
-            this.textBox10.Location = new System.Drawing.Point(573, 290);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 28);
-            this.textBox10.TabIndex = 51;
+            this.textBox_compressor_current.Location = new System.Drawing.Point(573, 290);
+            this.textBox_compressor_current.Name = "textBox_compressor_current";
+            this.textBox_compressor_current.ReadOnly = true;
+            this.textBox_compressor_current.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_current.TabIndex = 51;
             // 
-            // textBox11
+            // textBox_EXV_CurrentPosition
             // 
-            this.textBox11.Location = new System.Drawing.Point(573, 369);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 28);
-            this.textBox11.TabIndex = 52;
+            this.textBox_EXV_CurrentPosition.Location = new System.Drawing.Point(573, 389);
+            this.textBox_EXV_CurrentPosition.Name = "textBox_EXV_CurrentPosition";
+            this.textBox_EXV_CurrentPosition.ReadOnly = true;
+            this.textBox_EXV_CurrentPosition.Size = new System.Drawing.Size(100, 28);
+            this.textBox_EXV_CurrentPosition.TabIndex = 52;
             // 
-            // textBox12
+            // textBox_EXV_initial_status
             // 
-            this.textBox12.Location = new System.Drawing.Point(573, 407);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(100, 28);
-            this.textBox12.TabIndex = 53;
+            this.textBox_EXV_initial_status.Location = new System.Drawing.Point(573, 427);
+            this.textBox_EXV_initial_status.Name = "textBox_EXV_initial_status";
+            this.textBox_EXV_initial_status.ReadOnly = true;
+            this.textBox_EXV_initial_status.Size = new System.Drawing.Size(100, 28);
+            this.textBox_EXV_initial_status.TabIndex = 53;
             // 
-            // textBox13
+            // textBox_EXV_status
             // 
-            this.textBox13.Location = new System.Drawing.Point(573, 449);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(100, 28);
-            this.textBox13.TabIndex = 54;
+            this.textBox_EXV_status.Location = new System.Drawing.Point(573, 469);
+            this.textBox_EXV_status.Name = "textBox_EXV_status";
+            this.textBox_EXV_status.ReadOnly = true;
+            this.textBox_EXV_status.Size = new System.Drawing.Size(100, 28);
+            this.textBox_EXV_status.TabIndex = 54;
             // 
-            // textBox14
+            // textBox_four_way_1
             // 
-            this.textBox14.Location = new System.Drawing.Point(573, 627);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(100, 28);
-            this.textBox14.TabIndex = 55;
+            this.textBox_four_way_1.Location = new System.Drawing.Point(573, 647);
+            this.textBox_four_way_1.Name = "textBox_four_way_1";
+            this.textBox_four_way_1.ReadOnly = true;
+            this.textBox_four_way_1.Size = new System.Drawing.Size(100, 28);
+            this.textBox_four_way_1.TabIndex = 55;
             // 
-            // textBox15
+            // textBox_four_way_2
             // 
-            this.textBox15.Location = new System.Drawing.Point(573, 669);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(100, 28);
-            this.textBox15.TabIndex = 56;
+            this.textBox_four_way_2.Location = new System.Drawing.Point(573, 689);
+            this.textBox_four_way_2.Name = "textBox_four_way_2";
+            this.textBox_four_way_2.ReadOnly = true;
+            this.textBox_four_way_2.Size = new System.Drawing.Size(100, 28);
+            this.textBox_four_way_2.TabIndex = 56;
             // 
-            // textBox21
+            // textBox_PTC_m_voltage
             // 
-            this.textBox21.Location = new System.Drawing.Point(1069, 365);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(100, 28);
-            this.textBox21.TabIndex = 62;
+            this.textBox_PTC_m_voltage.Location = new System.Drawing.Point(1069, 471);
+            this.textBox_PTC_m_voltage.Name = "textBox_PTC_m_voltage";
+            this.textBox_PTC_m_voltage.ReadOnly = true;
+            this.textBox_PTC_m_voltage.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_voltage.TabIndex = 62;
             // 
-            // textBox22
+            // textBox_PTC_m_current
             // 
-            this.textBox22.Location = new System.Drawing.Point(1069, 404);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(100, 28);
-            this.textBox22.TabIndex = 63;
+            this.textBox_PTC_m_current.Location = new System.Drawing.Point(1069, 510);
+            this.textBox_PTC_m_current.Name = "textBox_PTC_m_current";
+            this.textBox_PTC_m_current.ReadOnly = true;
+            this.textBox_PTC_m_current.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_current.TabIndex = 63;
             // 
-            // textBox23
+            // textBox_PTC_m_temp_out
             // 
-            this.textBox23.Location = new System.Drawing.Point(1069, 446);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(100, 28);
-            this.textBox23.TabIndex = 64;
+            this.textBox_PTC_m_temp_out.Location = new System.Drawing.Point(1069, 552);
+            this.textBox_PTC_m_temp_out.Name = "textBox_PTC_m_temp_out";
+            this.textBox_PTC_m_temp_out.ReadOnly = true;
+            this.textBox_PTC_m_temp_out.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_temp_out.TabIndex = 64;
             // 
-            // textBox24
+            // textBox_PTC_m_temp_internel
             // 
-            this.textBox24.Location = new System.Drawing.Point(1069, 489);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(100, 28);
-            this.textBox24.TabIndex = 65;
+            this.textBox_PTC_m_temp_internel.Location = new System.Drawing.Point(1069, 595);
+            this.textBox_PTC_m_temp_internel.Name = "textBox_PTC_m_temp_internel";
+            this.textBox_PTC_m_temp_internel.ReadOnly = true;
+            this.textBox_PTC_m_temp_internel.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_temp_internel.TabIndex = 65;
             // 
-            // textBox25
+            // textBox_PTC_m_status
             // 
-            this.textBox25.Location = new System.Drawing.Point(1069, 532);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(100, 28);
-            this.textBox25.TabIndex = 66;
+            this.textBox_PTC_m_status.Location = new System.Drawing.Point(1069, 638);
+            this.textBox_PTC_m_status.Name = "textBox_PTC_m_status";
+            this.textBox_PTC_m_status.ReadOnly = true;
+            this.textBox_PTC_m_status.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_status.TabIndex = 66;
             // 
-            // comboBox1
+            // comboBox_compressor_status
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(703, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 26);
-            this.comboBox1.TabIndex = 67;
+            this.comboBox_compressor_status.FormattingEnabled = true;
+            this.comboBox_compressor_status.Location = new System.Drawing.Point(703, 36);
+            this.comboBox_compressor_status.Name = "comboBox_compressor_status";
+            this.comboBox_compressor_status.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_compressor_status.TabIndex = 67;
             // 
-            // textBox26
+            // textBox_compressor_speed_set
             // 
-            this.textBox26.Location = new System.Drawing.Point(703, 75);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 28);
-            this.textBox26.TabIndex = 68;
+            this.textBox_compressor_speed_set.Location = new System.Drawing.Point(703, 75);
+            this.textBox_compressor_speed_set.Name = "textBox_compressor_speed_set";
+            this.textBox_compressor_speed_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_speed_set.TabIndex = 68;
             // 
-            // textBox27
+            // textBox_compressor_limit_power_set
             // 
-            this.textBox27.Location = new System.Drawing.Point(703, 117);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 28);
-            this.textBox27.TabIndex = 69;
+            this.textBox_compressor_limit_power_set.Location = new System.Drawing.Point(703, 117);
+            this.textBox_compressor_limit_power_set.Name = "textBox_compressor_limit_power_set";
+            this.textBox_compressor_limit_power_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_compressor_limit_power_set.TabIndex = 69;
             // 
-            // textBox28
+            // textBox_EXV_CurrentPosition_set
             // 
-            this.textBox28.Location = new System.Drawing.Point(703, 369);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 28);
-            this.textBox28.TabIndex = 70;
+            this.textBox_EXV_CurrentPosition_set.Location = new System.Drawing.Point(703, 389);
+            this.textBox_EXV_CurrentPosition_set.Name = "textBox_EXV_CurrentPosition_set";
+            this.textBox_EXV_CurrentPosition_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_EXV_CurrentPosition_set.TabIndex = 70;
             // 
-            // textBox29
+            // textBox_three_way_1_set
             // 
-            this.textBox29.Location = new System.Drawing.Point(703, 520);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(100, 28);
-            this.textBox29.TabIndex = 71;
+            this.textBox_three_way_1_set.Location = new System.Drawing.Point(703, 540);
+            this.textBox_three_way_1_set.Name = "textBox_three_way_1_set";
+            this.textBox_three_way_1_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_three_way_1_set.TabIndex = 71;
             // 
-            // textBox30
+            // textBox_three_way_2_set
             // 
-            this.textBox30.Location = new System.Drawing.Point(703, 562);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(100, 28);
-            this.textBox30.TabIndex = 72;
+            this.textBox_three_way_2_set.Location = new System.Drawing.Point(703, 582);
+            this.textBox_three_way_2_set.Name = "textBox_three_way_2_set";
+            this.textBox_three_way_2_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_three_way_2_set.TabIndex = 72;
             // 
-            // comboBox2
+            // textBox_four_way_1_set
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(703, 627);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 26);
-            this.comboBox2.TabIndex = 73;
+            this.textBox_four_way_1_set.FormattingEnabled = true;
+            this.textBox_four_way_1_set.Location = new System.Drawing.Point(703, 647);
+            this.textBox_four_way_1_set.Name = "textBox_four_way_1_set";
+            this.textBox_four_way_1_set.Size = new System.Drawing.Size(100, 26);
+            this.textBox_four_way_1_set.TabIndex = 73;
             // 
-            // comboBox3
+            // textBox_four_way_2_set
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(703, 669);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(100, 26);
-            this.comboBox3.TabIndex = 74;
+            this.textBox_four_way_2_set.FormattingEnabled = true;
+            this.textBox_four_way_2_set.Location = new System.Drawing.Point(703, 689);
+            this.textBox_four_way_2_set.Name = "textBox_four_way_2_set";
+            this.textBox_four_way_2_set.Size = new System.Drawing.Size(100, 26);
+            this.textBox_four_way_2_set.TabIndex = 74;
             // 
-            // textBox31
+            // textBox_PTC_b_heat_level
             // 
-            this.textBox31.Location = new System.Drawing.Point(1069, 322);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            this.textBox31.Size = new System.Drawing.Size(100, 28);
-            this.textBox31.TabIndex = 76;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(929, 325);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(116, 18);
-            this.label27.TabIndex = 75;
-            this.label27.Text = "WPTC加热挡位";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(1069, 36);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(100, 28);
-            this.textBox16.TabIndex = 88;
+            this.textBox_PTC_b_heat_level.Location = new System.Drawing.Point(1069, 75);
+            this.textBox_PTC_b_heat_level.Name = "textBox_PTC_b_heat_level";
+            this.textBox_PTC_b_heat_level.ReadOnly = true;
+            this.textBox_PTC_b_heat_level.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_heat_level.TabIndex = 88;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(929, 39);
+            this.label17.Location = new System.Drawing.Point(929, 78);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(116, 18);
             this.label17.TabIndex = 87;
             this.label17.Text = "WPTC加热挡位";
             // 
-            // textBox17
+            // textBox_PTC_b_status
             // 
-            this.textBox17.Location = new System.Drawing.Point(1069, 246);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(100, 28);
-            this.textBox17.TabIndex = 86;
+            this.textBox_PTC_b_status.Location = new System.Drawing.Point(1069, 285);
+            this.textBox_PTC_b_status.Name = "textBox_PTC_b_status";
+            this.textBox_PTC_b_status.ReadOnly = true;
+            this.textBox_PTC_b_status.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_status.TabIndex = 86;
             // 
-            // textBox18
+            // textBox_PTC_b_temp_internel
             // 
-            this.textBox18.Location = new System.Drawing.Point(1069, 203);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(100, 28);
-            this.textBox18.TabIndex = 85;
+            this.textBox_PTC_b_temp_internel.Location = new System.Drawing.Point(1069, 242);
+            this.textBox_PTC_b_temp_internel.Name = "textBox_PTC_b_temp_internel";
+            this.textBox_PTC_b_temp_internel.ReadOnly = true;
+            this.textBox_PTC_b_temp_internel.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_temp_internel.TabIndex = 85;
             // 
-            // textBox19
+            // textBox_PTC_b_temp_out
             // 
-            this.textBox19.Location = new System.Drawing.Point(1069, 160);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(100, 28);
-            this.textBox19.TabIndex = 84;
+            this.textBox_PTC_b_temp_out.Location = new System.Drawing.Point(1069, 199);
+            this.textBox_PTC_b_temp_out.Name = "textBox_PTC_b_temp_out";
+            this.textBox_PTC_b_temp_out.ReadOnly = true;
+            this.textBox_PTC_b_temp_out.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_temp_out.TabIndex = 84;
             // 
-            // textBox20
+            // textBox_PTC_b_current
             // 
-            this.textBox20.Location = new System.Drawing.Point(1069, 118);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(100, 28);
-            this.textBox20.TabIndex = 83;
+            this.textBox_PTC_b_current.Location = new System.Drawing.Point(1069, 157);
+            this.textBox_PTC_b_current.Name = "textBox_PTC_b_current";
+            this.textBox_PTC_b_current.ReadOnly = true;
+            this.textBox_PTC_b_current.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_current.TabIndex = 83;
             // 
-            // textBox32
+            // textBox_PTC_b_voltage
             // 
-            this.textBox32.Location = new System.Drawing.Point(1069, 79);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(100, 28);
-            this.textBox32.TabIndex = 82;
+            this.textBox_PTC_b_voltage.Location = new System.Drawing.Point(1069, 118);
+            this.textBox_PTC_b_voltage.Name = "textBox_PTC_b_voltage";
+            this.textBox_PTC_b_voltage.ReadOnly = true;
+            this.textBox_PTC_b_voltage.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_b_voltage.TabIndex = 82;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(929, 249);
+            this.label18.Location = new System.Drawing.Point(929, 288);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(116, 18);
             this.label18.TabIndex = 81;
@@ -689,7 +678,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(929, 206);
+            this.label19.Location = new System.Drawing.Point(929, 245);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(116, 18);
             this.label19.TabIndex = 80;
@@ -698,7 +687,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(929, 163);
+            this.label20.Location = new System.Drawing.Point(929, 202);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(116, 18);
             this.label20.TabIndex = 79;
@@ -707,7 +696,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(965, 121);
+            this.label21.Location = new System.Drawing.Point(965, 160);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 18);
             this.label21.TabIndex = 78;
@@ -716,75 +705,146 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(965, 82);
+            this.label28.Location = new System.Drawing.Point(965, 121);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(80, 18);
             this.label28.TabIndex = 77;
             this.label28.Text = "WPTC电压";
             // 
-            // comboBox4
+            // comboBox_PTC_b_heat_level
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1198, 36);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(100, 26);
-            this.comboBox4.TabIndex = 89;
+            this.comboBox_PTC_b_heat_level.FormattingEnabled = true;
+            this.comboBox_PTC_b_heat_level.Location = new System.Drawing.Point(1198, 75);
+            this.comboBox_PTC_b_heat_level.Name = "comboBox_PTC_b_heat_level";
+            this.comboBox_PTC_b_heat_level.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_PTC_b_heat_level.TabIndex = 89;
             // 
-            // comboBox5
+            // textBox_WPTC_b_target_temp
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(1198, 322);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(100, 26);
-            this.comboBox5.TabIndex = 90;
+            this.textBox_WPTC_b_target_temp.Location = new System.Drawing.Point(1069, 36);
+            this.textBox_WPTC_b_target_temp.Name = "textBox_WPTC_b_target_temp";
+            this.textBox_WPTC_b_target_temp.ReadOnly = true;
+            this.textBox_WPTC_b_target_temp.Size = new System.Drawing.Size(100, 28);
+            this.textBox_WPTC_b_target_temp.TabIndex = 92;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(929, 39);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(116, 18);
+            this.label29.TabIndex = 91;
+            this.label29.Text = "WPTC目标温度";
+            // 
+            // textBox_WPTC_m_target_temp
+            // 
+            this.textBox_WPTC_m_target_temp.Location = new System.Drawing.Point(1069, 389);
+            this.textBox_WPTC_m_target_temp.Name = "textBox_WPTC_m_target_temp";
+            this.textBox_WPTC_m_target_temp.ReadOnly = true;
+            this.textBox_WPTC_m_target_temp.Size = new System.Drawing.Size(100, 28);
+            this.textBox_WPTC_m_target_temp.TabIndex = 98;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(929, 392);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(116, 18);
+            this.label27.TabIndex = 97;
+            this.label27.Text = "WPTC目标温度";
+            // 
+            // comboBox_PTC_m_heat_level
+            // 
+            this.comboBox_PTC_m_heat_level.FormattingEnabled = true;
+            this.comboBox_PTC_m_heat_level.Location = new System.Drawing.Point(1198, 428);
+            this.comboBox_PTC_m_heat_level.Name = "comboBox_PTC_m_heat_level";
+            this.comboBox_PTC_m_heat_level.Size = new System.Drawing.Size(100, 26);
+            this.comboBox_PTC_m_heat_level.TabIndex = 96;
+            // 
+            // textBox_PTC_m_heat_level
+            // 
+            this.textBox_PTC_m_heat_level.Location = new System.Drawing.Point(1069, 428);
+            this.textBox_PTC_m_heat_level.Name = "textBox_PTC_m_heat_level";
+            this.textBox_PTC_m_heat_level.ReadOnly = true;
+            this.textBox_PTC_m_heat_level.Size = new System.Drawing.Size(100, 28);
+            this.textBox_PTC_m_heat_level.TabIndex = 95;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(929, 431);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(116, 18);
+            this.label30.TabIndex = 94;
+            this.label30.Text = "WPTC加热挡位";
+            // 
+            // textBox_WPTC_m_target_temp_set
+            // 
+            this.textBox_WPTC_m_target_temp_set.Location = new System.Drawing.Point(1198, 389);
+            this.textBox_WPTC_m_target_temp_set.Name = "textBox_WPTC_m_target_temp_set";
+            this.textBox_WPTC_m_target_temp_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_WPTC_m_target_temp_set.TabIndex = 99;
+            // 
+            // textBox_WPTC_b_target_temp_set
+            // 
+            this.textBox_WPTC_b_target_temp_set.Location = new System.Drawing.Point(1198, 36);
+            this.textBox_WPTC_b_target_temp_set.Name = "textBox_WPTC_b_target_temp_set";
+            this.textBox_WPTC_b_target_temp_set.Size = new System.Drawing.Size(100, 28);
+            this.textBox_WPTC_b_target_temp_set.TabIndex = 100;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 743);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.textBox16);
+            this.ClientSize = new System.Drawing.Size(1326, 787);
+            this.Controls.Add(this.textBox_WPTC_b_target_temp_set);
+            this.Controls.Add(this.textBox_WPTC_m_target_temp_set);
+            this.Controls.Add(this.textBox_WPTC_m_target_temp);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.comboBox_PTC_m_heat_level);
+            this.Controls.Add(this.textBox_PTC_m_heat_level);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.textBox_WPTC_b_target_temp);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.comboBox_PTC_b_heat_level);
+            this.Controls.Add(this.textBox_PTC_b_heat_level);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox32);
+            this.Controls.Add(this.textBox_PTC_b_status);
+            this.Controls.Add(this.textBox_PTC_b_temp_internel);
+            this.Controls.Add(this.textBox_PTC_b_temp_out);
+            this.Controls.Add(this.textBox_PTC_b_current);
+            this.Controls.Add(this.textBox_PTC_b_voltage);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox_four_way_2_set);
+            this.Controls.Add(this.textBox_four_way_1_set);
+            this.Controls.Add(this.textBox_three_way_2_set);
+            this.Controls.Add(this.textBox_three_way_1_set);
+            this.Controls.Add(this.textBox_EXV_CurrentPosition_set);
+            this.Controls.Add(this.textBox_compressor_limit_power_set);
+            this.Controls.Add(this.textBox_compressor_speed_set);
+            this.Controls.Add(this.comboBox_compressor_status);
+            this.Controls.Add(this.textBox_PTC_m_status);
+            this.Controls.Add(this.textBox_PTC_m_temp_internel);
+            this.Controls.Add(this.textBox_PTC_m_temp_out);
+            this.Controls.Add(this.textBox_PTC_m_current);
+            this.Controls.Add(this.textBox_PTC_m_voltage);
+            this.Controls.Add(this.textBox_four_way_2);
+            this.Controls.Add(this.textBox_four_way_1);
+            this.Controls.Add(this.textBox_EXV_status);
+            this.Controls.Add(this.textBox_EXV_initial_status);
+            this.Controls.Add(this.textBox_EXV_CurrentPosition);
+            this.Controls.Add(this.textBox_compressor_current);
+            this.Controls.Add(this.textBox_compressor_voltage);
+            this.Controls.Add(this.textBox_temperature_IGBT);
+            this.Controls.Add(this.textBox_temperature_basic_board);
+            this.Controls.Add(this.textBox_compressor_limit_power);
+            this.Controls.Add(this.textBox_compressor_speed);
+            this.Controls.Add(this.textBox_compressor_status);
+            this.Controls.Add(this.textBox_three_way_2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox_three_way_1);
@@ -858,48 +918,54 @@
         private System.Windows.Forms.TextBox textBox_three_way_1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox textBox_three_way_2;
+        private System.Windows.Forms.TextBox textBox_compressor_status;
+        private System.Windows.Forms.TextBox textBox_compressor_speed;
+        private System.Windows.Forms.TextBox textBox_compressor_limit_power;
+        private System.Windows.Forms.TextBox textBox_temperature_basic_board;
+        private System.Windows.Forms.TextBox textBox_temperature_IGBT;
+        private System.Windows.Forms.TextBox textBox_compressor_voltage;
+        private System.Windows.Forms.TextBox textBox_compressor_current;
+        private System.Windows.Forms.TextBox textBox_EXV_CurrentPosition;
+        private System.Windows.Forms.TextBox textBox_EXV_initial_status;
+        private System.Windows.Forms.TextBox textBox_EXV_status;
+        private System.Windows.Forms.TextBox textBox_four_way_1;
+        private System.Windows.Forms.TextBox textBox_four_way_2;
+        private System.Windows.Forms.TextBox textBox_PTC_m_voltage;
+        private System.Windows.Forms.TextBox textBox_PTC_m_current;
+        private System.Windows.Forms.TextBox textBox_PTC_m_temp_out;
+        private System.Windows.Forms.TextBox textBox_PTC_m_temp_internel;
+        private System.Windows.Forms.TextBox textBox_PTC_m_status;
+        private System.Windows.Forms.ComboBox comboBox_compressor_status;
+        private System.Windows.Forms.TextBox textBox_compressor_speed_set;
+        private System.Windows.Forms.TextBox textBox_compressor_limit_power_set;
+        private System.Windows.Forms.TextBox textBox_EXV_CurrentPosition_set;
+        private System.Windows.Forms.TextBox textBox_three_way_1_set;
+        private System.Windows.Forms.TextBox textBox_three_way_2_set;
+        private System.Windows.Forms.ComboBox textBox_four_way_1_set;
+        private System.Windows.Forms.ComboBox textBox_four_way_2_set;
+        private System.Windows.Forms.TextBox textBox_PTC_b_heat_level;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox textBox_PTC_b_status;
+        private System.Windows.Forms.TextBox textBox_PTC_b_temp_internel;
+        private System.Windows.Forms.TextBox textBox_PTC_b_temp_out;
+        private System.Windows.Forms.TextBox textBox_PTC_b_current;
+        private System.Windows.Forms.TextBox textBox_PTC_b_voltage;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBox_PTC_b_heat_level;
+        private System.Windows.Forms.TextBox textBox_WPTC_b_target_temp;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox textBox_WPTC_m_target_temp;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.ComboBox comboBox_PTC_m_heat_level;
+        private System.Windows.Forms.TextBox textBox_PTC_m_heat_level;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox_WPTC_m_target_temp_set;
+        private System.Windows.Forms.TextBox textBox_WPTC_b_target_temp_set;
     }
 }
 

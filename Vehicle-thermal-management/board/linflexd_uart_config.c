@@ -24,7 +24,7 @@
 
 /*linflexd_uart_config0*/
 linflexd_uart_state_t linflexd_uart_config0_State;
-const linflexd_uart_user_config_t linflexd_uart_config0 = {
+linflexd_uart_user_config_t linflexd_uart_config0 = {
     .baudRate=19200U,
     .parityCheck=false,
     .parityType=LINFlexD_UART_PARITY_EVEN,

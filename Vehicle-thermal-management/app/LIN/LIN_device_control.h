@@ -22,7 +22,7 @@
 /************************************ 压缩机通讯 ************************************/
 
 /* 更改压缩机的转速，变相等于开启压缩机 */
-uint8_t Compressor_Set_Speed(uint16_t speed, uint16_t limit_power);
+uint8_t Compressor_Set_Speed(uint8_t speed, uint8_t limit_power);
 /* 关闭压缩机 */
 uint8_t Compressor_Shutdown(void);
 /* 获取压缩机状态 */

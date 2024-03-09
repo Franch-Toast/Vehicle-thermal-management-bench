@@ -58,6 +58,10 @@
       "variantName": "",
       "variantList": []
     },
+    "git": {
+      "enable": false,
+      "path": ".cache,build,.vscode"
+    },
     "heapSize": "200",
     "ideDeviceName": "YTM32B1ME05G0MLQT",
     "initList": [
@@ -340,10 +344,10 @@
                 },
                 {
                   "name": "LINFlexD0_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
                   "periSrc": 0,
-                  "userCtrl": false,
+                  "userCtrl": true,
                   "busClock": [
                     "SLOW_BUS_CLK",
                     "FAST_BUS_CLK"
@@ -1010,7 +1014,7 @@
           }
         ]
       },
-      "updateTime": 1705819369833,
+      "updateTime": 1709954428846,
       "lock": false
     },
     "device": {
@@ -2773,7 +2777,7 @@
           "filter": []
         }
       ],
-      "updateTime": 1705498466963,
+      "updateTime": 1709954458710,
       "lock": false
     },
     "linflexd_uart": {
@@ -2781,8 +2785,8 @@
       "data": [
         {
           "name": "linflexd_uart_config0",
-          "readonly": true,
-          "baudrate": 115200,
+          "readonly": false,
+          "baudrate": 19200,
           "parityCheck": false,
           "parityType": "LINFlexD_UART_PARITY_EVEN",
           "stopBitsCount": "LINFlexD_UART_ONE_STOP_BIT",
@@ -2793,7 +2797,7 @@
           "rxDMAChannel": 0
         }
       ],
-      "updateTime": 1703383786219,
+      "updateTime": 1709954476594,
       "lock": false
     },
     "pins": {
@@ -2931,9 +2935,66 @@
           "init": "1",
           "userLabel": "LINFlexD1_SLEEPEN",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLB",
+          "gpioBase": "GPIOB",
+          "num": "78",
+          "label": "PTB_0",
+          "feature": "LINFlexD0_RX",
+          "alt": "PCTRL_MUX_ALT2",
+          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": false,
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLB",
+          "gpioBase": "GPIOB",
+          "num": "77",
+          "label": "PTB_1",
+          "feature": "LINFlexD0_TX",
+          "alt": "PCTRL_MUX_ALT2",
+          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": false,
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLC",
+          "gpioBase": "GPIOC",
+          "num": "75",
+          "label": "PTC_10",
+          "feature": "GPIO",
+          "alt": "PCTRL_MUX_AS_GPIO",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "GPIO_OUTPUT_DIRECTION",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": "1",
+          "userLabel": "LINFlexD0_SLEEPEN",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
         }
       ],
-      "updateTime": 1705480651962,
+      "updateTime": 1709954423490,
       "lock": false
     }
   }

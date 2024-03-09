@@ -19,7 +19,7 @@ LincurrentEvent = 2 means master send done,
 LincurrentEvent = 3 means error happens
 */
 volatile uint8_t LincurrentEvent = 0;
-#define linMasterCurrentState linflexd_lin_config0_State
+
 
 linflexd_frame_t linMasterFrame =
     {
@@ -74,8 +74,10 @@ static void linflexd_process_callback(uint32_t instance, void *state)
 void LIN_MASTER_init()
 {
     status_t status = STATUS_SUCCESS;
-    status |= LINFlexD_DRV_Init(LINFlexD_Master, &linflexd_lin_config0, &linMasterCurrentState);
-    LINFlexD_DRV_InstallCallback(LINFlexD_Master, linflexd_process_callback); // 注册回调函数
+    status |= LINFlexD_DRV_Init(LIN0_Master, &linflexd_lin_config0, &linflexd_lin0_State);
+    status |= LINFlexD_DRV_Init(LIN1_Master, &linflexd_lin_config0, &linflexd_lin1_State);
+    LINFlexD_DRV_InstallCallback(LIN0_Master, linflexd_process_callback); // 注册回调函数
+    LINFlexD_DRV_InstallCallback(LIN1_Master, linflexd_process_callback); // 注册回调函数
     if (status == STATUS_SUCCESS)
         PRINTF("LIN MASTER initialize successfully!\n");
     else
@@ -83,14 +85,14 @@ void LIN_MASTER_init()
 }
 
 // LIN主机 发送帧
-status_t LIN_Master_Send_Frame()
+status_t LIN_Master_Send_Frame(uint32_t instance)
 {
     status_t status = STATUS_SUCCESS;
     LincurrentEvent = 0;
     /* LIN Master Send a Frame */
     // linMasterFrame.id = 0x35;
     linMasterFrame.responseType = LIN_MASTER_RESPONSE; // 发送时，MCU作为主机必须为LIN_MASTER_RESPONSE模式
-    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
+    status |= LINFlexD_DRV_MasterTransfer(instance, &linMasterFrame);
     /* Wait until master transmission completed */
     while (0 == LincurrentEvent)
         ;
@@ -100,14 +102,14 @@ status_t LIN_Master_Send_Frame()
 }
 
 // LIN主机 接收帧
-status_t LIN_Master_Receive_Frame()
+status_t LIN_Master_Receive_Frame(uint32_t instance)
 {
     status_t status = STATUS_SUCCESS;
     LincurrentEvent = 0;
     /* LIN Master receive a Frame */
     // linMasterFrame.id = 0x32;
     linMasterFrame.responseType = LIN_SLAVE_RESPONSE; // 接收时，MCU作为主机必须为LIN_SLAVE_RESPONSE模式
-    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
+    status |= LINFlexD_DRV_MasterTransfer(instance, &linMasterFrame);
     /* wait until master receive completed */
     while (0 == LincurrentEvent)
         ;

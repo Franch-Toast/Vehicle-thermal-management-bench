@@ -22,12 +22,18 @@
 
 /*! @brief peripheral clock PeripheralClockConfig */
 
-peripheral_clock_config_t clock_config0PeripheralClockConfig[5] = {
+peripheral_clock_config_t clock_config0PeripheralClockConfig[6] = {
     {
         .clkName = GPIO_CLK,
         .clkGate = true,
-        .clkSrc = CLK_SRC_FIRC,
         .divider = DIV_BY_1,
+        .clkSrc = CLK_SRC_FIRC,
+    },
+    {
+        .clkName = LINFlexD0_CLK,
+        .clkGate = true,
+        .divider = DIV_BY_1,
+        .clkSrc = CLK_SRC_DISABLED,
     },
     {
         .clkName = LINFlexD1_CLK,
@@ -106,7 +112,7 @@ clock_manager_user_config_t clock_config0ClockManager = {
     .ipcConfig =
         {
             .peripheralClocks = clock_config0PeripheralClockConfig,
-            .count = 5,
+            .count = 6,
         },
 };
 

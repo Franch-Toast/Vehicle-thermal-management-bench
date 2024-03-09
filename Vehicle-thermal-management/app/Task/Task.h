@@ -25,18 +25,31 @@
 #include "semphr.h"
 #include "UART.h"
 
-typedef enum
-{
-    Compressor_OFF = 0x00,
-    Compressor_ON = 0x01,
-    Compressor_PowerLimit = 0x02,
-} Compressor_Open_status_t;
+/* 解包索引宏 */
+#define Unpack_Compressor_status_index 2        // 压缩机开启状态
+#define Unpack_Compressor_speed_index 3         // 压缩机转速
+#define Unpack_Compressor_PowerLimit_index 4    // 压缩机最大功率
+#define Unpack_EXV_AskPosition_index 5      // EXV开度
+#define Unpack_three_way_valve_status_1_index 7 // 三通阀1开度
+#define Unpack_three_way_valve_status_2_index 8 // 三通阀2开度
+#define Unpack_four_way_valve_status_1_index 9  // 四通阀1开度
+#define Unpack_four_way_valve_status_2_index 10 // 四通阀2开度
+#define Unpack_PTC_heat_level_battery_index 11  // 电池WPTC加热挡位
+#define Unpack_PTC_target_temperature_battery_index 12  // 电池WPTC目标温度
+#define Unpack_PTC_heat_level_motor_index 13    // 电机WPTC加热挡位
+#define Unpack_PTC_target_temperature_motor_index 14 // 电机WPTC目标温度
 
-typedef enum
-{
-    WPTC_OFF = 0x00,
-    WPTC_ON = 0x01,
-} WPTC_Open_status_t;
+//值得注意的是，不需要组包的宏，因为组包直接将台架信息的结构体发送，直接在上位机解析即可
+
+/* 压缩机开启状态宏 */
+
+#define Compressor_OFF 0x00
+#define Compressor_ON 0x01
+#define Compressor_PowerLimit 0x02
+
+/* WPTC开启状态宏 */
+#define WPTC_OFF 0x00
+#define WPTC_ON 0x01
 
 /* 压缩机状态结构体 */
 typedef struct

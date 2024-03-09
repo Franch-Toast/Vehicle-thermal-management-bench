@@ -18,7 +18,6 @@
 #include "Task.h"
 #include "queue.h"
 
-
 /* 上位机指令传输信号量 */
 extern SemaphoreHandle_t Get_upper_order_Handle;
 
@@ -26,6 +25,8 @@ extern SemaphoreHandle_t Get_upper_order_Handle;
 Serial_data_frame_t serial_data_frame;
 
 ringBuffer_t buffer; // 定义一个环形缓冲区
+
+extern SemaphoreHandle_t MuxSem_Serial_Handle; // 互斥信号量句柄，用于保护串口传输帧
 
 uint8_t Rx_Byte;
 
@@ -59,8 +60,7 @@ uint8_t RingBuff_Read_frame(void)
         // 由于 copy 等同于读，所以要修改缓冲区的指针
         buffer.head = buffer.tail;
         return serial_data_frame.data_length;
-    }   
-    
+    }
 }
 void RingBuff_Read_Byte(uint8_t *pData)
 {
@@ -76,14 +76,15 @@ void RingBuff_Read_Byte(uint8_t *pData)
     // return 0; // 返回0，表示读取数据成功
 }
 
-
 void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 {
     // uint32_t ulReturn = taskENTER_CRITICAL_FROM_ISR();
     if (event == UART_EVENT_RX_FULL)
     {
+        xSemaphoreTakeFromISR(MuxSem_Serial_Handle, pdFALSE);
         RingBuff_Write(Rx_Byte);
         LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(PRINTF_UART, &Rx_Byte, 1);
+        xSemaphoreGiveFromISR(MuxSem_Serial_Handle, pdFALSE);
     }
     else if (event == UART_EVENT_TIMEOUT) // 串口空闲中断
     {
@@ -96,7 +97,7 @@ void UART_Rx_Callback(void *driverState, uart_event_t event, void *userData)
 void UART_init()
 {
     LINFlexD_UART_DRV_Init(PRINTF_UART, &linflexd_uart_config0_State, &linflexd_uart_config0);
-    
+
     /* 注册回调函数 */
     LINFlexD_UART_DRV_InstallRxCallback(PRINTF_UART, UART_Rx_Callback, NULL);
     /* 开启单字节接收中断 */

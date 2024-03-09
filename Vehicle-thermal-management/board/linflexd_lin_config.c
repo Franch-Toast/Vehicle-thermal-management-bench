@@ -23,7 +23,8 @@
 
 
 /*linflexd_lin_config0*/
-linflexd_state_t linflexd_lin_config0_State;
+linflexd_state_t linflexd_lin0_State;
+linflexd_state_t linflexd_lin1_State;
 linflexd_user_config_t linflexd_lin_config0 = {
     .baudRate=19200U,
     .nodeFunction=true,

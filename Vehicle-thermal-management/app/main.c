@@ -70,6 +70,7 @@ extern QueueHandle_t Message_queue_main2Task0x01; // 主任务向Task01通信用
 extern SemaphoreHandle_t Get_upper_order_Handle;   // 串口接收二值信号量
 extern EventGroupHandle_t HangTask01EventGroup; // 挂起Task01用事件组句柄
 extern SemaphoreHandle_t MuxSem_Handle;  // 互斥信号量句柄，用于保护LIN传输帧
+extern SemaphoreHandle_t MuxSem_Serial_Handle;  // 互斥信号量句柄，用于保护串口传输帧
 
 /* 台架状态结构体 */
 Workbench_status_t Workbench_status;
@@ -207,8 +208,9 @@ static void COM_init(void)
 
     /* 互斥锁初始化 */
     MuxSem_Handle = xSemaphoreCreateMutex();
-    xSemaphoreGive(MuxSem_Handle); // 释放锁
-
+    MuxSem_Serial_Handle = xSemaphoreCreateMutex();
+    xSemaphoreGive(MuxSem_Serial_Handle); // 释放锁
+    xSemaphoreGive(MuxSem_Handle);        // 释放锁
 }
 
 /* USER CODE END 4 */

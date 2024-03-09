@@ -32,7 +32,7 @@
 
 /*linflexd_uart_config0*/
 extern linflexd_uart_state_t linflexd_uart_config0_State;
-extern const linflexd_uart_user_config_t linflexd_uart_config0;
+extern linflexd_uart_user_config_t linflexd_uart_config0;
 
 
 

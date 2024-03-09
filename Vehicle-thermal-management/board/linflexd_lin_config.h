@@ -1,14 +1,3 @@
-/*
- * @Author: Franch-Toast
- * @Date: 2024-01-17 17:09:21
- * @email: random996@163.com
- * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-01-18 16:20:24
- * @Description: 
- * Shit Code Manufacturing Machine, a low-level bug production expert myself.
- * The code is terrible but can be barely understood. 
- * Welcome to communicate with each other!
- */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -42,11 +31,9 @@
 
 
 /*linflexd_lin_config0*/
-extern linflexd_state_t linflexd_lin_config0_State;
+extern linflexd_state_t linflexd_lin0_State;
+extern linflexd_state_t linflexd_lin1_State;
 extern linflexd_user_config_t linflexd_lin_config0;
-
-
-
 
 
 #endif
