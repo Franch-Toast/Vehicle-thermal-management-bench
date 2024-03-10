@@ -109,6 +109,12 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox_WPTC_m_target_temp_set = new System.Windows.Forms.TextBox();
             this.textBox_WPTC_b_target_temp_set = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // button_scan_serial
@@ -792,6 +798,66 @@
             this.textBox_WPTC_b_target_temp_set.Size = new System.Drawing.Size(100, 28);
             this.textBox_WPTC_b_target_temp_set.TabIndex = 100;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(880, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(434, 317);
+            this.groupBox1.TabIndex = 101;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "电池";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(880, 365);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(434, 308);
+            this.groupBox2.TabIndex = 102;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "电机";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Location = new System.Drawing.Point(372, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(442, 317);
+            this.groupBox3.TabIndex = 103;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "压缩机";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox4.Location = new System.Drawing.Point(372, 365);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(442, 140);
+            this.groupBox4.TabIndex = 104;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "电子膨胀阀";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.Location = new System.Drawing.Point(372, 519);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(442, 104);
+            this.groupBox5.TabIndex = 105;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "三通阀";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox6.Location = new System.Drawing.Point(372, 629);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(442, 101);
+            this.groupBox6.TabIndex = 106;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "四通阀";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -876,6 +942,12 @@
             this.Controls.Add(this.comboBox_baudrate);
             this.Controls.Add(this.comboBox_serialport);
             this.Controls.Add(this.button_scan_serial);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox6);
             this.Name = "Form1";
             this.Text = "R290热管理台架上位机";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -966,6 +1038,12 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox textBox_WPTC_m_target_temp_set;
         private System.Windows.Forms.TextBox textBox_WPTC_b_target_temp_set;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
 

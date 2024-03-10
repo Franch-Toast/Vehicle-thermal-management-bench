@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace UpperPC
 {
@@ -40,6 +42,24 @@ namespace UpperPC
                 "512000","921600"};
             comboBox_baudrate.Items.AddRange(baudrate);
             comboBox_baudrate.SelectedIndex = 0;
+
+            string[] compressor_status = { "停机", "开机" };
+            comboBox_compressor_status.Items.AddRange(compressor_status);
+            comboBox_compressor_status.SelectedIndex = 0;
+
+            string[] four_way_valve_status = { "模式1", "模式2" };
+            textBox_four_way_1_set.Items.AddRange(four_way_valve_status);
+            textBox_four_way_1_set.SelectedIndex = 0;
+            textBox_four_way_2_set.Items.AddRange(four_way_valve_status);
+            textBox_four_way_2_set.SelectedIndex = 0;
+
+
+
+            string[] PTC_heat_level = { "0档", "1档" , "2档", "3档", "4档", "5档", "6档", "7档", "8档", "9档" };
+            comboBox_PTC_b_heat_level.Items.AddRange(PTC_heat_level);
+            comboBox_PTC_b_heat_level.SelectedIndex = 0;
+            comboBox_PTC_m_heat_level.Items.AddRange(PTC_heat_level);
+            comboBox_PTC_m_heat_level.SelectedIndex = 0;
 
         }
 
@@ -73,6 +93,7 @@ namespace UpperPC
                     button_open_serial.Text = "关闭串口";
 
                     Thread processingThread = new Thread(ProcessData);
+                    processingThread.IsBackground = true; // 设定为后台线程
                     processingThread.Start(); // 线程调度开始
 
                 }
@@ -127,20 +148,22 @@ namespace UpperPC
             byte[] Data = new byte[1];//发送单个字节
             if (serialPort1.IsOpen)//判断串口是否打开，如果打开执行下一步操作
             {
-                if (textBox2.Text != "")
-                {
 
-                    for (int i = 0; i < (textBox2.Text.Length - textBox2.Text.Length % 2) / 2; i++)//取余3运算作用是防止用户输入的字符为奇数个
-                    {
-                        Data[0] = Convert.ToByte(textBox2.Text.Substring(i * 2, 2), 16);
-                        serialPort1.Write(Data, 0, 1);//循环发送（如果输入字符为0A0BB,则只发送0A,0B）
-                    }
-                    if (textBox2.Text.Length % 2 != 0)//剩下一位单独处理
-                    {
-                        Data[0] = Convert.ToByte(textBox2.Text.Substring(textBox2.Text.Length - 1, 1), 16);//单独发送B（0B）
-                        serialPort1.Write(Data, 0, 1);//发送
-                    }
-                }
+                Pack();
+                //if (textBox2.Text != "")
+                //{
+
+                //    for (int i = 0; i < (textBox2.Text.Length - textBox2.Text.Length % 2) / 2; i++)//取余3运算作用是防止用户输入的字符为奇数个
+                //    {
+                //        Data[0] = Convert.ToByte(textBox2.Text.Substring(i * 2, 2), 16);
+                //        serialPort1.Write(Data, 0, 1);//循环发送（如果输入字符为0A0BB,则只发送0A,0B）
+                //    }
+                //    if (textBox2.Text.Length % 2 != 0)//剩下一位单独处理
+                //    {
+                //        Data[0] = Convert.ToByte(textBox2.Text.Substring(textBox2.Text.Length - 1, 1), 16);//单独发送B（0B）
+                //        serialPort1.Write(Data, 0, 1);//发送
+                //    }
+                //}
             }
             else
             {
@@ -235,11 +258,11 @@ namespace UpperPC
         private void Unpack(Byte[] data)
         {
             int n = data.Length;
-            switch(data[1])
+            switch (data[1])
             {
                 case 0x02:// 传输的数据
                     {
-                        if (data[n - 1]!= 0xFF || data[n - 2] != n - 3) break; // 不满足帧要求，丢弃
+                        if (data[n - 1] != 0xFF || data[n - 2] != n - 3) break; // 不满足帧要求，丢弃
 
 
                         /* 解包的格式如下 */
@@ -250,7 +273,200 @@ namespace UpperPC
                          */
 
 
+                        switch(data[Unpack_index.compressor_status])// 压缩机状态
+                        {
+                            case (byte)0:
+                                {
+                                    textBox_compressor_status.Text = "未运行";
+                                    break;
+                                }
+                            case (byte)1:
+                                {
+                                    textBox_compressor_status.Text = "全功率";
+                                    break;
+                                }
+                            case (byte)2:
+                                {
+                                    textBox_compressor_status.Text = "限制功率";
+                                    break;
+                                }
+                            default:
+                                {
+                                    textBox_compressor_status.Text = "Error!";
+                                    break;
+                                }
+                        }
 
+                        textBox_compressor_speed.Text = Convert.ToString(data[Unpack_index.compressor_speed] * 50);// 压缩机转速
+                        
+                        // 放到点击按钮方法中
+                        textBox_compressor_limit_power.Text = textBox_compressor_limit_power_set.Text;
+
+                        textBox_temperature_basic_board.Text = Convert.ToString(data[Unpack_index.temperature_basic_board] - 50);
+                        textBox_temperature_IGBT.Text = Convert.ToString(data[Unpack_index.temperature_IGBT] - 50);
+                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage] * 256 + data[Unpack_index.compressor_voltage + 1]) * 2);
+                        textBox_compressor_current.Text = Convert.ToString((data[Unpack_index.compressor_current] * 256 + data[Unpack_index.compressor_current + 1]) * 0.1);
+                        textBox_EXV_CurrentPosition.Text = Convert.ToString(data[Unpack_index.EXV_CurrentPosition] * 256 + data[Unpack_index.EXV_CurrentPosition + 1]);
+
+
+                        switch (data[Unpack_index.EXV_initial_status])// EXV初始化状态
+                        {
+                            case (byte)0:
+                                {
+                                    textBox_EXV_initial_status.Text = "未初始化";
+                                    break;
+                                }
+                            case (byte)1:
+                                {
+                                    textBox_EXV_initial_status.Text = "初始化中";
+                                    break;
+                                }
+                            case (byte)2:
+                                {
+                                    textBox_EXV_initial_status.Text = "已初始化";
+                                    break;
+                                }
+                            default:
+                                {
+                                    textBox_EXV_initial_status.Text = "Error!";
+                                    break;
+                                }
+                        }
+                        switch (data[Unpack_index.EXV_status])// EXV状态
+                        {
+                            case (byte)0:
+                                {
+                                    textBox_EXV_status.Text = "未动作";
+                                    break;
+                                }
+                            case (byte)1:
+                                {
+                                    textBox_EXV_status.Text = "动作中";
+                                    break;
+                                }
+                            default:
+                                {
+                                    textBox_EXV_status.Text = "Error!";
+                                    break;
+                                }
+                        }
+
+
+
+                       
+                        textBox_three_way_1.Text = Convert.ToString(data[Unpack_index.three_way_1_status] * 0.4);
+                        textBox_three_way_2.Text = Convert.ToString(data[Unpack_index.three_way_2_status] * 0.4);
+                        textBox_four_way_1.Text = Convert.ToString(data[Unpack_index.four_way_1_status]);
+                        textBox_four_way_2.Text = Convert.ToString(data[Unpack_index.four_way_2_status]);
+
+                        // 放到点击按钮方法中
+                        textBox_WPTC_b_target_temp.Text = textBox_WPTC_b_target_temp_set.Text;
+                        // 注意在发送的时候，需要根据comoBox给出具体数值
+                        textBox_PTC_b_heat_level.Text = comboBox_PTC_b_heat_level.Text;
+
+                        textBox_PTC_b_voltage.Text = Convert.ToString(data[Unpack_index.PTC_voltage_b] * 2);
+                        textBox_PTC_b_current.Text = Convert.ToString(data[Unpack_index.PTC_current_b] * 0.25);
+                        textBox_PTC_b_temp_out.Text = Convert.ToString(data[Unpack_index.PTC_temp_out_b] - 50);
+                        textBox_PTC_b_temp_internel.Text = Convert.ToString(data[Unpack_index.PTC_temp_internel_b] - 50);
+
+                        switch (data[Unpack_index.PTC_status_b])// 电池PTC状态
+                        {
+                            case (byte)0:
+                                {
+                                    textBox_PTC_b_status.Text = "OFF";
+                                    break;
+                                }
+                            case (byte)1:
+                                {
+                                    textBox_PTC_b_status.Text = "ON";
+                                    break;
+                                }
+                            case (byte)2:
+                                {
+                                    textBox_PTC_b_status.Text = "Degraded";
+                                    break;
+                                }
+                            case (byte)3:
+                                {
+                                    textBox_PTC_b_status.Text = "stopped";
+                                    break;
+                                }
+                            case (byte)4:
+                                {
+                                    textBox_PTC_b_status.Text = "shutdown";
+                                    break;
+                                }
+                            case (byte)5:
+                                {
+                                    textBox_PTC_b_status.Text = "shorted";
+                                    break;
+                                }
+                            case (byte)6:
+                                {
+                                    textBox_PTC_b_status.Text = "reset not possible";
+                                    break;
+                                }
+                            default:
+                                {
+                                    textBox_PTC_b_status.Text = "Error!";
+                                    break;
+                                }
+                        }
+
+
+                        // 放到点击按钮方法中
+                        textBox_WPTC_m_target_temp.Text = textBox_WPTC_m_target_temp_set.Text;
+                        textBox_PTC_m_heat_level.Text = comboBox_PTC_m_heat_level.Text;
+                        
+
+                        textBox_PTC_m_voltage.Text = Convert.ToString(data[Unpack_index.PTC_voltage_m] * 2);
+                        textBox_PTC_m_current.Text = Convert.ToString(data[Unpack_index.PTC_current_m] * 0.25);
+                        textBox_PTC_m_temp_out.Text = Convert.ToString(data[Unpack_index.PTC_temp_out_m] - 50);
+                        textBox_PTC_m_temp_internel.Text = Convert.ToString(data[Unpack_index.PTC_temp_internel_m] - 50);
+
+                        switch (data[Unpack_index.PTC_status_m])// 电机PTC状态
+                        {
+                            case (byte)0:
+                                {
+                                    textBox_PTC_m_status.Text = "OFF";
+                                    break;
+                                }
+                            case (byte)1:
+                                {
+                                    textBox_PTC_m_status.Text = "ON";
+                                    break;
+                                }
+                            case (byte)2:
+                                {
+                                    textBox_PTC_m_status.Text = "Degraded";
+                                    break;
+                                }
+                            case (byte)3:
+                                {
+                                    textBox_PTC_m_status.Text = "stopped";
+                                    break;
+                                }
+                            case (byte)4:
+                                {
+                                    textBox_PTC_m_status.Text = "shutdown";
+                                    break;
+                                }
+                            case (byte)5:
+                                {
+                                    textBox_PTC_m_status.Text = "shorted";
+                                    break;
+                                }
+                            case (byte)6:
+                                {
+                                    textBox_PTC_m_status.Text = "reset not possible";
+                                    break;
+                                }
+                            default:
+                                {
+                                    textBox_PTC_m_status.Text = "Error!";
+                                    break;
+                                }
+                        }
 
                         break;
                     }
@@ -266,6 +482,103 @@ namespace UpperPC
             }
         }
 
+
+        private void Pack()
+        {
+            
+            byte[] data = { 0xFE, 0x01};
+            try
+            {
+                /* 压缩机 */
+
+                if (comboBox_compressor_status.Text == "开机")
+                {
+                    data.Append((byte)1);
+                    data.Append((byte)(Convert.ToInt32(textBox_compressor_speed_set.Text) / 50));
+                }
+                else
+                {
+                    data.Append((byte)0);
+                    data.Append((byte)0);// 没选择开机则转速给0，默认停机
+                }
+
+                data.Append((byte)(Convert.ToInt32(textBox_compressor_limit_power_set.Text) / 40));
+
+                /* 电子膨胀阀 */
+
+                data.Append((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) / 256));
+                data.Append((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) % 256));
+
+                /* 三通阀1和2 */
+
+                data.Append((byte)(Convert.ToInt32(textBox_three_way_1_set.Text) / 0.4));
+                data.Append((byte)(Convert.ToInt32(textBox_three_way_2_set.Text) / 0.4));
+
+                /* 四通阀1和2 */
+
+                data.Append((byte)(Convert.ToInt32(textBox_four_way_1_set.Text[2]) - 48));// 模式1/2
+                data.Append((byte)(Convert.ToInt32(textBox_four_way_2_set.Text[2]) - 48));
+
+                /* 电池PTC */
+                data.Append((byte)(Convert.ToInt32(comboBox_PTC_b_heat_level.Text[0]) * 10 + 3));// 根据挡位输出加热等级数值
+                data.Append((byte)(Convert.ToInt32(textBox_WPTC_b_target_temp_set.Text)));
+
+
+                /* 电机PTC */
+                data.Append((byte)(Convert.ToInt32(comboBox_PTC_m_heat_level.Text[0]) * 10 + 3));// 根据挡位输出加热等级数值
+                data.Append((byte)(Convert.ToInt32(textBox_WPTC_m_target_temp_set.Text)));
+                
+                data.Append((byte)13);
+                data.Append((byte)0xFF);
+
+                serialPort1.Write(data, 0, data.Length);
+
+            }
+            catch
+            {
+                MessageBox.Show("输入有误！");
+            }
+        }
+
+
+
+
+        static class Unpack_index
+        {
+
+            public const byte compressor_status = 2;       // 压缩机开启状态
+            public const byte compressor_fault_status = 3; // 压缩机故障状态
+            public const byte compressor_speed = 4;        // 压缩机转速
+            public const byte compressor_limit_power = 5;  // 压缩机允许最大功率
+            public const byte temperature_basic_board = 6; // 基板温度
+            public const byte temperature_IGBT = 7;        // IGBT温度
+            public const byte compressor_voltage = 8;     // 压缩机供电电压,uint16
+            public const byte compressor_current = 10;     // 压缩机电流,uint16
+            public const byte EXV_CurrentPosition = 12; // EXV膨胀阀开度
+            public const byte EXV_initial_status = 14;   // EXV的初始化状态
+            public const byte EXV_status = 15;           // EXV的运行状态
+
+            public const byte PTC_current_b = 16;       // PTC电流_电池
+            public const byte PTC_voltage_b = 17;       // PTC电压_电池
+            public const byte PTC_temp_out_b = 18;      // PTC的出口温度_电池
+            public const byte PTC_temp_internel_b = 19; // PTC的内部温度_电池
+            public const byte PTC_status_b = 20;        // PTC工作状态_电池
+            public const byte PTC_heat_level_b = 21;    // PTC加热挡位_电池
+
+            public const byte PTC_current_m = 22;       // PTC电流_电机
+            public const byte PTC_voltage_m = 23;       // PTC电压_电机
+            public const byte PTC_temp_out_m = 24;      // PTC的出口温度_电机
+            public const byte PTC_temp_internel_m = 25; // PTC的内部温度_电机
+            public const byte PTC_status_m = 26;        // PTC工作状态_电机
+            public const byte PTC_heat_level_m = 27;    // PTC加热挡位_电机
+
+            public const byte three_way_1_status = 28;
+            public const byte three_way_2_status = 29;
+
+            public const byte four_way_1_status = 30;
+            public const byte four_way_2_status = 31;
+
+        }
 
 
 

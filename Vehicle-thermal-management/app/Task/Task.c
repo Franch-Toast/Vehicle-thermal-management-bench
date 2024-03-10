@@ -196,15 +196,30 @@ static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
 {
     status_t status = 0;
     /* 解包，解析上位机的发送请求 */
-
-    status = Compressor_Set_Speed(DataFrame.data[Unpack_Compressor_speed_index], DataFrame.data[Unpack_Compressor_PowerLimit_index]);
+    if (DataFrame.data[Unpack_Compressor_status_index] == 0)// 没指示开机，直接shutdown
+    {
+        status = Compressor_Shutdown();
+    }
+    else // 指示开机，正常给速度
+    {
+        status = Compressor_Set_Speed(DataFrame.data[Unpack_Compressor_speed_index], DataFrame.data[Unpack_Compressor_PowerLimit_index]);
+    }
+    
     status |= Expansion_valve_Set_Open(*((uint16_t *)(&DataFrame.data[Unpack_EXV_AskPosition_index]))); // 注意传参的类型
     status |= Three_way_valve_Set_Open(LIN0_Master, DataFrame.data[Unpack_three_way_valve_status_1_index]);
     status |= Three_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_three_way_valve_status_2_index]);
     status |= Four_way_valve_Set_Open(LIN0_Master, DataFrame.data[Unpack_four_way_valve_status_1_index]);
     status |= Four_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_four_way_valve_status_2_index]);
-    status |= WPTC_Set_Temperature(LIN0_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index]);
-    status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index]);
+
+    if (DataFrame.data[Unpack_PTC_heat_level_battery_index] < 4)
+        status |= WPTC_Shutdown(LIN0_Master);
+    else
+        status |= WPTC_Set_Temperature(LIN0_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index]);
+
+    if (DataFrame.data[Unpack_PTC_heat_level_motor_index] < 4)
+        status |= WPTC_Shutdown(LIN1_Master);
+    else
+        status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index]);
 }
 
 /*

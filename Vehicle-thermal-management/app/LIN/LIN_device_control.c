@@ -32,6 +32,8 @@ uint8_t Compressor_Set_Speed(uint8_t speed, uint8_t limit_power)
     linMasterFrame.data[1] = speed;       // 第二个字节为压缩机转速，放大因数为50
     linMasterFrame.data[2] = 0x01;        // 第三个字节低两位压缩机允许运行
 
+    Workbench_status.Compressor_status.compressor_limit_power = limit_power; // 状态中存放
+
     status = LIN_Master_Send_Frame(LIN0_Master); // 发送帧
 
     if (status != 0) // 如果发送失败了，则
@@ -86,7 +88,7 @@ uint8_t Compressor_Get_info(void)
     Workbench_status.Compressor_status.compressor_speed = linMasterFrame.data[1];                                                // 转速：rpm
     Workbench_status.Compressor_status.temperature_basic_board = linMasterFrame.data[2];                                         // 基板温度：℃
     Workbench_status.Compressor_status.temperature_IGBT = linMasterFrame.data[3];                                                // IGBT温度：℃
-    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[4])) | ((linMasterFrame.data[4] & 0x0F) << 8); // 电流：A
+    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[4])) | ((linMasterFrame.data[5] & 0x0F) << 8); // 电流：A
     Workbench_status.Compressor_status.compressor_voltage = linMasterFrame.data[6] | ((linMasterFrame.data[7] & 0x03) << 8);     // 电压：V
     Workbench_status.Compressor_status.compressor_status = linMasterFrame.data[7] & 0x38;                                        // 压缩机状态
 
@@ -262,7 +264,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
     linMasterFrame.dataLength = 4;     // 四个字节
     memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
 
-    linMasterFrame.data[0] = heat_power;  // 注意请求加热功率heat_power范围为[0,127]
+    linMasterFrame.data[0] = heat_power;  // 注意请求加热功率heat_power范围为[0,100]
     linMasterFrame.data[1] = 0x01;        // PTC使能
     linMasterFrame.data[2] = temperature; // 注意temperature范围为[0,127]
     // 重置请求、紧急切断、放电请求均为不要求
@@ -279,7 +281,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 }
 
 /* 获取WPTC状态 */
-uint8_t WPTC_Get_info(uint8_t instance) // 输入的是第instance个WPTC，instance = 1 or 2
+uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线上的WPTC
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
