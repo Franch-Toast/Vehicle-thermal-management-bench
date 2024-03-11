@@ -138,6 +138,7 @@
             // serialPort1
             // 
             this.serialPort1.BaudRate = 119600;
+            this.serialPort1.ReadTimeout = 5;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.port_DataReceived);
             // 
             // comboBox_baudrate

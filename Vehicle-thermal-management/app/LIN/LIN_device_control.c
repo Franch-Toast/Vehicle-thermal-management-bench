@@ -3,7 +3,7 @@
  * @Date: 2024-02-29 20:18:57
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-02 19:13:39
+ * @LastEditTime: 2024-03-11 17:41:42
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -38,7 +38,7 @@ uint8_t Compressor_Set_Speed(uint8_t speed, uint8_t limit_power)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("Compressor Send fail!");
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -59,7 +59,7 @@ uint8_t Compressor_Shutdown(void)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("Compressor Send fail!");
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -80,7 +80,7 @@ uint8_t Compressor_Get_info(void)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Receive fail!");
+        PRINTF("Compressor Receive fail!");
     }
 
     /* 对接收数据进行解析 */
@@ -117,7 +117,7 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("EXV Send fail!");
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -138,7 +138,7 @@ uint8_t Expansion_valve_Get_info(void)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Receive fail!");
+        PRINTF("EXV Receive fail!");
     }
 
     /* 对接收数据进行解析 */
@@ -169,7 +169,7 @@ uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("Three way valve %d Send fail!",instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -190,7 +190,7 @@ uint8_t Three_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Receive fail!");
+        PRINTF("Three way valve %d Receive fail!",instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -219,7 +219,7 @@ uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode) // mode 只有�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("Four way valve %d Send fail!",instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -240,7 +240,7 @@ uint8_t Four_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Receive fail!");
+        PRINTF("Four way valve %d Receive fail!",instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -273,7 +273,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("WPTC %d Send fail!",instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -294,7 +294,7 @@ uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Receive fail!");
+        PRINTF("WPTC %d Receive fail!",instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -324,7 +324,7 @@ uint8_t WPTC_Shutdown(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("LIN Send fail!");
+        PRINTF("WPTC %d Send fail!",instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁

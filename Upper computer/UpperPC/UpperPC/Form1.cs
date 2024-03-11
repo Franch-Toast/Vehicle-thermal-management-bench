@@ -41,7 +41,7 @@ namespace UpperPC
             string[] baudrate = { "4800", "9600", "14400", "19200", "38400", "56000", "57600", "115200", "128000", "230400","256000",
                 "512000","921600"};
             comboBox_baudrate.Items.AddRange(baudrate);
-            comboBox_baudrate.SelectedIndex = 0;
+            comboBox_baudrate.SelectedIndex = 3;
 
             string[] compressor_status = { "停机", "开机" };
             comboBox_compressor_status.Items.AddRange(compressor_status);
@@ -60,6 +60,16 @@ namespace UpperPC
             comboBox_PTC_b_heat_level.SelectedIndex = 0;
             comboBox_PTC_m_heat_level.Items.AddRange(PTC_heat_level);
             comboBox_PTC_m_heat_level.SelectedIndex = 0;
+
+            textBox_compressor_speed_set.Text = "0";
+            textBox_compressor_limit_power_set.Text = "0";
+            textBox_EXV_CurrentPosition_set.Text = "180";
+            textBox_three_way_1_set.Text = "100";
+            textBox_three_way_2_set.Text = "100";
+            textBox_WPTC_b_target_temp_set.Text = "50";
+            textBox_WPTC_m_target_temp_set.Text = "50";
+
+
 
         }
 
@@ -108,39 +118,57 @@ namespace UpperPC
 
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)//串口数据接收事件
         {
-            int len = serialPort1.BytesToRead;//获取可以读取的字节数
-            byte[] buff = new byte[len];//创建缓存数据数组
-            serialPort1.Read(buff, 0, len);
 
 
-            mutex.WaitOne();// 加锁
+            try
+            {
+                mutex.WaitOne();// 加锁
+                while (true)
+                {
 
-            receiveRingBuffer.WriteBuffer(buff); // 写入环形缓冲区
 
-            mutex.ReleaseMutex();// 解锁
+                    //Thread.Sleep(10);
+                    byte[] buff = new byte[1];
 
-            ProcessEvent.Set();// 释放信号量
+                    //int len = serialPort1.BytesToRead;//获取可以读取的字节数
 
-            //if (buff[0] != 0xFE) // 来的不是数据帧，而是调试语句
-            //{
-            //    string str = Encoding.Default.GetString(buff);//Byte值根据ASCII码表转为 String
-            //    textBox1.AppendText(str);//对话框追加显示数据
-            //}
-            //else // 来的是数据帧
-            //{
+                    buff[0] = (byte)serialPort1.ReadByte();
 
-            //    for (int i = 0; i < len; i++)
-            //    {
-            //        string str = Convert.ToString(buff[i], 16).ToUpper();//转换为大写十六进制字符串
-            //        textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
-            //        if (i == 2)
-            //        {
-            //            textBox_three_way_1.Clear();
-            //            textBox_three_way_1.Text = Convert.ToString(buff[i] * 0.4);
-            //        }
-            //    }
-            //}
 
+                    
+
+                    receiveRingBuffer.WriteBuffer(buff); // 写入环形缓冲区
+
+                    
+                }
+            }
+            catch
+            {
+
+                mutex.ReleaseMutex();// 解锁
+                ProcessEvent.Set();// 释放信号量
+                return;
+                //if (buff[0] != 0xFE) // 来的不是数据帧，而是调试语句
+                //{
+                //    string str = Encoding.Default.GetString(buff);//Byte值根据ASCII码表转为 String
+                //    textBox1.AppendText(str);//对话框追加显示数据
+                //}
+                //else // 来的是数据帧
+                //{
+
+                //    for (int i = 0; i < len; i++)
+                //    {
+                //        string str = Convert.ToString(buff[i], 16).ToUpper();//转换为大写十六进制字符串
+                //        textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
+                //        if (i == 2)
+                //        {
+                //            textBox_three_way_1.Clear();
+                //            textBox_three_way_1.Text = Convert.ToString(buff[i] * 0.4);
+                //        }
+                //    }
+                //}
+            }
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -149,7 +177,15 @@ namespace UpperPC
             if (serialPort1.IsOpen)//判断串口是否打开，如果打开执行下一步操作
             {
 
+
+
+
                 Pack();
+                //mutex.WaitOne();// 加锁
+                //byte[] temp = { 0xFE,0x02,0x00,0x00,0x00,0x00,0x43,0x43,0xB1,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x32,0x32,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x81,0x00,0x01,0x00,0x1E,0xFF };
+                //serialPort1.Write(temp, 0, 34);//发送
+                //mutex.ReleaseMutex();
+
                 //if (textBox2.Text != "")
                 //{
 
@@ -238,6 +274,10 @@ namespace UpperPC
                 receiveRingBuffer.ReadBuffer(data, 0, data.Length);// 读出并存入
 
                 mutex.ReleaseMutex();// 这个时候解锁即可
+                
+                if (data.Length == 0) 
+                    continue;
+
 
                 if (data[0] != 0xFE)// 证明这段语句是调试语句，直接打印
                 {
@@ -246,9 +286,23 @@ namespace UpperPC
                 }
                 else
                 {
+
+                    int len = data.Length;
+                    for (int i = 0; i < len; i++)
+                    {
+                        string str = Convert.ToString(data[i], 16).ToUpper();//转换为大写十六进制字符串
+                        textBox1.AppendText("0x" + (str.Length == 1 ? "0" + str : str) + " ");//空位补“0” 
+                        //if (i == 2)
+                        //{
+                        //    textBox_three_way_1.Clear();
+                        //    textBox_three_way_1.Text = Convert.ToString(data[i] * 0.4);
+                        //}
+                    }
+
+
                     Unpack(data);// 解包
                 }
-
+                
 
 
             }
@@ -262,7 +316,7 @@ namespace UpperPC
             {
                 case 0x02:// 传输的数据
                     {
-                        if (data[n - 1] != 0xFF || data[n - 2] != n - 3) break; // 不满足帧要求，丢弃
+                        if (data[n - 1] != 0xFF || data[n - 2] != n - 4) break; // 不满足帧要求，丢弃
 
 
                         /* 解包的格式如下 */
@@ -304,7 +358,7 @@ namespace UpperPC
 
                         textBox_temperature_basic_board.Text = Convert.ToString(data[Unpack_index.temperature_basic_board] - 50);
                         textBox_temperature_IGBT.Text = Convert.ToString(data[Unpack_index.temperature_IGBT] - 50);
-                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage] * 256 + data[Unpack_index.compressor_voltage + 1]) * 2);
+                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage] + data[Unpack_index.compressor_voltage + 1] * 256) * 2);
                         textBox_compressor_current.Text = Convert.ToString((data[Unpack_index.compressor_current] * 256 + data[Unpack_index.compressor_current + 1]) * 0.1);
                         textBox_EXV_CurrentPosition.Text = Convert.ToString(data[Unpack_index.EXV_CurrentPosition] * 256 + data[Unpack_index.EXV_CurrentPosition + 1]);
 
@@ -486,50 +540,54 @@ namespace UpperPC
         private void Pack()
         {
             
-            byte[] data = { 0xFE, 0x01};
+            byte[] data = new byte[17];
+            data[0] = (byte)0xFE;
+            data[1] = (byte)0x01;
+
             try
             {
                 /* 压缩机 */
 
                 if (comboBox_compressor_status.Text == "开机")
                 {
-                    data.Append((byte)1);
-                    data.Append((byte)(Convert.ToInt32(textBox_compressor_speed_set.Text) / 50));
+                    data[2] = (byte)1;
+                    
+                    data[3] = ((byte)(Convert.ToInt32(textBox_compressor_speed_set.Text) / 50));
                 }
                 else
                 {
-                    data.Append((byte)0);
-                    data.Append((byte)0);// 没选择开机则转速给0，默认停机
+                    data[2] = ((byte)0);
+                    data[3] = ((byte)0);// 没选择开机则转速给0，默认停机
                 }
 
-                data.Append((byte)(Convert.ToInt32(textBox_compressor_limit_power_set.Text) / 40));
+                data[4] = ((byte)(Convert.ToInt32(textBox_compressor_limit_power_set.Text) / 40));
 
                 /* 电子膨胀阀 */
 
-                data.Append((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) / 256));
-                data.Append((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) % 256));
+                data[5] = ((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) / 256));
+                data[6] = ((byte)(Convert.ToInt32(textBox_EXV_CurrentPosition_set.Text) % 256));
 
                 /* 三通阀1和2 */
 
-                data.Append((byte)(Convert.ToInt32(textBox_three_way_1_set.Text) / 0.4));
-                data.Append((byte)(Convert.ToInt32(textBox_three_way_2_set.Text) / 0.4));
+                data[7] = ((byte)(Convert.ToInt32(textBox_three_way_1_set.Text) / 0.4));
+                data[8] = ((byte)(Convert.ToInt32(textBox_three_way_2_set.Text) / 0.4));
 
                 /* 四通阀1和2 */
 
-                data.Append((byte)(Convert.ToInt32(textBox_four_way_1_set.Text[2]) - 48));// 模式1/2
-                data.Append((byte)(Convert.ToInt32(textBox_four_way_2_set.Text[2]) - 48));
+                data[9] = ((byte)(Convert.ToInt32(textBox_four_way_1_set.Text[2]) - 48));// 模式1/2
+                data[10] = ((byte)(Convert.ToInt32(textBox_four_way_2_set.Text[2]) - 48));
 
                 /* 电池PTC */
-                data.Append((byte)(Convert.ToInt32(comboBox_PTC_b_heat_level.Text[0]) * 10 + 3));// 根据挡位输出加热等级数值
-                data.Append((byte)(Convert.ToInt32(textBox_WPTC_b_target_temp_set.Text)));
+                data[11] = ((byte)(Convert.ToInt32(Convert.ToString(comboBox_PTC_b_heat_level.Text[0])) * 10 + 3));// 根据挡位输出加热等级数值
+                data[12] = ((byte)(Convert.ToInt32(textBox_WPTC_b_target_temp_set.Text)));
 
 
                 /* 电机PTC */
-                data.Append((byte)(Convert.ToInt32(comboBox_PTC_m_heat_level.Text[0]) * 10 + 3));// 根据挡位输出加热等级数值
-                data.Append((byte)(Convert.ToInt32(textBox_WPTC_m_target_temp_set.Text)));
+                data[13] = ((byte)(Convert.ToInt32(Convert.ToString(comboBox_PTC_m_heat_level.Text[0])) * 10 + 3));// 根据挡位输出加热等级数值
+                data[14] = ((byte)(Convert.ToInt32(textBox_WPTC_m_target_temp_set.Text)));
                 
-                data.Append((byte)13);
-                data.Append((byte)0xFF);
+                data[15] = ((byte)13);
+                data[16] = ((byte)0xFF);
 
                 serialPort1.Write(data, 0, data.Length);
 

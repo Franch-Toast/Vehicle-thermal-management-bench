@@ -45,7 +45,7 @@
 /* USER CODE BEGIN PD */
 
 #define QUEUE_LEN 4   // 消息队列中能存放多少个消息
-#define QUEUE_SIZE 11 // 消息队列中的一个消息的长度，即一个数据帧结构体的长度
+#define QUEUE_SIZE 20 // 消息队列中的一个消息的长度，即一个数据帧结构体的长度
 
 /* USER CODE END PD */
 
