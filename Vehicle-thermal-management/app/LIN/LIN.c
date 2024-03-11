@@ -3,7 +3,7 @@
  * @Date: 2024-01-17 21:40:11
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-11 17:30:29
+ * @LastEditTime: 2024-03-11 19:36:51
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -35,7 +35,7 @@ static void linflexd_process_callback(uint32_t instance, void *state)
 {
     linflexd_state_t *linState = (linflexd_state_t *)state;
     (void)instance;
-    PRINTF("linState->currentEventId:%d",linState->currentEventId);
+    // PRINTF("linState->currentEventId:%d",linState->currentEventId);
 
     if (LINFlexD_HEADER_RECEIVED_EVENT == linState->currentEventId)
     {
@@ -58,19 +58,6 @@ static void linflexd_process_callback(uint32_t instance, void *state)
     /* If any error happened, deal with it following */
     if (linState->errorStatus)
     {
-        /* Master response */
-        if (0x35 == linMasterFrame.id)
-        {
-            LincurrentEvent = LINMasterError;
-        }
-        /* Slave response */
-        else if (0x32 == linMasterFrame.id)
-        {
-            LincurrentEvent = LINMasterError;
-        }
-        else
-        {
-        }
         linState->errorStatus = 0;
     }
 }
@@ -84,9 +71,9 @@ void LIN_MASTER_init()
     LINFlexD_DRV_InstallCallback(LIN0_Master, linflexd_process_callback); // 注册回调函数
     LINFlexD_DRV_InstallCallback(LIN1_Master, linflexd_process_callback); // 注册回调函数
     if (status == STATUS_SUCCESS)
-        PRINTF("LIN MASTER initialize successfully!\n");
+        PRINTF("LIN MASTER initialize successfully!");
     else
-        PRINTF("LIN MASTER initialize fail!\n");
+        PRINTF("LIN MASTER initialize failed!");
 }
 
 // LIN主机 发送帧

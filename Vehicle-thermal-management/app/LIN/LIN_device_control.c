@@ -3,7 +3,7 @@
  * @Date: 2024-02-29 20:18:57
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-11 17:41:42
+ * @LastEditTime: 2024-03-11 21:39:09
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -88,9 +88,9 @@ uint8_t Compressor_Get_info(void)
     Workbench_status.Compressor_status.compressor_speed = linMasterFrame.data[1];                                                // 转速：rpm
     Workbench_status.Compressor_status.temperature_basic_board = linMasterFrame.data[2];                                         // 基板温度：℃
     Workbench_status.Compressor_status.temperature_IGBT = linMasterFrame.data[3];                                                // IGBT温度：℃
-    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[4])) | ((linMasterFrame.data[5] & 0x0F) << 8); // 电流：A
-    Workbench_status.Compressor_status.compressor_voltage = linMasterFrame.data[6] | ((linMasterFrame.data[7] & 0x03) << 8);     // 电压：V
-    Workbench_status.Compressor_status.compressor_status = linMasterFrame.data[7] & 0x38;                                        // 压缩机状态
+    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[5])) | ((linMasterFrame.data[4] & 0x0F) << 8); // 电流：A
+    Workbench_status.Compressor_status.compressor_voltage = ((linMasterFrame.data[7] & 0x03) << 8) | ((linMasterFrame.data[6])); // 电压：V
+    Workbench_status.Compressor_status.compressor_status = (linMasterFrame.data[7] & 0x38) >> 3;                                 // 压缩机状态
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
@@ -108,8 +108,8 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
     linMasterFrame.dataLength = 8;     // 8个字节
     memset(linMasterFrame.data, 0, 8); // 8个字节内容全部清0
 
-    linMasterFrame.data[0] = (uint8_t)open; // 第一二个字节为请求位置，两个字节的宽度，但是大小仅允许【0，480】
-    linMasterFrame.data[1] = (uint8_t)(open >> 4);
+    linMasterFrame.data[1] = (uint8_t)open; // 第一二个字节为请求位置，两个字节的宽度，但是大小仅允许【0，480】
+    linMasterFrame.data[0] = (uint8_t)(open >> 8);
 
     linMasterFrame.data[2] = 0x01;               // 第三个字节bit0允许使能膨胀阀
     linMasterFrame.data[3] = 0x00;               // 第四个字节3个bit允许是否初始化
@@ -143,10 +143,10 @@ uint8_t Expansion_valve_Get_info(void)
 
     /* 对接收数据进行解析 */
 
-    Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[2] | (linMasterFrame.data[3] << 8);          // EXV膨胀阀开度:当前位置
-    Workbench_status.EXV_status.EXV_status = ((linMasterFrame.data[0] & 0x0C) >> 2) | (linMasterFrame.data[0] & 0x10); // EXV的初始化状态和运行状态，分别为前4bit和后4bit
-
-    xSemaphoreGive(MuxSem_Handle); // 解锁
+    Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[3] | (linMasterFrame.data[2] << 8); // EXV膨胀阀开度:当前位置
+    Workbench_status.EXV_status.EXV_status = (linMasterFrame.data[0] & 0x10) >> 4;                            // EXV运行状态
+    Workbench_status.EXV_status.EXV_initial_status = (linMasterFrame.data[0] & 0x0C) >> 2;                    // EXV的初始化状态
+    xSemaphoreGive(MuxSem_Handle);                                                                            // 解锁
     return status;
 }
 
@@ -169,7 +169,7 @@ uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Three way valve %d Send fail!",instance + 1);
+        PRINTF("Three way valve %d Send fail!", instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -190,7 +190,7 @@ uint8_t Three_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Three way valve %d Receive fail!",instance + 1);
+        PRINTF("Three way valve %d Receive fail!", instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -219,7 +219,7 @@ uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode) // mode 只有�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Four way valve %d Send fail!",instance + 1);
+        PRINTF("Four way valve %d Send fail!", instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -240,7 +240,7 @@ uint8_t Four_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Four way valve %d Receive fail!",instance + 1);
+        PRINTF("Four way valve %d Receive fail!", instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -273,7 +273,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Send fail!",instance + 1);
+        PRINTF("WPTC %d Send fail!", instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -294,7 +294,7 @@ uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Receive fail!",instance + 1);
+        PRINTF("WPTC %d Receive fail!", instance + 1);
     }
 
     /* 对接收数据进行解析 */
@@ -324,7 +324,7 @@ uint8_t WPTC_Shutdown(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Send fail!",instance + 1);
+        PRINTF("WPTC %d Send fail!", instance + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁

@@ -156,9 +156,9 @@ void Task_0x01(void *parameter)
 
             // 获取返回值判断是否触发，因为这是非阻塞的模式，在这里清除标志位
             EventBits_t bit = xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, 0);
-            if (bit == 0)
+            if (bit == 2)
                 break; // 说明事件标志被触发，上位机要求停机，不要继续发送
-            vTaskDelay(100);
+            vTaskDelay(10);
         }
     }
 }
@@ -181,7 +181,6 @@ void Task_0x02(void *parameter)
         // LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 10);
 
 
-        // PRINTF("sss");
         Packing_and_Send();
 
         /* 等待一段时间后再继续传输，防止数据传输过快，疯狂占用 */
@@ -244,7 +243,7 @@ static void Packing_and_Send(void)
     status |= WPTC_Get_info(LIN0_Master);
     status |= WPTC_Get_info(LIN1_Master);
 
-    vTaskDelay(100);
+    vTaskDelay(10);
     xSemaphoreTake(MuxSem_Serial_Handle, portMAX_DELAY); // 加锁
     serial_data_frame.data[0] = 0xFE;
     serial_data_frame.data[1] = 0x02;
@@ -255,10 +254,10 @@ static void Packing_and_Send(void)
     // 发送数据
     // taskDISABLE_INTERRUPTS();
     // taskENTER_CRITICAL(); // 进入临界区
-    for(int i = 0; i < 34;i++)
-        printf_char(*(serial_data_frame.data + i));
+    // for(int i = 0; i < 34;i++)
+    //     printf_char(*(serial_data_frame.data + i));
     // taskEXIT_CRITICAL(); // 退出临界区
     // taskENABLE_INTERRUPTS();
-    // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, 34);
+    LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, 34);
     xSemaphoreGive(MuxSem_Serial_Handle); // 解锁
 }

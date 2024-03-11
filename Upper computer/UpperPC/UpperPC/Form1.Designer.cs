@@ -115,6 +115,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_scan_serial
@@ -859,11 +860,24 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "四通阀";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(1198, 683);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(110, 43);
+            this.button2.TabIndex = 107;
+            this.button2.Text = "停机";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1326, 787);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox_WPTC_b_target_temp_set);
             this.Controls.Add(this.textBox_WPTC_m_target_temp_set);
             this.Controls.Add(this.textBox_WPTC_m_target_temp);
@@ -1045,6 +1059,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -102,4 +102,8 @@ void UART_init()
     LINFlexD_UART_DRV_InstallRxCallback(PRINTF_UART, UART_Rx_Callback, NULL);
     /* 开启单字节接收中断 */
     LINFlexD_UART_DRV_StartReceiveUsingInterrupts_Personal(PRINTF_UART, &Rx_Byte, 1);
+
+    PRINTF("Serial port startup successfully!");
+
+
 }

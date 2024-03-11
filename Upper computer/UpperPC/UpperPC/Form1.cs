@@ -173,11 +173,18 @@ namespace UpperPC
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            byte[] Data = new byte[1];//发送单个字节
+            //byte[] Data = new byte[1];//发送单个字节
             if (serialPort1.IsOpen)//判断串口是否打开，如果打开执行下一步操作
             {
 
+                // 放到点击按钮方法中
+                textBox_compressor_limit_power.Text = textBox_compressor_limit_power_set.Text;
 
+                // 放到点击按钮方法中
+                textBox_WPTC_b_target_temp.Text = textBox_WPTC_b_target_temp_set.Text;
+                // 放到点击按钮方法中
+                textBox_WPTC_m_target_temp.Text = textBox_WPTC_m_target_temp_set.Text;
+                textBox_PTC_m_heat_level.Text = comboBox_PTC_m_heat_level.Text;
 
 
                 Pack();
@@ -329,17 +336,17 @@ namespace UpperPC
 
                         switch(data[Unpack_index.compressor_status])// 压缩机状态
                         {
-                            case (byte)0:
+                            case (byte)0x00:
                                 {
                                     textBox_compressor_status.Text = "未运行";
                                     break;
                                 }
-                            case (byte)1:
+                            case (byte)0x01:
                                 {
                                     textBox_compressor_status.Text = "全功率";
                                     break;
                                 }
-                            case (byte)2:
+                            case (byte)0x02:
                                 {
                                     textBox_compressor_status.Text = "限制功率";
                                     break;
@@ -353,29 +360,28 @@ namespace UpperPC
 
                         textBox_compressor_speed.Text = Convert.ToString(data[Unpack_index.compressor_speed] * 50);// 压缩机转速
                         
-                        // 放到点击按钮方法中
-                        textBox_compressor_limit_power.Text = textBox_compressor_limit_power_set.Text;
+
 
                         textBox_temperature_basic_board.Text = Convert.ToString(data[Unpack_index.temperature_basic_board] - 50);
                         textBox_temperature_IGBT.Text = Convert.ToString(data[Unpack_index.temperature_IGBT] - 50);
-                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage] + data[Unpack_index.compressor_voltage + 1] * 256) * 2);
+                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage + 1] + data[Unpack_index.compressor_voltage] * 256) * 2);
                         textBox_compressor_current.Text = Convert.ToString((data[Unpack_index.compressor_current] * 256 + data[Unpack_index.compressor_current + 1]) * 0.1);
                         textBox_EXV_CurrentPosition.Text = Convert.ToString(data[Unpack_index.EXV_CurrentPosition] * 256 + data[Unpack_index.EXV_CurrentPosition + 1]);
 
 
                         switch (data[Unpack_index.EXV_initial_status])// EXV初始化状态
                         {
-                            case (byte)0:
+                            case (byte)0x00:
                                 {
                                     textBox_EXV_initial_status.Text = "未初始化";
                                     break;
                                 }
-                            case (byte)1:
+                            case (byte)0x01:
                                 {
                                     textBox_EXV_initial_status.Text = "初始化中";
                                     break;
                                 }
-                            case (byte)2:
+                            case (byte)0x02:
                                 {
                                     textBox_EXV_initial_status.Text = "已初始化";
                                     break;
@@ -388,12 +394,12 @@ namespace UpperPC
                         }
                         switch (data[Unpack_index.EXV_status])// EXV状态
                         {
-                            case (byte)0:
+                            case (byte)0x00:
                                 {
                                     textBox_EXV_status.Text = "未动作";
                                     break;
                                 }
-                            case (byte)1:
+                            case (byte)0x01:
                                 {
                                     textBox_EXV_status.Text = "动作中";
                                     break;
@@ -413,8 +419,6 @@ namespace UpperPC
                         textBox_four_way_1.Text = Convert.ToString(data[Unpack_index.four_way_1_status]);
                         textBox_four_way_2.Text = Convert.ToString(data[Unpack_index.four_way_2_status]);
 
-                        // 放到点击按钮方法中
-                        textBox_WPTC_b_target_temp.Text = textBox_WPTC_b_target_temp_set.Text;
                         // 注意在发送的时候，需要根据comoBox给出具体数值
                         textBox_PTC_b_heat_level.Text = comboBox_PTC_b_heat_level.Text;
 
@@ -425,37 +429,37 @@ namespace UpperPC
 
                         switch (data[Unpack_index.PTC_status_b])// 电池PTC状态
                         {
-                            case (byte)0:
+                            case (byte)0x00:
                                 {
                                     textBox_PTC_b_status.Text = "OFF";
                                     break;
                                 }
-                            case (byte)1:
+                            case (byte)0x01:
                                 {
                                     textBox_PTC_b_status.Text = "ON";
                                     break;
                                 }
-                            case (byte)2:
+                            case (byte)0x02:
                                 {
                                     textBox_PTC_b_status.Text = "Degraded";
                                     break;
                                 }
-                            case (byte)3:
+                            case (byte)0x03:
                                 {
                                     textBox_PTC_b_status.Text = "stopped";
                                     break;
                                 }
-                            case (byte)4:
+                            case (byte)0x04:
                                 {
                                     textBox_PTC_b_status.Text = "shutdown";
                                     break;
                                 }
-                            case (byte)5:
+                            case (byte)0x05:
                                 {
                                     textBox_PTC_b_status.Text = "shorted";
                                     break;
                                 }
-                            case (byte)6:
+                            case (byte)0x06:
                                 {
                                     textBox_PTC_b_status.Text = "reset not possible";
                                     break;
@@ -468,9 +472,7 @@ namespace UpperPC
                         }
 
 
-                        // 放到点击按钮方法中
-                        textBox_WPTC_m_target_temp.Text = textBox_WPTC_m_target_temp_set.Text;
-                        textBox_PTC_m_heat_level.Text = comboBox_PTC_m_heat_level.Text;
+
                         
 
                         textBox_PTC_m_voltage.Text = Convert.ToString(data[Unpack_index.PTC_voltage_m] * 2);
@@ -480,37 +482,37 @@ namespace UpperPC
 
                         switch (data[Unpack_index.PTC_status_m])// 电机PTC状态
                         {
-                            case (byte)0:
+                            case (byte)0x00:
                                 {
                                     textBox_PTC_m_status.Text = "OFF";
                                     break;
                                 }
-                            case (byte)1:
+                            case (byte)0x01:
                                 {
                                     textBox_PTC_m_status.Text = "ON";
                                     break;
                                 }
-                            case (byte)2:
+                            case (byte)0x02:
                                 {
                                     textBox_PTC_m_status.Text = "Degraded";
                                     break;
                                 }
-                            case (byte)3:
+                            case (byte)0x03:
                                 {
                                     textBox_PTC_m_status.Text = "stopped";
                                     break;
                                 }
-                            case (byte)4:
+                            case (byte)0x04:
                                 {
                                     textBox_PTC_m_status.Text = "shutdown";
                                     break;
                                 }
-                            case (byte)5:
+                            case (byte)0x05:
                                 {
                                     textBox_PTC_m_status.Text = "shorted";
                                     break;
                                 }
-                            case (byte)6:
+                            case (byte)0x06:
                                 {
                                     textBox_PTC_m_status.Text = "reset not possible";
                                     break;
@@ -636,6 +638,13 @@ namespace UpperPC
             public const byte four_way_1_status = 30;
             public const byte four_way_2_status = 31;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            byte[] shutdown_message = {0xFE,0x00,0x00,0xFF};
+            
+            serialPort1.Write(shutdown_message, 0, 4);
         }
 
 

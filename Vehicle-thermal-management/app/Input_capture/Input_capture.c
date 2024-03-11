@@ -85,6 +85,6 @@ void Input_capture_get_pulse_frequncy(float *frequency)
     
     *frequency = eTMR_DRV_GetFrequency(eTMR_IC_INST) / (pulse[1] + pulse[0]);
     // 计算捕获的频率，并保存在外部传入的指针地址，给外部使用
-    PRINTF("input capture frequncy is %f Hz.\n",*frequency);
-    PRINTF("pulse[0] = %d , pulse[1] = %d \n",pulse[0],pulse[1]);
+    PRINTF("input capture frequncy is %f Hz.",*frequency);
+    PRINTF("pulse[0] = %d , pulse[1] = %d ",pulse[0],pulse[1]);
 }
