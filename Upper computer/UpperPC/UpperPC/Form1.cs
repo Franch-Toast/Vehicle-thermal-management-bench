@@ -364,9 +364,9 @@ namespace UpperPC
 
                         textBox_temperature_basic_board.Text = Convert.ToString(data[Unpack_index.temperature_basic_board] - 50);
                         textBox_temperature_IGBT.Text = Convert.ToString(data[Unpack_index.temperature_IGBT] - 50);
-                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage + 1] + data[Unpack_index.compressor_voltage] * 256) * 2);
-                        textBox_compressor_current.Text = Convert.ToString((data[Unpack_index.compressor_current] * 256 + data[Unpack_index.compressor_current + 1]) * 0.1);
-                        textBox_EXV_CurrentPosition.Text = Convert.ToString(data[Unpack_index.EXV_CurrentPosition] * 256 + data[Unpack_index.EXV_CurrentPosition + 1]);
+                        textBox_compressor_voltage.Text = Convert.ToString((data[Unpack_index.compressor_voltage] + data[Unpack_index.compressor_voltage + 1] * 256) * 2);
+                        textBox_compressor_current.Text = Convert.ToString((data[Unpack_index.compressor_current + 1] * 256 + data[Unpack_index.compressor_current]) * 0.1);
+                        textBox_EXV_CurrentPosition.Text = Convert.ToString(data[Unpack_index.EXV_CurrentPosition + 1] * 256 + data[Unpack_index.EXV_CurrentPosition]);
 
 
                         switch (data[Unpack_index.EXV_initial_status])// EXV初始化状态

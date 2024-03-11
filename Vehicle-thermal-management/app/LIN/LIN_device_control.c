@@ -88,7 +88,7 @@ uint8_t Compressor_Get_info(void)
     Workbench_status.Compressor_status.compressor_speed = linMasterFrame.data[1];                                                // 转速：rpm
     Workbench_status.Compressor_status.temperature_basic_board = linMasterFrame.data[2];                                         // 基板温度：℃
     Workbench_status.Compressor_status.temperature_IGBT = linMasterFrame.data[3];                                                // IGBT温度：℃
-    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[5])) | ((linMasterFrame.data[4] & 0x0F) << 8); // 电流：A
+    Workbench_status.Compressor_status.compressor_current = ((linMasterFrame.data[4])) | ((linMasterFrame.data[5] & 0x0F) << 8); // 电流：A
     Workbench_status.Compressor_status.compressor_voltage = ((linMasterFrame.data[7] & 0x03) << 8) | ((linMasterFrame.data[6])); // 电压：V
     Workbench_status.Compressor_status.compressor_status = (linMasterFrame.data[7] & 0x38) >> 3;                                 // 压缩机状态
 
@@ -143,7 +143,7 @@ uint8_t Expansion_valve_Get_info(void)
 
     /* 对接收数据进行解析 */
 
-    Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[3] | (linMasterFrame.data[2] << 8); // EXV膨胀阀开度:当前位置
+    Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[2] | (linMasterFrame.data[3] << 8); // EXV膨胀阀开度:当前位置
     Workbench_status.EXV_status.EXV_status = (linMasterFrame.data[0] & 0x10) >> 4;                            // EXV运行状态
     Workbench_status.EXV_status.EXV_initial_status = (linMasterFrame.data[0] & 0x0C) >> 2;                    // EXV的初始化状态
     xSemaphoreGive(MuxSem_Handle);                                                                            // 解锁
@@ -244,9 +244,10 @@ uint8_t Four_way_valve_Get_info(uint8_t instance)
     }
 
     /* 对接收数据进行解析 */
+    Workbench_status.four_way_valve_status[instance] = linMasterFrame.data[0];
 
-    Workbench_status.four_way_valve_status[instance] = linMasterFrame.data[0];                // 低4bit四通阀当前位置
-    Workbench_status.four_way_valve_status[instance] |= (linMasterFrame.data[1] & 0x03) << 4; // 高4bit四通阀的运动状态
+    // Workbench_status.four_way_valve_status[instance] = linMasterFrame.data[0];                // 低4bit四通阀当前位置
+    // Workbench_status.four_way_valve_status[instance] |= (linMasterFrame.data[1] & 0x03) << 4; // 高4bit四通阀的运动状态
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
@@ -300,6 +301,7 @@ uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线�
     /* 对接收数据进行解析 */
 
     memcpy(&Workbench_status.WPTC_status[instance], linMasterFrame.data, 4);           // 结构体的成员地址与通讯矩阵中的一致，直接memcpy
+
     Workbench_status.WPTC_status[instance].PTC_status = linMasterFrame.data[4] & 0x07; // PTC工作状态，3bit
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
