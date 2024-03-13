@@ -3,7 +3,7 @@
  * @Date: 2024-02-29 20:18:57
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-11 21:39:09
+ * @LastEditTime: 2024-03-12 12:26:47
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -120,15 +120,22 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
         PRINTF("EXV Send fail!");
     }
 
+    // 值得注意的是电子膨胀阀要求先写在读、且中间不能有其他子节点的读写
+    // 这里直接调用读取函数，同时调用函数中去除互斥锁 防止死锁发生
+
+    status |= Expansion_valve_Get_info();
+
+
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
 }
 
 /* 获取电子膨胀阀状态 */
+// 注意，该函数在写函数中被调用了，去除了互斥锁
 uint8_t Expansion_valve_Get_info(void)
 {
     status_t status = 0;
-    xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
+    // xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
 
     linMasterFrame.id = 0x29;          // 帧ID为0x29
     linMasterFrame.dataLength = 8;     // 八个字节
@@ -146,7 +153,7 @@ uint8_t Expansion_valve_Get_info(void)
     Workbench_status.EXV_status.EXV_CurrentPosition = linMasterFrame.data[2] | (linMasterFrame.data[3] << 8); // EXV膨胀阀开度:当前位置
     Workbench_status.EXV_status.EXV_status = (linMasterFrame.data[0] & 0x10) >> 4;                            // EXV运行状态
     Workbench_status.EXV_status.EXV_initial_status = (linMasterFrame.data[0] & 0x0C) >> 2;                    // EXV的初始化状态
-    xSemaphoreGive(MuxSem_Handle);                                                                            // 解锁
+    // xSemaphoreGive(MuxSem_Handle);                                                                            // 解锁
     return status;
 }
 

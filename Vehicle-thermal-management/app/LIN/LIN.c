@@ -70,6 +70,8 @@ void LIN_MASTER_init()
     status |= LINFlexD_DRV_Init(LIN1_Master, &linflexd_lin_config0, &linflexd_lin1_State);
     LINFlexD_DRV_InstallCallback(LIN0_Master, linflexd_process_callback); // 注册回调函数
     LINFlexD_DRV_InstallCallback(LIN1_Master, linflexd_process_callback); // 注册回调函数
+    
+    
     if (status == STATUS_SUCCESS)
         PRINTF("LIN MASTER initialize successfully!");
     else
