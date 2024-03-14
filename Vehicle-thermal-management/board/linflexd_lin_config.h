@@ -33,6 +33,7 @@
 /*linflexd_lin_config0*/
 extern linflexd_state_t linflexd_lin0_State;
 extern linflexd_state_t linflexd_lin1_State;
+extern linflexd_state_t linflexd_lin2_State;
 extern linflexd_user_config_t linflexd_lin_config0;
 
 

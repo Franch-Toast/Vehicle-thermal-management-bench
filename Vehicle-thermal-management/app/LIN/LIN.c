@@ -3,7 +3,7 @@
  * @Date: 2024-01-17 21:40:11
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-11 19:36:51
+ * @LastEditTime: 2024-03-14 18:41:28
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -68,9 +68,10 @@ void LIN_MASTER_init()
     status_t status = STATUS_SUCCESS;
     status |= LINFlexD_DRV_Init(LIN0_Master, &linflexd_lin_config0, &linflexd_lin0_State);
     status |= LINFlexD_DRV_Init(LIN1_Master, &linflexd_lin_config0, &linflexd_lin1_State);
+    status |= LINFlexD_DRV_Init(LIN2_Master, &linflexd_lin_config0, &linflexd_lin2_State);
     LINFlexD_DRV_InstallCallback(LIN0_Master, linflexd_process_callback); // 注册回调函数
     LINFlexD_DRV_InstallCallback(LIN1_Master, linflexd_process_callback); // 注册回调函数
-    
+    LINFlexD_DRV_InstallCallback(LIN2_Master, linflexd_process_callback); // 注册回调函数
     
     if (status == STATUS_SUCCESS)
         PRINTF("LIN MASTER initialize successfully!");
@@ -91,8 +92,8 @@ status_t LIN_Master_Send_Frame(uint32_t instance)
     while (0 == LincurrentEvent)
         ;
     if (LincurrentEvent == LINMasterSendDone)
-        return status;
-    return STATUS_ERROR;
+        return 0;
+    return LincurrentEvent;
 }
 
 // LIN主机 接收帧
@@ -108,6 +109,6 @@ status_t LIN_Master_Receive_Frame(uint32_t instance)
     while (0 == LincurrentEvent)
         ;
     if (LincurrentEvent == LINMaserRecvDone)
-        return status;
-    return STATUS_ERROR;
+        return 0;
+    return LincurrentEvent;
 }

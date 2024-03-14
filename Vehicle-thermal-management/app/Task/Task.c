@@ -105,8 +105,8 @@ void Task_0x00(void *parameter)
         {
             /* 发送 终止台架运行的指令 */
             Compressor_Shutdown();
-            WPTC_Shutdown(LIN0_Master); // 关闭WPTC1
-            WPTC_Shutdown(LIN1_Master); // 关闭WPTC2
+            WPTC_Shutdown(LIN1_Master,0); // 关闭WPTC1
+            WPTC_Shutdown(LIN2_Master,1); // 关闭WPTC2
         }
         if (cnt < 0)
         {
@@ -160,7 +160,7 @@ void Task_0x01(void *parameter)
             EventBits_t bit = xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, 0);
             if (bit == 2)
                 break; // 说明事件标志被触发，上位机要求停机，不要继续发送
-            vTaskDelay(100);
+            vTaskDelay(10);
         }
     }
 }
@@ -183,7 +183,7 @@ void Task_0x02(void *parameter)
         // LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 10);
 
 
-        // Packing_and_Send();
+        Packing_and_Send();
 
         /* 等待一段时间后再继续传输，防止数据传输过快，疯狂占用 */
         vTaskDelay(100);
@@ -199,32 +199,32 @@ static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
 {
     status_t status = 0;
     /* 解包，解析上位机的发送请求 */
-    // if (DataFrame.data[Unpack_Compressor_status_index] == 0)// 没指示开机，直接shutdown
-    // {
-    //     status = Compressor_Shutdown();
-    // }
-    // else // 指示开机，正常给速度
-    // {
-    //     status = Compressor_Set_Speed(DataFrame.data[Unpack_Compressor_speed_index], DataFrame.data[Unpack_Compressor_PowerLimit_index]);
-    // }
+    if (DataFrame.data[Unpack_Compressor_status_index] == 0)// 没指示开机，直接shutdown
+    {
+        status = Compressor_Shutdown();
+    }
+    else // 指示开机，正常给速度
+    {
+        status = Compressor_Set_Speed(DataFrame.data[Unpack_Compressor_speed_index], DataFrame.data[Unpack_Compressor_PowerLimit_index]);
+    }
     
-    
-    // status |= Three_way_valve_Set_Open(LIN0_Master, DataFrame.data[Unpack_three_way_valve_status_1_index]);
-    // status |= Three_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_three_way_valve_status_2_index]);
-    // status |= Four_way_valve_Set_Open(LIN0_Master, DataFrame.data[Unpack_four_way_valve_status_1_index]);
-    status |= Four_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_four_way_valve_status_2_index]);
 
-    // if (DataFrame.data[Unpack_PTC_heat_level_battery_index] < 4)
-    //     status |= WPTC_Shutdown(LIN0_Master);
-    // else
-    //     status |= WPTC_Set_Temperature(LIN0_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index]);
+    status |= Three_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_three_way_valve_status_1_index],0);
+    status |= Three_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_three_way_valve_status_2_index],1);
+    status |= Four_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_four_way_valve_status_1_index],0);
+    status |= Four_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_four_way_valve_status_2_index],1);
 
-    // if (DataFrame.data[Unpack_PTC_heat_level_motor_index] < 4)
-    //     status |= WPTC_Shutdown(LIN1_Master);
-    // else
-    //     status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index]);
+    if (DataFrame.data[Unpack_PTC_heat_level_battery_index] < 4)
+        status |= WPTC_Shutdown(LIN1_Master,0);
+    else
+        status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index],0);
 
-    // status |= Expansion_valve_Set_Open(*((uint16_t *)(&DataFrame.data[Unpack_EXV_AskPosition_index]))); // 注意传参的类型
+    if (DataFrame.data[Unpack_PTC_heat_level_motor_index] < 4)
+        status |= WPTC_Shutdown(LIN2_Master,1);
+    else
+        status |= WPTC_Set_Temperature(LIN2_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index],1);
+
+    status |= Expansion_valve_Set_Open(*((uint16_t *)(&DataFrame.data[Unpack_EXV_AskPosition_index]))); // 注意传参的类型
 }
 
 /*
@@ -240,12 +240,12 @@ static void Packing_and_Send(void)
     // 获取台架所有原件的状态信息
     status |= Compressor_Get_info();
     // status |= Expansion_valve_Get_info();// 在写函数中被调用
-    status |= Four_way_valve_Get_info(LIN0_Master);
-    status |= Four_way_valve_Get_info(LIN1_Master);
-    status |= Three_way_valve_Get_info(LIN0_Master);
-    status |= Three_way_valve_Get_info(LIN1_Master);
-    status |= WPTC_Get_info(LIN0_Master);
-    status |= WPTC_Get_info(LIN1_Master);
+    status |= Four_way_valve_Get_info(LIN1_Master,0);
+    status |= Four_way_valve_Get_info(LIN2_Master,1);
+    status |= Three_way_valve_Get_info(LIN1_Master,0);
+    status |= Three_way_valve_Get_info(LIN2_Master,1);
+    status |= WPTC_Get_info(LIN1_Master,0);
+    status |= WPTC_Get_info(LIN2_Master,1);
 
     vTaskDelay(10);
     xSemaphoreTake(MuxSem_Serial_Handle, portMAX_DELAY); // 加锁

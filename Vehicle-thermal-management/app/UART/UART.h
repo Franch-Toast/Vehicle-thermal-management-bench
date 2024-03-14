@@ -3,7 +3,7 @@
  * @Date: 2023-12-24 11:53:25
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-02-28 20:02:06
+ * @LastEditTime: 2024-03-14 21:21:30
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -36,9 +36,11 @@ typedef struct
 } ringBuffer_t;
 
 void UART_init(void);
+/* 缓冲区写单字节 */
 void RingBuff_Write(uint8_t data);
+/* 缓冲区读数据帧，存放在全局变量中 */
 uint8_t RingBuff_Read_frame(void);
-
+/* 缓冲区读单字节 */
 void RingBuff_Read_Byte(uint8_t *pData);
 
 extern ringBuffer_t buffer;

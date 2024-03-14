@@ -5,24 +5,48 @@
 
 ## 项目需求
 
-1. 传感器数据采集；
-2. 执行器动作；
-3. 采集数据的发送；
-4. 部件间的通讯；
+1. 实现对实验台架的控制；
+2. 采集各控制部件的数据；
+3. 开发下位机，保证实时性；
+4. 开发上位机实现操作员的控制；
 
 
 
 ## 解决方案
 
-### 硬件设计
+### 方案概况
+
+​		基于新型制冷剂R290的热管理台架系统控制由PC端的上位机与MCU端的下位机组合完成，实现对台架上压缩机、三通阀等元件的控制与数据读取。台架控制方案的示意图见图。
+
+​		其中，下位机根据对应的**LIN通讯**协议对LIN通讯元件进行控制，并输出PWM波调节水泵、散热器风扇等元件的转速。下位机同时循环读取各元件的状态，与上位机**通过串口通信**，上位机在获取数据后通过解析显示。操作员通过观察和操作上位机向下位机发送指令实现对台架的控制。
+
+<img src="./pic/10.png" alt="方案概况" style="zoom:50%;" />
+
+​		实验台架由系统部分和电源信号箱部分组成：
+
+<img src="./pic/18.png" alt="LIN测试硬件图" style="zoom:43%;" />
+
+| <img src="./pic/19.png" alt="LIN测试硬件图" style="zoom:43%;" /> | <img src="./pic/20.png" alt="LIN测试硬件图" style="zoom:43%;" /> |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                          电源信号箱                          |                           台架部件                           |
+
+
+
+
+
+### 下位机方案
+
+#### 硬件设计
 
 主控芯片使用 **国产车规级芯片 云途 `YTM32B1ME0` **。
 
 暂时使用云途公司的评估板 **`YTM32B1ME0 -Q144 评估板`**进行功能的开发。
 
-![评估板](./pic/1.png)
 
-#### 评估板资源
+
+##### 片上资源与开发板资源
+
+片上资源如下所示
 
 板载资源：
 
@@ -37,41 +61,35 @@
 - 1 个板载 I2C 接口 EEPROM 
 - 1 个板载 SPI 接口 FRAM
 
-
-
-#### 传感器
-
-##### 流量传感器
-
-
-
-##### 水路PT传感器
-
-
-
-#### 执行器
-
-##### 水泵
-
-
-
-
+| ![片上资源](./pic/11.png) | <img src="./pic/1.png" alt="评估板" style="zoom:60%;" /> |
+| :-----------------------: | :------------------------------------------------------: |
+|         片上资源          |                        开发板资源                        |
 
 
 
 ### 软件设计
 
-开发初版使用云途公司提供的配置工具PE进行快速搭建。
+​		MCU配置通过云途公司提供的配置工具YT CONFIG TOOL。通过该工具对MCU的资源进行基础配置。
+
+​		使用 **Visual Studio Code** 进行代码编辑，**CMake构建项目**，**JTAG接口烧录**。在 VS Code 中进行Debug。
+
+| ![PE](./pic/12.png) | <img src="./pic/13.png" alt="PE" style="zoom:50%;" /> |
+| :-----------------: | :---------------------------------------------------: |
+|   YT CONFIG TOOL    |                   VS Code 编写代码                    |
+
+使用的开发板及 J-Link 烧录器：
 
 
 
+| ![开发板](./pic/14.png) | <img src="./pic/15.png"  /> |
+| :---------------------: | :-------------------------: |
+|         开发板          |           J-link            |
 
+##### MCU功能配置
 
-#### MCU功能配置
+###### 时钟
 
-##### 时钟
-
-暂时使用默认时钟配置，外部高速晶振提供三个主时钟频率（CORE_CLK、FAST_CLK、SLOW_CLK）分别为120MHz、120MHz、40MHz。
+使用默认时钟配置，外部高速晶振提供三个主时钟频率（CORE_CLK、FAST_CLK、SLOW_CLK）分别为120MHz、120MHz、40MHz。经过分频器、锁相环等后MCU主频为120MHz。
 
 ![时钟配置](./pic/2.png)
 
@@ -79,24 +97,23 @@
 
 
 
-##### 串口
+###### 串口
 
-串口配置：
+| **功能** | **IO** | **MCU Pin NO.** | **Direction** | **Interrupt config** | **Interrupt Status** |
+| -------- | ------ | --------------- | ------------- | -------------------- | -------------------- |
+| UART-RXD | PTA_8  | 144             | Input         | 接收中断+空闲中断    | No clear             |
+| UART-TXD | PTA_9  | 143             | Output        | 发送中断             | clear                |
 
-|   功能   |  IO   | MCU  Pin  NO. | Direction | Interrupt config | Interrupt Status |
-| :------: | :---: | :-----------: | :-------: | :--------------: | :--------------: |
-| UART-RXD | PTA_8 |      144      |   Input   |        -         |        -         |
-| UART-TXD | PTA_9 |      143      |  Output   |        -         |        -         |
 
-- 波特率：115200
+
+- 波特率：115200 bit/s
 - 无奇偶校验
 - 停止位：1
 - 字长：8
 - 传输类型：中断传输
+- 接收方式：环形缓冲区
 
 
-
-###### 串口功能函数
 
 `/app/UART`
 
@@ -110,13 +127,34 @@
 
 ###### printf函数移植
 
-为了优化调试和数据串口输出的目的，移植了**[mpaland大佬的printf库](https://github.com/mpaland/printf)**，实现了线程安全的类PC端的输出效果。
+​		为了优化调试和数据串口输出的目的，移植了**[mpaland大佬的printf库](https://github.com/mpaland/printf)**，实现了线程安全的类PC端的输出效果。
 
 ![输出结果测试](./pic/3.png)
 
+​		串口接收数据的方式使用 **接收中断+空闲中断** 实现，使用接收中断获取单字节数据并**存入环形缓冲区**中，在空闲中断中向主任务发送信号量表明传输结束。
+
+```c
+/* 以下定义和声明在 UART.h 中 */
+
+/* 环形缓冲区结构体 */
+typedef struct
+{
+    uint8_t head;                 // 缓冲区头部位置
+    uint8_t tail;                 // 缓冲区尾部位置
+    uint8_t ringBuff[BUFFER_MAX]; // 缓冲区数组
+} ringBuffer_t;
+
+/* 缓冲区写单字节 */
+void RingBuff_Write(uint8_t data);
+/* 缓冲区读数据帧，存放在全局变量中 */
+uint8_t RingBuff_Read_frame(void);
+/* 缓冲区读单字节 */
+void RingBuff_Read_Byte(uint8_t *pData);
+```
 
 
-##### PWM
+
+###### 定时器
 
 使用高级定时器eTMR1，并通过channel6输出PWM。
 
@@ -149,8 +187,6 @@ PWM配置：
 
 
 
-###### PWM功能函数
-
 `/app/PWM`
 
 实现功能：
@@ -160,38 +196,17 @@ PWM配置：
 - PWM失能输出
 - PWM占空比调节
 
-在`PWM.c`中主要定义的函数：
-
 ```c
-void PWM_init()
-{	// 调用eTMR驱动，严格意义上来讲，这个函数应该定义为eTMR_init()
-    eTMR_DRV_Deinit(eTMR_INST);// 清除寄存器的值，恢复默认
-    eTMR_DRV_Init(eTMR_INST,ETMR_PWM_USER_CONFIG_info,&etmrState);
-    // 使用ETMR_PWM_USER_CONFIG_info结构体中的信息（时钟源、分频系数等）初始化eTMR，并把该实例的状态存到etmrState，有实例状态指针数组会指向etmrState。
-    eTMR_DRV_InitPwm(eTMR_INST,&ETMR_PWM_Config0);
-    // 使用ETMR_PWM_Config0结构体中的信息（频率、计数方式、技术初始值、通道具体配置（占空比等））初始化PWM mode。初始占空比配置为50%。
-}
+/* 以下定义和声明在 PWM.h 中 */
 
+// PWM 初始化
+void PWM_init(void);
 // PWM使能，发送信号
-void PWM_Start()
-{
-    eTMR_DRV_Enable(eTMR_INST);
-}
-
+void PWM_Start(void);
 // PWM失能，停止发送信号
-void PWM_Stop(void)
-{
-    eTMR_DRV_Disable(eTMR_INST);
-}
-
-// PWM占空比调节，输入浮点数的占空比即可
-void PWM_Changedutycycle(float duty_cycle)
-{
-    eTMR_DRV_UpdatePwmChannel(eTMR_INST, ETMR_PWM_Config0IndChConfig[0].hwChannelId, (uint32_t)(duty_cycle * 0x8000), 0x0000U);
-    eTMR_DRV_SetLdok(eTMR_INST);
-    // OSIF_TimeDelay(10);
-}
-
+void PWM_Stop(void);
+// PWM占空比调节
+void PWM_Changedutycycle(float duty_cycle);
 ```
 
 
@@ -202,7 +217,7 @@ void PWM_Changedutycycle(float duty_cycle)
 
 
 
-##### 输入捕获
+###### 输入捕获
 
 为完成脉冲捕获，使用eTMR0的channel0配置了输入捕获功能。其中对于定时器的时钟计算方法同[PWM配置](#####PWM)中描述的。计算捕获周期的方法为：
 
@@ -222,11 +237,9 @@ $$Captured\_Counter$$是相邻的两个CH_CVAL寄存器相减得到的。
 
 
 
-需要注意的是：新版的SDK中通过`eTMR_SetCounterInitValSrc(etmrBase, true);`函数来确定Counter初始值的源值是从INIT寄存器中获得还是直接向CNT寄存器中写入；通过`eTMR_SetInitVal(etmrBase, 1U);`函数向INIT寄存器中写入初始值；通过`eTMR_SetMod(etmrBase, param->countValue);`函数向MOD寄存器中写入最大重装载值，对于eTMR0而言，MOD的值不可以超过0xFFFF。**具体的配置查看寄存器手册。**
+​		需要注意的是：新版的SDK中通过`eTMR_SetCounterInitValSrc(etmrBase, true);`函数来确定Counter初始值的源值是从INIT寄存器中获得还是直接向CNT寄存器中写入；通过`eTMR_SetInitVal(etmrBase, 1U);`函数向INIT寄存器中写入初始值；通过`eTMR_SetMod(etmrBase, param->countValue);`函数向MOD寄存器中写入最大重装载值，对于eTMR0而言，MOD的值不可以超过0xFFFF。**具体的配置查看寄存器手册。**
 
 
-
-###### 输入捕获功能函数
 
 `/app/Input_capture`
 
@@ -237,54 +250,17 @@ $$Captured\_Counter$$是相邻的两个CH_CVAL寄存器相减得到的。
 - 输入捕获失能输出
 - 输入捕获脉冲频率输出
 
-在`Input_capture.c`中主要定义的函数：
-
 ```c
+/* 以下定义和声明在 Input_capture.h 中 */
+
 // 输入捕获初始化
-void Input_capture_init(void)
-{
-    eTMR_DRV_Deinit(eTMR_IC_INST);
-    eTMR_DRV_Init(eTMR_IC_INST,&ETMR_IC_USER_CONFIG_info,&etmrState_IC);
-    eTMR_DRV_InitInputCapture(eTMR_IC_INST, &ETMR_IC_Config0);
-}
-
+void Input_capture_init(void);
 // 输入捕获使能
-void Input_capture_Start(void)
-{
-    eTMR_DRV_Enable(eTMR_IC_INST);
-    // eTMR_DRV_EnableChnInt(eTMR_IC_INST, ETMR_IC_Config0.inputChConfig[0].hwChannelId);
-}
-
+void Input_capture_Start(void);
 // 输入捕获失能
-void Input_capture_Stop(void)
-{
-    eTMR_DRV_Disable(eTMR_IC_INST);
-}
-
-void Input_capture_get_pulse_frequncy(float *frequency)
-{
-    uint32_t pulse[2] = {0,0};
-    // status_t status = STATUS_SUCCESS;
-    while(1) // 如果没有两个边沿没有捕获完成就一直在这里等待捕获完成
-    {
-        eTMR_DRV_InputCaptureHandler(eTMR_IC_INST,0);// 主动调用函数，如果捕获完成会把捕获完成标志位置1，在该函数中计算了脉宽！
-        if(eTMR_DRV_GetInputCaptureComplete(eTMR_IC_INST,0))// 检查捕获完成标志位是否置1
-        {
-            pulse[0] = eTMR_DRV_GetInputCapturePositivePulseCount(eTMR_IC_INST, 0);
-            // 获取正脉宽
-            pulse[1] = eTMR_DRV_GetInputCaptureNegativePulseCount(eTMR_IC_INST, 0);
-            // 获取负脉宽
-            eTMR_DRV_ClearInputCaptureComplete(eTMR_IC_INST,0);
-            // 清楚标志位
-            break;
-        }
-    }
-    
-    *frequency = eTMR_DRV_GetFrequency(eTMR_IC_INST) / (pulse[1] + pulse[0]);
-    // 计算捕获的频率，并保存在外部传入的指针地址，给外部使用
-    PRINTF("input capture frequncy is %f Hz.\n",*frequency);
-    PRINTF("pulse[0] = %d , pulse[1] = %d \n",pulse[0],pulse[1]);
-}
+void Input_capture_Stop(void);
+// 获取输入捕获的脉冲频率
+void Input_capture_get_pulse_frequncy(float *frequency);
 ```
 
 其中很踩坑的一点是：**`eTMR_DRV_InputCaptureHandler(eTMR_IC_INST,0);`中计算的是脉宽，这就意味着，输入捕获的触发信号必须是正负边沿都要触发，否则是没有办法计算的！！**由于官方SDK写得很拉跨，这里我debug了很久，并且查了很久的寄存器手册才发现问题。当然，也可以单纯捕获上升沿，通过直接读取寄存器的方法，即获取通道的CH_CVAL寄存器，然后相减得到整个脉冲的长度，但是这种需要做在中断里，目前使用的这种方法是不需要进入中断的。
@@ -299,9 +275,9 @@ void Input_capture_get_pulse_frequncy(float *frequency)
 
 
 
-##### LIN通讯
+###### LIN通讯
 
-台架上的大部分元件与下位机间的通讯方式是LIN通讯，故而在MCU中配置LIN通讯功能。值得注意的是，YTM32B1ME0芯片中继承了4个片上外设LINflex，外界LIN收发器可以快速配置LIN通讯功能，加快了开发。
+​		台架上的大部分控制元件与下位机间的通讯方式是LIN通讯，故而在MCU中配置LIN通讯功能。值得注意的是，YTM32B1ME0芯片中继承了4个片上外设LINFlexd，外界LIN收发器可以快速配置LIN通讯功能，加快了开发。LINFlexD 控制器是芯片的一个 IP，支持 Local Interconnect Network (LIN) 协议，可作 LIN 主机或作 LIN 从机。
 
 
 
@@ -313,19 +289,13 @@ LIN配置：
 
 
 
-需要注意的是：在硬件板子上有两种连接方式，当板子使用5V供电时，连接 J27 (1-12V、2-LIN、3-GND)，当使用12V供电时，跳线帽直接连接 J24 ，只需要连接 J27- 2 即可。当然，J26 是要对应连接的。
+需要注意的是：在硬件板子上有两种连接方式，当板子使用5V供电时，连接 J27 (1-12V、2-LIN、3-GND)，当使用12V供电时，跳线帽直接连接 J24 ，只需要连接 J27- 2 即可。当然，J26 是要对应连接的。这里注意，在主机通讯时必须连接12V VBAT，否则LIN通讯很大概率会失败。
+
+| ![LIN原理图](./pic/7.png) | <img src="./pic/8.png" alt="LIN实际接线图" style="zoom:50%;" /> |
+| :-----------------------: | :----------------------------------------------------------: |
+|          原理图           |                            接线图                            |
 
 
-
-![LIN原理图](./pic/7.png)
-
-实际对应板子上的接线图如下：
-
-![LIN实际接线图](./pic/8.png)
-
-
-
-###### LIN功能函数
 
 `/app/LIN`
 
@@ -335,116 +305,123 @@ LIN配置：
 - LIN主机 发送帧
 - LIN主机 接收帧
 
-在`LIN.c`中主要定义的函数：
+
 
 ```c
+/* 以下定义和声明在 LIN.h 中 */
+
+#define LIN0_Master (0)
+#define LIN1_Master (1)
+#define LIN2_Master (3)
+#define LINMaserRecvDone (1)
+#define LINMasterSendDone (2)
+#define LINMasterError (3)
+
+/*
+currentEvent = 1 means master recv done,
+currentEvent = 2 means master send done,
+currentEvent = 3 means error happens
+*/
+extern volatile uint8_t currentEvent;
+
+// LIN主机 初始化
+void LIN_MASTER_init(void);
 // LIN主机 发送帧
-void LIN_Master_Send_Frame()
-{
-    status_t status = STATUS_SUCCESS;
-    currentEvent = 0;
-    /* LIN Master Send a Frame */
-    linMasterFrame.id = 0x35;
-    linMasterFrame.responseType = LIN_MASTER_RESPONSE;
-    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
-    /* Wait until master transmission completed */
-    while (0 == currentEvent);
-
-    if (LINMasterSendDone == currentEvent)
-    {
-        PRINTF("LIN Master Send: \n");
-        for (uint8_t i = 0; i < linMasterFrame.dataLength; i++)
-        {
-            PRINTF("%d, \n", linMasterFrame.data[i]);
-        }
-        PRINTF("\r\n");
-    }
-    else
-    {
-        PRINTF("LIN Master Send error!\n");
-    }
-}
-
+status_t LIN_Master_Send_Frame(uint32_t instance);
 // LIN主机 接收帧
-void LIN_Master_Receive_Frame()
-{
-    status_t status = STATUS_SUCCESS;
-    currentEvent = 0;
-    /* LIN Master receive a Frame */
-    linMasterFrame.id = 0x32;
-    linMasterFrame.responseType = LIN_SLAVE_RESPONSE;
-    status |= LINFlexD_DRV_MasterTransfer(LINFlexD_Master, &linMasterFrame);
-    /* wait until master receive completed */
-    while (0 == currentEvent);
-
-    if (LINMaserRecvDone == currentEvent)
-    {
-        PRINTF("LIN Master Receive: \n");
-        for (uint8_t i = 0; i < linMasterFrame.dataLength; i++)
-        {
-            PRINTF("%d, \n", linMasterFrame.data[i]);
-        }
-        PRINTF("\r\n");
-    }
-    else
-    {
-        PRINTF("LIN Master Receive error!\n");
-    }
-}
+status_t LIN_Master_Receive_Frame(uint32_t instance);
 ```
 
 其中对于接收的处理和事件的处理结果都放在了回调函数`linflexd_process_callback`中，这个函数比较精髓，同样定义在了[`LIN.c`](.\Vehicle-thermal-management\app\LIN\LIN.c)中。
 
 
 
+###### LIN通讯的检测
+
 测试功能使用的是 12V供电的三通阀，搭配220V-12V DC电源转换器，进行通讯：
 
-![LIN测试硬件图](./pic/9.png)
+串口输出结果：发送的是使控制三通阀开度调整的帧，收到的是三通阀传来的数据结果。根据商家给出的通讯矩阵可以对收到的数据进行解析。
 
-串口输出结果：
+| <img src="./pic/9.png" alt="LIN测试硬件图" style="zoom:43%;" /> | <img src="./pic/6.jpg" alt="LIN测试硬件图" style="zoom:15%;" /> | ![LIN通讯测试结果](./pic/6.png) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :-----------------------------: |
+|                     三通阀LIN测试接线图                      |                     LIN总线用12V稳压电源                     |         LIN通讯串口反馈         |
 
-发送的是使控制三通阀开度调整的帧，收到的是三通阀传来的数据结果。根据商家给出的通讯矩阵可以对收到的数据进行解析。
-
-![LIN通讯测试结果](./pic/6.png)
-
-
-
-###### LIN硬件连线
-
-由于存在两个相同的三通阀、四通阀、WPTC，为清晰区分器件，拉起两条LIN总线，将相同的期间分别装载在不同的总线上：
-
-
-
-| LIN0 总线  | LIN1 总线 |
-| :--------: | :-------: |
-|   压缩机   | WPTC电机  |
-| 电子膨胀阀 | 三通阀#2  |
-|  WPTC电池  | 四通阀#2  |
-|  三通阀#1  |           |
-|  四通阀#1  |           |
+| <img src="./pic/17.png" style="zoom:80%;" /> | <img src="./pic/5.jpg" alt="LIN测试硬件图" style="zoom:50%;" /> |
+| :------------------------------------------: | :----------------------------------------------------------: |
+|                   干扰波型                   |                     修正后正常的通讯波形                     |
 
 
 
 
 
+###### LIN总线设备挂载情况
+
+​		由于存在两个相同的三通阀、四通阀、WPTC，为清晰区分器件，且出现三通阀与压缩机有指令帧ID是相同的情况，拉起三条LIN总线，将相同的期间分别装载在不同的总线上：
 
 
 
-
-##### FreeRTOS移植
-
-为满足板子的实时性需求，为芯片移植了FreeRTOS操作系统（`FreeRTOS Kernel V10.4.3`）。主要文件存放在rtos文件夹中，内存管理使用了heap_4.c。`FreeRTOSConfig.h`参考了FreeRTOS官方给出的文件进行了修改。
-
-使用动态内存创建任务的方法，在main.c文件中简单地创建了一个任务（AppTaskCreate），再在这个任务中创建两个任务进行测试：
-
-1. PWM的开启
-2. 输入捕获功能的开启
-
-经测试，移植成功，可以正常启动。
+| LIN0 总线  | LIN1 总线 | LIN3 总线 |
+| :--------: | :-------: | --------- |
+|   压缩机   | WPTC电池  | WPTC电机  |
+| 电子膨胀阀 | 三通阀#1  | 三通阀#2  |
+|            | 四通阀#1  | 四通阀#2  |
 
 
 
+###### FreeRTOS移植
 
+​		在开发过程中为芯片移植了FreeRTOS操作系统（**FreeRTOS Kernel V10.4.3**）。源码存放在项目rtos文件夹中，内存管理使用了**heap_4.c**方式。FreeRTOSConfig.h参考了FreeRTOS官方给出的文件进行了修改。
+
+​		任务创建使用动态内存创建方法，在main.c文件中创建了一个任务（AppTaskCreate），用于创建主程序任务。项目中的主要任务有四个：
+
+- **Task_main**：在获取串口中断释放的信号量后对数据帧进行解析，如果满足正确的帧格式则进行解析，根据指令码将数据发送给消息队列或激活事件，唤醒对应的任务。在未收到信号量的时候阻塞任务。
+- **Task_00**：在收到Task_main的事件激活时被唤醒，清除Task_02使能事件，中止Task_01的发送，中止台架的运行。未收到激活事件时被阻塞。
+- **Task_01**：在收到Task_main向消息队列中写入的消息后被唤醒，对数据帧进行解包，根据数据向控制元件进行控制及调整，在发送控制数据结束后，唤醒Task_02。在消息队列中未收到消息的时候阻塞任务。
+- **Task_02**：在收到Task_01的事件激活时被唤醒，获取台架的状态信息，对状态信息进行组包，通过串口向上位机发送。在被清除使能事件或未收到激活事件时被阻塞。
+
+
+
+###### 下位机的运行逻辑
+
+​    为实现下位机与上位机的正常通信，需要对上位机和下位机的运行逻辑进行设计。下位机的运行逻辑流程图如图13所示，在FreeRTOS操作系统中运行四个任务，其中主任务与串口中断通过信号量同步，串口接收到一帧信息后通过信号量通知主任务，主任务进行解析获取指令，通过消息队列或事件组的事件激活唤醒对应的任务。唤醒的任务完成自身的主要功能并通过事件激活或阻塞其他任务。
+
+![下位机逻辑](./pic/16.png)
+
+
+
+```c
+/* 以下定义和声明在 LIN_device_control.h 中 */
+
+
+/************************************ 压缩机通讯 ************************************/
+/* 更改压缩机的转速，变相等于开启压缩机 */
+uint8_t Compressor_Set_Speed(uint16_t speed, uint16_t limit_power);
+/* 关闭压缩机 */
+uint8_t Compressor_Shutdown(void);
+/* 获取压缩机状态 */
+uint8_t Compressor_Get_info(void);
+/************************************ 电子膨胀阀通讯 ************************************/
+/* 更改电子膨胀阀的开度 */
+uint8_t Expansion_valve_Set_Open(uint16_t open);
+/* 获取电子膨胀阀状态 */
+uint8_t Expansion_valve_Get_info(void);
+/************************************ 三通阀通讯 ************************************/
+/* 更改三通阀的比例开度 */
+uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos);
+/* 获取比例三通阀状态 */
+uint8_t Three_way_valve_Get_info(uint8_t instance);
+/************************************ 四通阀通讯 ************************************/
+/* 更改四通阀的开关状态 */
+uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode); // mode 只有两种取值
+/* 获取比例三通阀状态 */
+uint8_t Four_way_valve_Get_info(uint8_t instance);
+/************************************ WPTC通讯 ************************************/
+/* 开启WPTC加热，并设置温度 */
+uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power);
+/* 获取WPTC状态 */
+uint8_t WPTC_Get_info(uint8_t instance); // 输入的是第instance个WPTC，instance = 1 or 2
+
+```
 
 
 

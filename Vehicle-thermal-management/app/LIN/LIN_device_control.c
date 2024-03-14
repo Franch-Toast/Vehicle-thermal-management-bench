@@ -3,7 +3,7 @@
  * @Date: 2024-02-29 20:18:57
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-12 12:26:47
+ * @LastEditTime: 2024-03-14 18:29:09
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -125,7 +125,6 @@ uint8_t Expansion_valve_Set_Open(uint16_t open)
 
     status |= Expansion_valve_Get_info();
 
-
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
 }
@@ -160,7 +159,7 @@ uint8_t Expansion_valve_Get_info(void)
 /************************************ 三通阀通讯 ************************************/
 
 /* 更改三通阀的比例开度 */
-uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos)
+uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos, uint8_t index)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -176,7 +175,7 @@ uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Three way valve %d Send fail!", instance + 1);
+        PRINTF("Three way valve %d Send fail!", index + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -184,7 +183,7 @@ uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos)
 }
 
 /* 获取比例三通阀状态 */
-uint8_t Three_way_valve_Get_info(uint8_t instance)
+uint8_t Three_way_valve_Get_info(uint8_t instance, uint8_t index)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -197,12 +196,12 @@ uint8_t Three_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Three way valve %d Receive fail!", instance + 1);
+        PRINTF("Three way valve %d Receive fail!", index + 1);
     }
 
     /* 对接收数据进行解析 */
 
-    Workbench_status.three_way_valve_status[instance] = linMasterFrame.data[2]; // 三通阀开度:当前位置
+    Workbench_status.three_way_valve_status[index] = linMasterFrame.data[2]; // 三通阀开度:当前位置
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
@@ -211,7 +210,7 @@ uint8_t Three_way_valve_Get_info(uint8_t instance)
 /************************************ 四通阀通讯 ************************************/
 
 /* 更改四通阀的开关状态 */
-uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode) // mode 只有两种取值
+uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode, uint8_t index) // mode 只有两种取值
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -226,7 +225,7 @@ uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode) // mode 只有�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Four way valve %d Send fail!", instance + 1);
+        PRINTF("Four way valve %d Send fail!", index + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -234,7 +233,7 @@ uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode) // mode 只有�
 }
 
 /* 获取比例三通阀状态 */
-uint8_t Four_way_valve_Get_info(uint8_t instance)
+uint8_t Four_way_valve_Get_info(uint8_t instance, uint8_t index)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -247,11 +246,11 @@ uint8_t Four_way_valve_Get_info(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("Four way valve %d Receive fail!", instance + 1);
+        PRINTF("Four way valve %d Receive fail!", index + 1);
     }
 
     /* 对接收数据进行解析 */
-    Workbench_status.four_way_valve_status[instance] = linMasterFrame.data[0];
+    Workbench_status.four_way_valve_status[index] = linMasterFrame.data[0];
 
     // Workbench_status.four_way_valve_status[instance] = linMasterFrame.data[0];                // 低4bit四通阀当前位置
     // Workbench_status.four_way_valve_status[instance] |= (linMasterFrame.data[1] & 0x03) << 4; // 高4bit四通阀的运动状态
@@ -263,7 +262,7 @@ uint8_t Four_way_valve_Get_info(uint8_t instance)
 /************************************ WPTC通讯 ************************************/
 
 /* 开启WPTC加热，并设置温度 */
-uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power)
+uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power, uint8_t index)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -281,7 +280,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Send fail!", instance + 1);
+        PRINTF("WPTC %d Send fail!", index + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
@@ -289,7 +288,7 @@ uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat
 }
 
 /* 获取WPTC状态 */
-uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线上的WPTC
+uint8_t WPTC_Get_info(uint8_t instance, uint8_t index) // 输入的是挂载在哪一条LIN线上的WPTC
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -302,21 +301,21 @@ uint8_t WPTC_Get_info(uint8_t instance) // 输入的是挂载在哪一条LIN线�
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Receive fail!", instance + 1);
+        PRINTF("WPTC %d Receive fail!", index + 1);
     }
 
     /* 对接收数据进行解析 */
 
-    memcpy(&Workbench_status.WPTC_status[instance], linMasterFrame.data, 4);           // 结构体的成员地址与通讯矩阵中的一致，直接memcpy
+    memcpy(&Workbench_status.WPTC_status[index], linMasterFrame.data, 4); // 结构体的成员地址与通讯矩阵中的一致，直接memcpy
 
-    Workbench_status.WPTC_status[instance].PTC_status = linMasterFrame.data[4] & 0x07; // PTC工作状态，3bit
+    Workbench_status.WPTC_status[index].PTC_status = linMasterFrame.data[4] & 0x07; // PTC工作状态，3bit
 
     xSemaphoreGive(MuxSem_Handle); // 解锁
     return status;
 }
 
 /* 关闭温度 */
-uint8_t WPTC_Shutdown(uint8_t instance)
+uint8_t WPTC_Shutdown(uint8_t instance, uint8_t index)
 {
     status_t status = 0;
     xSemaphoreTake(MuxSem_Handle, portMAX_DELAY); // 加锁
@@ -333,7 +332,7 @@ uint8_t WPTC_Shutdown(uint8_t instance)
 
     if (status != 0) // 如果发送失败了，则
     {
-        PRINTF("WPTC %d Send fail!", instance + 1);
+        PRINTF("WPTC %d Send fail!", index + 1);
     }
 
     xSemaphoreGive(MuxSem_Handle); // 解锁

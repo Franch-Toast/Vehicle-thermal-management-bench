@@ -246,7 +246,7 @@ extern "C"
     {
         base->LINIER =    LINFlexD_LINIER_SZIE(0U)      /* Stuck at zero interrupt enable */
                           | LINFlexD_LINIER_OCIE(1U)      /* Output Compare Interrupt enable */
-                          | LINFlexD_LINIER_BEIE(1U)      /* Bit error */
+                          | LINFlexD_LINIER_BEIE(0U)      /* Bit error */
                           | LINFlexD_LINIER_CEIE(1U)      /* Checksum error */
                           | LINFlexD_LINIER_HEIE(1U)      /* Header error */
                           | LINFlexD_LINIER_FEIE(1U)      /* Frame error */
