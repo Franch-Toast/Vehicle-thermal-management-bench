@@ -121,7 +121,7 @@ status_t LINFlexD_DRV_Init(uint32_t instance,
         while (LINFlexD_GetLinState(base) != LINFlexD_STATE_INIT_MODE) {}
 
         /* 让其进入bit error仍然坚持发送 */
-        base->LINCR2 &= LINFlexD_LINCR2_IOBE(0U);
+        base->LINCR2 &= ~LINFlexD_LINCR2_IOBE(1U);
         
         /* Set linflexd to lin mode */
         LINFlexD_Init(base, (bool)(linUserConfig->nodeFunction), (linflexd_break_length_t)(linUserConfig->breakLength));

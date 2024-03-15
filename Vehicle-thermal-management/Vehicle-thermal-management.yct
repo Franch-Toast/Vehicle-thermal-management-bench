@@ -380,10 +380,10 @@
                 },
                 {
                   "name": "LINFlexD3_CLK",
-                  "gate": false,
+                  "gate": true,
                   "busSrc": 0,
                   "periSrc": 0,
-                  "userCtrl": false,
+                  "userCtrl": true,
                   "busClock": [
                     "SLOW_BUS_CLK",
                     "FAST_BUS_CLK"
@@ -1014,7 +1014,7 @@
           }
         ]
       },
-      "updateTime": 1709954428846,
+      "updateTime": 1710313643223,
       "lock": false
     },
     "device": {
@@ -2943,14 +2943,14 @@
           "label": "PTB_0",
           "feature": "LINFlexD0_RX",
           "alt": "PCTRL_MUX_ALT2",
-          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
           "direction": "",
           "pullEnable": 0,
           "pullSelect": "",
           "filter": false,
           "passiveFilter": false,
           "strength": "PCTRL_LOW_DRIVE_STRENGTH",
-          "intFlag": false,
+          "intFlag": "true",
           "init": 0,
           "userLabel": "",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
@@ -2962,14 +2962,14 @@
           "label": "PTB_1",
           "feature": "LINFlexD0_TX",
           "alt": "PCTRL_MUX_ALT2",
-          "intCfg": "PCTRL_DMA_INT_DISABLED",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
           "direction": "",
           "pullEnable": 0,
           "pullSelect": "",
           "filter": false,
           "passiveFilter": false,
           "strength": "PCTRL_LOW_DRIVE_STRENGTH",
-          "intFlag": false,
+          "intFlag": "true",
           "init": 0,
           "userLabel": "",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
@@ -2992,9 +2992,66 @@
           "init": "1",
           "userLabel": "LINFlexD0_SLEEPEN",
           "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLE",
+          "gpioBase": "GPIOE",
+          "num": "6",
+          "label": "PTE_10",
+          "feature": "LINFlexD3_RX",
+          "alt": "PCTRL_MUX_ALT5",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLE",
+          "gpioBase": "GPIOE",
+          "num": "5",
+          "label": "PTE_11",
+          "feature": "LINFlexD3_TX",
+          "alt": "PCTRL_MUX_ALT5",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": 0,
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
+        },
+        {
+          "base": "PCTRLA",
+          "gpioBase": "GPIOA",
+          "num": "141",
+          "label": "PTA_5",
+          "feature": "GPIO",
+          "alt": "PCTRL_MUX_AS_GPIO",
+          "intCfg": "PCTRL_INT_FALLING_EDGE",
+          "direction": "GPIO_OUTPUT_DIRECTION",
+          "pullEnable": 0,
+          "pullSelect": "",
+          "filter": false,
+          "passiveFilter": false,
+          "strength": "PCTRL_LOW_DRIVE_STRENGTH",
+          "intFlag": "true",
+          "init": "1",
+          "userLabel": "",
+          "rateSelect": "PCTRL_FAST_SLEW_RATE"
         }
       ],
-      "updateTime": 1709954423490,
+      "updateTime": 1710313636482,
       "lock": false
     }
   }

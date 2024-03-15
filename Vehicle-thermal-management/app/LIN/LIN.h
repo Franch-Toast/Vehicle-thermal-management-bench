@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2024-01-17 21:37:01
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-03-14 18:25:35
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 #ifndef __LIN_H__
 #define __LIN_H__
 
@@ -6,6 +17,7 @@
 
 #define LIN0_Master (0)
 #define LIN1_Master (1)
+#define LIN2_Master (3)
 #define LINMaserRecvDone (1)
 #define LINMasterSendDone (2)
 #define LINMasterError (3)

@@ -39,28 +39,28 @@ uint8_t Expansion_valve_Get_info(void);
 /************************************ 三通阀通讯 ************************************/
 
 /* 更改三通阀的比例开度 */
-uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos);
+uint8_t Three_way_valve_Set_Open(uint8_t instance, uint8_t pos, uint8_t index);
 
 /* 获取比例三通阀状态 */
-uint8_t Three_way_valve_Get_info(uint8_t instance);
+uint8_t Three_way_valve_Get_info(uint8_t instance, uint8_t index);
 
 /************************************ 四通阀通讯 ************************************/
 
 /* 更改四通阀的开关状态 */
-uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode); // mode 只有两种取值
+uint8_t Four_way_valve_Set_Open(uint8_t instance, uint8_t mode, uint8_t index); // mode 只有两种取值
 
 /* 获取比例三通阀状态 */
-uint8_t Four_way_valve_Get_info(uint8_t instance);
+uint8_t Four_way_valve_Get_info(uint8_t instance, uint8_t index);
 
 /************************************ WPTC通讯 ************************************/
 
 /* 开启WPTC加热，并设置温度 */
-uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power);
+uint8_t WPTC_Set_Temperature(uint8_t instance, uint8_t temperature, uint8_t heat_power, uint8_t index);
 
 /* 获取WPTC状态 */
-uint8_t WPTC_Get_info(uint8_t instance); // 输入的是第instance个WPTC，instance = 1 or 2
+uint8_t WPTC_Get_info(uint8_t instance, uint8_t index); // 输入的是第instance个WPTC，instance = 1 or 2
 
 /* 关闭温度 */
-uint8_t WPTC_Shutdown(uint8_t instance);
+uint8_t WPTC_Shutdown(uint8_t instance, uint8_t index);
 
 #endif
