@@ -12,6 +12,8 @@
 
 
 
+[TOC]
+
 ## 解决方案
 
 ### 方案概况
@@ -24,9 +26,9 @@
 
 ​		实验台架由系统部分和电源信号箱部分组成：
 
-<img src="./pic/18.png" alt="LIN测试硬件图" style="zoom:43%;" />
+<img src="./pic/18.png"  />
 
-| <img src="./pic/19.png" alt="LIN测试硬件图" style="zoom:43%;" /> | <img src="./pic/20.png" alt="LIN测试硬件图" style="zoom:43%;" /> |
+| <img src="./pic/19.png" alt="LIN测试硬件图" style="zoom:55%;" /> | <img src="./pic/20.png" alt="LIN测试硬件图" style="zoom:55%;" /> |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |                          电源信号箱                          |                           台架部件                           |
 
@@ -67,7 +69,7 @@
 
 
 
-### 软件设计
+#### 软件设计
 
 ​		MCU配置通过云途公司提供的配置工具YT CONFIG TOOL。通过该工具对MCU的资源进行基础配置。
 
@@ -381,11 +383,44 @@ status_t LIN_Master_Receive_Frame(uint32_t instance);
 
 
 
+```c
+/* 以下定义和声明在 Task.c 中 */
+
+/* 任务句柄 */
+TaskHandle_t Task_main_Handle = NULL;
+TaskHandle_t Task_0x00_Handle = NULL;
+TaskHandle_t Task_0x01_Handle = NULL;
+TaskHandle_t Task_0x02_Handle = NULL;
+```
+
+
+
+###### 任务间的同步与通信
+
+该操作系统中运行有四个任务，任务间的通信主要通过消息队列、互斥信号量、事件组、信号量来完成，同时为了保证资源的互斥访问，使用了互斥锁。
+
+```c
+/* 以下定义和声明在 Task.c 中 */
+
+/* 通信用句柄 */
+extern QueueHandle_t Message_queue_main2Task0x01; // 主任务向Task01通信用消息队列句柄
+extern SemaphoreHandle_t Get_upper_order_Handle;  // 串口接收二值信号量
+extern EventGroupHandle_t HangTask01EventGroup;   // 挂起Task01用事件组句柄
+extern SemaphoreHandle_t MuxSem_Handle;           // 互斥信号量句柄，用于保护LIN传输帧
+extern SemaphoreHandle_t MuxSem_Serial_Handle;    // 互斥信号量句柄，用于保护串口传输帧
+```
+
+
+
+
+
+
+
 ###### 下位机的运行逻辑
 
 ​    为实现下位机与上位机的正常通信，需要对上位机和下位机的运行逻辑进行设计。下位机的运行逻辑流程图如图13所示，在FreeRTOS操作系统中运行四个任务，其中主任务与串口中断通过信号量同步，串口接收到一帧信息后通过信号量通知主任务，主任务进行解析获取指令，通过消息队列或事件组的事件激活唤醒对应的任务。唤醒的任务完成自身的主要功能并通过事件激活或阻塞其他任务。
 
-![下位机逻辑](./pic/16.png)
+<img src="./pic/16.png" alt="下位机逻辑" style="zoom:125%;" />
 
 
 
@@ -425,11 +460,46 @@ uint8_t WPTC_Get_info(uint8_t instance); // 输入的是第instance个WPTC，ins
 
 
 
+### 上位机设计
+
+#### 上位机开发环境
+
+上位机使用C# 开发，开发环境为Visual Studio 2022。
+
+![vs2022](./pic/21.png)
 
 
-#### 编译与烧录
 
-使用 VS Code 进行代码编辑，Cmake构建项目，JTAG接口烧录。
+#### 上位机与下位机通讯数据帧定义
 
-在 VS Code 中进行debug。
+​		上位机与下位机传输时，由于指令需求的不同，数据帧是非定长的，故在字节流中需要判断出每一帧的起始和结束位置。
+
+​		**串口发送帧格式规定：由 帧头 + 指令码 + 数据码 + 数据长 + 帧尾 组成。**
+
+约束串口通信的帧头帧尾格式如下：
+
+- 帧头：0xFE
+- 帧尾：0xFF
+
+
+
+![帧定义](./pic/22.png)
+
+​	上位机与下位机在通讯过程中根据该定义进行数据的组包和解包。
+
+
+
+
+
+#### 上位机运行逻辑与界面
+
+​		上位机的运行逻辑设计如下：不断获取串口数据进行解包，根据数据帧的定义进行解包并进行显示，刷新显示框内的内容以及图表。操作员通过点击上位机界面上的按钮向下位机发送指令，再通过观察数据框和图标得到反馈和台架的状态数据。
+
+<img src="./pic/23.png" alt="运行逻辑" style="zoom: 33%;" />
+
+上位机的初版界面如下所示：
+
+​	控制元件的所有状态在界面中实时显示，并能够通过选择框输入进行控制，下位机的调试语句和控制元件的状态数据同样也会在左边的显示框中显示。
+
+![上位机界面通讯](./pic/24.png)
 
