@@ -69,7 +69,14 @@ namespace UpperPC
             textBox_WPTC_b_target_temp_set.Text = "50";
             textBox_WPTC_m_target_temp_set.Text = "50";
 
-
+            textBox3_PWM_pump1.Text = "0";
+            textBox3_PWM_pump2.Text = "0";
+            textBox3_PWM_HVAC.Text = "0";
+            textBox3_PWM_radiator.Text = "0";
+            textBox2_PWM_pump1.Text = "0";
+            textBox2_PWM_pump2.Text = "0";
+            textBox2_PWM_HVAC.Text = "0";
+            textBox2_PWM_radiator.Text = "0";
 
         }
 
@@ -176,6 +183,8 @@ namespace UpperPC
             //byte[] Data = new byte[1];//发送单个字节
             if (serialPort1.IsOpen)//判断串口是否打开，如果打开执行下一步操作
             {
+                // 组包发包
+                Pack();
 
                 // 放到点击按钮方法中
                 textBox_compressor_limit_power.Text = textBox_compressor_limit_power_set.Text;
@@ -186,8 +195,11 @@ namespace UpperPC
                 textBox_WPTC_m_target_temp.Text = textBox_WPTC_m_target_temp_set.Text;
                 textBox_PTC_m_heat_level.Text = comboBox_PTC_m_heat_level.Text;
 
+                textBox2_PWM_pump1.Text = textBox3_PWM_pump1.Text;
+                textBox2_PWM_pump2.Text = textBox3_PWM_pump2.Text;
+                textBox2_PWM_HVAC.Text = textBox3_PWM_HVAC.Text;
+                textBox2_PWM_radiator.Text = textBox3_PWM_radiator.Text;
 
-                Pack();
                 //mutex.WaitOne();// 加锁
                 //byte[] temp = { 0xFE,0x02,0x00,0x00,0x00,0x00,0x43,0x43,0xB1,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x32,0x32,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x81,0x00,0x01,0x00,0x1E,0xFF };
                 //serialPort1.Write(temp, 0, 34);//发送
@@ -542,7 +554,7 @@ namespace UpperPC
         private void Pack()
         {
             
-            byte[] data = new byte[17];
+            byte[] data = new byte[21];
             data[0] = (byte)0xFE;
             data[1] = (byte)0x01;
 
@@ -587,9 +599,15 @@ namespace UpperPC
                 /* 电机PTC */
                 data[13] = ((byte)(Convert.ToInt32(Convert.ToString(comboBox_PTC_m_heat_level.Text[0])) * 10 + 3));// 根据挡位输出加热等级数值
                 data[14] = ((byte)(Convert.ToInt32(textBox_WPTC_m_target_temp_set.Text)));
+
                 
-                data[15] = ((byte)13);
-                data[16] = ((byte)0xFF);
+                data[15] = ((byte)(Convert.ToInt32(Convert.ToString(textBox3_PWM_pump1.Text))));
+                data[16] = ((byte)(Convert.ToInt32(Convert.ToString(textBox3_PWM_pump2.Text))));
+                data[17] = ((byte)(Convert.ToInt32(Convert.ToString(textBox3_PWM_HVAC.Text))));
+                data[18] = ((byte)(Convert.ToInt32(Convert.ToString(textBox3_PWM_radiator.Text))));
+
+                data[19] = ((byte)17);
+                data[20] = ((byte)0xFF);
 
                 serialPort1.Write(data, 0, data.Length);
 
@@ -645,6 +663,20 @@ namespace UpperPC
             byte[] shutdown_message = {0xFE,0x00,0x00,0xFF};
             
             serialPort1.Write(shutdown_message, 0, 4);
+
+            // 放到点击按钮方法中
+            textBox_compressor_limit_power.Text = "0";
+
+            // 放到点击按钮方法中
+            textBox_WPTC_b_target_temp.Text = "0";
+            // 放到点击按钮方法中
+            textBox_WPTC_m_target_temp.Text = "0";
+            textBox_PTC_m_heat_level.Text = "0";
+
+            textBox2_PWM_pump1.Text = "0";
+            textBox2_PWM_pump2.Text = "0";
+            textBox2_PWM_HVAC.Text = "0";
+            textBox2_PWM_radiator.Text = "0";
         }
 
 

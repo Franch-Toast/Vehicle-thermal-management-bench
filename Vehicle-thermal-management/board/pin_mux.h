@@ -1,3 +1,14 @@
+/*
+ * @Author: Franch-Toast
+ * @Date: 2023-12-23 23:43:52
+ * @email: random996@163.com
+ * @github: https://github.com/Franch-Toast
+ * @LastEditTime: 2024-04-02 16:24:23
+ * @Description: 
+ * Shit Code Manufacturing Machine, a low-level bug production expert myself.
+ * The code is terrible but can be barely understood. 
+ * Welcome to communicate with each other!
+ */
 
 /*
  *  Copyright 2020-2023 Yuntu Microelectronics co.,ltd
@@ -44,7 +55,7 @@ extern "C" {
 /*! @brief Definitions for BOARD_InitPins Functional Group */
 
 /*! @brief User number of configured pins */
-#define NUM_OF_CONFIGURED_PINS0                        13
+#define NUM_OF_CONFIGURED_PINS0                        16
 /*! @brief User configuration structure */
 extern pin_settings_config_t g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0];
 

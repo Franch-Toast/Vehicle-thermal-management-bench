@@ -183,9 +183,14 @@ $$
 
 PWM配置：
 
+四路PWM的频率相同，直接使用一个定时器eTMR1的四个通道即可：
+
 |    功能    |  IO   | MCU  Pin  NO. | eTMRx_CHx | Frequency |       CLK_SRC        | Prescaler |   Align_Mode    |
 | :--------: | :---: | :-----------: | :-------: | :-------: | :------------------: | :-------: | :-------------: |
-| PWM output | PTC_0 |      53       | eTMR1_CH6 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
+| PWM 水泵2  | PTC_0 |      53       | eTMR1_CH6 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
+| PWM 水泵1  | PTC_1 |      52       | eTMR1_CH7 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
+|  PWM HVAC  | PTD_8 |      55       | eTMR1_CH5 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
+| PWM 散热器 | PTD_9 |      54       | eTMR1_CH4 |   100Hz   | $f_{FAST\_BUS\_CLK}$ |    60     | right(向上计数) |
 
 
 

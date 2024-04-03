@@ -27,6 +27,9 @@ SemaphoreHandle_t MuxSem_Serial_Handle = NULL;
 extern linflexd_frame_t linMasterFrame;
 extern Workbench_status_t Workbench_status;
 
+/* 声明PWM状态结构体 */
+extern etmr_state_t etmrState_PWM;
+
 /* 串口发送数据帧结构体，大小为 11 Bytes */
 extern Serial_data_frame_t serial_data_frame;
 
@@ -48,6 +51,7 @@ void Task_main(void *parameter)
 
     while (1)
     {
+
         xReturn = xSemaphoreTake(Get_upper_order_Handle, portMAX_DELAY);
 
         if (xReturn == pdPASS) // 说明不为空
@@ -55,7 +59,7 @@ void Task_main(void *parameter)
             xSemaphoreTake(MuxSem_Serial_Handle, portMAX_DELAY); // 加锁
             if (RingBuff_Read_frame() > 0)                       // 只是将数据读到结构体中，后续的数据提取在各自任务中做
             {
-                xSemaphoreGive(MuxSem_Serial_Handle);// 解锁
+                xSemaphoreGive(MuxSem_Serial_Handle);                                                                       // 解锁
                 if (serial_data_frame.data[0] == 0xFE && serial_data_frame.data[serial_data_frame.data_length - 1] == 0xFF) // 满足帧定义
                 {
                     if (serial_data_frame.data_length != serial_data_frame.data[serial_data_frame.data_length - 2] + 4)
@@ -65,7 +69,9 @@ void Task_main(void *parameter)
                     }
                     if (serial_data_frame.data[1] == 0x01) // 唤醒Task01
                     {
+                        // 例子： FE 01 00 00 00 00 00 00 00 00 00 00 00 00 00 0D FF
                         // LINFlexD_UART_DRV_SendDataPolling(2, serial_data_frame.data, serial_data_frame.data_length);
+                        xEventGroupSetBits(HangTask01EventGroup, 0x04); // bit2 置1，让Task_0x01停止发送
                         xQueueSend(Message_queue_main2Task0x01, &serial_data_frame, 1000);
                     }
                     else if (serial_data_frame.data[1] == 0x00) // 唤醒Task00
@@ -96,17 +102,26 @@ void Task_0x00(void *parameter)
     while (1)
     {
         /* 等待主任务唤醒 */
-        xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdFALSE, pdFALSE, portMAX_DELAY);
+        xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, portMAX_DELAY);
+        xEventGroupSetBits(HangTask01EventGroup, 0x04); // bit2 置1，让Task_0x01停止发送
         // 仅一位标志位，无需获取返回值，此处不能清除标志位，由Task_0x01清除
 
         uint8_t cnt = 30; // 尝试次数
+
+        // vTaskDelay(100);// 等待Task_0x01当前发送结束
         /* 其中有一个器件没关掉 或 尝试次数耗尽了 */
         while ((Workbench_status.Compressor_status.compressor_status == Compressor_ON || Workbench_status.WPTC_status[0].PTC_status == WPTC_ON || Workbench_status.WPTC_status[1].PTC_status == WPTC_ON) && cnt--)
         {
             /* 发送 终止台架运行的指令 */
             Compressor_Shutdown();
-            WPTC_Shutdown(LIN1_Master,0); // 关闭WPTC1
-            WPTC_Shutdown(LIN2_Master,1); // 关闭WPTC2
+            WPTC_Shutdown(LIN1_Master, 0); // 关闭WPTC1
+            WPTC_Shutdown(LIN2_Master, 1); // 关闭WPTC2
+            /* 关闭PWM */
+            PWM_Changedutycycle(0, 0);
+            PWM_Changedutycycle(1, 0);
+            PWM_Changedutycycle(2, 1);
+            PWM_Changedutycycle(3, 0);
+            eTMR_DRV_SetLdok(eTMR_PWM_INST); 
         }
         if (cnt < 0)
         {
@@ -115,12 +130,19 @@ void Task_0x00(void *parameter)
 
             continue;
         }
-        
-        PRINTF("Shut Down Successfully!");
 
+        /* 关闭PWM */
+        PWM_Changedutycycle(0, 0);
+        PWM_Changedutycycle(1, 0);
+        PWM_Changedutycycle(2, 1);
+        PWM_Changedutycycle(3, 0);
+        eTMR_DRV_SetLdok(eTMR_PWM_INST); 
+
+        PRINTF("Shut Down Successfully!");
+        // vTaskDelay(1000);// 让Task_0x02继续再发送一会
         /* 清除已经置位的事件标志通知Task_0x02挂起自身，停止向上位机发送 */
         xEventGroupClearBits(HangTask01EventGroup, 0x01); // bit0被清除
-        vTaskDelay(1000);
+        vTaskDelay(100);
     }
 }
 
@@ -137,6 +159,8 @@ void Task_0x01(void *parameter)
     BaseType_t xReturn = pdTRUE;
     Serial_data_frame_t DataFrame;
 
+    /* PWM 启动即开启 */
+    PWM_Start();
     while (1)
     {
         /* 在这里第一次等待消息，如果没收到就阻塞 */
@@ -148,6 +172,7 @@ void Task_0x01(void *parameter)
             continue; // 继续等待消息
         }
 
+        xEventGroupClearBits(HangTask01EventGroup, 0x04); // bit2被清除，防止第一次发送时一次发送就停机，该语句仅在第一次发送时会起到作用
         /* 置位事件标志唤醒Task_0x02，开始向上位机发送台架状态 */
         xEventGroupSetBits(HangTask01EventGroup, 0x01); // bit0 置1
 
@@ -157,10 +182,17 @@ void Task_0x01(void *parameter)
             Unpacking_and_Run(DataFrame);
 
             // 获取返回值判断是否触发，因为这是非阻塞的模式，在这里清除标志位
-            EventBits_t bit = xEventGroupWaitBits(HangTask01EventGroup, 0x02, pdTRUE, pdFALSE, 0);
-            if (bit == 2)
-                break; // 说明事件标志被触发，上位机要求停机，不要继续发送
-            vTaskDelay(10);
+            EventBits_t bit = xEventGroupWaitBits(HangTask01EventGroup, 0x04, pdTRUE, pdFALSE, 0);
+            if ((bit & 0x04))
+                break; // 说明事件标志被触发，上位机要求停机/更新数据，不要继续发送
+
+            /* 测试用输出 */
+            // if (DataFrame.data[Unpack_PTC_heat_level_motor_index] == 0x00)
+            //     serial_data_frame.data[2] = 0x00;
+            // else if (DataFrame.data[Unpack_PTC_heat_level_motor_index] == 0x01)
+            //     serial_data_frame.data[2] = 0x01;
+
+            vTaskDelay(50);
         }
     }
 }
@@ -182,11 +214,12 @@ void Task_0x02(void *parameter)
         // uint8_t responce2upper[10] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10};
         // LINFlexD_UART_DRV_SendDataPolling(2, responce2upper, 10);
 
-
+        /* 测试用输出 */
+        // PRINTF("Upload!");
         Packing_and_Send();
 
         /* 等待一段时间后再继续传输，防止数据传输过快，疯狂占用 */
-        vTaskDelay(100);
+        vTaskDelay(50);
     }
 }
 
@@ -199,7 +232,7 @@ static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
 {
     status_t status = 0;
     /* 解包，解析上位机的发送请求 */
-    if (DataFrame.data[Unpack_Compressor_status_index] == 0)// 没指示开机，直接shutdown
+    if (DataFrame.data[Unpack_Compressor_status_index] == 0) // 没指示开机，直接shutdown
     {
         status = Compressor_Shutdown();
     }
@@ -207,24 +240,30 @@ static void Unpacking_and_Run(Serial_data_frame_t DataFrame)
     {
         status = Compressor_Set_Speed(DataFrame.data[Unpack_Compressor_speed_index], DataFrame.data[Unpack_Compressor_PowerLimit_index]);
     }
-    
 
-    status |= Three_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_three_way_valve_status_1_index],0);
-    status |= Three_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_three_way_valve_status_2_index],1);
-    status |= Four_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_four_way_valve_status_1_index],0);
-    status |= Four_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_four_way_valve_status_2_index],1);
+    status |= Three_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_three_way_valve_status_1_index], 0);
+    status |= Three_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_three_way_valve_status_2_index], 1);
+    status |= Four_way_valve_Set_Open(LIN1_Master, DataFrame.data[Unpack_four_way_valve_status_1_index], 0);
+    status |= Four_way_valve_Set_Open(LIN2_Master, DataFrame.data[Unpack_four_way_valve_status_2_index], 1);
 
     if (DataFrame.data[Unpack_PTC_heat_level_battery_index] < 4)
-        status |= WPTC_Shutdown(LIN1_Master,0);
+        status |= WPTC_Shutdown(LIN1_Master, 0);
     else
-        status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index],0);
+        status |= WPTC_Set_Temperature(LIN1_Master, DataFrame.data[Unpack_PTC_target_temperature_battery_index], DataFrame.data[Unpack_PTC_heat_level_battery_index], 0);
 
     if (DataFrame.data[Unpack_PTC_heat_level_motor_index] < 4)
-        status |= WPTC_Shutdown(LIN2_Master,1);
+        status |= WPTC_Shutdown(LIN2_Master, 1);
     else
-        status |= WPTC_Set_Temperature(LIN2_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index],1);
+        status |= WPTC_Set_Temperature(LIN2_Master, DataFrame.data[Unpack_PTC_target_temperature_motor_index], DataFrame.data[Unpack_PTC_heat_level_motor_index], 1);
 
     status |= Expansion_valve_Set_Open(*((uint16_t *)(&DataFrame.data[Unpack_EXV_AskPosition_index]))); // 注意传参的类型
+
+    //28 32 3C 46
+    PWM_Changedutycycle(0, 1 - DataFrame.data[Unpack_PWM_water_pump_1_index] * 0.01);
+    PWM_Changedutycycle(1, 1 - DataFrame.data[Unpack_PWM_water_pump_2_index] * 0.01);
+    PWM_Changedutycycle(2, DataFrame.data[Unpack_PWM_HVAC_index] * 0.01);
+    PWM_Changedutycycle(3, 1 - DataFrame.data[Unpack_PWM_Radiator_index] * 0.01);
+    eTMR_DRV_SetLdok(eTMR_PWM_INST);
 }
 
 /*
@@ -240,12 +279,12 @@ static void Packing_and_Send(void)
     // 获取台架所有原件的状态信息
     status |= Compressor_Get_info();
     // status |= Expansion_valve_Get_info();// 在写函数中被调用
-    status |= Four_way_valve_Get_info(LIN1_Master,0);
-    status |= Four_way_valve_Get_info(LIN2_Master,1);
-    status |= Three_way_valve_Get_info(LIN1_Master,0);
-    status |= Three_way_valve_Get_info(LIN2_Master,1);
-    status |= WPTC_Get_info(LIN1_Master,0);
-    status |= WPTC_Get_info(LIN2_Master,1);
+    status |= Four_way_valve_Get_info(LIN1_Master, 0);
+    status |= Four_way_valve_Get_info(LIN2_Master, 1);
+    status |= Three_way_valve_Get_info(LIN1_Master, 0);
+    status |= Three_way_valve_Get_info(LIN2_Master, 1);
+    status |= WPTC_Get_info(LIN1_Master, 0);
+    status |= WPTC_Get_info(LIN2_Master, 1);
 
     vTaskDelay(10);
     xSemaphoreTake(MuxSem_Serial_Handle, portMAX_DELAY); // 加锁

@@ -26,7 +26,7 @@ void PWM_Start(void);
 void PWM_Stop(void);
 
 // PWM占空比调节
-void PWM_Changedutycycle(float duty_cycle);
+void PWM_Changedutycycle(uint8_t ch, float duty_cycle);
 
 
 

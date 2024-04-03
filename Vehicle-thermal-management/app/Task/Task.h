@@ -3,7 +3,7 @@
  * @Date: 2024-02-25 22:17:21
  * @email: random996@163.com
  * @github: https://github.com/Franch-Toast
- * @LastEditTime: 2024-03-04 16:39:04
+ * @LastEditTime: 2024-04-02 16:57:01
  * @Description:
  * Shit Code Manufacturing Machine, a low-level bug production expert myself.
  * The code is terrible but can be barely understood.
@@ -38,6 +38,10 @@
 #define Unpack_PTC_target_temperature_battery_index 12 // 电池WPTC目标温度
 #define Unpack_PTC_heat_level_motor_index 13           // 电机WPTC加热挡位
 #define Unpack_PTC_target_temperature_motor_index 14   // 电机WPTC目标温度
+#define Unpack_PWM_water_pump_1_index 15               // 电子水泵 1 PWM占空比
+#define Unpack_PWM_water_pump_2_index 16               // 电子水泵 2 PWM占空比
+#define Unpack_PWM_HVAC_index 17                       // HVAC PWM占空比
+#define Unpack_PWM_Radiator_index 18                   // 散热器 PWM占空比
 
 // 值得注意的是，不需要组包的宏，因为组包直接将台架信息的结构体发送，直接在上位机解析即可
 

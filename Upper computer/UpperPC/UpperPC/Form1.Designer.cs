@@ -116,6 +116,20 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox3_PWM_pump1 = new System.Windows.Forms.TextBox();
+            this.textBox3_PWM_pump2 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox3_PWM_HVAC = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox3_PWM_radiator = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox2_PWM_pump1 = new System.Windows.Forms.TextBox();
+            this.textBox2_PWM_pump2 = new System.Windows.Forms.TextBox();
+            this.textBox2_PWM_HVAC = new System.Windows.Forms.TextBox();
+            this.textBox2_PWM_radiator = new System.Windows.Forms.TextBox();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_scan_serial
@@ -187,14 +201,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(330, 527);
+            this.textBox1.Size = new System.Drawing.Size(330, 643);
             this.textBox1.TabIndex = 6;
             // 
             // button_clear_window
             // 
             this.button_clear_window.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_clear_window.ForeColor = System.Drawing.Color.Black;
-            this.button_clear_window.Location = new System.Drawing.Point(244, 712);
+            this.button_clear_window.Location = new System.Drawing.Point(244, 821);
             this.button_clear_window.Name = "button_clear_window";
             this.button_clear_window.Size = new System.Drawing.Size(110, 43);
             this.button_clear_window.TabIndex = 15;
@@ -206,7 +220,7 @@
             // 
             this.button_save_data.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_save_data.ForeColor = System.Drawing.Color.Black;
-            this.button_save_data.Location = new System.Drawing.Point(24, 712);
+            this.button_save_data.Location = new System.Drawing.Point(24, 821);
             this.button_save_data.Name = "button_save_data";
             this.button_save_data.Size = new System.Drawing.Size(110, 43);
             this.button_save_data.TabIndex = 16;
@@ -397,7 +411,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1198, 732);
+            this.button1.Location = new System.Drawing.Point(752, 820);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 43);
             this.button1.TabIndex = 42;
@@ -407,11 +421,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(850, 678);
+            this.textBox2.Location = new System.Drawing.Point(380, 750);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(330, 97);
+            this.textBox2.Size = new System.Drawing.Size(343, 113);
             this.textBox2.TabIndex = 43;
             // 
             // textBox_three_way_2
@@ -864,7 +878,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1198, 683);
+            this.button2.Location = new System.Drawing.Point(752, 750);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 43);
             this.button2.TabIndex = 107;
@@ -872,11 +886,134 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBox2_PWM_radiator);
+            this.groupBox7.Controls.Add(this.textBox2_PWM_HVAC);
+            this.groupBox7.Controls.Add(this.textBox2_PWM_pump2);
+            this.groupBox7.Controls.Add(this.textBox2_PWM_pump1);
+            this.groupBox7.Controls.Add(this.textBox3_PWM_radiator);
+            this.groupBox7.Controls.Add(this.textBox3_PWM_HVAC);
+            this.groupBox7.Controls.Add(this.label33);
+            this.groupBox7.Controls.Add(this.label34);
+            this.groupBox7.Controls.Add(this.textBox3_PWM_pump2);
+            this.groupBox7.Controls.Add(this.label32);
+            this.groupBox7.Controls.Add(this.textBox3_PWM_pump1);
+            this.groupBox7.Controls.Add(this.label31);
+            this.groupBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox7.Location = new System.Drawing.Point(880, 692);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(434, 171);
+            this.groupBox7.TabIndex = 108;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "PWM";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.Location = new System.Drawing.Point(49, 24);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(116, 18);
+            this.label31.TabIndex = 109;
+            this.label31.Text = "水泵#1占空比";
+            // 
+            // textBox3_PWM_pump1
+            // 
+            this.textBox3_PWM_pump1.Location = new System.Drawing.Point(318, 21);
+            this.textBox3_PWM_pump1.Name = "textBox3_PWM_pump1";
+            this.textBox3_PWM_pump1.Size = new System.Drawing.Size(100, 28);
+            this.textBox3_PWM_pump1.TabIndex = 110;
+            // 
+            // textBox3_PWM_pump2
+            // 
+            this.textBox3_PWM_pump2.Location = new System.Drawing.Point(318, 58);
+            this.textBox3_PWM_pump2.Name = "textBox3_PWM_pump2";
+            this.textBox3_PWM_pump2.Size = new System.Drawing.Size(100, 28);
+            this.textBox3_PWM_pump2.TabIndex = 112;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Location = new System.Drawing.Point(49, 61);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(116, 18);
+            this.label32.TabIndex = 111;
+            this.label32.Text = "水泵#2占空比";
+            // 
+            // textBox3_PWM_HVAC
+            // 
+            this.textBox3_PWM_HVAC.Location = new System.Drawing.Point(318, 93);
+            this.textBox3_PWM_HVAC.Name = "textBox3_PWM_HVAC";
+            this.textBox3_PWM_HVAC.Size = new System.Drawing.Size(100, 28);
+            this.textBox3_PWM_HVAC.TabIndex = 114;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label33.Location = new System.Drawing.Point(67, 96);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(98, 18);
+            this.label33.TabIndex = 113;
+            this.label33.Text = "HVAC占空比";
+            // 
+            // textBox3_PWM_radiator
+            // 
+            this.textBox3_PWM_radiator.Location = new System.Drawing.Point(318, 129);
+            this.textBox3_PWM_radiator.Name = "textBox3_PWM_radiator";
+            this.textBox3_PWM_radiator.Size = new System.Drawing.Size(100, 28);
+            this.textBox3_PWM_radiator.TabIndex = 116;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label34.Location = new System.Drawing.Point(49, 132);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(116, 18);
+            this.label34.TabIndex = 115;
+            this.label34.Text = "散热器占空比";
+            // 
+            // textBox2_PWM_pump1
+            // 
+            this.textBox2_PWM_pump1.Location = new System.Drawing.Point(189, 21);
+            this.textBox2_PWM_pump1.Name = "textBox2_PWM_pump1";
+            this.textBox2_PWM_pump1.ReadOnly = true;
+            this.textBox2_PWM_pump1.Size = new System.Drawing.Size(100, 28);
+            this.textBox2_PWM_pump1.TabIndex = 117;
+            // 
+            // textBox2_PWM_pump2
+            // 
+            this.textBox2_PWM_pump2.Location = new System.Drawing.Point(189, 58);
+            this.textBox2_PWM_pump2.Name = "textBox2_PWM_pump2";
+            this.textBox2_PWM_pump2.ReadOnly = true;
+            this.textBox2_PWM_pump2.Size = new System.Drawing.Size(100, 28);
+            this.textBox2_PWM_pump2.TabIndex = 118;
+            // 
+            // textBox2_PWM_HVAC
+            // 
+            this.textBox2_PWM_HVAC.Location = new System.Drawing.Point(189, 93);
+            this.textBox2_PWM_HVAC.Name = "textBox2_PWM_HVAC";
+            this.textBox2_PWM_HVAC.ReadOnly = true;
+            this.textBox2_PWM_HVAC.Size = new System.Drawing.Size(100, 28);
+            this.textBox2_PWM_HVAC.TabIndex = 119;
+            // 
+            // textBox2_PWM_radiator
+            // 
+            this.textBox2_PWM_radiator.Location = new System.Drawing.Point(189, 129);
+            this.textBox2_PWM_radiator.Name = "textBox2_PWM_radiator";
+            this.textBox2_PWM_radiator.ReadOnly = true;
+            this.textBox2_PWM_radiator.Size = new System.Drawing.Size(100, 28);
+            this.textBox2_PWM_radiator.TabIndex = 120;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 787);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1385, 904);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox_WPTC_b_target_temp_set);
             this.Controls.Add(this.textBox_WPTC_m_target_temp_set);
@@ -963,9 +1100,12 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox7);
             this.Name = "Form1";
             this.Text = "R290热管理台架上位机";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1060,6 +1200,19 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox textBox3_PWM_HVAC;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBox3_PWM_pump2;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox3_PWM_pump1;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox3_PWM_radiator;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox2_PWM_radiator;
+        private System.Windows.Forms.TextBox textBox2_PWM_HVAC;
+        private System.Windows.Forms.TextBox textBox2_PWM_pump2;
+        private System.Windows.Forms.TextBox textBox2_PWM_pump1;
     }
 }
 
